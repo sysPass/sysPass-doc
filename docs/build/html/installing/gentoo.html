@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Instalación Gentoo &#8212; sysPass 2.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="sysPass 2.0.0 documentation" href="../index.html" />
+    <link rel="up" title="Instalación" href="index.html" />
+    <link rel="next" title="Modo Hosting" href="hostingmode.html" />
+    <link rel="prev" title="Instalación CentOS 7" href="centos7.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_icon_24_nobg.png"></span>
+          sysPass</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Índice</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/index.html">Configuración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Aplicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../updating.html">Actualización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Preguntas Frecuentes</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Instalación Gentoo</a><ul>
+<li><a class="reference internal" href="#prerequisitos">Prerequisitos</a></li>
+<li><a class="reference internal" href="#instalacion-de-paquetes">Instalación de paquetes</a></li>
+<li><a class="reference internal" href="#configuracion-de-apache">Configuración de Apache</a></li>
+<li><a class="reference internal" href="#configuracion-de-mysql">Configuración de MySQL</a></li>
+<li><a class="reference internal" href="#configuracion-de-directorios-y-permisos">Configuración de directorios y permisos</a></li>
+<li><a class="reference internal" href="#configuracion-del-entorno">Configuración del entorno</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="centos7.html" title="Previous Chapter: Instalación CentOS 7"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Instalación CentOS 7</span>
+    </a>
+  </li>
+  <li>
+    <a href="hostingmode.html" title="Next Chapter: Modo Hosting"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Modo Hosting &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/installing/gentoo.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="instalacion-gentoo">
+<h1>Instalación Gentoo<a class="headerlink" href="#instalacion-gentoo" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisitos">
+<h2>Prerequisitos<a class="headerlink" href="#prerequisitos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Servidor Web (Apache/Nginx/Lighttpd) con SSL habilitado.</li>
+<li>MariaDB o MySQL &gt;= 5</li>
+<li>PHP &gt;= 5.6 &lt;= 7.0</li>
+<li><dl class="first docutils">
+<dt>Módulos PHP</dt>
+<dd><ul class="first last">
+<li>mysql</li>
+<li>pdo</li>
+<li>mcrypt</li>
+<li>ldap (opcional)</li>
+<li>XML</li>
+<li>SimpleXML</li>
+<li>Curl</li>
+<li>Json</li>
+<li>GD</li>
+<li>intl</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Última versión de sysPass <a class="reference external" href="https://github.com/nuxsmin/sysPass/releases">https://github.com/nuxsmin/sysPass/releases</a></li>
+</ul>
+</div>
+<div class="section" id="instalacion-de-paquetes">
+<h2>Instalación de paquetes<a class="headerlink" href="#instalacion-de-paquetes" title="Permalink to this headline">¶</a></h2>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">emerge</span> <span class="o">--</span><span class="n">ask</span> <span class="n">dev</span><span class="o">-</span><span class="n">db</span><span class="o">/</span><span class="n">mysql</span>
+<span class="n">emerge</span> <span class="o">--</span><span class="n">ask</span> <span class="n">www</span><span class="o">-</span><span class="n">servers</span><span class="o">/</span><span class="n">apache</span>
+
+<span class="n">PHP_TARGETS</span><span class="o">=</span><span class="s2">&quot;php5-6&quot;</span>
+<span class="n">USE</span><span class="o">=</span><span class="s2">&quot;apache2 pdo curl simplexml xml zlib crypt gd intl json opcache&quot;</span>
+<span class="n">emerge</span> <span class="o">--</span><span class="n">ask</span> <span class="n">dev</span><span class="o">-</span><span class="n">lang</span><span class="o">/</span><span class="n">php</span>
+</pre></div>
+</div>
+<p>Si se quiere habilitar LDAP es necesario compilar PHP con soporte para ldap:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">PHP_TARGETS</span><span class="o">=</span><span class="s2">&quot;php5-6&quot;</span>
+<span class="n">USE</span><span class="o">=</span><span class="s2">&quot;apache2 pdo curl ldap minimal simplexml xml zlib crypt gd intl json opcache&quot;</span>
+<span class="n">emerge</span> <span class="o">--</span><span class="n">ask</span> <span class="n">dev</span><span class="o">-</span><span class="n">lang</span><span class="o">/</span><span class="n">php</span>
+</pre></div>
+</div>
+<p>En los siguientes enlaces hay disponible documentación más extensa de cómo instalar y configurar dichos paquetes:</p>
+<p><a class="reference external" href="https://wiki.gentoo.org/wiki/Apache">https://wiki.gentoo.org/wiki/Apache</a></p>
+<p><a class="reference external" href="https://wiki.gentoo.org/wiki/PHP">https://wiki.gentoo.org/wiki/PHP</a></p>
+<p><a class="reference external" href="https://wiki.gentoo.org/wiki/MySQL">https://wiki.gentoo.org/wiki/MySQL</a></p>
+</div>
+<div class="section" id="configuracion-de-apache">
+<h2>Configuración de Apache<a class="headerlink" href="#configuracion-de-apache" title="Permalink to this headline">¶</a></h2>
+<p>Es necesario habilitar el módulo de PHP en Apache, por lo que editamos el archivo /etc/conf.d/apache2 y modificamos la variable APACHE2_OPTS añadiendo &#8220;-D PHP5&#8221;:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">APACHE2_OPTS</span><span class="o">=</span><span class="s2">&quot;... -D PHP5&quot;</span>
+</pre></div>
+</div>
+<p>Iniciamos y establecemos el auto-inicio de Apache:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">rc</span><span class="o">-</span><span class="n">update</span> <span class="n">add</span> <span class="n">apached</span> <span class="n">default</span>
+<span class="n">rc</span><span class="o">-</span><span class="n">service</span> <span class="n">apache2</span> <span class="n">start</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuracion-de-mysql">
+<h2>Configuración de MySQL<a class="headerlink" href="#configuracion-de-mysql" title="Permalink to this headline">¶</a></h2>
+<p>Establecemos la clave de root de MySQL:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">emerge</span> <span class="o">--</span><span class="n">config</span> <span class="n">dev</span><span class="o">-</span><span class="n">db</span><span class="o">/</span><span class="n">mysql</span>
+</pre></div>
+</div>
+<p>Iniciamos y establecemos el auto-inicio de MySQL:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">rc</span><span class="o">-</span><span class="n">update</span> <span class="n">add</span> <span class="n">mysql</span> <span class="n">default</span>
+<span class="n">rc</span><span class="o">-</span><span class="n">service</span> <span class="n">mysql</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p>Securizamos la instalación de Mysql:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">mysql_secure_installation</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuracion-de-directorios-y-permisos">
+<h2>Configuración de directorios y permisos<a class="headerlink" href="#configuracion-de-directorios-y-permisos" title="Permalink to this headline">¶</a></h2>
+<p>Crear un directorio para la aplicación en la raíz del servidor web:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">localhost</span><span class="o">/</span><span class="n">syspass</span>
+</pre></div>
+</div>
+<p>Copiar y descomprimir el archivo sysPass en el directorio creado:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">sysPass</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">localhost</span><span class="o">/</span><span class="n">syspass</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">localhost</span><span class="o">/</span><span class="n">syspass</span>
+<span class="n">tar</span> <span class="n">xzf</span> <span class="n">syspass</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>Cambiar el propietario del directorio &#8216;syspass/config&#8217;. Ha de coincidir con el usuario del servidor web:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">chown</span> <span class="n">apache</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">localhost</span><span class="o">/</span><span class="n">syspass</span><span class="o">/</span><span class="n">config</span>
+<span class="n">chmod</span> <span class="mi">750</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">localhost</span><span class="o">/</span><span class="n">syspass</span><span class="o">/</span><span class="n">config</span>
+</pre></div>
+</div>
+<p>Crear y cambiar el propietario del directorio de copias de seguridad:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">localhost</span><span class="o">/</span><span class="n">syspass</span><span class="o">/</span><span class="n">backup</span>
+<span class="n">chown</span> <span class="n">apache</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">localhost</span><span class="o">/</span><span class="n">syspass</span><span class="o">/</span><span class="n">backup</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuracion-del-entorno">
+<h2>Configuración del entorno<a class="headerlink" href="#configuracion-del-entorno" title="Permalink to this headline">¶</a></h2>
+<p>Abir un navegador y escribir la URL:</p>
+<p><a class="reference external" href="https://IP_O_NOMBRE_SERVIDOR/syspass/index.php">https://IP_O_NOMBRE_SERVIDOR/syspass/index.php</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Seguir los pasos del instalador y tras la correcta finalización, ya es posible acceder a la aplicación</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2010-2017, Rubén Domínguez &lt;nuxsmin _at_ syspass _dot_ org&gt;.<br/>
+      Last updated on Feb 06, 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

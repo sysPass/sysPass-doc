@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Búsqueda de Cuentas &#8212; sysPass 2.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="sysPass 2.0.0 documentation" href="../index.html" />
+    <link rel="up" title="Aplicación" href="index.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="Permisos" href="permissions.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_icon_24_nobg.png"></span>
+          sysPass</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Índice</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installing/index.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/index.html">Configuración</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Aplicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../updating.html">Actualización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Preguntas Frecuentes</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Búsqueda de Cuentas</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="permissions.html" title="Previous Chapter: Permisos"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Permisos</span>
+    </a>
+  </li>
+  <li>
+    <a href="api.html" title="Next Chapter: API"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">API &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/application/searching.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="busqueda-de-cuentas">
+<h1>Búsqueda de Cuentas<a class="headerlink" href="#busqueda-de-cuentas" title="Permalink to this headline">¶</a></h1>
+<p>La búsqueda de cuentas realiza una consulta del texto introducido en los campos &#8220;nombre&#8221;, &#8220;login&#8221;, &#8220;url&#8221; y &#8220;notas&#8221;.</p>
+<p>Es posible fltrar los resultados mediante la selección de categoría, cliente o etiquetas.</p>
+<p>El filtrado mediante etiquetas es acumulativo (&#8220;OR&#8221;), por lo que se incluirán las cuentas con las etiquetas seleccionadas.</p>
+<p>Existen filtros especiales que son introducidos en el campo de texto:</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Filtro</th>
+<th class="head">Descripción</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>user:login</td>
+<td>Devolver las cuentas a las que el usuario con login &#8220;login&#8221; tenga acceso</td>
+</tr>
+<tr class="row-odd"><td>owner:login</td>
+<td>Devolver las cuentas en las que &#8220;login&#8221; es propietario</td>
+</tr>
+<tr class="row-even"><td>maingroup:group_name</td>
+<td>Devolver las cuentas con grupo principal &#8220;group_name&#8221;</td>
+</tr>
+<tr class="row-odd"><td>group:group_name</td>
+<td>Devolver las cuentas a las que el grupo con nombre &#8220;group_name&#8221; tenga acceso</td>
+</tr>
+<tr class="row-even"><td>file:file_name</td>
+<td>Devolver las cuentas que contengan el archivo con nombre &#8220;file_name&#8221;</td>
+</tr>
+<tr class="row-odd"><td>expired:</td>
+<td>Devolver las cuentas con clave caducada</td>
+</tr>
+<tr class="row-even"><td>private:</td>
+<td>Devolver las cuentas privadas del usuario actual</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2010-2017, Rubén Domínguez &lt;nuxsmin _at_ syspass _dot_ org&gt;.<br/>
+      Last updated on Feb 06, 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

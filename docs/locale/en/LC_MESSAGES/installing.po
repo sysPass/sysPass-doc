@@ -1,0 +1,406 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2017, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-06 01:05+0000\n"
+"PO-Revision-Date: 2017-02-06 02:06+0100\n"
+"Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
+"Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Language: en\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#: ../../source/installing/centos7.rst:2
+msgid "Instalación CentOS 7"
+msgstr "CentOS 7 Installation"
+
+#: ../../source/installing/centos7.rst:5 ../../source/installing/debian8.rst:5
+#: ../../source/installing/gentoo.rst:5
+msgid "Prerequisitos"
+msgstr "Prerequisites"
+
+#: ../../source/installing/centos7.rst:7 ../../source/installing/debian8.rst:7
+#: ../../source/installing/gentoo.rst:6
+msgid "Servidor Web (Apache/Nginx/Lighttpd) con SSL habilitado."
+msgstr "Web server (Apache/Nginx/Lighttpd) with SSL enabled."
+
+#: ../../source/installing/centos7.rst:8 ../../source/installing/debian8.rst:8
+#: ../../source/installing/gentoo.rst:7
+msgid "MariaDB o MySQL >= 5"
+msgstr "MariaDB or MySQL >= 5"
+
+#: ../../source/installing/centos7.rst:9 ../../source/installing/debian8.rst:9
+#: ../../source/installing/gentoo.rst:8
+msgid "PHP >= 5.6 <= 7.0"
+msgstr "PHP >= 5.6 <= 7.0"
+
+#: ../../source/installing/centos7.rst:17
+#: ../../source/installing/debian8.rst:15
+#: ../../source/installing/gentoo.rst:18
+msgid "Módulos PHP"
+msgstr "PHP modules"
+
+#: ../../source/installing/centos7.rst:11
+msgid "Mysql"
+msgstr "Mysql"
+
+#: ../../source/installing/centos7.rst:12
+#: ../../source/installing/debian8.rst:12
+#: ../../source/installing/gentoo.rst:12
+msgid "mcrypt"
+msgstr "mcrypt"
+
+#: ../../source/installing/centos7.rst:13
+#: ../../source/installing/debian8.rst:16
+#: ../../source/installing/gentoo.rst:13
+msgid "ldap (opcional)"
+msgstr "ldap (optional)"
+
+#: ../../source/installing/centos7.rst:14
+#: ../../source/installing/gentoo.rst:15
+msgid "SimpleXML"
+msgstr "SimpleXML"
+
+#: ../../source/installing/centos7.rst:15
+#: ../../source/installing/debian8.rst:13
+#: ../../source/installing/gentoo.rst:16
+msgid "Curl"
+msgstr "Curl"
+
+#: ../../source/installing/centos7.rst:16
+#: ../../source/installing/debian8.rst:14
+#: ../../source/installing/gentoo.rst:17
+msgid "Json"
+msgstr "Json"
+
+#: ../../source/installing/centos7.rst:17
+#: ../../source/installing/debian8.rst:15
+#: ../../source/installing/gentoo.rst:18
+msgid "GD"
+msgstr "GD"
+
+#: ../../source/installing/centos7.rst:18
+msgid "PDO"
+msgstr "PDO"
+
+#: ../../source/installing/centos7.rst:19
+#: ../../source/installing/debian8.rst:17
+#: ../../source/installing/gentoo.rst:20
+msgid "Última versión de sysPass https://github.com/nuxsmin/sysPass/releases"
+msgstr "The latest sysPass release https://github.com/nuxsmin/sysPass/releases"
+
+#: ../../source/installing/centos7.rst:22
+#: ../../source/installing/debian8.rst:20 ../../source/installing/index.rst:4
+msgid "Instalación"
+msgstr "Installation"
+
+#: ../../source/installing/centos7.rst:24
+#: ../../source/installing/gentoo.rst:23
+msgid "Instalación de paquetes"
+msgstr "Packages installation"
+
+#: ../../source/installing/centos7.rst:30
+msgid "Para iniciar y auto-iniciar el servidor web Apache:"
+msgstr "In order to start and auto-start the Apache Web server:"
+
+#: ../../source/installing/centos7.rst:37
+msgid "Para iniciar y auto-iniciar el servidor MariaDB:"
+msgstr "In order to start and auto-start the MariaDB server:"
+
+#: ../../source/installing/centos7.rst:44
+msgid "Necesitamos securizar el servidor MariaDB:"
+msgstr "We need to secure the MySQL installation:"
+
+#: ../../source/installing/centos7.rst:52
+msgid "Instalación del repositorio EPEL para módulo de encriptación"
+msgstr "Installing EPEL repository for encryption module"
+
+#: ../../source/installing/centos7.rst:54
+msgid "Descargar e instalar el RPM para el repositorio de EPEL:"
+msgstr "Download and install the RPM for the EPEL repository:"
+
+#: ../../source/installing/centos7.rst:64
+msgid "Habilitar los puertos en el firewall"
+msgstr "Enable the firewall ports"
+
+#: ../../source/installing/centos7.rst:65
+msgid "Añadir reglas en el firewall:"
+msgstr "Add firewall rules:"
+
+#: ../../source/installing/centos7.rst:74
+#: ../../source/installing/debian8.rst:38
+#: ../../source/installing/gentoo.rst:89
+msgid "Configuración de directorios y permisos"
+msgstr "Directories and permissions configuration:"
+
+#: ../../source/installing/centos7.rst:76
+#: ../../source/installing/debian8.rst:40
+#: ../../source/installing/gentoo.rst:91
+msgid "Crear un directorio para la aplicación en la raíz del servidor web:"
+msgstr "Create a directory for the application in the webserver root:"
+
+#: ../../source/installing/centos7.rst:82
+#: ../../source/installing/debian8.rst:46
+#: ../../source/installing/gentoo.rst:97
+msgid "Copiar y descomprimir el archivo sysPass en el directorio creado:"
+msgstr " Copy and unzip the sysPass archive in the newly created directory: "
+
+#: ../../source/installing/centos7.rst:90
+#: ../../source/installing/debian8.rst:54
+#: ../../source/installing/gentoo.rst:105
+msgid ""
+"Cambiar el propietario del directorio 'syspass/config'. Ha de coincidir con "
+"el usuario del servidor web:"
+msgstr ""
+"Change the owner of 'syspass/config' directory. It should be the same user "
+"that the web server runs:"
+
+#: ../../source/installing/centos7.rst:97
+#: ../../source/installing/debian8.rst:61
+#: ../../source/installing/gentoo.rst:112
+msgid "Crear y cambiar el propietario del directorio de copias de seguridad:"
+msgstr "Create an change the backup directory owner:"
+
+#: ../../source/installing/centos7.rst:105
+msgid "Modificando SELinux"
+msgstr "Modifying SELinux"
+
+#: ../../source/installing/centos7.rst:107
+msgid ""
+"Para permitir a sysPass escribir su configuración y backups, tenemos dos "
+"opciones:"
+msgstr ""
+"In order to allow sysPass to write its own configuration file and backups, "
+"we have two choices:"
+
+#: ../../source/installing/centos7.rst:111
+msgid "Elegir una de las dos opciones"
+msgstr "Choose one of the options"
+
+#: ../../source/installing/centos7.rst:113
+msgid ""
+"Cambiar el usuario y contexto de SELinux para hacer escribibles los "
+"directorios de config y backups:"
+msgstr ""
+"Change the SELinux user and target context to make writable the config and "
+"backup directories:"
+
+#: ../../source/installing/centos7.rst:120
+msgid ""
+"Deshabilitar SELinux editando el archivo '/etc/sysconfig/selinux' y cambiar "
+"el valor de la variable \"SELINUX\" a \"permissive\" y reiniciar el sistema."
+msgstr ""
+"Disable SELinux by editing '/etc/sysconfig/selinux' file, change the "
+"“SELINUX” variable value to “permissive” and reboot your system."
+
+#: ../../source/installing/centos7.rst:123
+#: ../../source/installing/debian8.rst:69
+#: ../../source/installing/gentoo.rst:120
+msgid "Configuración del entorno"
+msgstr "Environment configuration"
+
+#: ../../source/installing/centos7.rst:125
+#: ../../source/installing/debian8.rst:71
+#: ../../source/installing/gentoo.rst:122
+msgid "Abir un navegador y escribir la URL:"
+msgstr "Open the web browser and point to the URL:"
+
+#: ../../source/installing/centos7.rst:127
+#: ../../source/installing/debian8.rst:73
+#: ../../source/installing/gentoo.rst:124
+msgid "https://IP_O_NOMBRE_SERVIDOR/syspass/index.php"
+msgstr "https://IP_OR_SERVER_NAME/syspass/index.php"
+
+#: ../../source/installing/centos7.rst:129
+#: ../../source/installing/debian8.rst:75
+#: ../../source/installing/gentoo.rst:126
+msgid ""
+"Seguir los pasos del instalador y tras la correcta finalización, ya es "
+"posible acceder a la aplicación"
+msgstr ""
+"Please, follow installer steps and after the successful finishing, you will "
+"be able to log into the application"
+
+#: ../../source/installing/debian8.rst:2
+msgid "Instalación Debian 8"
+msgstr "Debian 8 Installation"
+
+#: ../../source/installing/debian8.rst:11
+#: ../../source/installing/gentoo.rst:10
+msgid "mysql"
+msgstr "mysql"
+
+#: ../../source/installing/debian8.rst:22
+msgid "Instalación de paquetes en Debian GNU/Linux:"
+msgstr "Packages installation in Debian GNU/Linux:"
+
+#: ../../source/installing/debian8.rst:30
+msgid "Opcional para habilitar LDAP:"
+msgstr "Optional to enable LDAP:"
+
+#: ../../source/installing/gentoo.rst:2
+msgid "Instalación Gentoo"
+msgstr "Gentoo Installation"
+
+#: ../../source/installing/gentoo.rst:11
+msgid "pdo"
+msgstr "pdo"
+
+#: ../../source/installing/gentoo.rst:14
+msgid "XML"
+msgstr "XML"
+
+#: ../../source/installing/gentoo.rst:19
+msgid "intl"
+msgstr "intl"
+
+#: ../../source/installing/gentoo.rst:34
+msgid ""
+"Si se quiere habilitar LDAP es necesario compilar PHP con soporte para ldap:"
+msgstr ""
+"If you want to use LDAP backend, you would need to compile PHP to support it:"
+
+#: ../../source/installing/gentoo.rst:42
+msgid ""
+"En los siguientes enlaces hay disponible documentación más extensa de cómo "
+"instalar y configurar dichos paquetes:"
+msgstr ""
+"At the following links there are more detailed documentation about how to "
+"install and configure these packages:"
+
+#: ../../source/installing/gentoo.rst:44
+msgid "https://wiki.gentoo.org/wiki/Apache"
+msgstr "https://wiki.gentoo.org/wiki/Apache"
+
+#: ../../source/installing/gentoo.rst:46
+msgid "https://wiki.gentoo.org/wiki/PHP"
+msgstr "https://wiki.gentoo.org/wiki/PHP"
+
+#: ../../source/installing/gentoo.rst:48
+msgid "https://wiki.gentoo.org/wiki/MySQL"
+msgstr "https://wiki.gentoo.org/wiki/MySQL"
+
+#: ../../source/installing/gentoo.rst:51
+msgid "Configuración de Apache"
+msgstr "Apache configuration"
+
+#: ../../source/installing/gentoo.rst:53
+msgid ""
+"Es necesario habilitar el módulo de PHP en Apache, por lo que editamos el "
+"archivo /etc/conf.d/apache2 y modificamos la variable APACHE2_OPTS añadiendo "
+"\"-D PHP5\":"
+msgstr ""
+"You need to enable PHP module in Apache by modifying the variable "
+"APACHE2_OPTS and adding \"-D PHP5\" in the file /etc/conf.d/apache2:"
+
+#: ../../source/installing/gentoo.rst:59
+msgid "Iniciamos y establecemos el auto-inicio de Apache:"
+msgstr "We start and set auto-start for the Apache service: "
+
+#: ../../source/installing/gentoo.rst:67
+msgid "Configuración de MySQL"
+msgstr "MySQL Configuration"
+
+#: ../../source/installing/gentoo.rst:69
+msgid "Establecemos la clave de root de MySQL:"
+msgstr "You need to set MySQL root password: "
+
+#: ../../source/installing/gentoo.rst:75
+msgid "Iniciamos y establecemos el auto-inicio de MySQL:"
+msgstr "We start and set auto-start for the MySQL service:"
+
+#: ../../source/installing/gentoo.rst:82
+msgid "Securizamos la instalación de Mysql:"
+msgstr "We need to secure MySQL installation:"
+
+#: ../../source/installing/hostingmode.rst:2
+msgid "Modo Hosting"
+msgstr "Hosting Mode"
+
+#: ../../source/installing/hostingmode.rst:4
+msgid ""
+"El modo hosting es para aquellas instalaciones que se ejecutan en un hosting "
+"externo en las que no es posible crear la base de datos ni el usuario de "
+"conexión a la misma."
+msgstr ""
+"The hosting mode is for those installations that are running on a external "
+"hosting, where is not possible to create neither database nor connection "
+"user for it."
+
+#: ../../source/installing/hostingmode.rst:6
+msgid ""
+"**No se creará la base de datos (sí las tablas) ni el usuario de conexión**"
+msgstr ""
+"**It won't create neither database (except tables) nor connection user**"
+
+#: ../../source/installing/hostingmode.rst:8
+msgid "Los pasos para realizar la instalación son los siguientes:"
+msgstr "The steps to perform the installation are the following:"
+
+#: ../../source/installing/hostingmode.rst:10
+msgid "Crear un usuario/clave en el panel del hosting."
+msgstr "Create an user/password for sysPass connection at the hosting panel."
+
+#: ../../source/installing/hostingmode.rst:11
+msgid ""
+"Crear la base de datos de sysPass (no crear tablas) y dar permisos al "
+"usuario anterior."
+msgstr ""
+"Create the sysPass database (not tables) and give permissions to the "
+"previous user on it."
+
+#: ../../source/installing/hostingmode.rst:12
+msgid ""
+"Iniciar la instalación de sysPass (borrar el archivo \"config/config.xml\" "
+"si existe) y utilizar el usuario/clave creados como usuario de sysPass (los "
+"dos primeros campos)."
+msgstr ""
+"Start the sysPass installation (delete 'config/config.php' file if exists) "
+"and use the user/password that was previously created for sysPass (the two "
+"first fields in the installation page)."
+
+#: ../../source/installing/hostingmode.rst:13
+msgid ""
+"Indicar el usuario con permisos de administración de MySQL/MariaDB (puede "
+"ser el mismo de antes si tiene suficientes permisos), para realizar la "
+"creación de tablas en la base de datos de sysPass. Este usuario es sólo para "
+"la instalación y normalmente en los hostings suele ser el usuario/clave de "
+"gestión."
+msgstr ""
+"Provide a MySQL/MariaDB user with administration rights (it could be the "
+"same as previous if it has enough permissions), in order to create sysPass "
+"database tables. This user is used only for the installation process and it "
+"often would be the user/password for the hosting management."
+
+#: ../../source/installing/hostingmode.rst:14
+msgid ""
+"Si hay conexión con la base de datos y los permisos son correctos, la "
+"instalación debe de finalizar correctamente."
+msgstr ""
+"If database connection and permissions are right, the installation should "
+"terminate successfully."
+
+#: ../../source/installing/hostingmode.rst:16
+msgid "En caso de errores, verificar el archivo de registro del servidor web."
+msgstr ""
+" In case of errors, you could take a look to the web server error logs."
+
+#~ msgid "Servidor Web (Apache/Lighttpd) con SSL habilitado."
+#~ msgstr "Web server (Apache/Nginx/Lighttpd) with SSL enabled."
+
+#~ msgid "Servidor web (Apache/Lighttpd) con SSL habilitado."
+#~ msgstr "Web server (Apache/Nginx/Lighttpd) with SSL enabled."
+
+#~ msgid "MySQL 5"
+#~ msgstr "MySQL 5"
+
+#~ msgid "Instalación de Paquetes"
+#~ msgstr "Packages Installation"

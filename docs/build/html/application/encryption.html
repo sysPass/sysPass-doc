@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Encriptación &#8212; sysPass 2.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="sysPass 2.0.0 documentation" href="../index.html" />
+    <link rel="up" title="Aplicación" href="index.html" />
+    <link rel="next" title="Autentificación" href="authentication.html" />
+    <link rel="prev" title="Aplicación" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_icon_24_nobg.png"></span>
+          sysPass</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Índice</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installing/index.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/index.html">Configuración</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Aplicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../updating.html">Actualización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Preguntas Frecuentes</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Encriptación</a><ul>
+<li><a class="reference internal" href="#clave-maestra-temporal">Clave Maestra Temporal</a></li>
+<li><a class="reference internal" href="#id1">PKI</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: Aplicación"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Aplicación</span>
+    </a>
+  </li>
+  <li>
+    <a href="authentication.html" title="Next Chapter: Autentificación"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Autentificación &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/application/encryption.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="encriptacion">
+<h1>Encriptación<a class="headerlink" href="#encriptacion" title="Permalink to this headline">¶</a></h1>
+<p>La encriptación de sysPass está basada en <a class="reference external" href="http://es.wikipedia.org/wiki/Advanced_Encryption_Standard">rijndael-256</a> en modo <a class="reference external" href="http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Cipher-block_chaining_.28CBC.29">CBC</a>  mediante el uso del módulo <a class="reference external" href="http://php.net/manual/en/book.mcrypt.php">mcrypt</a> de PHP.</p>
+<p>Los datos encriptados (hasta versión 2.0) son:</p>
+<ul class="simple">
+<li>Claves de las cuentas</li>
+<li>Datos de campos personalizados</li>
+<li>Exportación en formato XML de sysPass</li>
+</ul>
+<p>Para hacer uso de la aplicación, por primera vez, es necesario conocer la clave maestra o la clave maestra temporal (ver <a class="reference internal" href="#temporarymasterkey"><span class="std std-ref">Clave Maestra Temporal</span></a>), ya que sólo se almacena un hash generado mediante <a class="reference external" href="`https://en.wikipedia.org/wiki/Blowfish_(cipher)`">Blowfish</a> con un salt generado usando el generador de números aleatorios MCRYPT_DEV_URANDOM. Para la generación del hash en <a class="reference external" href="`https://en.wikipedia.org/wiki/Blowfish_(cipher)`">Blowfish</a> se utiliza un coste de 7 para las iteraciones del algoritmo.</p>
+<p>Tras hacer login con la clave maestra, ésta se almacena en los datos del usuario. Para su almacenamiento encriptado con <a class="reference external" href="http://es.wikipedia.org/wiki/Advanced_Encryption_Standard">rijndael-256</a> se utiliza una llave de 32 bytes generada con <a class="reference external" href="`https://en.wikipedia.org/wiki/Blowfish_(cipher)`">Blowfish</a> usando la clave, el login del usuario y un salt generado con <a class="reference external" href="http://php.net/manual/en/function.openssl-random-pseudo-bytes.php">openssl_random_pseudo_bytes</a> y almacenado en la configuración de sysPass bajo la etiqueta &#8220;passwordSalt&#8221;.</p>
+<p>En los siguientes inicios de sesión la clave maestra es recuperada desde los datos del usuario y desencriptada usando la clave, el login del usuario y el salt generado en la configuración de sysPass. Esta clave es almacenada en la sesión del usuario mediante la encriptación de la misma con una llave generada con <a class="reference external" href="`https://en.wikipedia.org/wiki/Blowfish_(cipher)`">Blowfish</a> usando el ID de sesión de PHP y el salt de la aplicación.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">El ID de sesión de PHP es regenerado cada tiempo_máximo_sesion/2</p>
+</div>
+<p>En el caso de que la clave maestra sea cambiada se solicitará a todos los usuarios la nueva clave o una clave maestra temporal (ver <a class="reference internal" href="#temporarymasterkey"><span class="std std-ref">Clave Maestra Temporal</span></a>).</p>
+<p>Si un usuario canbia su clave de acceso, en el siguiente login, se le solicitará la clave anterior para poder obtener la clave maestra. Si no es posible obtener la clave maestra, se le solicitará.</p>
+<div class="section" id="clave-maestra-temporal">
+<span id="temporarymasterkey"></span><h2>Clave Maestra Temporal<a class="headerlink" href="#clave-maestra-temporal" title="Permalink to this headline">¶</a></h2>
+<p>Es posible generar una clave maestra temporal para su uso por los usuarios de la aplicación, así no es necesario conocer la clave maestra original.</p>
+<p>Para la generación de la clave maestra temporal se utiliza la clave maestra original encriptada con <a class="reference external" href="http://es.wikipedia.org/wiki/Advanced_Encryption_Standard">rijndael-256</a> y una llave de 32 bytes generada usando <a class="reference external" href="http://php.net/manual/en/function.openssl-random-pseudo-bytes.php">openssl_random_pseudo_bytes</a> cuyo hash <a class="reference external" href="`https://en.wikipedia.org/wiki/Blowfish_(cipher)`">Blowfish</a> es almacenado en la tabla &#8220;config&#8221; de la base de datos.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Para la comprobación de la clave maestra temporal <strong>sólo</strong> se utiliza el hash generado con <a class="reference external" href="`https://en.wikipedia.org/wiki/Blowfish_(cipher)`">Blowfish</a></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>PKI<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Para mejorar la seguridad de los datos enviados, se hace uso de <a class="reference external" href="https://en.wikipedia.org/wiki/Public_key_infrastructure">PKI</a> para la encriptación de las claves que son enviadas desde los formularios de la aplicación.</p>
+<p>Las claves pública y privada son generadas en el directorio &#8220;config&#8221; de la aplicación.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Tener en cuenta que el mayor riesgo de seguridad está en los propios usuarios, ya que una clave comprometida puede causar una brecha de seguridad.</p>
+<p class="last">Un servidor de sysPass comprometido puede ser peligroso si la base de datos está junto al servidor web, debido a que los datos de red pueden ser obtenidos por lo que las claves serían reveladas.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2010-2017, Rubén Domínguez &lt;nuxsmin _at_ syspass _dot_ org&gt;.<br/>
+      Last updated on Feb 06, 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

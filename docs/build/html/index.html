@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introducción &#8212; sysPass 2.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="sysPass 2.0.0 documentation" href="#" />
+    <link rel="next" title="Instalación" href="installing/index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span><img src="_static/logo_icon_24_nobg.png"></span>
+          sysPass</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Índice</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing/index.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration/index.html">Configuración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application/index.html">Aplicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updating.html">Actualización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Preguntas Frecuentes</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Introducción</a><ul>
+<li><a class="reference internal" href="#caracteristicas">Características</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="installing/index.html" title="Next Chapter: Instalación"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Instalación &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/index.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="logo docutils container">
+<a class="reference internal image-reference" href="_images/logo.png"><img alt="Logo sysPass" class="align-left" src="_images/logo.png" style="width: 500px;" /></a>
+</div>
+<div class="section" id="introduccion">
+<h1>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h1>
+<p>sysPass es un gestor de claves web escrito en PHP que permite la gestión centralizada de claves en un entorno multiusuario.</p>
+<div class="section" id="caracteristicas">
+<h2>Características<a class="headerlink" href="#caracteristicas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Interfaz con Material Design Lite en HTML5 y Ajax</li>
+<li>Claves encriptadas con AES-256 CBC</li>
+<li>Multiusuario con gestión de usuarios, grupos y perfiles</li>
+<li>Gestión avanzada de perfiles con 29 niveles de acceso</li>
+<li>Autentificación con MySQL/MariaDB, OpenLDAP y Active Directory</li>
+<li>Notificaciones por email e in-app de actividad</li>
+<li>Enlaces públicos a cuentas sin necesidad de login</li>
+<li>Historial de cambios en cuentas</li>
+<li>Gestión de archivos asociados a cuentas con previsualización de imágenes</li>
+<li>Multilenguaje, con traducciones en Inglés, Catalán, Alemán, Polaco, Ruso, Francés y Holandés</li>
+<li>Enlace a Wiki externa e integración con API de DokuWiki</li>
+<li>Backup en formato portable y exportación en XML encriptado</li>
+<li>Registro de acciones y eventos con posibilidad de enviar a Syslog remoto en formato CEF</li>
+<li>Configurable y extensible mediante temas y plugins</li>
+<li>API para integración con otras aplicaciones</li>
+<li>Importación desde KeePass, KeePassX y CSV</li>
+<li>Instalación en un solo paso</li>
+</ul>
+<div class="toctree-wrapper compound" id="mastertoc">
+<p class="caption"><span class="caption-text">Índice</span><a class="headerlink" href="#mastertoc" title="Permalink to this toctree">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing/index.html">Instalación</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing/debian8.html">Instalación Debian 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing/centos7.html">Instalación CentOS 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing/gentoo.html">Instalación Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing/hostingmode.html">Modo Hosting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration/index.html">Configuración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration/ldap.html">Configuración de LDAP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="application/index.html">Aplicación</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="application/encryption.html">Encriptación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="application/authentication.html">Autentificación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="application/authorization.html">Autorización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="application/permissions.html">Permisos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="application/searching.html">Búsqueda de Cuentas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="application/api.html">API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="updating.html">Actualización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Preguntas Frecuentes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#para-que-sirve-syspass">¿Para qué sirve sysPass?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#donde-se-puede-instalar-syspass">¿Dónde se puede instalar sysPass?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#como-se-instala-syspass">¿Cómo se instala sysPass?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#que-metodos-de-autentificacion-utiliza">¿Qué métodos de autentificación utiliza?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#para-que-sirve-la-encriptacion">¿Para qué sirve la encriptación?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#que-quiere-decir-portable">¿Qué quiere decir “portable”?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#hay-una-clave-maestra-por-cada-cuenta-usuario">¿Hay una clave maestra por cada cuenta/usuario?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#que-son-los-enlaces-a-wiki">¿Qué son los enlaces a Wiki?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#para-que-sirven-las-categorias">¿Para qué sirven las categorías?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#para-que-sirven-los-grupos-de-usuarios">¿Para qué sirven los grupos de usuarios?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#para-que-sirve-el-campo-cliente">¿Para qué sirve el campo cliente?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#existe-un-historico-de-cuentas">¿Existe un histórico de cuentas?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#para-que-sirven-los-perfiles">¿Para qué sirven los perfiles?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#que-es-el-modo-mantenimiento">¿Qué es el modo mantenimiento?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#puedo-cambiar-la-clave-maestra">¿Puedo cambiar la Clave Maestra?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#no-recuerdo-la-clave-maestra-puedo-desencriptar-las-claves">No recuerdo la Clave Maestra, ¿Puedo desencriptar las claves?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#funciona-el-backup-en-windows">¿Funciona el backup en Windows?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#el-lenguaje-no-cambia">El lenguaje no cambia</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2010-2017, Rubén Domínguez &lt;nuxsmin _at_ syspass _dot_ org&gt;.<br/>
+      Last updated on Feb 06, 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

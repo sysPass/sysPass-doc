@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2017, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-05 19:47+0000\n"
+"PO-Revision-Date: 2017-02-06 02:14+0100\n"
+"Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
+"Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Language: en\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ../../source/updating.rst:2
+msgid "Actualización"
+msgstr "Updating"
+
+#: ../../source/updating.rst:4
+msgid "Para la actualización de sysPass son necesarios los siguientes pasos:"
+msgstr "For the sysPass updating the following steps are needed:"
+
+#: ../../source/updating.rst:6
+msgid ""
+"Descargar la aplicación desde https://github.com/nuxsmin/sysPass/releases y "
+"descomprimir los archivos"
+msgstr ""
+"Download the application from https://github.com/nuxsmin/sysPass/releases "
+"and uncompress the files"
+
+#: ../../source/updating.rst:7
+msgid "Establecer el propietario y permisos del directorio de sysPass"
+msgstr "Set the sysPass directory owner and permissions"
+
+#: ../../source/updating.rst:8
+msgid ""
+"Copiar los archivos (\"config.xml\", \"key.pem\" y \"pubkey.pem\") del "
+"directorio \"config\" de la versión actual a la nueva"
+msgstr ""
+"Copy the files (\"config.xml\", \"key.pem\" y \"pubkey.pem\") within the  "
+"\"config\" directory from the current version to the new one"
+
+#: ../../source/updating.rst:9
+msgid "Acceder desde un navegador a la aplicación"
+msgstr "Open the application from a web browser"
+
+#: ../../source/updating.rst:11
+msgid "Si la aplicación requiere de actualización de la base de datos:"
+msgstr "If the application requires a database upgrade:"
+
+#: ../../source/updating.rst:13
+msgid "**Realizar una copia de seguridad de la base de datos**"
+msgstr "**Perform a database backup**"
+
+#: ../../source/updating.rst:14
+msgid ""
+"Introducir el código de actualización que se encuentra en el archivo "
+"\"config/config.xml\" con la etiqueta \"upgradeKey\""
+msgstr ""
+"Enter the updating code which could be found in the \"config/config.xml\" "
+"file within the tag \"upgradeKey\""
+
+#: ../../source/updating.rst:16
+msgid ""
+"Tras la actualización, se mostrará un mensaje y en el registro de eventos se "
+"pueden revisar los detalles de la actualización"
+msgstr ""
+"After the updating, it will show a message and you could take a look to the "
+"updating details in the event log"

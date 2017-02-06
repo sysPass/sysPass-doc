@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuración de LDAP &#8212; sysPass 2.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="sysPass 2.0.0 documentation" href="../index.html" />
+    <link rel="up" title="Configuración" href="index.html" />
+    <link rel="next" title="Aplicación" href="../application/index.html" />
+    <link rel="prev" title="Configuración" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_icon_24_nobg.png"></span>
+          sysPass</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Índice</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installing/index.html">Instalación</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Configuración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/index.html">Aplicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../updating.html">Actualización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Preguntas Frecuentes</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Configuración de LDAP</a><ul>
+<li><a class="reference internal" href="#consejos">Consejos</a></li>
+<li><a class="reference internal" href="#enlaces">Enlaces</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: Configuración"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Configuración</span>
+    </a>
+  </li>
+  <li>
+    <a href="../application/index.html" title="Next Chapter: Aplicación"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Aplicación &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/configuration/ldap.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="configuracion-de-ldap">
+<h1>Configuración de LDAP<a class="headerlink" href="#configuracion-de-ldap" title="Permalink to this headline">¶</a></h1>
+<p>Para configurar un servidor de OpenLDAP correctamente, puedes seguir el siguiente artículo en <a class="reference external" href="https://wiki.debian.org/LDAP/OpenLDAPSetup">https://wiki.debian.org/LDAP/OpenLDAPSetup</a> en el que se describen los pasos para configurar un servidor totalmente operativo en distribuciones Debian y derivadas.</p>
+<p>En OpenLDAP, para usar la característica de pertenecia a grupo, es necesario añadir un &#8216;overlay&#8217; llamado &#8216;membeof&#8217;. Es un módulo que añade un atributo interno a los usuarios que son miembros de un grupo.</p>
+<p>Estos son los pasos para configurar el módulo:</p>
+<ul>
+<li><p class="first">Crear un archivo &#8216;ldap_memberof_add.ldif&#8217; con este contenido:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dn</span><span class="p">:</span> <span class="n">cn</span><span class="o">=</span><span class="n">module</span><span class="p">,</span><span class="n">cn</span><span class="o">=</span><span class="n">config</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">olcModuleList</span>
+<span class="n">cn</span><span class="p">:</span> <span class="n">module</span>
+<span class="n">olcModulePath</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ldap</span>
+<span class="n">olcModuleLoad</span><span class="p">:</span> <span class="n">memberof</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Crear un archivo &#8216;ldap_memberof_config.ldif&#8217; con este contenido:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dn</span><span class="p">:</span> <span class="n">olcOverlay</span><span class="o">=</span><span class="n">memberof</span><span class="p">,</span><span class="n">olcDatabase</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="n">hdb</span><span class="p">,</span><span class="n">cn</span><span class="o">=</span><span class="n">config</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">olcMemberOf</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">olcOverlayConfig</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">olcConfig</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">top</span>
+<span class="n">olcOverlay</span><span class="p">:</span> <span class="n">memberof</span>
+<span class="n">olcMemberOfDangling</span><span class="p">:</span> <span class="n">ignore</span>
+<span class="n">olcMemberOfRefInt</span><span class="p">:</span> <span class="n">TRUE</span>
+<span class="n">olcMemberOfGroupOC</span><span class="p">:</span> <span class="n">groupOfNames</span>
+<span class="n">olcMemberOfMemberAD</span><span class="p">:</span> <span class="n">member</span>
+<span class="n">olcMemberOfMemberOfAD</span><span class="p">:</span> <span class="n">memberOf</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Modificar la configuración de LDAP con estos comandos:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ldapadd</span> <span class="o">-</span><span class="n">D</span> <span class="n">cn</span><span class="o">=</span><span class="n">admin</span><span class="p">,</span><span class="n">cn</span><span class="o">=</span><span class="n">config</span> <span class="o">-</span><span class="n">w</span> <span class="s2">&quot;password&quot;</span> <span class="o">-</span><span class="n">H</span> <span class="n">ldapi</span><span class="p">:</span><span class="o">///</span> <span class="o">-</span><span class="n">f</span> <span class="n">memberof_add</span><span class="o">.</span><span class="n">ldif</span>
+<span class="n">ldapadd</span> <span class="o">-</span><span class="n">D</span> <span class="n">cn</span><span class="o">=</span><span class="n">admin</span><span class="p">,</span><span class="n">cn</span><span class="o">=</span><span class="n">config</span> <span class="o">-</span><span class="n">w</span> <span class="s2">&quot;password&quot;</span> <span class="o">-</span><span class="n">H</span> <span class="n">ldapi</span><span class="p">:</span><span class="o">///</span> <span class="o">-</span><span class="n">f</span> <span class="n">memberof_config</span><span class="o">.</span><span class="n">ldif</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="section" id="consejos">
+<h2>Consejos<a class="headerlink" href="#consejos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Comprobar que si el usuario &#8216;admin&#8217; de sysPass coincide con el de LDAP, es necesario añadir este usuario al grupo de LDAP que tiene permisos de acceso a sysPass.</li>
+<li>El nombre y email de los usuarios de LDAP son obtenidos de los atributos &#8216;displayname&#8217;,&#8217;fullname&#8217; y &#8216;mail&#8217;.</li>
+<li>Es posible usar ldaps configurando la URI de conexión como &#8216;ldaps:/ /mi_servidor_ldap&#8217;.</li>
+<li>Puedes instalar <a class="reference external" href="http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page">phpLDAPadmin</a> para crear y administrar objetos de LDAP.</li>
+</ul>
+</div>
+<div class="section" id="enlaces">
+<h2>Enlaces<a class="headerlink" href="#enlaces" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Wiki de LDAP en Debian: <a class="reference external" href="https://wiki.debian.org/LDAP/OpenLDAPSetup">https://wiki.debian.org/LDAP/OpenLDAPSetup</a></li>
+<li>Configuración de &#8216;memberof&#8217;: <a class="reference external" href="http://www.cbjck.de/2012/05/enabling-the-memberof-overlay-for-openldap/">http://www.cbjck.de/2012/05/enabling-the-memberof-overlay-for-openldap/</a></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2010-2017, Rubén Domínguez &lt;nuxsmin _at_ syspass _dot_ org&gt;.<br/>
+      Last updated on Feb 06, 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

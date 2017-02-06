@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2017, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-06 01:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/faq.rst:2
+msgid "Preguntas Frecuentes"
+msgstr ""
+
+#: ../../source/faq.rst:5
+msgid "¿Para qué sirve sysPass?"
+msgstr ""
+
+#: ../../source/faq.rst:7
+msgid "sysPass un gestor de claves que permite almacenarlas de forma segura mediante encriptación de doble sentido con clave maestra. Las claves están asociadas a cuentas, las cuales tienen información detallada del propósito de la misma como: cliente, categoría, notas, archivos, etc."
+msgstr ""
+
+#: ../../source/faq.rst:9
+msgid "La idea inicial era la de hacer accesible las claves de cuentas de acceso a servidores y servicios en un entorno multiusuario, de forma segura y que pudiera ser exportable a una memoria externa."
+msgstr ""
+
+#: ../../source/faq.rst:12
+msgid "¿Dónde se puede instalar sysPass?"
+msgstr ""
+
+#: ../../source/faq.rst:14
+msgid "La aplicación pueder ser instalada en cualquier sistema que disponga de Apache, PHP y MySQL."
+msgstr ""
+
+#: ../../source/faq.rst:17
+msgid "¿Cómo se instala sysPass?"
+msgstr ""
+
+#: ../../source/faq.rst:19
+msgid "Bajar la aplicación desde https://github.com/nuxsmin/sysPass/releases/latest y seguir los pasos de :doc:`/installing/index`"
+msgstr ""
+
+#: ../../source/faq.rst:22
+msgid "¿Qué métodos de autentificación utiliza?"
+msgstr ""
+
+#: ../../source/faq.rst:24
+msgid "sysPass utiliza MySQL/MariaDB o LDAP como “backends” de autentificación."
+msgstr ""
+
+#: ../../source/faq.rst:26
+msgid "En caso de utilizar LDAP, si no es posible conectar con el servidor de LDAP, se utilizará MySQL como “backend” utilizando los datos de acceso de la última sesión iniciada en LDAP."
+msgstr ""
+
+#: ../../source/faq.rst:28
+msgid "Para más información ver: :doc:`/application/authentication`"
+msgstr ""
+
+#: ../../source/faq.rst:31
+msgid "¿Para qué sirve la encriptación?"
+msgstr ""
+
+#: ../../source/faq.rst:33
+msgid "La encriptación de las claves en la base de datos permite que, en caso de que alguien tenga acceso a ésta o si se realiza una exportación de la misma, no sea legible sin la clave maestra."
+msgstr ""
+
+#: ../../source/faq.rst:35
+msgid "Esta solución es muy conveniente para ejecutar la aplicación desde un pendrive, para casos en los que no es posible acceder al servidor donde se almacena la aplicación. ¿Qué tipo de encriptación utiliza?"
+msgstr ""
+
+#: ../../source/faq.rst:38
+msgid "El esquema de cifrado utilizado es rijndael-256_ en modo CBC_."
+msgstr ""
+
+#: ../../source/faq.rst:40
+#: ../../source/faq.rst:65
+msgid "Para más información ver: :doc:`/application/encryption`"
+msgstr ""
+
+#: ../../source/faq.rst:46
+msgid "¿Qué quiere decir “portable”?"
+msgstr ""
+
+#: ../../source/faq.rst:48
+msgid "Este término se refiere a aquellas aplicaciones que pueden ser ejecutadas sin realizar la instalación de componentes en el sistema operativo que la ejecuta."
+msgstr ""
+
+#: ../../source/faq.rst:50
+msgid "Esta aplicación es posible hacerla “portable” mediante la instalación de apache, php y mysql en una unidad externa. Para ello, es posible utilizar cualquiera de los paquetes LAMP_ disponibles como WAMP, XAMPP, etc."
+msgstr ""
+
+#: ../../source/faq.rst:54
+msgid "La herramienta de backup permite realizar una copia de todo el entorno (aplicación y base de datos), para poder instalarlo en la unidad externa. La encriptación de los datos de las cuentas, hace que la seguridad sea muy alta en caso de pérdida de la unidad extraíble."
+msgstr ""
+
+#: ../../source/faq.rst:57
+msgid "¿Hay una clave maestra por cada cuenta/usuario?"
+msgstr ""
+
+#: ../../source/faq.rst:59
+msgid "La clave maestra es global para todas las cuentas y usuarios."
+msgstr ""
+
+#: ../../source/faq.rst:61
+msgid "Cada vez que un usuario se dé de alta, cambie su clave personal o se reestablezca la clave maestra, será necesario que éste la introduzca en el siguiente inicio de sesión."
+msgstr ""
+
+#: ../../source/faq.rst:63
+msgid "Cada vez que se produzca un cambio de clave maestra, los usuarios que tengan iniciada la sesión, sólo podrán visualizar las cuentas hasta que introduzca la nueva clave."
+msgstr ""
+
+#: ../../source/faq.rst:68
+msgid "¿Qué son los enlaces a Wiki?"
+msgstr ""
+
+#: ../../source/faq.rst:70
+msgid "Nos permiten enlazar las cuentas con un determinado patrón de nombre, a una Wiki externa que permita pasar el nombre de la cuenta como parámetro en la URL."
+msgstr ""
+
+#: ../../source/faq.rst:72
+msgid "Hay dos tipos de enlaces, uno que enlaza con la página de búsqueda de la Wiki y pasa como parámetro el nombre del cliente, y otro, que enlaza directamente con la página de la cuenta."
+msgstr ""
+
+#: ../../source/faq.rst:75
+msgid "¿Para qué sirven las categorías?"
+msgstr ""
+
+#: ../../source/faq.rst:77
+msgid "Las categorías tienen como objetivo el clasificar las cuentas para poder realizar búsquedas más precisas."
+msgstr ""
+
+#: ../../source/faq.rst:80
+msgid "¿Para qué sirven los grupos de usuarios?"
+msgstr ""
+
+#: ../../source/faq.rst:82
+msgid "Estos grupos se utilizan para dar acceso a los usuarios a las cuentas que tengan dicho grupo como principal o secundario."
+msgstr ""
+
+#: ../../source/faq.rst:85
+msgid "¿Para qué sirve el campo cliente?"
+msgstr ""
+
+#: ../../source/faq.rst:87
+msgid "Al igual que las categorías, es posible hacer búsquedas basadas en el cliente. Este campo se puede tratar de forma genérica como departamento, empresa, división, etc."
+msgstr ""
+
+#: ../../source/faq.rst:89
+msgid "En futuras versiones se podrán asociar usuarios a clientes."
+msgstr ""
+
+#: ../../source/faq.rst:92
+msgid "¿Existe un histórico de cuentas?"
+msgstr ""
+
+#: ../../source/faq.rst:94
+msgid "Sí, cada vez que se realiza una modificación de una cuenta, se realiza una copia del estado anterior de la misma."
+msgstr ""
+
+#: ../../source/faq.rst:96
+msgid "En los detalles de la cuenta se puede visualizar cada registro del histórico de una cuenta. Si la clave maestra con la que fue guardada la cuenta en dicho punto no conincide con la actual, no se podrá mostrar."
+msgstr ""
+
+#: ../../source/faq.rst:99
+msgid "¿Para qué sirven los perfiles?"
+msgstr ""
+
+#: ../../source/faq.rst:101
+msgid "Los perfiles son usados para definir las acciones que pueden realizar los usuarios."
+msgstr ""
+
+#: ../../source/faq.rst:103
+msgid "Existen 29 niveles de acceso que pueden ser activados de forma conjunta, permitiendo así definir a qué partes de la aplicación pueden acceder los usuarios con dicho perfil."
+msgstr ""
+
+#: ../../source/faq.rst:106
+msgid "¿Qué es el modo mantenimiento?"
+msgstr ""
+
+#: ../../source/faq.rst:108
+msgid "Este modo se utiliza para impedir que los usuarios utilicen la aplicación en las ocasiones en las que se estén realizando operaciones sobre la Base de Datos, actualizaciones, etc."
+msgstr ""
+
+#: ../../source/faq.rst:110
+msgid "El usuario que active el modo matenimiento será el único que puede utilizar la aplicación hasta el cierre de sesión. Después de ello es necesario desactivarlo en el archivo \"config/config.xml\" bajo la etiqueta \"maintenance\""
+msgstr ""
+
+#: ../../source/faq.rst:113
+msgid "¿Puedo cambiar la Clave Maestra?"
+msgstr ""
+
+#: ../../source/faq.rst:115
+msgid "Sí, para ello es necesario conocer la actual. Se recomienda realizar una copia de seguridad de la Base de Datos."
+msgstr ""
+
+#: ../../source/faq.rst:118
+msgid "No recuerdo la Clave Maestra, ¿Puedo desencriptar las claves?"
+msgstr ""
+
+#: ../../source/faq.rst:120
+msgid "No, no es posible visualizar una clave sin la Clave Maestra."
+msgstr ""
+
+#: ../../source/faq.rst:123
+msgid "¿Funciona el backup en Windows?"
+msgstr ""
+
+#: ../../source/faq.rst:125
+msgid "Sí, desde la versión 1.1 se utiliza la librería PHAR de PHP para realizar los backups."
+msgstr ""
+
+#: ../../source/faq.rst:128
+msgid "El lenguaje no cambia"
+msgstr ""
+
+#: ../../source/faq.rst:130
+msgid "Revisa las locales instaladas en tu sistema (servidor), porque sysPass usa el sistema de internacionalización `GNU gettext`_."
+msgstr ""
+
+#: ../../source/faq.rst:134
+msgid "Las locales deben de ser de la variante UTF-8."
+msgstr ""
+

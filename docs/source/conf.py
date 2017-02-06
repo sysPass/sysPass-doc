@@ -16,8 +16,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 #import guzzle_sphinx_theme
@@ -251,7 +251,7 @@ html_last_updated_fmt = '%b %d, %Y'
 #
 # html_search_language = 'en'
 
-locale_dirs = ['locale']
+locale_dirs = ['../locale']
 
 # A dictionary with options for the search language support, empty by default.
 # 'ja' uses this config value.

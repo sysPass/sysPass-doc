@@ -3,167 +3,201 @@
 # This file is distributed under the same license as the sysPass package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-05 19:47+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-02-06 13:40+0100\n"
+"Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
+"Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Language: en\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: ../../source/faq.rst:2
 msgid "Preguntas Frecuentes"
-msgstr ""
+msgstr "Frequently Asked Questions"
 
 #: ../../source/faq.rst:5
 msgid "¿Para qué sirve sysPass?"
-msgstr ""
+msgstr "What is sysPass?"
 
 #: ../../source/faq.rst:7
 msgid ""
 "sysPass un gestor de claves que permite almacenarlas de forma segura "
-"mediante encriptación de doble sentido con clave maestra. Las claves "
-"están asociadas a cuentas, las cuales tienen información detallada del "
-"propósito de la misma como: cliente, categoría, notas, archivos, etc."
+"mediante encriptación de doble sentido con clave maestra. Las claves están "
+"asociadas a cuentas, las cuales tienen información detallada del propósito "
+"de la misma como: cliente, categoría, notas, archivos, etc."
 msgstr ""
+"sysPass is a password manager that allows to save passwords using "
+"bidirectional encryption with a master password to a database. Passwords are "
+"associated to accounts, and these have detailed information about it like: "
+"customer, category, notes, files, etc. "
 
 #: ../../source/faq.rst:9
 msgid ""
-"La idea inicial era la de hacer accesible las claves de cuentas de acceso"
-" a servidores y servicios en un entorno multiusuario, de forma segura y "
-"que pudiera ser exportable a una memoria externa."
+"La idea inicial era la de hacer accesible las claves de cuentas de acceso a "
+"servidores y servicios en un entorno multiusuario, de forma segura y que "
+"pudiera ser exportable a una memoria externa."
 msgstr ""
+"The initial idea was to make servers and services passwords accesible in a "
+"multiuser environment with security applied and make a portable bundle to "
+"store on a flash drive. "
 
 #: ../../source/faq.rst:12
 msgid "¿Dónde se puede instalar sysPass?"
-msgstr ""
+msgstr "Where can I install sysPass?"
 
 #: ../../source/faq.rst:14
 msgid ""
 "La aplicación pueder ser instalada en cualquier sistema que disponga de "
 "Apache, PHP y MySQL."
 msgstr ""
+"The application can be installed on any system that has Apache, PHP and "
+"MySQL installed."
 
 #: ../../source/faq.rst:17
 msgid "¿Cómo se instala sysPass?"
-msgstr ""
+msgstr "How do I install sysPass"
 
 #: ../../source/faq.rst:19
 msgid ""
-"Bajar la aplicación desde "
-"https://github.com/nuxsmin/sysPass/releases/latest y seguir los pasos de "
-":doc:`/installing/index`"
+"Bajar la aplicación desde https://github.com/nuxsmin/sysPass/releases/latest "
+"y seguir los pasos de :doc:`/installing/index`"
 msgstr ""
+"You can download the application from https://github.com/nuxsmin/sysPass/"
+"releases/latest and follow steps on :doc:`/installing/index`"
 
 #: ../../source/faq.rst:22
 msgid "¿Qué métodos de autentificación utiliza?"
-msgstr ""
+msgstr "Which authentication methods are used?"
 
 #: ../../source/faq.rst:24
-msgid "sysPass utiliza MySQL/MariaDB o LDAP como “backends” de autentificación."
-msgstr ""
+msgid ""
+"sysPass utiliza MySQL/MariaDB o LDAP como “backends” de autentificación."
+msgstr "sysPass uses MySQL/MariaDB or LDAP as authentication backends. "
 
 #: ../../source/faq.rst:26
 msgid ""
-"En caso de utilizar LDAP, si no es posible conectar con el servidor de "
-"LDAP, se utilizará MySQL como “backend” utilizando los datos de acceso de"
-" la última sesión iniciada en LDAP."
+"En caso de utilizar LDAP, si no es posible conectar con el servidor de LDAP, "
+"se utilizará MySQL como “backend” utilizando los datos de acceso de la "
+"última sesión iniciada en LDAP."
 msgstr ""
+"If LDAP is used and it is for some reason not possible to connect to the "
+"configured LDAP server, it will use MySQL as backend. In this case, user "
+"login data will be the last used on user login by LDAP."
 
 #: ../../source/faq.rst:28
 msgid "Para más información ver: :doc:`/application/authentication`"
-msgstr ""
+msgstr "More information on: :doc:`/application/authentication`"
 
 #: ../../source/faq.rst:31
 msgid "¿Para qué sirve la encriptación?"
-msgstr ""
+msgstr "What is the encryption for?"
 
 #: ../../source/faq.rst:33
 msgid ""
-"La encriptación de las claves en la base de datos permite que, en caso de"
-" que alguien tenga acceso a ésta o si se realiza una exportación de la "
-"misma, no sea legible sin la clave maestra."
+"La encriptación de las claves en la base de datos permite que, en caso de "
+"que alguien tenga acceso a ésta o si se realiza una exportación de la misma, "
+"no sea legible sin la clave maestra."
 msgstr ""
+"The database passwords encryption allows that in case of anyone get access "
+"to the database or a data exporting is performed, it won't be readable "
+"without the master key."
 
 #: ../../source/faq.rst:35
 msgid ""
 "Esta solución es muy conveniente para ejecutar la aplicación desde un "
-"pendrive, para casos en los que no es posible acceder al servidor donde "
-"se almacena la aplicación. ¿Qué tipo de encriptación utiliza?"
+"pendrive, para casos en los que no es posible acceder al servidor donde se "
+"almacena la aplicación. ¿Qué tipo de encriptación utiliza?"
 msgstr ""
+"This solution is very convenient when you run the application from a flash "
+"drive, because if you lose it, the information is secured. "
 
 #: ../../source/faq.rst:38
 msgid "El esquema de cifrado utilizado es rijndael-256_ en modo CBC_."
-msgstr ""
+msgstr "The encryption schema used is rijndael-256_ in CBC_ mode."
 
 #: ../../source/faq.rst:40 ../../source/faq.rst:65
 msgid "Para más información ver: :doc:`/application/encryption`"
-msgstr ""
+msgstr "More information on: :doc:`/application/encryption`"
 
 #: ../../source/faq.rst:46
 msgid "¿Qué quiere decir “portable”?"
-msgstr ""
+msgstr "What is portable?"
 
 #: ../../source/faq.rst:48
 msgid ""
-"Este término se refiere a aquellas aplicaciones que pueden ser ejecutadas"
-" sin realizar la instalación de componentes en el sistema operativo que "
-"la ejecuta."
+"Este término se refiere a aquellas aplicaciones que pueden ser ejecutadas "
+"sin realizar la instalación de componentes en el sistema operativo que la "
+"ejecuta."
 msgstr ""
+"It means that you can run the application without really installing it."
 
 #: ../../source/faq.rst:50
 msgid ""
 "Esta aplicación es posible hacerla “portable” mediante la instalación de "
-"apache, php y mysql en una unidad externa. Para ello, es posible utilizar"
-" cualquiera de los paquetes LAMP_ disponibles como WAMP, XAMPP, etc."
+"apache, php y mysql en una unidad externa. Para ello, es posible utilizar "
+"cualquiera de los paquetes LAMP_ disponibles como WAMP, XAMPP, etc."
 msgstr ""
+"This application can be portable by installing Apache, PHP and MySQL on a "
+"flash drive. You can use any available LAMP bundles like WAMP, XAMPP, etc."
 
 #: ../../source/faq.rst:54
 msgid ""
 "La herramienta de backup permite realizar una copia de todo el entorno "
-"(aplicación y base de datos), para poder instalarlo en la unidad externa."
-" La encriptación de los datos de las cuentas, hace que la seguridad sea "
-"muy alta en caso de pérdida de la unidad extraíble."
+"(aplicación y base de datos), para poder instalarlo en la unidad externa. La "
+"encriptación de los datos de las cuentas, hace que la seguridad sea muy alta "
+"en caso de pérdida de la unidad extraíble."
 msgstr ""
+"The backup tool allows you to make a backup of whole the environment "
+"(application and database) for example to store it on a flash drive or put "
+"it somewhere safe as a backup."
 
 #: ../../source/faq.rst:57
 msgid "¿Hay una clave maestra por cada cuenta/usuario?"
-msgstr ""
+msgstr "Is there a master password for each account/user?"
 
 #: ../../source/faq.rst:59
 msgid "La clave maestra es global para todas las cuentas y usuarios."
-msgstr ""
+msgstr "The master password is global for all accounts and users."
 
 #: ../../source/faq.rst:61
 msgid ""
 "Cada vez que un usuario se dé de alta, cambie su clave personal o se "
-"reestablezca la clave maestra, será necesario que éste la introduzca en "
-"el siguiente inicio de sesión."
+"reestablezca la clave maestra, será necesario que éste la introduzca en el "
+"siguiente inicio de sesión."
 msgstr ""
+"Each time a user is added, his personal password is changed or the master "
+"password is reset, the user needs to enter the master password on the next "
+"session login."
 
 #: ../../source/faq.rst:63
 msgid ""
-"Cada vez que se produzca un cambio de clave maestra, los usuarios que "
-"tengan iniciada la sesión, sólo podrán visualizar las cuentas hasta que "
-"introduzca la nueva clave."
+"Cada vez que se produzca un cambio de clave maestra, los usuarios que tengan "
+"iniciada la sesión, sólo podrán visualizar las cuentas hasta que introduzca "
+"la nueva clave."
 msgstr ""
+"Each time the master password is changed, the users that are logged in, will "
+"only be able to view accounts details, until the new password is entered."
 
 #: ../../source/faq.rst:68
 msgid "¿Qué son los enlaces a Wiki?"
-msgstr ""
+msgstr "What are Wiki links?"
 
 #: ../../source/faq.rst:70
 msgid ""
-"Nos permiten enlazar las cuentas con un determinado patrón de nombre, a "
-"una Wiki externa que permita pasar el nombre de la cuenta como parámetro "
-"en la URL."
+"Nos permiten enlazar las cuentas con un determinado patrón de nombre, a una "
+"Wiki externa que permita pasar el nombre de la cuenta como parámetro en la "
+"URL."
 msgstr ""
+"It allows you to link the accounts with a name pattern to an external Wiki "
+"that allow to pass the account name as a parameter in the URL."
 
 #: ../../source/faq.rst:72
 msgid ""
@@ -171,30 +205,35 @@ msgid ""
 "Wiki y pasa como parámetro el nombre del cliente, y otro, que enlaza "
 "directamente con la página de la cuenta."
 msgstr ""
+"There are two types of links, the one that links to a Wiki search page (and "
+"in which the account name is passed as a parameter), and the other that "
+"links to the account page in the Wiki."
 
 #: ../../source/faq.rst:75
 msgid "¿Para qué sirven las categorías?"
-msgstr ""
+msgstr "What are categories?"
 
 #: ../../source/faq.rst:77
 msgid ""
 "Las categorías tienen como objetivo el clasificar las cuentas para poder "
 "realizar búsquedas más precisas."
-msgstr ""
+msgstr "Its goal is to classify the accounts to make more precise searches."
 
 #: ../../source/faq.rst:80
 msgid "¿Para qué sirven los grupos de usuarios?"
-msgstr ""
+msgstr "What are user groups?"
 
 #: ../../source/faq.rst:82
 msgid ""
-"Estos grupos se utilizan para dar acceso a los usuarios a las cuentas que"
-" tengan dicho grupo como principal o secundario."
+"Estos grupos se utilizan para dar acceso a los usuarios a las cuentas que "
+"tengan dicho grupo como principal o secundario."
 msgstr ""
+"These groups are used to give users access to accounts that have a certain "
+"group set as primary or secondary group"
 
 #: ../../source/faq.rst:85
 msgid "¿Para qué sirve el campo cliente?"
-msgstr ""
+msgstr "What is customer field?"
 
 #: ../../source/faq.rst:87
 msgid ""
@@ -202,37 +241,44 @@ msgid ""
 "cliente. Este campo se puede tratar de forma genérica como departamento, "
 "empresa, división, etc."
 msgstr ""
+"Like categories, it is possible to do searches based on the customer. This "
+"field can be treated generically as department, company, division, etc.."
 
 #: ../../source/faq.rst:89
 msgid "En futuras versiones se podrán asociar usuarios a clientes."
-msgstr ""
+msgstr " In future version it will be able to associate users to customers."
 
 #: ../../source/faq.rst:92
 msgid "¿Existe un histórico de cuentas?"
-msgstr ""
+msgstr "Is there an account history?"
 
 #: ../../source/faq.rst:94
 msgid ""
-"Sí, cada vez que se realiza una modificación de una cuenta, se realiza "
-"una copia del estado anterior de la misma."
+"Sí, cada vez que se realiza una modificación de una cuenta, se realiza una "
+"copia del estado anterior de la misma."
 msgstr ""
+"Yes, each time an account is modified or deleted, the application saves a "
+"copy of the last state."
 
 #: ../../source/faq.rst:96
 msgid ""
-"En los detalles de la cuenta se puede visualizar cada registro del "
-"histórico de una cuenta. Si la clave maestra con la que fue guardada la "
-"cuenta en dicho punto no conincide con la actual, no se podrá mostrar."
+"En los detalles de la cuenta se puede visualizar cada registro del histórico "
+"de una cuenta. Si la clave maestra con la que fue guardada la cuenta en "
+"dicho punto no conincide con la actual, no se podrá mostrar."
 msgstr ""
+"You can switch to a history point at account details page. If the master "
+"password that was used to save account history point differs from current, "
+"the password won't be shown."
 
 #: ../../source/faq.rst:99
 msgid "¿Para qué sirven los perfiles?"
-msgstr ""
+msgstr "What are profiles?"
 
 #: ../../source/faq.rst:101
 msgid ""
-"Los perfiles son usados para definir las acciones que pueden realizar los"
-" usuarios."
-msgstr ""
+"Los perfiles son usados para definir las acciones que pueden realizar los "
+"usuarios."
+msgstr "Profiles are used to define actions that the users can do."
 
 #: ../../source/faq.rst:103
 msgid ""
@@ -240,65 +286,75 @@ msgid ""
 "permitiendo así definir a qué partes de la aplicación pueden acceder los "
 "usuarios con dicho perfil."
 msgstr ""
+"There are 16 access levels that can be activated and it allows to define "
+"which modules can be accessed by the users in which are defined."
 
 #: ../../source/faq.rst:106
 msgid "¿Qué es el modo mantenimiento?"
-msgstr ""
+msgstr "What is maintenance mode?"
 
 #: ../../source/faq.rst:108
 msgid ""
-"Este modo se utiliza para impedir que los usuarios utilicen la aplicación"
-" en las ocasiones en las que se estén realizando operaciones sobre la "
-"Base de Datos, actualizaciones, etc."
+"Este modo se utiliza para impedir que los usuarios utilicen la aplicación en "
+"las ocasiones en las que se estén realizando operaciones sobre la Base de "
+"Datos, actualizaciones, etc."
 msgstr ""
+"This mode is used to disable the users to log in to the application while "
+"you are doing operations on database, updating, etc."
 
 #: ../../source/faq.rst:110
 msgid ""
-"El usuario que active el modo matenimiento será el único que puede "
-"utilizar la aplicación hasta el cierre de sesión. Después de ello es "
-"necesario desactivarlo en el archivo \"config/config.xml\" bajo la "
-"etiqueta \"maintenance\""
+"El usuario que active el modo matenimiento será el único que puede utilizar "
+"la aplicación hasta el cierre de sesión. Después de ello es necesario "
+"desactivarlo en el archivo \"config/config.xml\" bajo la etiqueta "
+"\"maintenance\""
 msgstr ""
+"The user that enables the maintenance mode, will be the only one that can "
+"use the application until a session log out. After that it will be needed to "
+"disable it in the \"config/config.xml\" file within the tag \"maintenance\""
 
 #: ../../source/faq.rst:113
 msgid "¿Puedo cambiar la Clave Maestra?"
-msgstr ""
+msgstr "Can I change Master Password?"
 
 #: ../../source/faq.rst:115
 msgid ""
 "Sí, para ello es necesario conocer la actual. Se recomienda realizar una "
 "copia de seguridad de la Base de Datos."
 msgstr ""
+"Yes, you need to know the current one. It's advisable to make a database "
+"backup before this process."
 
 #: ../../source/faq.rst:118
 msgid "No recuerdo la Clave Maestra, ¿Puedo desencriptar las claves?"
-msgstr ""
+msgstr "I don't remember Master Password, can I decrypt the passwords?"
 
 #: ../../source/faq.rst:120
 msgid "No, no es posible visualizar una clave sin la Clave Maestra."
-msgstr ""
+msgstr "No, it's not possible view the passwords without the Master Password."
 
 #: ../../source/faq.rst:123
 msgid "¿Funciona el backup en Windows?"
-msgstr ""
+msgstr "Does backup runs on Windows?"
 
 #: ../../source/faq.rst:125
 msgid ""
-"Sí, desde la versión 1.1 se utiliza la librería PHAR de PHP para realizar"
-" los backups."
-msgstr ""
+"Sí, desde la versión 1.1 se utiliza la librería PHAR de PHP para realizar "
+"los backups."
+msgstr "Yes, it uses the PHP PHAR library to get it working."
 
 #: ../../source/faq.rst:128
 msgid "El lenguaje no cambia"
-msgstr ""
+msgstr "The language doesn't change"
 
 #: ../../source/faq.rst:130
 msgid ""
-"Revisa las locales instaladas en tu sistema (servidor), porque sysPass "
-"usa el sistema de internacionalización `GNU gettext`_."
+"Revisa las locales instaladas en tu sistema (servidor), porque sysPass usa "
+"el sistema de internacionalización `GNU gettext`_."
 msgstr ""
+"Please take a look to the locales installed on your system (server), because "
+"sysPass uses the `GNU gettext`_ system for internationalization."
 
 #: ../../source/faq.rst:134
 msgid "Las locales deben de ser de la variante UTF-8."
-msgstr ""
-
+msgstr "The installed locales should be on the UTF-8 variant."

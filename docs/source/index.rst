@@ -1,3 +1,5 @@
+.. warning:: Esta es una versión en desarrollo de la documentación de sysPass 2.0
+
 .. container:: logo
 
   .. image:: _static/logo.png
@@ -34,7 +36,6 @@ Características
 .. toctree::
     :maxdepth: 2
     :name: mastertoc
-    :caption: Índice
 
     installing/index
     configuration/index

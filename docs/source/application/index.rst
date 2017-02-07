@@ -9,7 +9,7 @@ sysPass es una aplicación que utiliza una base de datos MySQL/MariaDB para alma
 
 .. toctree::
     :maxdepth: 2
-    :caption: Cómo funciona
+    :name: applicationtoc
 
     encryption
     authentication

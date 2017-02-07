@@ -150,7 +150,8 @@ html_theme = 'bootstrap'
 #
 # html_theme_options = {}
 html_theme_options = {
-    'bootswatch_theme': "flatly"
+    'navbar_class': "navbar navbar-inverse",
+    'bootswatch_theme': "custom"
 }
 
 # Add any paths that contain custom themes here, relative to this directory.

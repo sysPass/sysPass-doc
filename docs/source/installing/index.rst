@@ -5,9 +5,10 @@ Instalación
 
 .. toctree::
     :maxdepth: 2
-    :caption: Instalación
+    :name: installationtoc
 
     debian8
     centos7
     gentoo
+    docker
     hostingmode

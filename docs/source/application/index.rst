@@ -12,6 +12,7 @@ sysPass es una aplicación que utiliza una base de datos MySQL/MariaDB para alma
     :name: applicationtoc
 
     encryption
+    security
     authentication
     authorization
     permissions

@@ -46,6 +46,345 @@ Para mejorar la seguridad de los datos enviados, se hace uso de PKI_ para la enc
 
 Las claves pública y privada son generadas en el directorio "config" de la aplicación.
 
+Diagramas
+=========
+
+Proceso de Login
+----------------
+
+.. only:: lang_es
+
+  .. uml::
+
+    @startuml
+
+    start
+
+    :Login;
+
+    :Leer datos usuario;
+
+    :Recuperar clave maestra encriptada;
+
+    note right
+     Se usa una clave de 32 bytes AES de:
+     clave + login + salt
+    end note
+
+    if (Tiene la clave guardada?) then (Sí)
+      :Desencriptar clave maestra;
+    else (No)
+      :Login;
+
+      :Solicitar clave maestra;
+
+      if (Es clave maestra temporal?) then (Sí)
+        :Verificar;
+      else (No)
+        :Verificar clave maestra;
+      endif
+    endif
+
+    :Encriptar y guardar en la sesión del usuario;
+
+    note right
+     Se usa una clave de 32 bytes AES de:
+     session_id  + salt
+    end note
+
+    stop
+
+    @enduml
+
+.. only:: lang_en
+
+  .. uml::
+
+    @startuml
+
+    start
+
+    :Login;
+
+    :Get user data;
+
+    :Retrieve the encrypted master key;
+
+    note right
+      Generated from a 32 bytes AES key using:
+      password + login + hash
+    end note
+
+    if (Does it have the key saved?) then (Yes)
+      :Decrypt the master key;
+    else (No)
+      :Login;
+
+      :Request master key;
+
+      if (Is it a temporary master key?) then (Yes)
+        :Verify;
+      else (No)
+        :Verify master key;
+      endif
+    endif
+
+    :Encrypt and save in the user's session;
+
+    note right
+      Generated from a 32 bytes AES key using:
+      session_id + salt
+    end note
+
+    stop
+
+    @enduml
+
+Proceso de Clave Maestra
+------------------------
+
+.. only:: lang_es
+
+  .. uml::
+
+    @startuml
+
+    start
+
+    :Nueva clave maestra;
+
+    :Iniciar transacción SQL;
+
+    :Desencriptar cuentas
+    y volver a encriptar;
+
+    :Desencriptar cuentas del histórico
+    y volver a encriptar;
+
+    :Desencriptar campos personalizados
+    y volver a encriptar;
+
+    if (Han habido errores?) then (Sí)
+      :Deshacer transacción;
+
+      :Mostrar error y finalizar;
+    else (No)
+      :Finalizar transacción SQL;
+
+      :Generar hash Blowfish y guardar en BD;
+
+      note right
+       Se genera:
+       salt + hash (con salt)
+       Se guarda en tabla config.
+      end note
+
+      :Actualizar fecha de generación en BD;
+
+      note right
+       Fuerza que los usuarios cambien la clave
+      end note
+
+      :Enviar correo;
+    endif
+
+    stop
+
+    @enduml
+
+.. only:: lang_en
+
+  .. uml::
+
+    @startuml
+
+    start
+
+    :New master key;
+
+    :Begin SQL transaction;
+
+    :Decrypt accounts
+    and encrypt them again;
+
+    :Decrypt accounts history
+    and encrypt them again;
+
+    :Decrypt custom fields
+    and encrypt them again;
+
+    if (Is there any error?) then (Yes)
+      :Rollback transaction;
+
+      :Display error and finalize;
+    else (No)
+      :Finalize SQL transaction;
+
+      :Generate a Blowfish hash an save it in the DB;
+
+      note right
+        Generated using:
+        salt + hash (with salt)
+        Saved in the config table.
+      end note
+
+      :Update generation date in the DB;
+
+      note right
+       It forces to all users to change the master key
+      end note
+
+      :Send email;
+    endif
+    stop
+
+    @enduml
+
+Proceso de Clave Maestra Temporal
+---------------------------------
+
+.. only:: lang_es
+
+  .. uml::
+
+    @startuml
+
+    start
+
+    :Recuperar clave maestra en sesión;
+
+    :Generar clave para
+    encriptar la clave maestra;
+
+    note right
+      Se genera una clave AES de 32 bytes:
+      session_id + salt
+    end note
+
+    :Guardar encriptada en BD;
+
+    note right
+     Se guarda en tabla config.
+    end note
+
+    :Generar hash Blowfish y guardar en BD;
+
+    note right
+     Se genera:
+     salt + hash (con salt)
+     Se guarda en tabla config.
+    end note
+
+    :Mostar clave de encriptación
+    en la sesión actual.;
+
+    note right
+     Se elimina al salir
+    end note
+
+    :Enviar correo;
+
+    stop
+
+    @enduml
+
+.. only:: lang_en
+
+  .. uml::
+
+    @startuml
+
+    start
+
+    :Retrieve the master key from the session;
+
+    :Generate a 32 bytes key for
+    encrypting the master key;
+
+    note right
+      Generated from a 32 bytes AES key using:
+      session_id + salt
+    end note
+
+    :Save encrypted in the DB;
+
+    note right
+     Saved in the config table.
+    end note
+
+    :Generate a Blowfish hash and save it in the BD;
+
+    note right
+     Generated using:
+     salt + hash (with salt)
+     Saved in the config table.
+    end note
+
+    :Display the encryption key
+    in the current session;
+
+    note right
+     It's deleted on log out
+    end note
+
+    :Send email;
+
+    stop
+
+    @enduml
+
+Proceso PKI
+-----------
+
+.. only:: lang_es
+
+  .. uml::
+
+    @startuml
+
+    == Inicialización ==
+    Cliente -> Servidor: Solicita los datos de entorno con PKI
+    Servidor --> Cliente: Envía la clave pública
+
+    note right
+      El par de claves (publica y privada)
+      es creado si no existen
+    end note
+
+    == Enviando datos de formulario ==
+
+    Cliente -> Servidor: Envia la clave encriptada
+
+    note left: Usando la clave pública en Javascript
+
+    Servidor --> Cliente: Desencripta la clave, la guarda y envía la respuesta
+
+    @enduml
+
+.. only:: lang_en
+
+  .. uml::
+
+    @startuml
+
+    == Initialization ==
+    Client -> Server: Requests environment data within PKI
+    Server --> Client: Sends the public key
+
+    note right
+      Key pairs (public and private)
+      are created if not exists
+    end note
+
+    == Sending form data ==
+
+    Client -> Server: Sends password data encrypted
+
+    note left: Using public key within Javascript
+
+    Server --> Client: Decrypts the password, stores it and sends response
+
+    @enduml
 
 .. warning::
 

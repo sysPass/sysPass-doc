@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2017, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-08 14:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../source/index.rst:1
+msgid "Esta es una versión en desarrollo de la documentación de sysPass 2.0"
+msgstr ""
+
+#: ../../../source/index.rst:11
+msgid "Introducción"
+msgstr ""
+
+#: ../../../source/index.rst:13
+msgid "sysPass es un gestor de claves web escrito en PHP que permite la gestión centralizada de claves en un entorno multiusuario."
+msgstr ""
+
+#: ../../../source/index.rst:16
+msgid "Características"
+msgstr ""
+
+#: ../../../source/index.rst:18
+msgid "Interfaz con Material Design Lite en HTML5 y Ajax"
+msgstr ""
+
+#: ../../../source/index.rst:19
+msgid "Claves encriptadas con AES-256 CBC"
+msgstr ""
+
+#: ../../../source/index.rst:20
+msgid "Multiusuario con gestión de usuarios, grupos y perfiles"
+msgstr ""
+
+#: ../../../source/index.rst:21
+msgid "Gestión avanzada de perfiles con 29 niveles de acceso"
+msgstr ""
+
+#: ../../../source/index.rst:22
+msgid "Autentificación con MySQL/MariaDB, OpenLDAP y Active Directory"
+msgstr ""
+
+#: ../../../source/index.rst:23
+msgid "Notificaciones por email e in-app de actividad"
+msgstr ""
+
+#: ../../../source/index.rst:24
+msgid "Enlaces públicos a cuentas sin necesidad de login"
+msgstr ""
+
+#: ../../../source/index.rst:25
+msgid "Historial de cambios en cuentas"
+msgstr ""
+
+#: ../../../source/index.rst:26
+msgid "Gestión de archivos asociados a cuentas con previsualización de imágenes"
+msgstr ""
+
+#: ../../../source/index.rst:27
+msgid "Multilenguaje, con traducciones en Inglés, Catalán, Alemán, Polaco, Ruso, Francés y Holandés"
+msgstr ""
+
+#: ../../../source/index.rst:28
+msgid "Enlace a Wiki externa e integración con API de DokuWiki"
+msgstr ""
+
+#: ../../../source/index.rst:29
+msgid "Backup en formato portable y exportación en XML encriptado"
+msgstr ""
+
+#: ../../../source/index.rst:30
+msgid "Registro de acciones y eventos con posibilidad de enviar a Syslog remoto en formato CEF"
+msgstr ""
+
+#: ../../../source/index.rst:31
+msgid "Configurable y extensible mediante temas y plugins"
+msgstr ""
+
+#: ../../../source/index.rst:32
+msgid "API para integración con otras aplicaciones"
+msgstr ""
+
+#: ../../../source/index.rst:33
+msgid "Importación desde KeePass, KeePassX y CSV"
+msgstr ""
+
+#: ../../../source/index.rst:34
+msgid "Instalación en un solo paso"
+msgstr ""
+

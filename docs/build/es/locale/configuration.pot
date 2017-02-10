@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2017, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-08 14:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../source/configuration/index.rst:4
+msgid "Configuración"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:2
+msgid "Configuración de LDAP"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:4
+msgid "Para configurar un servidor de OpenLDAP correctamente, puedes seguir el siguiente artículo en https://wiki.debian.org/LDAP/OpenLDAPSetup en el que se describen los pasos para configurar un servidor totalmente operativo en distribuciones Debian y derivadas."
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:6
+msgid "En OpenLDAP, para usar la característica de pertenecia a grupo, es necesario añadir un 'overlay' llamado 'membeof'. Es un módulo que añade un atributo interno a los usuarios que son miembros de un grupo."
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:8
+msgid "Estos son los pasos para configurar el módulo:"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:10
+msgid "Crear un archivo 'ldap_memberof_add.ldif' con este contenido: ::"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:18
+msgid "Crear un archivo 'ldap_memberof_config.ldif' con este contenido: ::"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:32
+msgid "Modificar la configuración de LDAP con estos comandos: ::"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:38
+msgid "Consejos"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:40
+msgid "Comprobar que si el usuario 'admin' de sysPass coincide con el de LDAP, es necesario añadir este usuario al grupo de LDAP que tiene permisos de acceso a sysPass."
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:41
+msgid "El nombre y email de los usuarios de LDAP son obtenidos de los atributos 'displayname','fullname' y 'mail'."
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:42
+msgid "Es posible usar ldaps configurando la URI de conexión como 'ldaps:/ /mi_servidor_ldap'."
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:43
+msgid "Puedes instalar phpLDAPadmin_ para crear y administrar objetos de LDAP."
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:48
+msgid "Enlaces"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:50
+msgid "Wiki de LDAP en Debian: https://wiki.debian.org/LDAP/OpenLDAPSetup"
+msgstr ""
+
+#: ../../../source/configuration/ldap.rst:51
+msgid "Configuración de 'memberof': http://www.cbjck.de/2012/05/enabling-the-memberof-overlay-for-openldap/"
+msgstr ""
+

@@ -16,7 +16,7 @@ Características
 ---------------
 
 * Interfaz con Material Design Lite en HTML5 y Ajax
-* Claves encriptadas con AES-256 CBC
+* Claves encriptadas con AES-256 CTR
 * Multiusuario con gestión de usuarios, grupos y perfiles
 * Gestión avanzada de perfiles con 29 niveles de acceso
 * Autentificación con MySQL/MariaDB, OpenLDAP y Active Directory
@@ -33,6 +33,15 @@ Características
 * Importación desde KeePass, KeePassX y CSV
 * Instalación en un solo paso
 
+Qué no hace sysPass
+-------------------
+
+* No guarda la clave maestra en el servidor
+* No envía datos a ningún servicio externo
+* No encripta las claves de las cuentas individualmente, se utiliza una clave maestra para todas
+* No realiza cambios de clave en los servidores
+* No encripta los datos de las cuentas, sólo la clave y los campos personalizados ya que no se podrían realizar búsquedas
+
 .. toctree::
     :maxdepth: 2
     :name: mastertoc
@@ -40,5 +49,5 @@ Características
     installing/index
     configuration/index
     application/index
-    updating
+    updating/index
     faq

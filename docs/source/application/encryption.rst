@@ -1,14 +1,19 @@
-.. _rijndael-256: http://es.wikipedia.org/wiki/Advanced_Encryption_Standard
-.. _CBC: http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Cipher-block_chaining_.28CBC.29
+.. _AES-256: http://es.wikipedia.org/wiki/Advanced_Encryption_Standard
+.. _CTR: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Counter_.28CTR.29
 .. _Blowfish: `https://en.wikipedia.org/wiki/Blowfish_(cipher)`
-.. _mcrypt: http://php.net/manual/en/book.mcrypt.php
+.. _OpenSSL: http://php.net/manual/en/book.openssl.php
 .. _openssl_random_pseudo_bytes: http://php.net/manual/en/function.openssl-random-pseudo-bytes.php
 .. _PKI: https://en.wikipedia.org/wiki/Public_key_infrastructure
+.. _`Defuse/php-encryption`: https://github.com/defuse/php-encryption/blob/master/docs/CryptoDetails.md
 
 Encriptación
 ============
 
-La encriptación de sysPass está basada en rijndael-256_ en modo CBC_  mediante el uso del módulo mcrypt_ de PHP.
+.. warning::
+
+  Si aún utiliza versiones de sysPass <= 2.0 se recomienda actualizar a la versión 2.1 para implementar las mejoras de seguridad en la encryptación (CVE-2017-5999)
+
+La encriptación de sysPass está basada en AES-256_ en modo CTR_  mediante el uso del módulo OpenSSL_ de PHP. Para el manejo de los módulos y funciones de encriptación se utiliza la librería `Defuse/php-encryption`_
 
 Los datos encriptados (hasta versión 2.0) son:
 
@@ -16,13 +21,13 @@ Los datos encriptados (hasta versión 2.0) son:
 * Datos de campos personalizados
 * Exportación en formato XML de sysPass
 
-Para hacer uso de la aplicación, por primera vez, es necesario conocer la clave maestra o la clave maestra temporal (ver :ref:`temporarymasterkey`), ya que sólo se almacena un hash generado mediante Blowfish_ con un salt generado usando el generador de números aleatorios MCRYPT_DEV_URANDOM. Para la generación del hash en Blowfish_ se utiliza un coste de 7 para las iteraciones del algoritmo.
+Para hacer uso de la aplicación, por primera vez, es necesario conocer la clave maestra o la clave maestra temporal (ver :ref:`temporarymasterkey`), ya que sólo se almacena un hash generado mediante Blowfish_ con un salt generado usando el generador de números aleatorios MCRYPT_DEV_URANDOM. Para la generación del hash en Blowfish_ se utiliza un coste de 10 para las iteraciones del algoritmo.
 
-Tras hacer login con la clave maestra, ésta se almacena en los datos del usuario. Para su almacenamiento encriptado con rijndael-256_ se utiliza una llave de 32 bytes generada con Blowfish_ usando la clave, el login del usuario y un salt generado con openssl_random_pseudo_bytes_ y almacenado en la configuración de sysPass bajo la etiqueta "passwordSalt".
+Tras hacer login con la clave maestra, ésta se almacena en los datos del usuario. Para su almacenamiento encriptado genera una  llave segura usando la clave, el login del usuario y un salt generado con openssl_random_pseudo_bytes_ y almacenado en la configuración de sysPass bajo la etiqueta "passwordSalt".
 
-En los siguientes inicios de sesión la clave maestra es recuperada desde los datos del usuario y desencriptada usando la clave, el login del usuario y el salt generado en la configuración de sysPass. Esta clave es almacenada en la sesión del usuario mediante la encriptación de la misma con una llave generada con Blowfish_ usando el ID de sesión de PHP y el salt de la aplicación.
+En los siguientes inicios de sesión la clave maestra es recuperada desde los datos del usuario y desencriptada usando la clave, el login del usuario y el salt generado en la configuración de sysPass. Esta clave es almacenada en la sesión del usuario mediante la encriptación de la misma con una llave segura usando ID de sesión de PHP y la hora UNIX de inicio de la sesión.
 
-.. note:: El ID de sesión de PHP es regenerado cada tiempo_máximo_sesion/2
+.. note::  La llave de sesión regenerada cada 120 segundos.
 
 En el caso de que la clave maestra sea cambiada se solicitará a todos los usuarios la nueva clave o una clave maestra temporal (ver :ref:`temporarymasterkey`).
 
@@ -35,7 +40,7 @@ Clave Maestra Temporal
 
 Es posible generar una clave maestra temporal para su uso por los usuarios de la aplicación, así no es necesario conocer la clave maestra original.
 
-Para la generación de la clave maestra temporal se utiliza la clave maestra original encriptada con rijndael-256_ y una llave de 32 bytes generada usando openssl_random_pseudo_bytes_ cuyo hash Blowfish_ es almacenado en la tabla "config" de la base de datos.
+Para la generación de la clave maestra temporal se utiliza la clave maestra original encriptada con una llave segura protegida con una clave generada usando openssl_random_pseudo_bytes_ cuyo hash Blowfish_ es almacenado en la tabla "config" de la base de datos.
 
 .. note:: Para la comprobación de la clave maestra temporal **sólo** se utiliza el hash generado con Blowfish_
 
@@ -67,7 +72,7 @@ Proceso de Login
     :Recuperar clave maestra encriptada;
 
     note right
-     Se usa una clave de 32 bytes AES de:
+     Se usa una llave segura protegida con la clave:
      clave + login + salt
     end note
 
@@ -88,8 +93,8 @@ Proceso de Login
     :Encriptar y guardar en la sesión del usuario;
 
     note right
-     Se usa una clave de 32 bytes AES de:
-     session_id  + salt
+     Se usa una llave segura protegida con la clave:
+     session_id  + sid_start_time
     end note
 
     stop
@@ -111,7 +116,7 @@ Proceso de Login
     :Retrieve the encrypted master key;
 
     note right
-      Generated from a 32 bytes AES key using:
+      Generated a secure key protected by a password using:
       password + login + hash
     end note
 
@@ -132,8 +137,8 @@ Proceso de Login
     :Encrypt and save in the user's session;
 
     note right
-      Generated from a 32 bytes AES key using:
-      session_id + salt
+      Generated a secure key protected by a password using:
+      session_id + sid_start_time
     end note
 
     stop
@@ -174,8 +179,6 @@ Proceso de Clave Maestra
       :Generar hash Blowfish y guardar en BD;
 
       note right
-       Se genera:
-       salt + hash (con salt)
        Se guarda en tabla config.
       end note
 
@@ -223,8 +226,6 @@ Proceso de Clave Maestra
       :Generate a Blowfish hash an save it in the DB;
 
       note right
-        Generated using:
-        salt + hash (with salt)
         Saved in the config table.
       end note
 
@@ -257,8 +258,8 @@ Proceso de Clave Maestra Temporal
     encriptar la clave maestra;
 
     note right
-      Se genera una clave AES de 32 bytes:
-      session_id + salt
+      Se genera una llave segura protegida con la clave:
+      random_hash + config_salt
     end note
 
     :Guardar encriptada en BD;
@@ -267,11 +268,9 @@ Proceso de Clave Maestra Temporal
      Se guarda en tabla config.
     end note
 
-    :Generar hash Blowfish y guardar en BD;
+    :Generar hash Blowfish de la clave y guardar en BD;
 
     note right
-     Se genera:
-     salt + hash (con salt)
      Se guarda en tabla config.
     end note
 
@@ -298,12 +297,12 @@ Proceso de Clave Maestra Temporal
 
     :Retrieve the master key from the session;
 
-    :Generate a 32 bytes key for
+    :Generate password protected key for
     encrypting the master key;
 
     note right
-      Generated from a 32 bytes AES key using:
-      session_id + salt
+      Generated from a password using:
+      random_hash + config_salt
     end note
 
     :Save encrypted in the DB;
@@ -315,8 +314,6 @@ Proceso de Clave Maestra Temporal
     :Generate a Blowfish hash and save it in the BD;
 
     note right
-     Generated using:
-     salt + hash (with salt)
      Saved in the config table.
     end note
 

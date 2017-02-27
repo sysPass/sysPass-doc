@@ -1,4 +1,3 @@
-.. _rijndael-256: http://es.wikipedia.org/wiki/Advanced_Encryption_Standard
 .. _Blowfish: `https://en.wikipedia.org/wiki/Blowfish_(cipher)`
 
 Autentificación

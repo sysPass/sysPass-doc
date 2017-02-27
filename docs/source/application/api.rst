@@ -19,6 +19,7 @@ Realiza una búsqueda de cuentas
 ==========  ==============================
 Parámetro   Descripción
 ==========  ==============================
+authToken   Token API del usuario
 text        Texto a buscar
 count       Número de resultados a mostrar
 categoryId  Id de categoría a filtrar
@@ -34,6 +35,7 @@ Obtiene los detalles de una cuenta
 ==========  ==============================
 Parámetro   Descripción
 ==========  ==============================
+authToken   Token API del usuario
 id          Id de la cuenta
 userPass    Clave del usuario asociado al token
 ==========  ==============================
@@ -47,8 +49,9 @@ Obtiene la clave de una cuenta
 ==========  ==============================
 Parámetro   Descripción
 ==========  ==============================
+authToken   Token API del usuario
 id          Id de la cuenta
-userPass    Clave del usuario asociado al token
+tokenPass   Clave del token API
 details     Devolver detalles en la respuesta
 ==========  ==============================
 
@@ -61,7 +64,8 @@ Crea una cuenta
 ==========  ==============================
 Parámetro   Descripción
 ==========  ==============================
-userPass    Clave del usuario asociado al token
+authToken   Token API del usuario
+tokenPass   Clave del token API
 name        Nombre de cuenta
 categoryId  Id de categoría
 customerId  Id de cliente
@@ -80,6 +84,7 @@ Elimina una cuenta
 ==========  ==============================
 Parámetro   Descripción
 ==========  ==============================
+authToken   Token API del usuario
 id          Id de la cuenta
 ==========  ==============================
 
@@ -92,6 +97,7 @@ Realiza una búsqueda de categorías
 ==========  ==============================
 Parámetro   Descripción
 ==========  ==============================
+authToken   Token API del usuario
 name        Nombre a buscar
 count       Número de resultados a mostrar
 ==========  ==============================
@@ -105,6 +111,7 @@ Crea una categoría
 =========== ==============================
 Parámetro   Descripción
 =========== ==============================
+authToken   Token API del usuario
 name        Nombre de la categoría
 description Descripción
 =========== ==============================
@@ -118,6 +125,7 @@ Elimina una categoría
 =========== ==============================
 Parámetro   Descripción
 =========== ==============================
+authToken   Token API del usuario
 id          Id de la categoría
 =========== ==============================
 
@@ -130,6 +138,7 @@ Realiza una búsqueda de clientes
 ==========  ==============================
 Parámetro   Descripción
 ==========  ==============================
+authToken   Token API del usuario
 name        Nombre a buscar
 count       Número de resultados a mostrar
 ==========  ==============================
@@ -143,6 +152,7 @@ Crea un cliente
 =========== ==============================
 Parámetro   Descripción
 =========== ==============================
+authToken   Token API del usuario
 name        Nombre del cliente
 description Descripción
 =========== ==============================
@@ -154,9 +164,16 @@ Elimina un cliente
 =========== ==============================
 Parámetro   Descripción
 =========== ==============================
+authToken   Token API del usuario
 id          Id del cliente
 =========== ==============================
 
 backup
 ``````
 Realiza una copia de seguridad de la aplicación
+
+=========== ==============================
+Parámetro   Descripción
+=========== ==============================
+authToken   Token API del usuario
+=========== ==============================

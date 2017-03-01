@@ -1,9 +1,11 @@
+.. _`Defuse/php-encryption`: https://github.com/defuse/php-encryption/blob/master/docs/CryptoDetails.md
+
 Versión 2.1
 ===========
 
 Esta versión incluye mejoras en la seguridad de sysPass mediante las siguientes funcionalidades:
 
-* Uso de la librería Defuse/php-encryption para la encriptación de datos con OpenSSL (CVE-2017-5999)
+* Uso de la librería `Defuse/php-encryption`_ para la encriptación de datos con OpenSSL usando AES-256 CTR (CVE-2017-5999)
 * Mejoras en la seguridad de las claves de sesión
 * Clave para autorizaciones API
 * Mejoras en la seguridad de los enlaces públicos

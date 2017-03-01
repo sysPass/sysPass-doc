@@ -8,7 +8,7 @@ sysPass implementa las siguientes funcionalidades:
   * Autentificacion con base de datos
   * Autentificación con directorio LDAP
   * Autorización con Auth Basic
-  * Doble factor de autorización
+  * Autorización de doble factor
 
 * **Permisos**
 
@@ -37,7 +37,7 @@ sysPass implementa las siguientes funcionalidades:
   * Gestión de usuarios
   * Gestión de grupos
   * Gestión de perfiles
-  * Gestión de notificaciones
+  * Gestión de notificaciones in-App
 
 * **Configuración**
 
@@ -52,3 +52,6 @@ sysPass implementa las siguientes funcionalidades:
   * Configuración de notificaciones por correo
   * Cambio de clave maestra
   * Generación de clave maestra temporal
+  * Copia de seguridad de base de datos y aplicación
+  * Exportación en formato XML
+  * Importación en formato XML, KeePass, KeePassX y CSV

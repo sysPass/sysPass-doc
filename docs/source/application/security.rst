@@ -15,11 +15,11 @@ A pesar de estas medidas, es necesario asegurar los componentes del servidor web
 * Uso de HTTPS
 * Restricción de acceso a los directorios "config" y "backup"
 
-Para restringir el acceso a los directorios en Apache es posible utilizar los archivos ".htaccess" en cada directorio o en la configuración del sitio:
+Para restringir el acceso a los directorios en Apache es posible utilizar los archivos ".htaccess" en cada directorio, o en la configuración del sitio:
 
 .. code:: Apache
 
-  # En Apache 2.2
+  # Apache 2.2
   <Directory ~ "/var/www/html/sysPass/(config|backup)">
     <Limit GET HEAD POST>
       Order Deny,Allow
@@ -27,7 +27,7 @@ Para restringir el acceso a los directorios en Apache es posible utilizar los ar
     </Limit>
   </Directory>
 
-  # En Apache 2.4
+  # Apache 2.4
   <Directory ~ "/var/www/html/sysPass/(config|backup)">
     Require all denied
   </Directory>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-08 14:41+0000\n"
+"POT-Creation-Date: 2017-03-01 00:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../../source/index.rst:1
-msgid "Esta es una versión en desarrollo de la documentación de sysPass 2.0"
+msgid "Esta es una versión en desarrollo de la documentación de sysPass 2.1"
 msgstr ""
 
 #: ../../../source/index.rst:11
@@ -37,7 +37,7 @@ msgid "Interfaz con Material Design Lite en HTML5 y Ajax"
 msgstr ""
 
 #: ../../../source/index.rst:19
-msgid "Claves encriptadas con AES-256 CBC"
+msgid "Claves encriptadas con AES-256 CTR"
 msgstr ""
 
 #: ../../../source/index.rst:20
@@ -98,5 +98,33 @@ msgstr ""
 
 #: ../../../source/index.rst:34
 msgid "Instalación en un solo paso"
+msgstr ""
+
+#: ../../../source/index.rst:37
+msgid "Qué no hace sysPass"
+msgstr ""
+
+#: ../../../source/index.rst:39
+msgid "No guarda la clave maestra en el servidor"
+msgstr ""
+
+#: ../../../source/index.rst:40
+msgid "No envía datos a ningún servicio externo"
+msgstr ""
+
+#: ../../../source/index.rst:41
+msgid "No encripta las claves de las cuentas individualmente, se utiliza una clave maestra para todas"
+msgstr ""
+
+#: ../../../source/index.rst:42
+msgid "No realiza cambios de clave en los servidores"
+msgstr ""
+
+#: ../../../source/index.rst:43
+msgid "No encripta los datos de las cuentas, sólo la clave y los campos personalizados ya que no se podrían realizar búsquedas"
+msgstr ""
+
+#: ../../../source/index.rst:44
+msgid "No es como APT: NO tiene poderes de super vaca!!"
 msgstr ""
 

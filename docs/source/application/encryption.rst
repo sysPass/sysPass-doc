@@ -11,7 +11,7 @@ Encriptación
 
 .. warning::
 
-  Si aún utiliza versiones de sysPass <= 2.0 se recomienda actualizar a la versión 2.1 para implementar las mejoras de seguridad en la encryptación (CVE-2017-5999)
+  Si aún utiliza versiones de sysPass <= 2.0 se recomienda actualizar a la versión 2.1 para implementar las mejoras de seguridad en la encriptación (CVE-2017-5999)
 
 La encriptación de sysPass está basada en AES-256_ en modo CTR_  mediante el uso del módulo OpenSSL_ de PHP. Para el manejo de los módulos y funciones de encriptación se utiliza la librería `Defuse/php-encryption`_
 
@@ -23,7 +23,7 @@ Los datos encriptados (hasta versión 2.0) son:
 
 Para hacer uso de la aplicación, por primera vez, es necesario conocer la clave maestra o la clave maestra temporal (ver :ref:`temporarymasterkey`), ya que sólo se almacena un hash generado mediante Blowfish_ con un salt generado usando el generador de números aleatorios MCRYPT_DEV_URANDOM. Para la generación del hash en Blowfish_ se utiliza un coste de 10 para las iteraciones del algoritmo.
 
-Tras hacer login con la clave maestra, ésta se almacena en los datos del usuario. Para su almacenamiento encriptado genera una  llave segura usando la clave, el login del usuario y un salt generado con openssl_random_pseudo_bytes_ y almacenado en la configuración de sysPass bajo la etiqueta "passwordSalt".
+Tras hacer login con la clave maestra, ésta se almacena en los datos del usuario. Para su almacenamiento encriptado genera una llave segura usando la clave, el login del usuario y un salt generado con openssl_random_pseudo_bytes_ y almacenado en la configuración de sysPass bajo la etiqueta "passwordSalt".
 
 En los siguientes inicios de sesión la clave maestra es recuperada desde los datos del usuario y desencriptada usando la clave, el login del usuario y el salt generado en la configuración de sysPass. Esta clave es almacenada en la sesión del usuario mediante la encriptación de la misma con una llave segura usando ID de sesión de PHP y la hora UNIX de inicio de la sesión.
 

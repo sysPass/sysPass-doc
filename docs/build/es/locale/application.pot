@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-08 14:41+0000\n"
+"POT-Creation-Date: 2017-03-01 00:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,307 +41,345 @@ msgid "Realiza una búsqueda de cuentas"
 msgstr ""
 
 #: ../../../source/application/api.rst:20
-#: ../../../source/application/api.rst:35
-#: ../../../source/application/api.rst:48
-#: ../../../source/application/api.rst:62
-#: ../../../source/application/api.rst:81
-#: ../../../source/application/api.rst:93
-#: ../../../source/application/api.rst:106
-#: ../../../source/application/api.rst:119
-#: ../../../source/application/api.rst:131
-#: ../../../source/application/api.rst:144
-#: ../../../source/application/api.rst:155
+#: ../../../source/application/api.rst:36
+#: ../../../source/application/api.rst:50
+#: ../../../source/application/api.rst:65
+#: ../../../source/application/api.rst:85
+#: ../../../source/application/api.rst:98
+#: ../../../source/application/api.rst:112
+#: ../../../source/application/api.rst:126
+#: ../../../source/application/api.rst:139
+#: ../../../source/application/api.rst:153
+#: ../../../source/application/api.rst:165
+#: ../../../source/application/api.rst:176
 msgid "Parámetro"
 msgstr ""
 
 #: ../../../source/application/api.rst:20
-#: ../../../source/application/api.rst:35
-#: ../../../source/application/api.rst:48
-#: ../../../source/application/api.rst:62
-#: ../../../source/application/api.rst:81
-#: ../../../source/application/api.rst:93
-#: ../../../source/application/api.rst:106
-#: ../../../source/application/api.rst:109
-#: ../../../source/application/api.rst:119
-#: ../../../source/application/api.rst:131
-#: ../../../source/application/api.rst:144
-#: ../../../source/application/api.rst:147
-#: ../../../source/application/api.rst:155
+#: ../../../source/application/api.rst:36
+#: ../../../source/application/api.rst:50
+#: ../../../source/application/api.rst:65
+#: ../../../source/application/api.rst:85
+#: ../../../source/application/api.rst:98
+#: ../../../source/application/api.rst:112
+#: ../../../source/application/api.rst:116
+#: ../../../source/application/api.rst:126
+#: ../../../source/application/api.rst:139
+#: ../../../source/application/api.rst:153
+#: ../../../source/application/api.rst:157
+#: ../../../source/application/api.rst:165
+#: ../../../source/application/api.rst:176
 #: ../../../source/application/searching.rst:15
 msgid "Descripción"
 msgstr ""
 
 #: ../../../source/application/api.rst:22
-msgid "text"
+#: ../../../source/application/api.rst:38
+#: ../../../source/application/api.rst:52
+#: ../../../source/application/api.rst:67
+#: ../../../source/application/api.rst:87
+#: ../../../source/application/api.rst:100
+#: ../../../source/application/api.rst:114
+#: ../../../source/application/api.rst:128
+#: ../../../source/application/api.rst:141
+#: ../../../source/application/api.rst:155
+#: ../../../source/application/api.rst:167
+#: ../../../source/application/api.rst:178
+msgid "authToken"
 msgstr ""
 
 #: ../../../source/application/api.rst:22
+#: ../../../source/application/api.rst:38
+#: ../../../source/application/api.rst:52
+#: ../../../source/application/api.rst:67
+#: ../../../source/application/api.rst:87
+#: ../../../source/application/api.rst:100
+#: ../../../source/application/api.rst:114
+#: ../../../source/application/api.rst:128
+#: ../../../source/application/api.rst:141
+#: ../../../source/application/api.rst:155
+#: ../../../source/application/api.rst:167
+#: ../../../source/application/api.rst:178
+msgid "Token API del usuario"
+msgstr ""
+
+#: ../../../source/application/api.rst:23
+msgid "text"
+msgstr ""
+
+#: ../../../source/application/api.rst:23
 msgid "Texto a buscar"
 msgstr ""
 
-#: ../../../source/application/api.rst:23
-#: ../../../source/application/api.rst:96
-#: ../../../source/application/api.rst:134
+#: ../../../source/application/api.rst:24
+#: ../../../source/application/api.rst:102
+#: ../../../source/application/api.rst:143
 msgid "count"
 msgstr ""
 
-#: ../../../source/application/api.rst:23
-#: ../../../source/application/api.rst:96
-#: ../../../source/application/api.rst:134
+#: ../../../source/application/api.rst:24
+#: ../../../source/application/api.rst:102
+#: ../../../source/application/api.rst:143
 msgid "Número de resultados a mostrar"
 msgstr ""
 
-#: ../../../source/application/api.rst:24
-#: ../../../source/application/api.rst:66
+#: ../../../source/application/api.rst:25
+#: ../../../source/application/api.rst:70
 msgid "categoryId"
 msgstr ""
 
-#: ../../../source/application/api.rst:24
+#: ../../../source/application/api.rst:25
 msgid "Id de categoría a filtrar"
 msgstr ""
 
-#: ../../../source/application/api.rst:25
-#: ../../../source/application/api.rst:67
+#: ../../../source/application/api.rst:26
+#: ../../../source/application/api.rst:71
 msgid "customerId"
 msgstr ""
 
-#: ../../../source/application/api.rst:25
+#: ../../../source/application/api.rst:26
 msgid "Id de cliente a filtrar"
 msgstr ""
 
-#: ../../../source/application/api.rst:29
+#: ../../../source/application/api.rst:30
 msgid "getAccountData"
 msgstr ""
 
-#: ../../../source/application/api.rst:30
+#: ../../../source/application/api.rst:31
 msgid "Obtiene los detalles de una cuenta"
 msgstr ""
 
-#: ../../../source/application/api.rst:37
-#: ../../../source/application/api.rst:50
-#: ../../../source/application/api.rst:83
-#: ../../../source/application/api.rst:121
-#: ../../../source/application/api.rst:157
+#: ../../../source/application/api.rst:39
+#: ../../../source/application/api.rst:53
+#: ../../../source/application/api.rst:88
+#: ../../../source/application/api.rst:129
+#: ../../../source/application/api.rst:168
 msgid "id"
 msgstr ""
 
-#: ../../../source/application/api.rst:37
-#: ../../../source/application/api.rst:50
-#: ../../../source/application/api.rst:83
+#: ../../../source/application/api.rst:39
+#: ../../../source/application/api.rst:53
+#: ../../../source/application/api.rst:88
 msgid "Id de la cuenta"
 msgstr ""
 
-#: ../../../source/application/api.rst:38
-#: ../../../source/application/api.rst:51
-#: ../../../source/application/api.rst:64
+#: ../../../source/application/api.rst:40
 msgid "userPass"
 msgstr ""
 
-#: ../../../source/application/api.rst:38
-#: ../../../source/application/api.rst:51
-#: ../../../source/application/api.rst:64
+#: ../../../source/application/api.rst:40
 msgid "Clave del usuario asociado al token"
 msgstr ""
 
-#: ../../../source/application/api.rst:42
+#: ../../../source/application/api.rst:44
 msgid "getAccountPassword"
 msgstr ""
 
-#: ../../../source/application/api.rst:43
+#: ../../../source/application/api.rst:45
 msgid "Obtiene la clave de una cuenta"
 msgstr ""
 
-#: ../../../source/application/api.rst:52
+#: ../../../source/application/api.rst:54
+#: ../../../source/application/api.rst:68
+msgid "tokenPass"
+msgstr ""
+
+#: ../../../source/application/api.rst:54
+#: ../../../source/application/api.rst:68
+msgid "Clave del token API"
+msgstr ""
+
+#: ../../../source/application/api.rst:55
 msgid "details"
 msgstr ""
 
-#: ../../../source/application/api.rst:52
+#: ../../../source/application/api.rst:55
 msgid "Devolver detalles en la respuesta"
 msgstr ""
 
-#: ../../../source/application/api.rst:56
+#: ../../../source/application/api.rst:59
 msgid "addAccount"
 msgstr ""
 
-#: ../../../source/application/api.rst:57
+#: ../../../source/application/api.rst:60
 msgid "Crea una cuenta"
 msgstr ""
 
-#: ../../../source/application/api.rst:65
-#: ../../../source/application/api.rst:95
-#: ../../../source/application/api.rst:108
-#: ../../../source/application/api.rst:133
-#: ../../../source/application/api.rst:146
+#: ../../../source/application/api.rst:69
+#: ../../../source/application/api.rst:101
+#: ../../../source/application/api.rst:115
+#: ../../../source/application/api.rst:142
+#: ../../../source/application/api.rst:156
 msgid "name"
 msgstr ""
 
-#: ../../../source/application/api.rst:65
+#: ../../../source/application/api.rst:69
 msgid "Nombre de cuenta"
 msgstr ""
 
-#: ../../../source/application/api.rst:66
+#: ../../../source/application/api.rst:70
 msgid "Id de categoría"
 msgstr ""
 
-#: ../../../source/application/api.rst:67
+#: ../../../source/application/api.rst:71
 msgid "Id de cliente"
 msgstr ""
 
-#: ../../../source/application/api.rst:68
+#: ../../../source/application/api.rst:72
 msgid "pass"
 msgstr ""
 
-#: ../../../source/application/api.rst:68
+#: ../../../source/application/api.rst:72
 msgid "Clave"
 msgstr ""
 
-#: ../../../source/application/api.rst:69
+#: ../../../source/application/api.rst:73
 msgid "login"
 msgstr ""
 
-#: ../../../source/application/api.rst:69
+#: ../../../source/application/api.rst:73
 msgid "Usuario de acceso"
 msgstr ""
 
-#: ../../../source/application/api.rst:70
+#: ../../../source/application/api.rst:74
 msgid "url"
 msgstr ""
 
-#: ../../../source/application/api.rst:70
+#: ../../../source/application/api.rst:74
 msgid "URL o IP de acceso"
 msgstr ""
 
-#: ../../../source/application/api.rst:71
+#: ../../../source/application/api.rst:75
 msgid "notes"
 msgstr ""
 
-#: ../../../source/application/api.rst:71
+#: ../../../source/application/api.rst:75
 msgid "Notas sobre la cuenta"
 msgstr ""
 
-#: ../../../source/application/api.rst:75
+#: ../../../source/application/api.rst:79
 msgid "deleteAccount"
 msgstr ""
 
-#: ../../../source/application/api.rst:76
+#: ../../../source/application/api.rst:80
 msgid "Elimina una cuenta"
 msgstr ""
 
-#: ../../../source/application/api.rst:87
+#: ../../../source/application/api.rst:92
 msgid "getCategories"
 msgstr ""
 
-#: ../../../source/application/api.rst:88
+#: ../../../source/application/api.rst:93
 msgid "Realiza una búsqueda de categorías"
 msgstr ""
 
-#: ../../../source/application/api.rst:95
-#: ../../../source/application/api.rst:133
+#: ../../../source/application/api.rst:101
+#: ../../../source/application/api.rst:142
 msgid "Nombre a buscar"
 msgstr ""
 
-#: ../../../source/application/api.rst:100
+#: ../../../source/application/api.rst:106
 msgid "addCategory"
 msgstr ""
 
-#: ../../../source/application/api.rst:101
+#: ../../../source/application/api.rst:107
 msgid "Crea una categoría"
 msgstr ""
 
-#: ../../../source/application/api.rst:108
+#: ../../../source/application/api.rst:115
 msgid "Nombre de la categoría"
 msgstr ""
 
-#: ../../../source/application/api.rst:109
-#: ../../../source/application/api.rst:147
+#: ../../../source/application/api.rst:116
+#: ../../../source/application/api.rst:157
 msgid "description"
 msgstr ""
 
-#: ../../../source/application/api.rst:113
+#: ../../../source/application/api.rst:120
 msgid "deleteCategory"
 msgstr ""
 
-#: ../../../source/application/api.rst:114
+#: ../../../source/application/api.rst:121
 msgid "Elimina una categoría"
 msgstr ""
 
-#: ../../../source/application/api.rst:121
+#: ../../../source/application/api.rst:129
 msgid "Id de la categoría"
 msgstr ""
 
-#: ../../../source/application/api.rst:125
+#: ../../../source/application/api.rst:133
 msgid "getCustomers"
 msgstr ""
 
-#: ../../../source/application/api.rst:126
+#: ../../../source/application/api.rst:134
 msgid "Realiza una búsqueda de clientes"
 msgstr ""
 
-#: ../../../source/application/api.rst:138
+#: ../../../source/application/api.rst:147
 msgid "addCustomer"
 msgstr ""
 
-#: ../../../source/application/api.rst:139
+#: ../../../source/application/api.rst:148
 msgid "Crea un cliente"
 msgstr ""
 
-#: ../../../source/application/api.rst:146
+#: ../../../source/application/api.rst:156
 msgid "Nombre del cliente"
 msgstr ""
 
-#: ../../../source/application/api.rst:151
+#: ../../../source/application/api.rst:161
 msgid "deleteCustomer"
 msgstr ""
 
-#: ../../../source/application/api.rst:152
+#: ../../../source/application/api.rst:162
 msgid "Elimina un cliente"
 msgstr ""
 
-#: ../../../source/application/api.rst:157
+#: ../../../source/application/api.rst:168
 msgid "Id del cliente"
 msgstr ""
 
-#: ../../../source/application/api.rst:161
+#: ../../../source/application/api.rst:172
 msgid "backup"
 msgstr ""
 
-#: ../../../source/application/api.rst:162
+#: ../../../source/application/api.rst:173
 msgid "Realiza una copia de seguridad de la aplicación"
 msgstr ""
 
-#: ../../../source/application/authentication.rst:5
+#: ../../../source/application/authentication.rst:4
 msgid "Autentificación"
 msgstr ""
 
-#: ../../../source/application/authentication.rst:7
+#: ../../../source/application/authentication.rst:6
 msgid "Para la autentificación de sysPass es posible utilizar varios métodos:"
 msgstr ""
 
-#: ../../../source/application/authentication.rst:9
+#: ../../../source/application/authentication.rst:8
 msgid "Base de datos MySQL/MariaDB (por defecto)"
 msgstr ""
 
-#: ../../../source/application/authentication.rst:10
+#: ../../../source/application/authentication.rst:9
 msgid "Directorio LDAP (OpenLDAP, eDirectory, Active Directory, freeIPA, etc)"
 msgstr ""
 
-#: ../../../source/application/authentication.rst:14
+#: ../../../source/application/authentication.rst:13
 msgid "Si está activada la opción de LDAP, la autentificación con base de datos es utilizada cuando el servicio de LDAP no está accesible o el usuario no existe."
 msgstr ""
 
-#: ../../../source/application/authentication.rst:16
+#: ../../../source/application/authentication.rst:15
 msgid "Para la autentificación con base de datos se comprueba un hash generado con Blowfish_ de la clave del usuario, por lo que la clave **nunca** se almacena."
 msgstr ""
 
-#: ../../../source/application/authentication.rst:18
+#: ../../../source/application/authentication.rst:17
 msgid "Si se utiliza LDAP:"
 msgstr ""
 
-#: ../../../source/application/authentication.rst:20
+#: ../../../source/application/authentication.rst:19
 msgid "Se almacena el hash de la clave del usuario generado con Blowfish_ para comprobarlo en caso de fallo del servicio de LDAP."
 msgstr ""
 
-#: ../../../source/application/authentication.rst:21
+#: ../../../source/application/authentication.rst:20
 msgid "No es posible editar el login, nombre e email del usuario."
 msgstr ""
 
@@ -369,108 +407,301 @@ msgstr ""
 msgid "La autorización 2FA_ mediante el plugin Authenticator es realizada mediante la generarión de un token OTP_ desde la aplicación `Google Authenticator`_. Esta autorización es posible activarla desde las preferencias de cada usuario."
 msgstr ""
 
-#: ../../../source/application/encryption.rst:9
+#: ../../../source/application/encryption.rst:10
 msgid "Encriptación"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:11
-msgid "La encriptación de sysPass está basada en rijndael-256_ en modo CBC_  mediante el uso del módulo mcrypt_ de PHP."
-msgstr ""
-
-#: ../../../source/application/encryption.rst:13
-msgid "Los datos encriptados (hasta versión 2.0) son:"
-msgstr ""
-
-#: ../../../source/application/encryption.rst:15
-msgid "Claves de las cuentas"
+#: ../../../source/application/encryption.rst:14
+msgid "Si aún utiliza versiones de sysPass <= 2.0 se recomienda actualizar a la versión 2.1 para implementar las mejoras de seguridad en la encriptación (CVE-2017-5999)"
 msgstr ""
 
 #: ../../../source/application/encryption.rst:16
-msgid "Datos de campos personalizados"
+msgid "La encriptación de sysPass está basada en AES-256_ en modo CTR_  mediante el uso del módulo OpenSSL_ de PHP. Para el manejo de los módulos y funciones de encriptación se utiliza la librería `Defuse/php-encryption`_"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:17
-msgid "Exportación en formato XML de sysPass"
+#: ../../../source/application/encryption.rst:18
+msgid "Los datos encriptados (hasta versión 2.0) son:"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:19
-msgid "Para hacer uso de la aplicación, por primera vez, es necesario conocer la clave maestra o la clave maestra temporal (ver :ref:`temporarymasterkey`), ya que sólo se almacena un hash generado mediante Blowfish_ con un salt generado usando el generador de números aleatorios MCRYPT_DEV_URANDOM. Para la generación del hash en Blowfish_ se utiliza un coste de 7 para las iteraciones del algoritmo."
+#: ../../../source/application/encryption.rst:20
+msgid "Claves de las cuentas"
 msgstr ""
 
 #: ../../../source/application/encryption.rst:21
-msgid "Tras hacer login con la clave maestra, ésta se almacena en los datos del usuario. Para su almacenamiento encriptado con rijndael-256_ se utiliza una llave de 32 bytes generada con Blowfish_ usando la clave, el login del usuario y un salt generado con openssl_random_pseudo_bytes_ y almacenado en la configuración de sysPass bajo la etiqueta \"passwordSalt\"."
+msgid "Datos de campos personalizados"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:23
-msgid "En los siguientes inicios de sesión la clave maestra es recuperada desde los datos del usuario y desencriptada usando la clave, el login del usuario y el salt generado en la configuración de sysPass. Esta clave es almacenada en la sesión del usuario mediante la encriptación de la misma con una llave generada con Blowfish_ usando el ID de sesión de PHP y el salt de la aplicación."
+#: ../../../source/application/encryption.rst:22
+msgid "Exportación en formato XML de sysPass"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:25
-msgid "El ID de sesión de PHP es regenerado cada tiempo_máximo_sesion/2"
+#: ../../../source/application/encryption.rst:24
+msgid "Para hacer uso de la aplicación, por primera vez, es necesario conocer la clave maestra o la clave maestra temporal (ver :ref:`temporarymasterkey`), ya que sólo se almacena un hash generado mediante Blowfish_ con un salt generado usando el generador de números aleatorios MCRYPT_DEV_URANDOM. Para la generación del hash en Blowfish_ se utiliza un coste de 10 para las iteraciones del algoritmo."
 msgstr ""
 
-#: ../../../source/application/encryption.rst:27
+#: ../../../source/application/encryption.rst:26
+msgid "Tras hacer login con la clave maestra, ésta se almacena en los datos del usuario. Para su almacenamiento encriptado genera una llave segura usando la clave, el login del usuario y un salt generado con openssl_random_pseudo_bytes_ y almacenado en la configuración de sysPass bajo la etiqueta \"passwordSalt\"."
+msgstr ""
+
+#: ../../../source/application/encryption.rst:28
+msgid "En los siguientes inicios de sesión la clave maestra es recuperada desde los datos del usuario y desencriptada usando la clave, el login del usuario y el salt generado en la configuración de sysPass. Esta clave es almacenada en la sesión del usuario mediante la encriptación de la misma con una llave segura usando ID de sesión de PHP y la hora UNIX de inicio de la sesión."
+msgstr ""
+
+#: ../../../source/application/encryption.rst:30
+msgid "La llave de sesión regenerada cada 120 segundos."
+msgstr ""
+
+#: ../../../source/application/encryption.rst:32
 msgid "En el caso de que la clave maestra sea cambiada se solicitará a todos los usuarios la nueva clave o una clave maestra temporal (ver :ref:`temporarymasterkey`)."
 msgstr ""
 
-#: ../../../source/application/encryption.rst:29
+#: ../../../source/application/encryption.rst:34
 msgid "Si un usuario canbia su clave de acceso, en el siguiente login, se le solicitará la clave anterior para poder obtener la clave maestra. Si no es posible obtener la clave maestra, se le solicitará."
 msgstr ""
 
-#: ../../../source/application/encryption.rst:34
+#: ../../../source/application/encryption.rst:39
 msgid "Clave Maestra Temporal"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:36
+#: ../../../source/application/encryption.rst:41
 msgid "Es posible generar una clave maestra temporal para su uso por los usuarios de la aplicación, así no es necesario conocer la clave maestra original."
 msgstr ""
 
-#: ../../../source/application/encryption.rst:38
-msgid "Para la generación de la clave maestra temporal se utiliza la clave maestra original encriptada con rijndael-256_ y una llave de 32 bytes generada usando openssl_random_pseudo_bytes_ cuyo hash Blowfish_ es almacenado en la tabla \"config\" de la base de datos."
-msgstr ""
-
-#: ../../../source/application/encryption.rst:40
-msgid "Para la comprobación de la clave maestra temporal **sólo** se utiliza el hash generado con Blowfish_"
-msgstr ""
-
 #: ../../../source/application/encryption.rst:43
-msgid "PKI"
+msgid "Para la generación de la clave maestra temporal se utiliza la clave maestra original encriptada con una llave segura protegida con una clave generada usando openssl_random_pseudo_bytes_ cuyo hash Blowfish_ es almacenado en la tabla \"config\" de la base de datos."
 msgstr ""
 
 #: ../../../source/application/encryption.rst:45
-msgid "Para mejorar la seguridad de los datos enviados, se hace uso de PKI_ para la encriptación de las claves que son enviadas desde los formularios de la aplicación."
+msgid "Para la comprobación de la clave maestra temporal **sólo** se utiliza el hash generado con Blowfish_"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:47
-msgid "Las claves pública y privada son generadas en el directorio \"config\" de la aplicación."
+#: ../../../source/application/encryption.rst:48
+msgid "PKI"
 msgstr ""
 
 #: ../../../source/application/encryption.rst:50
+msgid "Para mejorar la seguridad de los datos enviados, se hace uso de PKI_ para la encriptación de las claves que son enviadas desde los formularios de la aplicación."
+msgstr ""
+
+#: ../../../source/application/encryption.rst:52
+msgid "Las claves pública y privada son generadas en el directorio \"config\" de la aplicación."
+msgstr ""
+
+#: ../../../source/application/encryption.rst:55
 msgid "Diagramas"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:53
+#: ../../../source/application/encryption.rst:58
 msgid "Proceso de Login"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:144
+#: ../../../source/application/encryption.rst:149
 msgid "Proceso de Clave Maestra"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:244
+#: ../../../source/application/encryption.rst:245
 msgid "Proceso de Clave Maestra Temporal"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:337
+#: ../../../source/application/encryption.rst:334
 msgid "Proceso PKI"
 msgstr ""
 
-#: ../../../source/application/encryption.rst:391
+#: ../../../source/application/encryption.rst:388
 msgid "Tener en cuenta que el mayor riesgo de seguridad está en los propios usuarios, ya que una clave comprometida puede causar una brecha de seguridad."
 msgstr ""
 
-#: ../../../source/application/encryption.rst:393
+#: ../../../source/application/encryption.rst:390
 msgid "Un servidor de sysPass comprometido puede ser peligroso si la base de datos está junto al servidor web, debido a que los datos de red pueden ser obtenidos por lo que las claves serían reveladas."
+msgstr ""
+
+#: ../../../source/application/features.rst:2
+msgid "Funcionalidades"
+msgstr ""
+
+#: ../../../source/application/features.rst:4
+msgid "sysPass implementa las siguientes funcionalidades:"
+msgstr ""
+
+#: ../../../source/application/features.rst:6
+msgid "**Seguridad**"
+msgstr ""
+
+#: ../../../source/application/features.rst:8
+msgid "Autentificacion con base de datos"
+msgstr ""
+
+#: ../../../source/application/features.rst:9
+msgid "Autentificación con directorio LDAP"
+msgstr ""
+
+#: ../../../source/application/features.rst:10
+msgid "Autorización con Auth Basic"
+msgstr ""
+
+#: ../../../source/application/features.rst:11
+msgid "Autorización de doble factor"
+msgstr ""
+
+#: ../../../source/application/features.rst:13
+msgid "**Permisos**"
+msgstr ""
+
+#: ../../../source/application/features.rst:15
+msgid "Control de acceso a módulos mediante perfiles"
+msgstr ""
+
+#: ../../../source/application/features.rst:16
+msgid "Usuarios adminsitradores de aplicación"
+msgstr ""
+
+#: ../../../source/application/features.rst:17
+msgid "Usuarios administradores de cuentas"
+msgstr ""
+
+#: ../../../source/application/features.rst:18
+msgid "Control de acceso a cuentas por usuario"
+msgstr ""
+
+#: ../../../source/application/features.rst:19
+msgid "Control de acceso a cuentas por grupo"
+msgstr ""
+
+#: ../../../source/application/features.rst:20
+msgid "Control para modificar cuentas por usuarios"
+msgstr ""
+
+#: ../../../source/application/features.rst:21
+msgid "Control para modificar cuentas por grupos"
+msgstr ""
+
+#: ../../../source/application/features.rst:23
+msgid "**Elementos**"
+msgstr ""
+
+#: ../../../source/application/features.rst:25
+msgid "Campos personalizados encriptados para cuentas, clientes, categorías y usuarios"
+msgstr ""
+
+#: ../../../source/application/features.rst:26
+msgid "Enlaces públicos a cuentas sin necesidad de usuario/clave"
+msgstr ""
+
+#: ../../../source/application/features.rst:27
+msgid "Configuración de caducidad de cuentas"
+msgstr ""
+
+#: ../../../source/application/features.rst:28
+msgid "Gestión de archivos para cuentas"
+msgstr ""
+
+#: ../../../source/application/features.rst:29
+msgid "Gestión de etiquetas para cuentas"
+msgstr ""
+
+#: ../../../source/application/features.rst:30
+msgid "Gestión de clientes"
+msgstr ""
+
+#: ../../../source/application/features.rst:31
+msgid "Gestión de categorías"
+msgstr ""
+
+#: ../../../source/application/features.rst:32
+msgid "Gestión de enlaces públicos"
+msgstr ""
+
+#: ../../../source/application/features.rst:33
+msgid "Gestión de autorizaciones API"
+msgstr ""
+
+#: ../../../source/application/features.rst:34
+msgid "Gestión de cuentas"
+msgstr ""
+
+#: ../../../source/application/features.rst:35
+msgid "Gestión de histórico de cuentas"
+msgstr ""
+
+#: ../../../source/application/features.rst:36
+msgid "Gestión de plugins"
+msgstr ""
+
+#: ../../../source/application/features.rst:37
+msgid "Gestión de usuarios"
+msgstr ""
+
+#: ../../../source/application/features.rst:38
+msgid "Gestión de grupos"
+msgstr ""
+
+#: ../../../source/application/features.rst:39
+msgid "Gestión de perfiles"
+msgstr ""
+
+#: ../../../source/application/features.rst:40
+msgid "Gestión de notificaciones in-App"
+msgstr ""
+
+#: ../../../source/application/features.rst:42
+#: ../../../source/application/permissions.rst:37
+msgid "**Configuración**"
+msgstr ""
+
+#: ../../../source/application/features.rst:44
+msgid "Configuración de idioma"
+msgstr ""
+
+#: ../../../source/application/features.rst:45
+msgid "Configuración de tema visual"
+msgstr ""
+
+#: ../../../source/application/features.rst:46
+msgid "Configuración de proxy"
+msgstr ""
+
+#: ../../../source/application/features.rst:47
+msgid "Configuración de cuentas"
+msgstr ""
+
+#: ../../../source/application/features.rst:48
+msgid "Configuración de enlaces públicos"
+msgstr ""
+
+#: ../../../source/application/features.rst:49
+msgid "Configuración de enlaces a Wiki"
+msgstr ""
+
+#: ../../../source/application/features.rst:50
+msgid "Configuración de enlaces con API de DokuWiki"
+msgstr ""
+
+#: ../../../source/application/features.rst:51
+msgid "Configuración de LDAP con importación de usuarios"
+msgstr ""
+
+#: ../../../source/application/features.rst:52
+msgid "Configuración de notificaciones por correo"
+msgstr ""
+
+#: ../../../source/application/features.rst:53
+msgid "Cambio de clave maestra"
+msgstr ""
+
+#: ../../../source/application/features.rst:54
+msgid "Generación de clave maestra temporal"
+msgstr ""
+
+#: ../../../source/application/features.rst:55
+msgid "Copia de seguridad de base de datos y aplicación"
+msgstr ""
+
+#: ../../../source/application/features.rst:56
+msgid "Exportación en formato XML"
+msgstr ""
+
+#: ../../../source/application/features.rst:57
+msgid "Importación en formato XML, KeePass, KeePassX y CSV"
 msgstr ""
 
 #: ../../../source/application/index.rst:4
@@ -596,10 +827,6 @@ msgstr ""
 
 #: ../../../source/application/permissions.rst:35
 msgid "Etiquetas - permite acceso total a la gestión de etiquetas"
-msgstr ""
-
-#: ../../../source/application/permissions.rst:37
-msgid "**Configuración**"
 msgstr ""
 
 #: ../../../source/application/permissions.rst:39
@@ -807,6 +1034,6 @@ msgid "Restricción de acceso a los directorios \"config\" y \"backup\""
 msgstr ""
 
 #: ../../../source/application/security.rst:18
-msgid "Para restringir el acceso a los directorios en Apache es posible utilizar los archivos \".htaccess\" en cada directorio o en la configuración del sitio:"
+msgid "Para restringir el acceso a los directorios en Apache es posible utilizar los archivos \".htaccess\" en cada directorio, o en la configuración del sitio:"
 msgstr ""
 

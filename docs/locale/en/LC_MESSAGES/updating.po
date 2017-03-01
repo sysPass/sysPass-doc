@@ -7,27 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-05 19:47+0000\n"
-"PO-Revision-Date: 2017-02-06 02:14+0100\n"
+"POT-Creation-Date: 2017-03-01 00:24+0000\n"
+"PO-Revision-Date: 2017-03-01 01:26+0100\n"
 "Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
 "Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 "Language: en\n"
 "X-Generator: Poedit 1.6.10\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
-#: ../../source/updating.rst:2
-msgid "Actualización"
-msgstr "Updating"
+#: ../../../source/updating/general.rst:2
+msgid "General"
+msgstr "General"
 
-#: ../../source/updating.rst:4
+#: ../../../source/updating/general.rst:4 ../../../source/updating/v2_1.rst:20
 msgid "Para la actualización de sysPass son necesarios los siguientes pasos:"
 msgstr "For the sysPass updating the following steps are needed:"
 
-#: ../../source/updating.rst:6
+#: ../../../source/updating/general.rst:6 ../../../source/updating/v2_1.rst:22
 msgid ""
 "Descargar la aplicación desde https://github.com/nuxsmin/sysPass/releases y "
 "descomprimir los archivos"
@@ -35,11 +34,11 @@ msgstr ""
 "Download the application from https://github.com/nuxsmin/sysPass/releases "
 "and uncompress the files"
 
-#: ../../source/updating.rst:7
+#: ../../../source/updating/general.rst:7 ../../../source/updating/v2_1.rst:23
 msgid "Establecer el propietario y permisos del directorio de sysPass"
 msgstr "Set the sysPass directory owner and permissions"
 
-#: ../../source/updating.rst:8
+#: ../../../source/updating/general.rst:8 ../../../source/updating/v2_1.rst:24
 msgid ""
 "Copiar los archivos (\"config.xml\", \"key.pem\" y \"pubkey.pem\") del "
 "directorio \"config\" de la versión actual a la nueva"
@@ -47,19 +46,22 @@ msgstr ""
 "Copy the files (\"config.xml\", \"key.pem\" y \"pubkey.pem\") within the  "
 "\"config\" directory from the current version to the new one"
 
-#: ../../source/updating.rst:9
+#: ../../../source/updating/general.rst:9 ../../../source/updating/v2_1.rst:25
 msgid "Acceder desde un navegador a la aplicación"
 msgstr "Open the application from a web browser"
 
-#: ../../source/updating.rst:11
+#: ../../../source/updating/general.rst:11
+#: ../../../source/updating/v2_1.rst:27
 msgid "Si la aplicación requiere de actualización de la base de datos:"
 msgstr "If the application requires a database upgrade:"
 
-#: ../../source/updating.rst:13
+#: ../../../source/updating/general.rst:13
+#: ../../../source/updating/v2_1.rst:29
 msgid "**Realizar una copia de seguridad de la base de datos**"
 msgstr "**Perform a database backup**"
 
-#: ../../source/updating.rst:14
+#: ../../../source/updating/general.rst:14
+#: ../../../source/updating/v2_1.rst:30
 msgid ""
 "Introducir el código de actualización que se encuentra en el archivo "
 "\"config/config.xml\" con la etiqueta \"upgradeKey\""
@@ -67,10 +69,82 @@ msgstr ""
 "Enter the updating code which could be found in the \"config/config.xml\" "
 "file within the tag \"upgradeKey\""
 
-#: ../../source/updating.rst:16
+#: ../../../source/updating/general.rst:16
+#: ../../../source/updating/v2_1.rst:36
 msgid ""
 "Tras la actualización, se mostrará un mensaje y en el registro de eventos se "
 "pueden revisar los detalles de la actualización"
 msgstr ""
 "After the updating, it will show a message and you could take a look to the "
 "updating details in the event log"
+
+#: ../../../source/updating/index.rst:4
+msgid "Actualización"
+msgstr "Updating"
+
+#: ../../../source/updating/v2_1.rst:4
+msgid "Versión 2.1"
+msgstr "2.1 Version"
+
+#: ../../../source/updating/v2_1.rst:6
+msgid ""
+"Esta versión incluye mejoras en la seguridad de sysPass mediante las "
+"siguientes funcionalidades:"
+msgstr ""
+"This version includes some improvements on the sysPass security by the "
+"following features:"
+
+#: ../../../source/updating/v2_1.rst:8
+msgid ""
+"Uso de la librería `Defuse/php-encryption`_ para la encriptación de datos "
+"con OpenSSL usando AES-256 CTR (CVE-2017-5999)"
+msgstr ""
+"It uses `Defuse/php-encryption`_ library for the data encryption with "
+"OpenSSL by using AES-256 CTR (CVE-2017-5999)"
+
+#: ../../../source/updating/v2_1.rst:9
+msgid "Mejoras en la seguridad de las claves de sesión"
+msgstr "Improvements on the session keys security"
+
+#: ../../../source/updating/v2_1.rst:10
+msgid "Clave para autorizaciones API"
+msgstr "API authorizations password"
+
+#: ../../../source/updating/v2_1.rst:11
+msgid "Mejoras en la seguridad de los enlaces públicos"
+msgstr "Improvements on the public links security"
+
+#: ../../../source/updating/v2_1.rst:13
+msgid ""
+"Esta actualización requiere de la reencriptación de todas las cuentas y "
+"datos encriptados, por lo que es necesaria la clave maestra y un login de "
+"usuario válido para registrar los cambios."
+msgstr ""
+"This upgrade requires to re-encrypt all the accounts and encrypted data, so "
+"the master password and a valid user login (for registering changes) will be "
+"needed."
+
+#: ../../../source/updating/v2_1.rst:15
+msgid ""
+"Aunque el proceso es seguro, es recomendable hacer una copia de seguridad "
+"completa de sysPass."
+msgstr ""
+"Though it's a safe process, it's advisable to make a full sysPass backup."
+
+#: ../../../source/updating/v2_1.rst:18
+msgid "Proceso"
+msgstr "Process"
+
+#: ../../../source/updating/v2_1.rst:31
+msgid "Introducir la clave maestra de sysPass"
+msgstr "Please, enter the sysPass master password."
+
+#: ../../../source/updating/v2_1.rst:32
+msgid "Introducir un login de usuario válido"
+msgstr "Please, enter a valid user login"
+
+#: ../../../source/updating/v2_1.rst:34
+msgid ""
+"Durante la actualización se mostrará el progreso de las tareas de "
+"encriptación"
+msgstr "During the upgrade, it will display the encryption tasks processes."

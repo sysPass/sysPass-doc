@@ -1,4 +1,4 @@
-.. warning:: Esta es una versión en desarrollo de la documentación de sysPass 2.0
+.. warning:: Esta es una versión en desarrollo de la documentación de sysPass 2.1
 
 .. container:: logo
 
@@ -41,6 +41,7 @@ Qué no hace sysPass
 * No encripta las claves de las cuentas individualmente, se utiliza una clave maestra para todas
 * No realiza cambios de clave en los servidores
 * No encripta los datos de las cuentas, sólo la clave y los campos personalizados ya que no se podrían realizar búsquedas
+* No es como APT: NO tiene poderes de super vaca!!
 
 .. toctree::
     :maxdepth: 2

@@ -9,10 +9,20 @@ Esta versión incluye mejoras en la seguridad de sysPass mediante las siguientes
 * Mejoras en la seguridad de las claves de sesión
 * Clave para autorizaciones API
 * Mejoras en la seguridad de los enlaces públicos
+* Detección de intentos de acceso fallidos. Se introduce un retardo después de varios intentos
 
 Esta actualización requiere de la reencriptación de todas las cuentas y datos encriptados, por lo que es necesaria la clave maestra y un login de usuario válido para registrar los cambios.
 
 Aunque el proceso es seguro, es recomendable hacer una copia de seguridad completa de sysPass.
+
+Cambios Importantes
+-------------------
+
+Debido a los cambios en la encriptación de datos, los siguientes elementos han de ser renovados:
+
+* Enlaces públicos: los enlaces son instantáneas de la cuenta enlazada, por lo que si se actualiza, es necesario renovar el enlace.
+* Autorizaciones API: A partir de esta versión es necesaria una clave para las autorizaciones que requieran de datos encriptados.
+* Clave maestra temporal: es necesario regenerarla si es usada.
 
 Proceso
 -------

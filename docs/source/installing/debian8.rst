@@ -72,4 +72,12 @@ Abir un navegador y escribir la URL:
 
 https://IP_O_NOMBRE_SERVIDOR/syspass/index.php
 
-.. note:: Seguir los pasos del instalador y tras la correcta finalización, ya es posible acceder a la aplicación
+.. note::
+
+  Seguir los pasos del instalador y tras la correcta finalización, ya es posible acceder a la aplicación
+
+  Para saber cómo funciona sysPass ver :doc:`/application/index`
+
+.. warning::
+
+  Se recomienda leer las indicaciones de seguridad en :doc:`/application/security`

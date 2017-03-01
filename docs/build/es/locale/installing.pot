@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: sysPass 2.0.0\n"
+"Project-Id-Version: sysPass 2.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 00:27+0000\n"
+"POT-Creation-Date: 2017-03-01 11:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -206,10 +206,25 @@ msgstr ""
 msgid "https://IP_O_NOMBRE_SERVIDOR/syspass/index.php"
 msgstr ""
 
-#: ../../../source/installing/centos7.rst:129
-#: ../../../source/installing/debian8.rst:75
-#: ../../../source/installing/gentoo.rst:126
+#: ../../../source/installing/centos7.rst:131
+#: ../../../source/installing/debian8.rst:77
+#: ../../../source/installing/docker.rst:67
+#: ../../../source/installing/gentoo.rst:128
 msgid "Seguir los pasos del instalador y tras la correcta finalización, ya es posible acceder a la aplicación"
+msgstr ""
+
+#: ../../../source/installing/centos7.rst:133
+#: ../../../source/installing/debian8.rst:79
+#: ../../../source/installing/docker.rst:69
+#: ../../../source/installing/gentoo.rst:130
+msgid "Para saber cómo funciona sysPass ver :doc:`/application/index`"
+msgstr ""
+
+#: ../../../source/installing/centos7.rst:137
+#: ../../../source/installing/debian8.rst:83
+#: ../../../source/installing/docker.rst:73
+#: ../../../source/installing/gentoo.rst:134
+msgid "Se recomienda leer las indicaciones de seguridad en :doc:`/application/security`"
 msgstr ""
 
 #: ../../../source/installing/debian8.rst:2

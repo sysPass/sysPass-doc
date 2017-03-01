@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: sysPass 2.0.0\n"
+"Project-Id-Version: sysPass 2.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 00:27+0000\n"
+"POT-Creation-Date: 2017-03-01 11:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,47 +21,47 @@ msgid "General"
 msgstr ""
 
 #: ../../../source/updating/general.rst:4
-#: ../../../source/updating/v2_1.rst:20
+#: ../../../source/updating/v2_1.rst:30
 msgid "Para la actualización de sysPass son necesarios los siguientes pasos:"
 msgstr ""
 
 #: ../../../source/updating/general.rst:6
-#: ../../../source/updating/v2_1.rst:22
+#: ../../../source/updating/v2_1.rst:32
 msgid "Descargar la aplicación desde https://github.com/nuxsmin/sysPass/releases y descomprimir los archivos"
 msgstr ""
 
 #: ../../../source/updating/general.rst:7
-#: ../../../source/updating/v2_1.rst:23
+#: ../../../source/updating/v2_1.rst:33
 msgid "Establecer el propietario y permisos del directorio de sysPass"
 msgstr ""
 
 #: ../../../source/updating/general.rst:8
-#: ../../../source/updating/v2_1.rst:24
+#: ../../../source/updating/v2_1.rst:34
 msgid "Copiar los archivos (\"config.xml\", \"key.pem\" y \"pubkey.pem\") del directorio \"config\" de la versión actual a la nueva"
 msgstr ""
 
 #: ../../../source/updating/general.rst:9
-#: ../../../source/updating/v2_1.rst:25
+#: ../../../source/updating/v2_1.rst:35
 msgid "Acceder desde un navegador a la aplicación"
 msgstr ""
 
 #: ../../../source/updating/general.rst:11
-#: ../../../source/updating/v2_1.rst:27
+#: ../../../source/updating/v2_1.rst:37
 msgid "Si la aplicación requiere de actualización de la base de datos:"
 msgstr ""
 
 #: ../../../source/updating/general.rst:13
-#: ../../../source/updating/v2_1.rst:29
+#: ../../../source/updating/v2_1.rst:39
 msgid "**Realizar una copia de seguridad de la base de datos**"
 msgstr ""
 
 #: ../../../source/updating/general.rst:14
-#: ../../../source/updating/v2_1.rst:30
+#: ../../../source/updating/v2_1.rst:40
 msgid "Introducir el código de actualización que se encuentra en el archivo \"config/config.xml\" con la etiqueta \"upgradeKey\""
 msgstr ""
 
 #: ../../../source/updating/general.rst:16
-#: ../../../source/updating/v2_1.rst:36
+#: ../../../source/updating/v2_1.rst:46
 msgid "Tras la actualización, se mostrará un mensaje y en el registro de eventos se pueden revisar los detalles de la actualización"
 msgstr ""
 
@@ -93,27 +93,51 @@ msgstr ""
 msgid "Mejoras en la seguridad de los enlaces públicos"
 msgstr ""
 
-#: ../../../source/updating/v2_1.rst:13
+#: ../../../source/updating/v2_1.rst:12
+msgid "Detección de intentos de acceso fallidos. Se introduce un retardo después de varios intentos"
+msgstr ""
+
+#: ../../../source/updating/v2_1.rst:14
 msgid "Esta actualización requiere de la reencriptación de todas las cuentas y datos encriptados, por lo que es necesaria la clave maestra y un login de usuario válido para registrar los cambios."
 msgstr ""
 
-#: ../../../source/updating/v2_1.rst:15
+#: ../../../source/updating/v2_1.rst:16
 msgid "Aunque el proceso es seguro, es recomendable hacer una copia de seguridad completa de sysPass."
 msgstr ""
 
-#: ../../../source/updating/v2_1.rst:18
+#: ../../../source/updating/v2_1.rst:19
+msgid "Cambios Importantes"
+msgstr ""
+
+#: ../../../source/updating/v2_1.rst:21
+msgid "Debido a los cambios en la encriptación de datos, los siguientes elementos han de ser renovados:"
+msgstr ""
+
+#: ../../../source/updating/v2_1.rst:23
+msgid "Enlaces públicos: los enlaces son instantáneas de la cuenta enlazada, por lo que si se actualiza, es necesario renovar el enlace."
+msgstr ""
+
+#: ../../../source/updating/v2_1.rst:24
+msgid "Autorizaciones API: A partir de esta versión es necesaria una clave para las autorizaciones que requieran de datos encriptados."
+msgstr ""
+
+#: ../../../source/updating/v2_1.rst:25
+msgid "Clave maestra temporal: es necesario regenerarla si es usada."
+msgstr ""
+
+#: ../../../source/updating/v2_1.rst:28
 msgid "Proceso"
 msgstr ""
 
-#: ../../../source/updating/v2_1.rst:31
+#: ../../../source/updating/v2_1.rst:41
 msgid "Introducir la clave maestra de sysPass"
 msgstr ""
 
-#: ../../../source/updating/v2_1.rst:32
+#: ../../../source/updating/v2_1.rst:42
 msgid "Introducir un login de usuario válido"
 msgstr ""
 
-#: ../../../source/updating/v2_1.rst:34
+#: ../../../source/updating/v2_1.rst:44
 msgid "Durante la actualización se mostrará el progreso de las tareas de encriptación"
 msgstr ""
 

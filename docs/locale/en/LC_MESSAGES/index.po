@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-01 00:27+0000\n"
-"PO-Revision-Date: 2017-03-01 01:28+0100\n"
+"PO-Revision-Date: 2017-03-01 09:31+0100\n"
 "Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
 "Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
 "MIME-Version: 1.0\n"
@@ -117,7 +117,7 @@ msgstr "One step installation"
 
 #: ../../../source/index.rst:37
 msgid "Qué no hace sysPass"
-msgstr "What does not do sysPass"
+msgstr "What sysPass does not do"
 
 #: ../../../source/index.rst:39
 msgid "No guarda la clave maestra en el servidor"

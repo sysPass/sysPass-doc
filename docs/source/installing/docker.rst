@@ -25,7 +25,7 @@ Crear el archivo "docker-compose.yml" y ejecutar docker-compose:
 
 .. literalinclude:: ../_src/docker-compose.yml
   :language: yaml
-  
+
 .. code:: bash
 
   docker-compose -p syspass -f docker-compose.yml up -d
@@ -61,3 +61,13 @@ Los datos de acceso a la base de datos son:
 .. container:: alert alert-success
 
   Es posible instalar otras imágenes de sysPass en `Docker Hub`_
+
+.. note::
+
+  Seguir los pasos del instalador y tras la correcta finalización, ya es posible acceder a la aplicación
+
+  Para saber cómo funciona sysPass ver :doc:`/application/index`
+
+.. warning::
+
+  Se recomienda leer las indicaciones de seguridad en :doc:`/application/security`

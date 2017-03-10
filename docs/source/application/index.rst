@@ -19,3 +19,4 @@ sysPass es una aplicación que utiliza una base de datos MySQL/MariaDB para alma
     searching
     api
     features
+    plugins

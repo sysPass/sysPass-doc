@@ -1,9 +1,7 @@
-.. _`patrón de observador`: https://en.wikipedia.org/wiki/Observer_pattern
-
 Plugins
 =======
 
-sysPass permite el uso de plugins mediante una arquitectura que implementa el `patrón de observador`_ el cual se caracteriza por emitir un mensaje a todos los observadores registrados.
+sysPass permite el uso de plugins mediante una arquitectura que implementa el `patrón de observador <https://en.wikipedia.org/wiki/Observer_pattern>`_ el cual se caracteriza por emitir un mensaje a todos los observadores registrados.
 
 Los plugins se instalan en el directorio 'sysPass/inc/Plugins' y contienen la siguiente estructura básica:
 
@@ -33,7 +31,7 @@ Los plugins se instalan en el directorio 'sysPass/inc/Plugins' y contienen la si
 Los nombres de los directorios y archivos deben de ser de la siguiente manera:
 
 1. Nombre de directorio con el nombre del plugin. Ejemplo: **Authenticator**
-2. Nombre de archivo con el numbre del plugin en minúscula. Ejemplo: **authenticator.po**
+2. Nombre de archivo con el nombre del plugin en minúscula. Ejemplo: **authenticator.po**
 3. Nombre de archivo con el nombre del plugin seguido de "Plugin.class.php". Ejemplo: **AuthenticatorPlugin.class.php**
 
 La clase principal se debe de llamar igual que el plugin y tiene que extender a la clase **PluginBase**. Esta clase tiene que implementar los siguientes métodos.
@@ -357,3 +355,32 @@ Ejemplo
         return (array)parent::getData();
     }
   }
+
+Eventos
+-------
+
+Cuando se emite un evento se incluye la instancia de la clase donde se genera, por lo que es posible acceder a los métodos de dicha clase.
+
+Actualmente, los eventos producidos son los siguientes:
+
+==============================  ========================  =========================================================================
+Evento                          Clase                     Descripción
+==============================  ========================  =========================================================================
+show.account.new                AccountController         Generado cuando se muestra la vista de una cuenta nueva
+show.account.copy               AccountController         Generado cuando se muestra la vista de copiar cuenta
+show.account.edit               AccountController         Generado cuando se muestra la vista de editar cuenta
+show.account.editpass           AccountController         Generado cuando se muestra la vista de editar clave de cuenta
+show.account.view               AccountController         Generado cuando se muestra la vista de detalles de cuenta
+show.account.viewhistory        AccountController         Generado cuando se muestra la vista de cuenta en histórico
+show.account.delete             AccountController         Generado cuando se muestra la vista de eliminar cuenta
+show.account.request            AccountController         Generado cuando se muestra la vista de petición de modificación de cuenta
+show.account.search             AccountSearchController   Generado cuando se muestra la vista de búsqueda de cuentas
+show.config                     ConfigController          Generado cuando se muestra la vista de configuración
+show.eventlog                   EventlogController        Generado cuando se muestra la vista del registro de eventos
+show.itemlist.accounts          ItemListController        Generado cuando se muestra la vista elementos y personalización
+show.itemlist.accesses          ItemListController        Generado cuando se muestra la vista de accesos
+show.itemlist.notices           ItemListController        Generado cuando se muestra la vista de notificaciones
+login.preferences               LoginController           Generado cuando se cargan las preferencias en el login
+main.prelogin.*                 MainController            Generado cuando se realiza una acción antes del login (vía URL)
+main.postlogin.*                MainController            Generado cuando se realiza una acción después del login (vía URL)
+==============================  ========================  =========================================================================

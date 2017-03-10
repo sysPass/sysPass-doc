@@ -11,7 +11,8 @@ Métodos
 -------
 
 getAccountSearch
-````````````````
+::::::::::::::::
+
 Realiza una búsqueda de cuentas
 
 .. cssclass:: table-bordered
@@ -27,7 +28,8 @@ customerId  Id de cliente a filtrar
 ==========  ==============================
 
 getAccountData
-``````````````
+::::::::::::::
+
 Obtiene los detalles de una cuenta
 
 .. cssclass:: table-bordered
@@ -41,7 +43,8 @@ userPass    Clave del usuario asociado al token
 ==========  ==============================
 
 getAccountPassword
-``````````````````
+::::::::::::::::::
+
 Obtiene la clave de una cuenta
 
 .. cssclass:: table-bordered
@@ -56,7 +59,8 @@ details     Devolver detalles en la respuesta
 ==========  ==============================
 
 addAccount
-``````````
+::::::::::
+
 Crea una cuenta
 
 .. cssclass:: table-bordered
@@ -76,7 +80,8 @@ notes       Notas sobre la cuenta
 ==========  ==============================
 
 deleteAccount
-`````````````
+:::::::::::::
+
 Elimina una cuenta
 
 .. cssclass:: table-bordered
@@ -89,7 +94,8 @@ id          Id de la cuenta
 ==========  ==============================
 
 getCategories
-`````````````
+:::::::::::::
+
 Realiza una búsqueda de categorías
 
 .. cssclass:: table-bordered
@@ -103,7 +109,8 @@ count       Número de resultados a mostrar
 ==========  ==============================
 
 addCategory
-```````````
+:::::::::::
+
 Crea una categoría
 
 .. cssclass:: table-bordered
@@ -117,7 +124,8 @@ description Descripción
 =========== ==============================
 
 deleteCategory
-``````````````
+::::::::::::::
+
 Elimina una categoría
 
 .. cssclass:: table-bordered
@@ -130,7 +138,8 @@ id          Id de la categoría
 =========== ==============================
 
 getCustomers
-````````````
+::::::::::::
+
 Realiza una búsqueda de clientes
 
 .. cssclass:: table-bordered
@@ -144,7 +153,8 @@ count       Número de resultados a mostrar
 ==========  ==============================
 
 addCustomer
-```````````
+:::::::::::
+
 Crea un cliente
 
 .. cssclass:: table-bordered
@@ -158,7 +168,8 @@ description Descripción
 =========== ==============================
 
 deleteCustomer
-``````````````
+::::::::::::::
+
 Elimina un cliente
 
 =========== ==============================
@@ -169,7 +180,8 @@ id          Id del cliente
 =========== ==============================
 
 backup
-``````
+::::::
+
 Realiza una copia de seguridad de la aplicación
 
 =========== ==============================

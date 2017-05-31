@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-28 23:59+0000\n"
-"PO-Revision-Date: 2017-03-01 12:37+0100\n"
+"POT-Creation-Date: 2017-03-10 08:06+0000\n"
+"PO-Revision-Date: 2017-03-10 09:37+0100\n"
 "Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
 "Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,7 @@ msgid "La URL de acceso a la API es \"https://servidor/sysPass/api.php\"."
 msgstr "The API access URL is \"https://server/sysPass/api.php\"."
 
 #: ../../../source/application/api.rst:11
+#: ../../../source/application/plugins.rst:40
 msgid "Métodos"
 msgstr "Methods"
 
@@ -42,314 +43,315 @@ msgstr "Methods"
 msgid "getAccountSearch"
 msgstr "getAccountSearch"
 
-#: ../../../source/application/api.rst:15
+#: ../../../source/application/api.rst:16
 msgid "Realiza una búsqueda de cuentas"
 msgstr "Performs an accounts searching"
 
-#: ../../../source/application/api.rst:20
-#: ../../../source/application/api.rst:36
-#: ../../../source/application/api.rst:50
-#: ../../../source/application/api.rst:65
-#: ../../../source/application/api.rst:85
-#: ../../../source/application/api.rst:98
-#: ../../../source/application/api.rst:112
-#: ../../../source/application/api.rst:126
-#: ../../../source/application/api.rst:139
-#: ../../../source/application/api.rst:153
-#: ../../../source/application/api.rst:165
+#: ../../../source/application/api.rst:21
+#: ../../../source/application/api.rst:38
+#: ../../../source/application/api.rst:53
+#: ../../../source/application/api.rst:69
+#: ../../../source/application/api.rst:90
+#: ../../../source/application/api.rst:104
+#: ../../../source/application/api.rst:119
+#: ../../../source/application/api.rst:134
+#: ../../../source/application/api.rst:148
+#: ../../../source/application/api.rst:163
 #: ../../../source/application/api.rst:176
+#: ../../../source/application/api.rst:188
 msgid "Parámetro"
 msgstr "Parameter"
 
-#: ../../../source/application/api.rst:20
-#: ../../../source/application/api.rst:36
-#: ../../../source/application/api.rst:50
-#: ../../../source/application/api.rst:65
-#: ../../../source/application/api.rst:85
-#: ../../../source/application/api.rst:98
-#: ../../../source/application/api.rst:112
-#: ../../../source/application/api.rst:116
-#: ../../../source/application/api.rst:126
-#: ../../../source/application/api.rst:139
-#: ../../../source/application/api.rst:153
-#: ../../../source/application/api.rst:157
-#: ../../../source/application/api.rst:165
+#: ../../../source/application/api.rst:21
+#: ../../../source/application/api.rst:38
+#: ../../../source/application/api.rst:53
+#: ../../../source/application/api.rst:69
+#: ../../../source/application/api.rst:90
+#: ../../../source/application/api.rst:104
+#: ../../../source/application/api.rst:119
+#: ../../../source/application/api.rst:123
+#: ../../../source/application/api.rst:134
+#: ../../../source/application/api.rst:148
+#: ../../../source/application/api.rst:163
+#: ../../../source/application/api.rst:167
 #: ../../../source/application/api.rst:176
+#: ../../../source/application/api.rst:188
+#: ../../../source/application/plugins.rst:367
 #: ../../../source/application/searching.rst:15
 msgid "Descripción"
 msgstr "Description"
 
-#: ../../../source/application/api.rst:22
-#: ../../../source/application/api.rst:38
-#: ../../../source/application/api.rst:52
-#: ../../../source/application/api.rst:67
-#: ../../../source/application/api.rst:87
-#: ../../../source/application/api.rst:100
-#: ../../../source/application/api.rst:114
-#: ../../../source/application/api.rst:128
-#: ../../../source/application/api.rst:141
-#: ../../../source/application/api.rst:155
-#: ../../../source/application/api.rst:167
+#: ../../../source/application/api.rst:23
+#: ../../../source/application/api.rst:40
+#: ../../../source/application/api.rst:55
+#: ../../../source/application/api.rst:71
+#: ../../../source/application/api.rst:92
+#: ../../../source/application/api.rst:106
+#: ../../../source/application/api.rst:121
+#: ../../../source/application/api.rst:136
+#: ../../../source/application/api.rst:150
+#: ../../../source/application/api.rst:165
 #: ../../../source/application/api.rst:178
+#: ../../../source/application/api.rst:190
 msgid "authToken"
 msgstr "authToken"
 
-#: ../../../source/application/api.rst:22
-#: ../../../source/application/api.rst:38
-#: ../../../source/application/api.rst:52
-#: ../../../source/application/api.rst:67
-#: ../../../source/application/api.rst:87
-#: ../../../source/application/api.rst:100
-#: ../../../source/application/api.rst:114
-#: ../../../source/application/api.rst:128
-#: ../../../source/application/api.rst:141
-#: ../../../source/application/api.rst:155
-#: ../../../source/application/api.rst:167
+#: ../../../source/application/api.rst:23
+#: ../../../source/application/api.rst:40
+#: ../../../source/application/api.rst:55
+#: ../../../source/application/api.rst:71
+#: ../../../source/application/api.rst:92
+#: ../../../source/application/api.rst:106
+#: ../../../source/application/api.rst:121
+#: ../../../source/application/api.rst:136
+#: ../../../source/application/api.rst:150
+#: ../../../source/application/api.rst:165
 #: ../../../source/application/api.rst:178
+#: ../../../source/application/api.rst:190
 msgid "Token API del usuario"
 msgstr "User's API token"
 
-#: ../../../source/application/api.rst:23
+#: ../../../source/application/api.rst:24
 msgid "text"
 msgstr "text"
 
-#: ../../../source/application/api.rst:23
+#: ../../../source/application/api.rst:24
 msgid "Texto a buscar"
 msgstr "Text to search for"
 
-#: ../../../source/application/api.rst:24
-#: ../../../source/application/api.rst:102
-#: ../../../source/application/api.rst:143
+#: ../../../source/application/api.rst:25
+#: ../../../source/application/api.rst:108
+#: ../../../source/application/api.rst:152
 msgid "count"
 msgstr "count"
 
-#: ../../../source/application/api.rst:24
-#: ../../../source/application/api.rst:102
-#: ../../../source/application/api.rst:143
+#: ../../../source/application/api.rst:25
+#: ../../../source/application/api.rst:108
+#: ../../../source/application/api.rst:152
 msgid "Número de resultados a mostrar"
 msgstr "Number of results to display"
 
-#: ../../../source/application/api.rst:25
-#: ../../../source/application/api.rst:70
+#: ../../../source/application/api.rst:26
+#: ../../../source/application/api.rst:74
 msgid "categoryId"
 msgstr "categoryId"
 
-#: ../../../source/application/api.rst:25
+#: ../../../source/application/api.rst:26
 msgid "Id de categoría a filtrar"
 msgstr "Category Id for filtering"
 
-#: ../../../source/application/api.rst:26
-#: ../../../source/application/api.rst:71
+#: ../../../source/application/api.rst:27
+#: ../../../source/application/api.rst:75
 msgid "customerId"
 msgstr "customerId"
 
-#: ../../../source/application/api.rst:26
+#: ../../../source/application/api.rst:27
 msgid "Id de cliente a filtrar"
 msgstr "Customer Id for filtering"
 
-#: ../../../source/application/api.rst:30
+#: ../../../source/application/api.rst:31
 msgid "getAccountData"
 msgstr "getAccountData"
 
-#: ../../../source/application/api.rst:31
+#: ../../../source/application/api.rst:33
 msgid "Obtiene los detalles de una cuenta"
 msgstr "Gets an account's details"
 
-#: ../../../source/application/api.rst:39
-#: ../../../source/application/api.rst:53
-#: ../../../source/application/api.rst:88
-#: ../../../source/application/api.rst:129
-#: ../../../source/application/api.rst:168
+#: ../../../source/application/api.rst:41
+#: ../../../source/application/api.rst:56
+#: ../../../source/application/api.rst:93
+#: ../../../source/application/api.rst:137
+#: ../../../source/application/api.rst:179
 msgid "id"
 msgstr "id"
 
-#: ../../../source/application/api.rst:39
-#: ../../../source/application/api.rst:53
-#: ../../../source/application/api.rst:88
+#: ../../../source/application/api.rst:41
+#: ../../../source/application/api.rst:56
+#: ../../../source/application/api.rst:93
 msgid "Id de la cuenta"
 msgstr "Account Id"
 
-#: ../../../source/application/api.rst:40
+#: ../../../source/application/api.rst:42
 msgid "userPass"
 msgstr "userPass"
 
-#: ../../../source/application/api.rst:40
+#: ../../../source/application/api.rst:42
 msgid "Clave del usuario asociado al token"
 msgstr "User's password that belongs the token"
 
-#: ../../../source/application/api.rst:44
+#: ../../../source/application/api.rst:46
 msgid "getAccountPassword"
 msgstr "getAccountPassword"
 
-#: ../../../source/application/api.rst:45
+#: ../../../source/application/api.rst:48
 msgid "Obtiene la clave de una cuenta"
 msgstr "Gets an account's password"
 
-#: ../../../source/application/api.rst:54
-#: ../../../source/application/api.rst:68
+#: ../../../source/application/api.rst:57
+#: ../../../source/application/api.rst:72
 msgid "tokenPass"
 msgstr "tokenPass"
 
-#: ../../../source/application/api.rst:54
-#: ../../../source/application/api.rst:68
+#: ../../../source/application/api.rst:57
+#: ../../../source/application/api.rst:72
 msgid "Clave del token API"
 msgstr "API token password"
 
-#: ../../../source/application/api.rst:55
+#: ../../../source/application/api.rst:58
 msgid "details"
 msgstr "details"
 
-#: ../../../source/application/api.rst:55
+#: ../../../source/application/api.rst:58
 msgid "Devolver detalles en la respuesta"
 msgstr "Get details in the response"
 
-#: ../../../source/application/api.rst:59
+#: ../../../source/application/api.rst:62
 msgid "addAccount"
 msgstr "addAccount"
 
-#: ../../../source/application/api.rst:60
+#: ../../../source/application/api.rst:64
 msgid "Crea una cuenta"
 msgstr "Adds a new account"
 
-#: ../../../source/application/api.rst:69
-#: ../../../source/application/api.rst:101
-#: ../../../source/application/api.rst:115
-#: ../../../source/application/api.rst:142
-#: ../../../source/application/api.rst:156
+#: ../../../source/application/api.rst:73
+#: ../../../source/application/api.rst:107
+#: ../../../source/application/api.rst:122
+#: ../../../source/application/api.rst:151
+#: ../../../source/application/api.rst:166
 msgid "name"
 msgstr "name"
 
-#: ../../../source/application/api.rst:69
+#: ../../../source/application/api.rst:73
 msgid "Nombre de cuenta"
 msgstr "Account name"
 
-#: ../../../source/application/api.rst:70
+#: ../../../source/application/api.rst:74
 msgid "Id de categoría"
 msgstr "Category Id"
 
-#: ../../../source/application/api.rst:71
+#: ../../../source/application/api.rst:75
 msgid "Id de cliente"
 msgstr "Customer Id"
 
-#: ../../../source/application/api.rst:72
+#: ../../../source/application/api.rst:76
 msgid "pass"
 msgstr "pass"
 
-#: ../../../source/application/api.rst:72
+#: ../../../source/application/api.rst:76
 msgid "Clave"
 msgstr "Password"
 
-#: ../../../source/application/api.rst:73
+#: ../../../source/application/api.rst:77
 msgid "login"
 msgstr "login"
 
-#: ../../../source/application/api.rst:73
+#: ../../../source/application/api.rst:77
 msgid "Usuario de acceso"
 msgstr "Access user"
 
-#: ../../../source/application/api.rst:74
+#: ../../../source/application/api.rst:78
 msgid "url"
 msgstr "url"
 
-#: ../../../source/application/api.rst:74
+#: ../../../source/application/api.rst:78
 msgid "URL o IP de acceso"
 msgstr "Access URL or IP"
 
-#: ../../../source/application/api.rst:75
+#: ../../../source/application/api.rst:79
 msgid "notes"
 msgstr "notes"
 
-#: ../../../source/application/api.rst:75
+#: ../../../source/application/api.rst:79
 msgid "Notas sobre la cuenta"
 msgstr "Notes for the account"
 
-#: ../../../source/application/api.rst:79
+#: ../../../source/application/api.rst:83
 msgid "deleteAccount"
 msgstr "deleteAccount"
 
-#: ../../../source/application/api.rst:80
+#: ../../../source/application/api.rst:85
 msgid "Elimina una cuenta"
 msgstr "Deletes an account"
 
-#: ../../../source/application/api.rst:92
+#: ../../../source/application/api.rst:97
 msgid "getCategories"
 msgstr "getCategories"
 
-#: ../../../source/application/api.rst:93
+#: ../../../source/application/api.rst:99
 msgid "Realiza una búsqueda de categorías"
 msgstr "Performs a categories searching"
 
-#: ../../../source/application/api.rst:101
-#: ../../../source/application/api.rst:142
+#: ../../../source/application/api.rst:107
+#: ../../../source/application/api.rst:151
 msgid "Nombre a buscar"
 msgstr "Name to search for"
 
-#: ../../../source/application/api.rst:106
+#: ../../../source/application/api.rst:112
 msgid "addCategory"
 msgstr "addCategory"
 
-#: ../../../source/application/api.rst:107
+#: ../../../source/application/api.rst:114
 msgid "Crea una categoría"
 msgstr "Adds a new category"
 
-#: ../../../source/application/api.rst:115
+#: ../../../source/application/api.rst:122
 msgid "Nombre de la categoría"
 msgstr "Category name"
 
-#: ../../../source/application/api.rst:116
-#: ../../../source/application/api.rst:157
+#: ../../../source/application/api.rst:123
+#: ../../../source/application/api.rst:167
 msgid "description"
 msgstr "description"
 
-#: ../../../source/application/api.rst:120
+#: ../../../source/application/api.rst:127
 msgid "deleteCategory"
 msgstr "deleteCategory"
 
-#: ../../../source/application/api.rst:121
+#: ../../../source/application/api.rst:129
 msgid "Elimina una categoría"
 msgstr "Deletes a category"
 
-#: ../../../source/application/api.rst:129
+#: ../../../source/application/api.rst:137
 msgid "Id de la categoría"
 msgstr "Category Id"
 
-#: ../../../source/application/api.rst:133
+#: ../../../source/application/api.rst:141
 msgid "getCustomers"
 msgstr "getCustomers"
 
-#: ../../../source/application/api.rst:134
+#: ../../../source/application/api.rst:143
 msgid "Realiza una búsqueda de clientes"
 msgstr "Performs a customers searching"
 
-#: ../../../source/application/api.rst:147
+#: ../../../source/application/api.rst:156
 msgid "addCustomer"
 msgstr "addCustomer"
 
-#: ../../../source/application/api.rst:148
+#: ../../../source/application/api.rst:158
 msgid "Crea un cliente"
 msgstr "Adds a new customer"
 
-#: ../../../source/application/api.rst:156
+#: ../../../source/application/api.rst:166
 msgid "Nombre del cliente"
 msgstr "Customer name"
 
-#: ../../../source/application/api.rst:161
+#: ../../../source/application/api.rst:171
 msgid "deleteCustomer"
 msgstr "deleteCustomer"
 
-#: ../../../source/application/api.rst:162
+#: ../../../source/application/api.rst:173
 msgid "Elimina un cliente"
 msgstr "Deletes a customer"
 
-#: ../../../source/application/api.rst:168
+#: ../../../source/application/api.rst:179
 msgid "Id del cliente"
 msgstr "Customer Id"
 
-#: ../../../source/application/api.rst:172
+#: ../../../source/application/api.rst:183
 msgid "backup"
 msgstr "backup"
 
-#: ../../../source/application/api.rst:173
+#: ../../../source/application/api.rst:185
 msgid "Realiza una copia de seguridad de la aplicación"
 msgstr "Performs an application backup"
 
@@ -1099,6 +1101,363 @@ msgid ""
 "seguridad o XML"
 msgstr ""
 "Only the \"Application Admin\" users can download the backup or XML files"
+
+#: ../../../source/application/plugins.rst:2
+msgid "Plugins"
+msgstr "Plugins"
+
+#: ../../../source/application/plugins.rst:4
+msgid ""
+"sysPass permite el uso de plugins mediante una arquitectura que implementa "
+"el `patrón de observador <https://en.wikipedia.org/wiki/Observer_pattern>`_ "
+"el cual se caracteriza por emitir un mensaje a todos los observadores "
+"registrados."
+msgstr ""
+"sysPass allows to use plugins through an architecture that implements "
+"`observer pattern <https://en.wikipedia.org/wiki/Observer_pattern>`_ which "
+"is characterized by emitting a message to all subscribed observers."
+
+#: ../../../source/application/plugins.rst:6
+msgid ""
+"Los plugins se instalan en el directorio 'sysPass/inc/Plugins' y contienen "
+"la siguiente estructura básica:"
+msgstr ""
+"The plugins are installed in 'sysPass/inc/Plugins' directory and they "
+"contain the following basic structure:"
+
+#: ../../../source/application/plugins.rst:31
+msgid ""
+"Los nombres de los directorios y archivos deben de ser de la siguiente "
+"manera:"
+msgstr "The directory and file names need to be set in the following way:"
+
+#: ../../../source/application/plugins.rst:33
+msgid ""
+"Nombre de directorio con el nombre del plugin. Ejemplo: **Authenticator**"
+msgstr "Directory name within the plugin name: Example: **Authenticator**"
+
+#: ../../../source/application/plugins.rst:34
+msgid ""
+"Nombre de archivo con el nombre del plugin en minúscula. Ejemplo: "
+"**authenticator.po**"
+msgstr ""
+"Filename within the plugin name in lowercase: Example: **authenticator.po**"
+
+#: ../../../source/application/plugins.rst:35
+msgid ""
+"Nombre de archivo con el nombre del plugin seguido de \"Plugin.class.php\". "
+"Ejemplo: **AuthenticatorPlugin.class.php**"
+msgstr ""
+"Filename within the plugin name followed by \"Plugin.class.php\". Example: "
+"**AuthenticatorPlugin.class.php**"
+
+#: ../../../source/application/plugins.rst:37
+msgid ""
+"La clase principal se debe de llamar igual que el plugin y tiene que "
+"extender a la clase **PluginBase**. Esta clase tiene que implementar los "
+"siguientes métodos."
+msgstr ""
+"The main class need to be named like the plugin and extends **PluginBase** "
+"class. This class must implement the following methods."
+
+#: ../../../source/application/plugins.rst:43
+msgid "init"
+msgstr "init"
+
+#: ../../../source/application/plugins.rst:45
+msgid "Método que se llama cada vez que se ejecuta el plugin"
+msgstr "Method that is called every time the plugin is executed"
+
+#: ../../../source/application/plugins.rst:55
+msgid "updateEvent"
+msgstr "updateEvent"
+
+#: ../../../source/application/plugins.rst:57
+msgid "Método que se llama cuando se emite un evento"
+msgstr "Method that is called when an event is emitted"
+
+#: ../../../source/application/plugins.rst:70
+msgid "getEvents"
+msgstr "getEvents"
+
+#: ../../../source/application/plugins.rst:72
+msgid ""
+"Método que devuelve un array de strings con los eventos a los que se "
+"suscribe el plugin"
+msgstr ""
+"Method that returns an strings array with the events that the plugin will be "
+"subscribed to"
+
+#: ../../../source/application/plugins.rst:87
+msgid "getJsResources"
+msgstr "getJsResources"
+
+#: ../../../source/application/plugins.rst:89
+msgid ""
+"Método que devuelve un array de strings con los recursos Javascript que "
+"necesita el plugin"
+msgstr ""
+"Method that returns an strings array with the Javascript resources required "
+"by the plugin"
+
+#: ../../../source/application/plugins.rst:104
+msgid "getAuthor"
+msgstr "getAuthor"
+
+#: ../../../source/application/plugins.rst:106
+msgid "Método que devuelve el nombre del autor del plugin"
+msgstr "Method that returns the plugin author"
+
+#: ../../../source/application/plugins.rst:121
+msgid "getVersion"
+msgstr "getVersion"
+
+#: ../../../source/application/plugins.rst:123
+msgid "Método que devuelve un array de integers con la versión del plugin"
+msgstr "Method that returns an integers array with the plugin version"
+
+#: ../../../source/application/plugins.rst:138
+msgid "getCompatibleVersion"
+msgstr "getCompatibleVersion"
+
+#: ../../../source/application/plugins.rst:140
+msgid ""
+"Método que devuelve un array de integers con la versión mínima de sysPass "
+"compatible"
+msgstr ""
+"Method that returns an integers array with the minimum sysPass compatible "
+"version"
+
+#: ../../../source/application/plugins.rst:155
+msgid "getCssResources"
+msgstr "getCssResources"
+
+#: ../../../source/application/plugins.rst:157
+msgid ""
+"Método que devuelve un array de strings con los recursos CSS que requiere el "
+"plugin"
+msgstr ""
+"Method that returns an strings array with the CSS resources required by the "
+"plugin"
+
+#: ../../../source/application/plugins.rst:172
+msgid "getName"
+msgstr "getName"
+
+#: ../../../source/application/plugins.rst:174
+msgid "Método que devuelve el nombre del plugin"
+msgstr "Method that returns the plugin name"
+
+#: ../../../source/application/plugins.rst:189
+msgid "getData"
+msgstr "getData"
+
+#: ../../../source/application/plugins.rst:191
+msgid "Método que devuelve los datos del plugin"
+msgstr "Method that returns the plugin data"
+
+#: ../../../source/application/plugins.rst:204
+msgid "Ejemplo"
+msgstr "Example"
+
+#: ../../../source/application/plugins.rst:360
+msgid "Eventos"
+msgstr "Events"
+
+#: ../../../source/application/plugins.rst:362
+msgid ""
+"Cuando se emite un evento se incluye la instancia de la clase donde se "
+"genera, por lo que es posible acceder a los métodos de dicha clase."
+msgstr ""
+"When an event is emitted the generating class instance is included as an "
+"argument, so it could be possible to access to the class events."
+
+#: ../../../source/application/plugins.rst:364
+msgid "Actualmente, los eventos producidos son los siguientes:"
+msgstr "Currently, the generated events are the following:"
+
+#: ../../../source/application/plugins.rst:367
+msgid "Evento"
+msgstr "Event"
+
+#: ../../../source/application/plugins.rst:367
+msgid "Clase"
+msgstr "Class"
+
+#: ../../../source/application/plugins.rst:369
+msgid "show.account.new"
+msgstr "show.account.new"
+
+#: ../../../source/application/plugins.rst:369
+#: ../../../source/application/plugins.rst:370
+#: ../../../source/application/plugins.rst:371
+#: ../../../source/application/plugins.rst:372
+#: ../../../source/application/plugins.rst:373
+#: ../../../source/application/plugins.rst:374
+#: ../../../source/application/plugins.rst:375
+#: ../../../source/application/plugins.rst:376
+msgid "AccountController"
+msgstr "AccountController"
+
+#: ../../../source/application/plugins.rst:369
+msgid "Generado cuando se muestra la vista de una cuenta nueva"
+msgstr "Generated when new account view is displayed"
+
+#: ../../../source/application/plugins.rst:370
+msgid "show.account.copy"
+msgstr "show.account.copy"
+
+#: ../../../source/application/plugins.rst:370
+msgid "Generado cuando se muestra la vista de copiar cuenta"
+msgstr "Generated when copy account view is displayed"
+
+#: ../../../source/application/plugins.rst:371
+msgid "show.account.edit"
+msgstr "show.account.edit"
+
+#: ../../../source/application/plugins.rst:371
+msgid "Generado cuando se muestra la vista de editar cuenta"
+msgstr "Generated when account edit view is displayed"
+
+#: ../../../source/application/plugins.rst:372
+msgid "show.account.editpass"
+msgstr "show.account.editpass"
+
+#: ../../../source/application/plugins.rst:372
+msgid "Generado cuando se muestra la vista de editar clave de cuenta"
+msgstr "Generated when account's password edit view is displayed"
+
+#: ../../../source/application/plugins.rst:373
+msgid "show.account.view"
+msgstr "show.account.view"
+
+#: ../../../source/application/plugins.rst:373
+msgid "Generado cuando se muestra la vista de detalles de cuenta"
+msgstr "Generated when account details view is displayed"
+
+#: ../../../source/application/plugins.rst:374
+msgid "show.account.viewhistory"
+msgstr "show.account.viewhistory"
+
+#: ../../../source/application/plugins.rst:374
+msgid "Generado cuando se muestra la vista de cuenta en histórico"
+msgstr "Generated when account's history view is displayed"
+
+#: ../../../source/application/plugins.rst:375
+msgid "show.account.delete"
+msgstr "show.account.delete"
+
+#: ../../../source/application/plugins.rst:375
+msgid "Generado cuando se muestra la vista de eliminar cuenta"
+msgstr "Generated when account delete view is displayed"
+
+#: ../../../source/application/plugins.rst:376
+msgid "show.account.request"
+msgstr "show.account.request"
+
+#: ../../../source/application/plugins.rst:376
+msgid ""
+"Generado cuando se muestra la vista de petición de modificación de cuenta"
+msgstr "Generated when request for account modification view is displayed"
+
+#: ../../../source/application/plugins.rst:377
+msgid "show.account.search"
+msgstr "show.account.search"
+
+#: ../../../source/application/plugins.rst:377
+msgid "AccountSearchController"
+msgstr "AccountSearchController"
+
+#: ../../../source/application/plugins.rst:377
+msgid "Generado cuando se muestra la vista de búsqueda de cuentas"
+msgstr "Generated when accounts searching view is displayed"
+
+#: ../../../source/application/plugins.rst:378
+msgid "show.config"
+msgstr "show.config"
+
+#: ../../../source/application/plugins.rst:378
+msgid "ConfigController"
+msgstr "ConfigController"
+
+#: ../../../source/application/plugins.rst:378
+msgid "Generado cuando se muestra la vista de configuración"
+msgstr "Generated when configuration view is displayed"
+
+#: ../../../source/application/plugins.rst:379
+msgid "show.eventlog"
+msgstr "show.eventlog"
+
+#: ../../../source/application/plugins.rst:379
+msgid "EventlogController"
+msgstr "EventlogController"
+
+#: ../../../source/application/plugins.rst:379
+msgid "Generado cuando se muestra la vista del registro de eventos"
+msgstr "Generated when event log view is displayed"
+
+#: ../../../source/application/plugins.rst:380
+msgid "show.itemlist.accounts"
+msgstr "show.itemlist.accounts"
+
+#: ../../../source/application/plugins.rst:380
+#: ../../../source/application/plugins.rst:381
+#: ../../../source/application/plugins.rst:382
+msgid "ItemListController"
+msgstr "ItemListController"
+
+#: ../../../source/application/plugins.rst:380
+msgid "Generado cuando se muestra la vista elementos y personalización"
+msgstr "Generated when items and customizations view is displayed"
+
+#: ../../../source/application/plugins.rst:381
+msgid "show.itemlist.accesses"
+msgstr "show.itemlist.accesses"
+
+#: ../../../source/application/plugins.rst:381
+msgid "Generado cuando se muestra la vista de accesos"
+msgstr "Generated when accesses view is displayed"
+
+#: ../../../source/application/plugins.rst:382
+msgid "show.itemlist.notices"
+msgstr "show.itemlist.notices"
+
+#: ../../../source/application/plugins.rst:382
+msgid "Generado cuando se muestra la vista de notificaciones"
+msgstr "Generated when notifications view is displayed"
+
+#: ../../../source/application/plugins.rst:383
+msgid "login.preferences"
+msgstr "login.preferences"
+
+#: ../../../source/application/plugins.rst:383
+msgid "LoginController"
+msgstr "LoginController"
+
+#: ../../../source/application/plugins.rst:383
+msgid "Generado cuando se cargan las preferencias en el login"
+msgstr "Generated when preferences are loaded on login"
+
+#: ../../../source/application/plugins.rst:384
+msgid "main.prelogin.*"
+msgstr "main.prelogin.*"
+
+#: ../../../source/application/plugins.rst:384
+#: ../../../source/application/plugins.rst:385
+msgid "MainController"
+msgstr "MainController"
+
+#: ../../../source/application/plugins.rst:384
+msgid "Generado cuando se realiza una acción antes del login (vía URL)"
+msgstr "Generated when an action before login is performed (from URL)"
+
+#: ../../../source/application/plugins.rst:385
+msgid "main.postlogin.*"
+msgstr "main.postlogin.*"
+
+#: ../../../source/application/plugins.rst:385
+msgid "Generado cuando se realiza una acción después del login (vía URL)"
+msgstr "Generated when an action after login is performed (from URL)"
 
 #: ../../../source/application/searching.rst:2
 msgid "Búsqueda de Cuentas"

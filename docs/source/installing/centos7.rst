@@ -12,10 +12,12 @@ Prerequisitos
     * mcrypt
     * ldap (opcional)
     * SimpleXML
+    * XML
     * Curl
     * Json
     * GD
     * PDO
+    * mbstring
 * Última versión de sysPass https://github.com/nuxsmin/sysPass/releases
 
 Instalación
@@ -25,7 +27,7 @@ Instalación de paquetes
 
 .. code:: bash
 
-    yum install httpd php-mysql php-pdo php-ldap php-gd php-pdo mariadb-server mariadb wget
+    yum install httpd php-mysql php-pdo php-ldap php-gd php-pdo php-xml php-mbstring mariadb-server mariadb wget
 
 Para iniciar y auto-iniciar el servidor web Apache:
 

@@ -9,17 +9,18 @@ Prerequisitos
 * PHP >= 5.6 <= 7.0
 * Módulos PHP
     * mysql
-    * mcrypt
     * Curl
     * Json
     * GD
+    * XML
+    * mbstring
     * ldap (opcional)
 * Última versión de sysPass https://github.com/nuxsmin/sysPass/releases
 
 Instalación
 -----------
 
-Instalación de paquetes en Debian GNU/Linux:
+Instalación de paquetes en Debian GNU/Linux
 
 .. code:: bash
 
@@ -37,13 +38,13 @@ Opcional para habilitar LDAP:
 Configuración de directorios y permisos
 ---------------------------------------
 
-Crear un directorio para la aplicación en la raíz del servidor web:
+Crear un directorio para la aplicación en la raíz del servidor web
 
 .. code:: bash
 
     mkdir /var/www/html/syspass
 
-Copiar y descomprimir el archivo sysPass en el directorio creado:
+Copiar y descomprimir el archivo sysPass en el directorio creado
 
 .. code:: bash
 
@@ -51,24 +52,24 @@ Copiar y descomprimir el archivo sysPass en el directorio creado:
     cd /var/www/html/syspass
     tar xzf syspass.tar.gz
 
-Cambiar el propietario del directorio 'syspass/config'. Ha de coincidir con el usuario del servidor web:
+Cambiar el propietario del directorio 'syspass/config'. Ha de coincidir con el usuario del servidor web
 
 .. code:: bash
 
     chown www-data /var/www/html/syspass/config
     chmod 750 /var/www/html/syspass/config
 
-Crear y cambiar el propietario del directorio de copias de seguridad:
+Crear y cambiar el propietario del directorio de copias de seguridad
 
 .. code:: bash
 
-    mkdir var/www/html/syspass/backup
+    mkdir /var/www/html/syspass/backup
     chown www-data /var/www/html/syspass/backup
 
 Configuración del entorno
 -------------------------
 
-Abir un navegador y escribir la URL:
+Abir un navegador y escribir la URL
 
 https://IP_O_NOMBRE_SERVIDOR/syspass/index.php
 

@@ -29,8 +29,9 @@ Instalación de paquetes en Debian GNU/Linux
 
 .. code:: bash
 
-    apt-get install apache2 libapache2-mod-php5 php5 php5-curl php5-mysqlnd \
-    php5-curl php5-gd php5-json mariadb-server
+    apt install apache2 libapache2-mod-php php php-curl php-mysqlnd php-curl \
+    php-gd php-json mariadb-server php-ldap
+    
     service apache2 restart
 
 Opcional para habilitar LDAP

@@ -5,28 +5,55 @@ sysPass permite el uso de plugins mediante una arquitectura que implementa el `p
 
 Los plugins se instalan en el directorio 'sysPass/inc/Plugins' y contienen la siguiente estructura básica:
 
-.. code::
+.. only:: lang_es
 
-  Plugins/
-  └── NombrePlugin (1)
-      ├── ajax
-      ├── js
-      │   ├── plugin.js
-      │   └── plugin.min.js
-      ├── locales
-      │   ├── en_US
-      │   │   └── LC_MESSAGES
-      │   │       ├── NombrePlugin.mo (2)
-      │   │       └── NombrePlugin.po (2)
-      ├── themes
-      │   └── material-blue
-      │       └── views
-      │           ├── main
-      │           │   └── login.inc
-      │           └── userpreferences
-      │               └── preferences.inc
-      │
-      └── NombrePluginPlugin.class.php (3)
+  .. code::
+
+    Plugins/
+    └── NombrePlugin (1)
+        ├── ajax
+        ├── js
+        │   ├── plugin.js
+        │   └── plugin.min.js
+        ├── locales
+        │   ├── en_US
+        │   │   └── LC_MESSAGES
+        │   │       ├── NombrePlugin.mo (2)
+        │   │       └── NombrePlugin.po (2)
+        ├── themes
+        │   └── material-blue
+        │       └── views
+        │           ├── main
+        │           │   └── login.inc
+        │           └── userpreferences
+        │               └── preferences.inc
+        │
+        └── NombrePluginPlugin.class.php (3)
+
+.. only:: lang_en
+
+  .. code::
+
+    Plugins/
+    └── PluginName (1)
+        ├── ajax
+        ├── js
+        │   ├── plugin.js
+        │   └── plugin.min.js
+        ├── locales
+        │   ├── en_US
+        │   │   └── LC_MESSAGES
+        │   │       ├── NombrePlugin.mo (2)
+        │   │       └── NombrePlugin.po (2)
+        ├── themes
+        │   └── material-blue
+        │       └── views
+        │           ├── main
+        │           │   └── login.inc
+        │           └── userpreferences
+        │               └── preferences.inc
+        │
+        └── PluginNamePlugin.class.php (3)
 
 Los nombres de los directorios y archivos deben de ser de la siguiente manera:
 

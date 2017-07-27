@@ -1,5 +1,3 @@
-.. warning:: Esta es una versión en desarrollo de la documentación de sysPass 2.1
-
 .. container:: logo
 
   .. image:: _static/logo.png
@@ -51,4 +49,5 @@ Qué no hace sysPass
     configuration/index
     application/index
     updating/index
+    howtos/index
     faq

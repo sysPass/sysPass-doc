@@ -1,6 +1,17 @@
 Configuración de LDAP
 =====================
 
+Active Directory
+----------------
+
+Consejos
+________
+
+* Comprobar que el usuario de conexión es miembro del grupo "Operadores de Cuenta"
+
+OpenLDAP
+--------
+
 Para configurar un servidor de OpenLDAP correctamente, puedes seguir el siguiente artículo en https://wiki.debian.org/LDAP/OpenLDAPSetup en el que se describen los pasos para configurar un servidor totalmente operativo en distribuciones Debian y derivadas.
 
 En OpenLDAP, para usar la característica de pertenecia a grupo, es necesario añadir un 'overlay' llamado 'membeof'. Es un módulo que añade un atributo interno a los usuarios que son miembros de un grupo.
@@ -14,7 +25,7 @@ Estos son los pasos para configurar el módulo:
     cn: module
     olcModulePath: /usr/lib/ldap
     olcModuleLoad: memberof
-    
+
 * Crear un archivo 'ldap_memberof_config.ldif' con este contenido: ::
 
     dn: olcOverlay=memberof,olcDatabase={1}hdb,cn=config

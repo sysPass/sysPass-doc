@@ -45,19 +45,31 @@ Existen 29 tipos de permisos:
 
   * Registro de Eventos - permite acceso total al registro de eventos
 
-A nivel de usuario es posible establecer los siguientes permisos:
-
-* Admin Aplicacion: permite acceso total a todos los módulos de la aplicación
-* Admin Cuentas: permite acceso total a todas las cuentas excepto las privadas
-
 ACL
 ---
 
-* Un usuario sólo puede visualizar o modificar las cuentas propias, de su grupo principal y las que tienen establecido el usuario o grupo secundario
-* Un grupo puede contener varios usuarios, los cuales tendrán acceso a las cuentas de dicho grupo
-* Una cuenta sólo puede ser modificada por los usuarios o grupos principales y los secundarios si está establecido el permiso de modificación en los accesos de la cuenta
-* Las cuentas privadas sólo son accesibles por el propietario
-* Las cuentas privadas para grupo sólo son accesibles por los usuarios el grupo principal
+Usuarios y Grupos
+_________________
+
+  * Los perfiles de usuario permiten establecer qué acciones puede realizar
+  * Un usuario sólo puede visualizar o modificar las cuentas si:
+
+    * Es propietario de la cuenta
+    * Pertenece al grupo principal de la cuenta
+    * Pertenece a los usuarios secundarios de la cuenta
+    * Su grupo principal pertenece a los grupos secundarios de la cuenta
+    * Si está incluido a través de un grupo y la opción "Acceso Grupos Secundarios" está habilitada
+
+  * Una cuenta sólo puede ser modificada por los usuarios o grupos secundarios si está establecido el permiso de modificación en los accesos de la cuenta
+  * Las cuentas privadas sólo son accesibles por el propietario
+  * Las cuentas privadas para grupo sólo son accesibles por los usuarios el grupo principal
+  * Admin Aplicacion: permite acceso total a todos los módulos de la aplicación
+  * Admin Cuentas: permite acceso total a todas las cuentas excepto las privadas
+
+API
+___
+
+Los permisos de acceso a la API son complementarios a los de acceso a las cuentas, es decir, las ACLs de usuarios y grupos se aplicarán cuando se visualiza o accede a las cuentas.
 
 .. rubric:: Notas
 

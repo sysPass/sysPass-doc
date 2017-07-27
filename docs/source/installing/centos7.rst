@@ -118,6 +118,7 @@ Para permitir a sysPass escribir su configuración y backups, tenemos dos opcion
 
     chcon -R -t httpd_sys_rw_content_t /var/www/html/sysPass/config/
     chcon -R -t httpd_sys_rw_content_t /var/www/html/sysPass/backup/
+    mkdir /var/www/html/sysPass/tmp && chcon -R -t httpd_sys_rw_content_t /var/www/html/sysPass/tmp
 
 * Deshabilitar SELinux editando el archivo '/etc/sysconfig/selinux' y cambiar el valor de la variable "SELINUX" a "permissive" y reiniciar el sistema.
 

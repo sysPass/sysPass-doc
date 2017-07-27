@@ -7,27 +7,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-05 19:47+0000\n"
-"PO-Revision-Date: 2017-02-06 01:32+0100\n"
+"POT-Creation-Date: 2017-07-26 06:14+0000\n"
+"PO-Revision-Date: 2017-07-26 08:17+0100\n"
 "Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
 "Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 "Language: en\n"
 "X-Generator: Poedit 1.6.10\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
-#: ../../source/configuration/index.rst:4
+#: ../../../source/configuration/index.rst:4
 msgid "Configuración"
 msgstr "Configuration"
 
-#: ../../source/configuration/ldap.rst:2
+#: ../../../source/configuration/ldap.rst:2
 msgid "Configuración de LDAP"
 msgstr "LDAP Configuration"
 
-#: ../../source/configuration/ldap.rst:4
+#: ../../../source/configuration/ldap.rst:5
+msgid "Active Directory"
+msgstr "Active Directory"
+
+#: ../../../source/configuration/ldap.rst:8
+#: ../../../source/configuration/ldap.rst:49
+msgid "Consejos"
+msgstr "Tips"
+
+#: ../../../source/configuration/ldap.rst:10
+msgid ""
+"Comprobar que el usuario de conexión es miembro del grupo \"Operadores de "
+"Cuenta\""
+msgstr "Checks if connection user is member of group \"Account Operators\""
+
+#: ../../../source/configuration/ldap.rst:13
+msgid "OpenLDAP"
+msgstr "OpenLDAP"
+
+#: ../../../source/configuration/ldap.rst:15
 msgid ""
 "Para configurar un servidor de OpenLDAP correctamente, puedes seguir el "
 "siguiente artículo en https://wiki.debian.org/LDAP/OpenLDAPSetup en el que "
@@ -38,7 +56,7 @@ msgstr ""
 "at https://wiki.debian.org/LDAP/OpenLDAPSetup which describes the steps to "
 "configure a fully operational server under a Debian like distribution. "
 
-#: ../../source/configuration/ldap.rst:6
+#: ../../../source/configuration/ldap.rst:17
 msgid ""
 "En OpenLDAP, para usar la característica de pertenecia a grupo, es necesario "
 "añadir un 'overlay' llamado 'membeof'. Es un módulo que añade un atributo "
@@ -48,27 +66,23 @@ msgstr ""
 "'overlay' called 'membeof'. It's a module that adds an internal attribute to "
 "those users which belongs to a group. "
 
-#: ../../source/configuration/ldap.rst:8
+#: ../../../source/configuration/ldap.rst:19
 msgid "Estos son los pasos para configurar el módulo:"
 msgstr "These are the steps to configure that module: "
 
-#: ../../source/configuration/ldap.rst:10
+#: ../../../source/configuration/ldap.rst:21
 msgid "Crear un archivo 'ldap_memberof_add.ldif' con este contenido: ::"
 msgstr "Create the file 'ldap_memberof_add.ldif' with this content: ::"
 
-#: ../../source/configuration/ldap.rst:18
+#: ../../../source/configuration/ldap.rst:29
 msgid "Crear un archivo 'ldap_memberof_config.ldif' con este contenido: ::"
 msgstr "Create the file 'ldap_memberof_config.ldif' with this content: ::"
 
-#: ../../source/configuration/ldap.rst:32
+#: ../../../source/configuration/ldap.rst:43
 msgid "Modificar la configuración de LDAP con estos comandos: ::"
 msgstr "Modify the LDAP configuration by running these commands: ::"
 
-#: ../../source/configuration/ldap.rst:38
-msgid "Consejos"
-msgstr "Tips"
-
-#: ../../source/configuration/ldap.rst:40
+#: ../../../source/configuration/ldap.rst:51
 msgid ""
 "Comprobar que si el usuario 'admin' de sysPass coincide con el de LDAP, es "
 "necesario añadir este usuario al grupo de LDAP que tiene permisos de acceso "
@@ -77,7 +91,7 @@ msgstr ""
 "Check whether the sysPass 'admin' user is the same in OpenLDAP, you need to "
 "add this user to the LDAP group that have access permissions to sysPass."
 
-#: ../../source/configuration/ldap.rst:41
+#: ../../../source/configuration/ldap.rst:52
 msgid ""
 "El nombre y email de los usuarios de LDAP son obtenidos de los atributos "
 "'displayname','fullname' y 'mail'."
@@ -85,7 +99,7 @@ msgstr ""
 "The username and email ofthe LDAP users are populated from "
 "'displayname','fullname' and 'mail' attributes."
 
-#: ../../source/configuration/ldap.rst:42
+#: ../../../source/configuration/ldap.rst:53
 msgid ""
 "Es posible usar ldaps configurando la URI de conexión como 'ldaps:/ /"
 "mi_servidor_ldap'."
@@ -93,19 +107,19 @@ msgstr ""
 "You could use ldaps by setting a connection URI like 'ldaps:/ /"
 "my_ldap_server'."
 
-#: ../../source/configuration/ldap.rst:43
+#: ../../../source/configuration/ldap.rst:54
 msgid "Puedes instalar phpLDAPadmin_ para crear y administrar objetos de LDAP."
 msgstr "You could install phpLDAPadmin to create and manage the LDAP objects."
 
-#: ../../source/configuration/ldap.rst:48
+#: ../../../source/configuration/ldap.rst:59
 msgid "Enlaces"
 msgstr "Links"
 
-#: ../../source/configuration/ldap.rst:50
+#: ../../../source/configuration/ldap.rst:61
 msgid "Wiki de LDAP en Debian: https://wiki.debian.org/LDAP/OpenLDAPSetup"
 msgstr "LDAP Debian Wiki: https://wiki.debian.org/LDAP/OpenLDAPSetup"
 
-#: ../../source/configuration/ldap.rst:51
+#: ../../../source/configuration/ldap.rst:62
 msgid ""
 "Configuración de 'memberof': http://www.cbjck.de/2012/05/enabling-the-"
 "memberof-overlay-for-openldap/"

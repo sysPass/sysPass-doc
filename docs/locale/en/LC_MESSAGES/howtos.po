@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2017, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 2.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-27 07:16+0000\n"
+"PO-Revision-Date: 2017-07-27 11:23+0100\n"
+"Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
+"Language-Team: sysPass <nuxsmin <nuxsmin@syspass.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Language: en\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#: ../../../source/howtos/index.rst:4
+msgid "HOWTOs"
+msgstr "HOWTOs"
+
+#: ../../../source/howtos/restore.rst:2
+msgid "Cómo restaurar sysPass"
+msgstr "How to restore sysPass"
+
+#: ../../../source/howtos/restore.rst:6
+msgid ""
+"Este procedimiento requiere disponer de una copia de seguridad de la base de "
+"datos y de la aplicación"
+msgstr "This procedure requires to have a database and application backup"
+
+#: ../../../source/howtos/restore.rst:8
+msgid ""
+"Restaurar la copia de la base de datos. Se puede realizar mediante la "
+"utilidad de copia de sysPass, usando MySQL Workbench o con la utilidad "
+"mysqldump"
+msgstr ""
+"Restore the database backup. It could be made either through the sysPass "
+"utility, MySQL workbench or mysqldump tool"
+
+#: ../../../source/howtos/restore.rst:9
+msgid ""
+"Crear el usuario de conexión (ver archivo \"config.xml\") y asignar permisos "
+"sobre la base de datos restaurada"
+msgstr ""
+"Create the connection user (see \"config.xml\" file) and set the correct "
+"permissions over the restored database"
+
+#: ../../../source/howtos/restore.rst:10
+msgid "Restaurar la copia de la aplicación"
+msgstr "Restore the application backup"
+
+#: ../../../source/howtos/restore.rst:11
+msgid "Acceder desde un navegador a la aplicación"
+msgstr "Point the browser to the application URL"
+
+#: ../../../source/howtos/upgrade.rst:2
+msgid "Cómo probar una actualización de sysPass"
+msgstr "How to test a sysPass update"
+
+#: ../../../source/howtos/upgrade.rst:6
+msgid ""
+"Este procedimiento indica los pasos a seguir para probar una actualización "
+"de sysPass sin modificar la instalación actual"
+msgstr ""
+"This procedure tells the steps to follow to try out a sysPass update without "
+"modifying the current installation"
+
+#: ../../../source/howtos/upgrade.rst:8
+msgid ""
+"Realizar una copia de la base de datos. Se puede realizar mediante la "
+"utilidad de copia de sysPass, usando MySQL Workbench o con la utilidad "
+"mysqldump"
+msgstr ""
+"Make a database backup. It could be made either through the sysPass utility, "
+"MySQL workbench or mysqldump tool"
+
+#: ../../../source/howtos/upgrade.rst:9
+msgid "Crear una nueva base de datos (ej. syspass21)"
+msgstr "Create a new database (eg. syspass21)"
+
+#: ../../../source/howtos/upgrade.rst:10
+msgid ""
+"Crear un usuario (ej. sp_admin21) y asignar permisos sobre la base de datos "
+"creada"
+msgstr ""
+"Create an user (eg. sp_admin21) and set the permissions over the newly "
+"created database"
+
+#: ../../../source/howtos/upgrade.rst:11
+msgid ""
+"Importar la copia de la base de datos en la nueva. Es posible utilizar las "
+"utilidades mencionadas"
+msgstr ""
+"Import the backup in the newly created database. You could use the above "
+"tools"
+
+#: ../../../source/howtos/upgrade.rst:12
+msgid "Crear un nuevo directorio y descomprimir la nueva versión [#f1]_"
+msgstr ""
+"Create a new directory and unpack the new sysPass version package [#f1]_"
+
+#: ../../../source/howtos/upgrade.rst:13
+msgid ""
+"Copiar todos los archivos del directorio \"config\" a la nueva ruta y "
+"comprobar los permisos [#f1]_"
+msgstr ""
+"Copy all files within the \"config\" directory to the new path and check out "
+"the permissions [#f1]_"
+
+#: ../../../source/howtos/upgrade.rst:14
+msgid ""
+"Modificar el archivo \"config/config.xml\" para cambiar los datos de acceso "
+"a la base de datos (\"dbname\", \"dbuser\" y \"dbpass\"). Comprobar que "
+"\"dbHost\" es correcto"
+msgstr ""
+"Modify the \"config/config.xml\" file to set the correct database connection "
+"parameters (\"dbname\", \"dbuser\" and \"dbpass\"). Please check out that "
+"\"dbHost\" is correct"
+
+#: ../../../source/howtos/upgrade.rst:15
+msgid ""
+"Acceder desde un navegador a la aplicación y seguir los pasos de "
+"actualización"
+msgstr ""
+"Point the browser to the application URL and follow the steps for upgrading"
+
+#: ../../../source/howtos/upgrade.rst:18
+msgid "Notas"
+msgstr "Notes"
+
+#: ../../../source/howtos/upgrade.rst:19
+msgid "Ver :doc:`/installing/index` para más detalles"
+msgstr "See :doc:`/installing/index` for more details"

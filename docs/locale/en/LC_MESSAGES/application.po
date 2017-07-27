@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-10 08:06+0000\n"
-"PO-Revision-Date: 2017-03-10 09:37+0100\n"
+"POT-Creation-Date: 2017-07-26 06:22+0000\n"
+"PO-Revision-Date: 2017-07-26 08:35+0100\n"
 "Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
 "Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,7 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 
 #: ../../../source/application/api.rst:4
+#: ../../../source/application/permissions.rst:70
 msgid "API"
 msgstr "API"
 
@@ -1016,56 +1017,59 @@ msgstr "**Others**"
 msgid "Registro de Eventos - permite acceso total al registro de eventos"
 msgstr "Event Log - allows full access to the event log"
 
-#: ../../../source/application/permissions.rst:48
-msgid "A nivel de usuario es posible establecer los siguientes permisos:"
-msgstr "At users level it would be able to set the following permissions:"
-
-#: ../../../source/application/permissions.rst:50
-msgid ""
-"Admin Aplicacion: permite acceso total a todos los módulos de la aplicación"
-msgstr "Application Admin: allows full access to all the application modules"
-
-#: ../../../source/application/permissions.rst:51
-msgid ""
-"Admin Cuentas: permite acceso total a todas las cuentas excepto las privadas"
-msgstr ""
-"Accounts Admin: allows full access to all the accounts except private ones"
-
-#: ../../../source/application/permissions.rst:54
+#: ../../../source/application/permissions.rst:49
 msgid "ACL"
 msgstr "ACL"
 
-#: ../../../source/application/permissions.rst:56
-msgid ""
-"Un usuario sólo puede visualizar o modificar las cuentas propias, de su "
-"grupo principal y las que tienen establecido el usuario o grupo secundario"
-msgstr ""
-"An user can only view or modify either its or main group or those accounts "
-"which have set the secondary user or group"
+#: ../../../source/application/permissions.rst:52
+msgid "Usuarios y Grupos"
+msgstr "Users and Groups"
+
+#: ../../../source/application/permissions.rst:54
+msgid "Los perfiles de usuario permiten establecer qué acciones puede realizar"
+msgstr "User profiles allow to set which actions could be done by the user"
+
+#: ../../../source/application/permissions.rst:55
+msgid "Un usuario sólo puede visualizar o modificar las cuentas si:"
+msgstr "An user can only display or modify accounts if:"
 
 #: ../../../source/application/permissions.rst:57
-msgid ""
-"Un grupo puede contener varios usuarios, los cuales tendrán acceso a las "
-"cuentas de dicho grupo"
-msgstr ""
-"A group could have several users, that will be granted to the accounts of "
-"the group."
+msgid "Es propietario de la cuenta"
+msgstr "Is the account's owner"
 
 #: ../../../source/application/permissions.rst:58
-msgid ""
-"Una cuenta sólo puede ser modificada por los usuarios o grupos principales y "
-"los secundarios si está establecido el permiso de modificación en los "
-"accesos de la cuenta"
-msgstr ""
-"An account can only be modified by either the main users or groups and the "
-"secondaries ones if the modification permission, on the account accesses, is "
-"enabled"
+msgid "Pertenece al grupo principal de la cuenta"
+msgstr "Is member of account's primary group"
 
 #: ../../../source/application/permissions.rst:59
+msgid "Pertenece a los usuarios secundarios de la cuenta"
+msgstr "Is member of account's secondary groups"
+
+#: ../../../source/application/permissions.rst:60
+msgid "Su grupo principal pertenece a los grupos secundarios de la cuenta"
+msgstr "His main group is listed as a secondary group of the account"
+
+#: ../../../source/application/permissions.rst:61
+msgid ""
+"Si está incluido a través de un grupo y la opción \"Acceso Grupos Secundarios"
+"\" está habilitada"
+msgstr ""
+"Is included through a group and the \"Secondary Groups Access\" option is "
+"enabled"
+
+#: ../../../source/application/permissions.rst:63
+msgid ""
+"Una cuenta sólo puede ser modificada por los usuarios o grupos secundarios "
+"si está establecido el permiso de modificación en los accesos de la cuenta"
+msgstr ""
+"An account can only be modified by either the users or secondary groups if "
+"the modification permission, on the account accesses, is enabled"
+
+#: ../../../source/application/permissions.rst:64
 msgid "Las cuentas privadas sólo son accesibles por el propietario"
 msgstr "The private accounts can only be accessed by the owner"
 
-#: ../../../source/application/permissions.rst:60
+#: ../../../source/application/permissions.rst:65
 msgid ""
 "Las cuentas privadas para grupo sólo son accesibles por los usuarios el "
 "grupo principal"
@@ -1073,15 +1077,36 @@ msgstr ""
 "The private accounts for groups can only be accessed by the users of the "
 "main group"
 
-#: ../../../source/application/permissions.rst:63
+#: ../../../source/application/permissions.rst:66
+msgid ""
+"Admin Aplicacion: permite acceso total a todos los módulos de la aplicación"
+msgstr "Application Admin: allows full access to all the application modules"
+
+#: ../../../source/application/permissions.rst:67
+msgid ""
+"Admin Cuentas: permite acceso total a todas las cuentas excepto las privadas"
+msgstr ""
+"Accounts Admin: allows full access to all the accounts except private ones"
+
+#: ../../../source/application/permissions.rst:72
+msgid ""
+"Los permisos de acceso a la API son complementarios a los de acceso a las "
+"cuentas, es decir, las ACLs de usuarios y grupos se aplicarán cuando se "
+"visualiza o accede a las cuentas."
+msgstr ""
+"The API access permissions are complementary to the accounts access "
+"permissions, so users and groups ACLs will be applied when an account is "
+"either listed or accessed."
+
+#: ../../../source/application/permissions.rst:75
 msgid "Notas"
 msgstr "Notes"
 
-#: ../../../source/application/permissions.rst:64
+#: ../../../source/application/permissions.rst:76
 msgid "Sólo a las cuentas a las que el usuario y su grupo tienen acceso"
 msgstr "Only the accounts that the user and its group are granted"
 
-#: ../../../source/application/permissions.rst:65
+#: ../../../source/application/permissions.rst:77
 msgid ""
 "En caso de no tener acceso a la cuenta, sólo es posible realizar una "
 "\"Solicitud de Modificación\""
@@ -1089,13 +1114,13 @@ msgstr ""
 "When the account access is not granted, it will only be able to perform a "
 "\"Request for Account Modification\""
 
-#: ../../../source/application/permissions.rst:66
+#: ../../../source/application/permissions.rst:78
 msgid ""
 "Los usuarios \"Admin Aplicación\" no pueden ser modificados por otros "
 "usuarios"
 msgstr "The \"Application Admin\" users cannot be modified by other users"
 
-#: ../../../source/application/permissions.rst:67
+#: ../../../source/application/permissions.rst:79
 msgid ""
 "Sólo los usuarios \"Admin Aplicación\" pueden descargar archivos de copia de "
 "seguridad o XML"
@@ -1619,3 +1644,6 @@ msgstr ""
 "In order to limit the access to the directories through Apache, \".htaccess"
 "\" files could be used within the directories or by modifying the site "
 "configuration:"
+
+#~ msgid "A nivel de usuario es posible establecer los siguientes permisos:"
+#~ msgstr "At users level it would be able to set the following permissions:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 00:27+0000\n"
+"POT-Creation-Date: 2017-07-27 06:47+0000\n"
 "PO-Revision-Date: 2017-03-01 09:31+0100\n"
 "Last-Translator: nuxsmin <nuxsmin@syspass.org>\n"
 "Language-Team: nuxsmin <nuxsmin@syspass.org>\n"
@@ -15,18 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
-"Language: en\n"
-"X-Generator: Poedit 1.6.10\n"
 
-#: ../../../source/index.rst:1
-msgid "Esta es una versión en desarrollo de la documentación de sysPass 2.1"
-msgstr "This is a development version of the sysPass 2.1 documentation"
-
-#: ../../../source/index.rst:11
+#: ../../../source/index.rst:9
 msgid "Introducción"
 msgstr "Introduction"
 
-#: ../../../source/index.rst:13
+#: ../../../source/index.rst:11
 msgid ""
 "sysPass es un gestor de claves web escrito en PHP que permite la gestión "
 "centralizada de claves en un entorno multiusuario."
@@ -34,119 +28,122 @@ msgstr ""
 "sysPass is a password management system written in PHP that allows a "
 "centralized passwords management in a multiuser environment."
 
-#: ../../../source/index.rst:16
+#: ../../../source/index.rst:14
 msgid "Características"
 msgstr "Features"
 
-#: ../../../source/index.rst:18
+#: ../../../source/index.rst:16
 msgid "Interfaz con Material Design Lite en HTML5 y Ajax"
 msgstr "Interface based on Material Design Lite with HTML5 and Ajax"
 
-#: ../../../source/index.rst:19
+#: ../../../source/index.rst:17
 msgid "Claves encriptadas con AES-256 CTR"
 msgstr "Encrypted passwords within AES-256 CTR"
 
-#: ../../../source/index.rst:20
+#: ../../../source/index.rst:18
 msgid "Multiusuario con gestión de usuarios, grupos y perfiles"
 msgstr "Multiuser with users, groups and profiles management"
 
-#: ../../../source/index.rst:21
+#: ../../../source/index.rst:19
 msgid "Gestión avanzada de perfiles con 29 niveles de acceso"
 msgstr "Advanced profile management with 29 access levels"
 
-#: ../../../source/index.rst:22
+#: ../../../source/index.rst:20
 msgid "Autentificación con MySQL/MariaDB, OpenLDAP y Active Directory"
 msgstr "MySQL/MariaDB, OpenLDAP and Active Directory authentication "
 
-#: ../../../source/index.rst:23
+#: ../../../source/index.rst:21
 msgid "Notificaciones por email e in-app de actividad"
 msgstr "Activity notifications by email and in-app"
 
-#: ../../../source/index.rst:24
+#: ../../../source/index.rst:22
 msgid "Enlaces públicos a cuentas sin necesidad de login"
 msgstr "Public links to accounts without login"
 
-#: ../../../source/index.rst:25
+#: ../../../source/index.rst:23
 msgid "Historial de cambios en cuentas"
 msgstr "Accounts changes history"
 
-#: ../../../source/index.rst:26
-msgid ""
-"Gestión de archivos asociados a cuentas con previsualización de imágenes"
+#: ../../../source/index.rst:24
+msgid "Gestión de archivos asociados a cuentas con previsualización de imágenes"
 msgstr "Accounts associated files management with images preview"
 
-#: ../../../source/index.rst:27
+#: ../../../source/index.rst:25
 msgid ""
-"Multilenguaje, con traducciones en Inglés, Catalán, Alemán, Polaco, Ruso, "
-"Francés y Holandés"
+"Multilenguaje, con traducciones en Inglés, Catalán, Alemán, Polaco, Ruso,"
+" Francés y Holandés"
 msgstr ""
 "Multilanguage translated to Spanish, Catalan, German, Polish, Russian, "
 "French and Dutch."
 
-#: ../../../source/index.rst:28
+#: ../../../source/index.rst:26
 msgid "Enlace a Wiki externa e integración con API de DokuWiki"
 msgstr "Link to external Wiki and DokuWiki's API integration"
 
-#: ../../../source/index.rst:29
+#: ../../../source/index.rst:27
 msgid "Backup en formato portable y exportación en XML encriptado"
 msgstr "Portable format backup and export to encrypted XML"
 
-#: ../../../source/index.rst:30
+#: ../../../source/index.rst:28
 msgid ""
-"Registro de acciones y eventos con posibilidad de enviar a Syslog remoto en "
-"formato CEF"
+"Registro de acciones y eventos con posibilidad de enviar a Syslog remoto "
+"en formato CEF"
 msgstr ""
-"Actions and events log with the ability to send messages to a remote Syslog "
-"in CEF format"
+"Actions and events log with the ability to send messages to a remote "
+"Syslog in CEF format"
 
-#: ../../../source/index.rst:31
+#: ../../../source/index.rst:29
 msgid "Configurable y extensible mediante temas y plugins"
 msgstr "Configurable and extensible using themes and plugins"
 
-#: ../../../source/index.rst:32
+#: ../../../source/index.rst:30
 msgid "API para integración con otras aplicaciones"
 msgstr "API for integrating with other applications"
 
-#: ../../../source/index.rst:33
+#: ../../../source/index.rst:31
 msgid "Importación desde KeePass, KeePassX y CSV"
 msgstr "Import from KeePass, KeePassX and CSV"
 
-#: ../../../source/index.rst:34
+#: ../../../source/index.rst:32
 msgid "Instalación en un solo paso"
 msgstr "One step installation"
 
-#: ../../../source/index.rst:37
+#: ../../../source/index.rst:35
 msgid "Qué no hace sysPass"
 msgstr "What sysPass does not do"
 
-#: ../../../source/index.rst:39
+#: ../../../source/index.rst:37
 msgid "No guarda la clave maestra en el servidor"
 msgstr "It does not store the master password in the server"
 
-#: ../../../source/index.rst:40
+#: ../../../source/index.rst:38
 msgid "No envía datos a ningún servicio externo"
 msgstr "It does not send any data to an external service"
 
-#: ../../../source/index.rst:41
+#: ../../../source/index.rst:39
 msgid ""
-"No encripta las claves de las cuentas individualmente, se utiliza una clave "
-"maestra para todas"
+"No encripta las claves de las cuentas individualmente, se utiliza una "
+"clave maestra para todas"
 msgstr ""
-"It does not encrypt the account's password individually, it uses a master "
-"password for all instead"
+"It does not encrypt the account's password individually, it uses a master"
+" password for all instead"
 
-#: ../../../source/index.rst:42
+#: ../../../source/index.rst:40
 msgid "No realiza cambios de clave en los servidores"
 msgstr "It does not perform password changes on the servers"
 
-#: ../../../source/index.rst:43
+#: ../../../source/index.rst:41
 msgid ""
 "No encripta los datos de las cuentas, sólo la clave y los campos "
 "personalizados ya que no se podrían realizar búsquedas"
 msgstr ""
-"It does not encrypt the accounts' data, only the password and custom fields "
-"data, because you couldn't perform searches"
+"It does not encrypt the accounts' data, only the password and custom "
+"fields data, because you couldn't perform searches"
 
-#: ../../../source/index.rst:44
+#: ../../../source/index.rst:42
 msgid "No es como APT: NO tiene poderes de super vaca!!"
 msgstr "It isn't like APT: doesn't have Super Cow Powers!!"
+
+#~ msgid "Esta es una versión en desarrollo de la documentación de sysPass 2.1"
+#~ msgstr "This is a development version of the sysPass 2.1 documentation"
+

@@ -30,7 +30,7 @@ Instalación de paquetes en Debian GNU/Linux
 .. code:: bash
 
     apt install apache2 libapache2-mod-php php php-curl php-mysqlnd php-curl \
-    php-gd php-json mariadb-server php-ldap php-mbstring
+    php-gd php-json mariadb-server php-ldap php-mbstring php-xml
     
     service apache2 restart
 

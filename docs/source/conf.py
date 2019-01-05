@@ -36,6 +36,7 @@ import sphinx_rtd_theme
 extensions = [
     'sphinx.ext.graphviz',
     'sphinx.ext.todo',
+    'sphinx.ext.ifconfig',
     'sphinxcontrib.plantuml'
 ]
 
@@ -544,3 +545,5 @@ pdf_documents = [
 # pdf_fit_background_mode = 'scale'
 
 plantuml = 'java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar'
+
+tags.add('lang_' + language)

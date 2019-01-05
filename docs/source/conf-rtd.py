@@ -34,23 +34,10 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-  #  'rst2pdf.pdfbuilder',
+    'rst2pdf.pdfbuilder',
     'sphinx.ext.graphviz',
-  # 'sphinx.ext.ifconfig',
-  # 'sphinx.ext.mathjax',
-  # 'sphinx.ext.todo',
-    'sphinxcontrib.actdiag',
-    'sphinxcontrib.blockdiag',
-  # 'sphinxcontrib.exceltable',
-  # 'sphinxcontrib.googleanalytics',
-  # 'sphinxcontrib.googlechart',
-  # 'sphinxcontrib.googlemaps',
-  # 'sphinxcontrib.libreoffice',
-    'sphinxcontrib.nwdiag',
-  # 'sphinxcontrib.packetdiag',
+    'sphinx.ext.todo',
     'sphinxcontrib.plantuml',
-  # 'sphinxcontrib.rackdiag',
-    'sphinxcontrib.seqdiag'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

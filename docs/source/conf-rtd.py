@@ -556,5 +556,3 @@ pdf_documents = [
 
 # Background images fitting mode
 # pdf_fit_background_mode = 'scale'
-
-plantuml = 'java -Djava.awt.headless=true -jar /opt/extensions/plantuml.jar'

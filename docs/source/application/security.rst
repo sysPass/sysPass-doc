@@ -19,17 +19,14 @@ Para restringir el acceso a los directorios en Apache es posible utilizar los ar
 
 .. code:: Apache
 
-  # Apache 2.2
-  <Directory ~ "/var/www/html/sysPass/(config|backup)">
-    <Limit GET HEAD POST>
-      Order Deny,Allow
-      Deny from all
-    </Limit>
+  # Apache 2.4
+  <Directory "/var/www/html/sysPass">
+    Options -Indexes -FollowSymLinks -Includes -ExecCGI
+    Require expr "%{REQUEST_URI} =~ /(index|api\.php)?/"
   </Directory>
 
-  # Apache 2.4
-  <Directory ~ "/var/www/html/sysPass/(config|backup)">
-    Require all denied
+  <Directory "/var/www/html/sysPass/public">
+    Require all granted
   </Directory>
 
 .. danger:: Es importante que el directorio "config" no sea accesible desde el servicio web, ya que puede revelar información importante.

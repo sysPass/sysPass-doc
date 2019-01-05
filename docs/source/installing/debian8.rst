@@ -1,6 +1,10 @@
 Instalación Debian 8
 ====================
 
+.. warning::
+
+  Only 2.0
+
 Prerequisitos
 -------------
 

@@ -1,6 +1,10 @@
 Instalación CentOS 7
 ====================
 
+.. warning::
+
+  Only 2.0. Work in progress
+
 Prerequisitos
 -------------
 

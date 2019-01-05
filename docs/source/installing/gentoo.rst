@@ -1,6 +1,10 @@
 Instalación Gentoo
 ==================
 
+.. warning::
+
+  Only 2.0
+  
 Prerequisitos
 -------------
 * Servidor Web (Apache/Nginx/Lighttpd) con SSL habilitado.

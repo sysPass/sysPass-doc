@@ -1,5 +1,9 @@
 .. _`JSON-RPC v2`: https://en.wikipedia.org/wiki/JSON-RPC
 
+.. warning::
+
+  Only 2.0. Work in progress
+  
 API
 ===
 

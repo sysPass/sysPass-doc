@@ -36,7 +36,6 @@ import sphinx_rtd_theme
 extensions = [
     'sphinx.ext.graphviz',
     'sphinx.ext.todo',
-    'sphinxcontrib.plantuml',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

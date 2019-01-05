@@ -1,10 +1,3 @@
-.. container:: logo
-
-  .. image:: _static/logo.png
-      :width: 500px
-      :alt: Logo sysPass
-      :align: left
-
 Introducción
 ============
 

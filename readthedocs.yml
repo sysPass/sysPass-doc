@@ -3,9 +3,10 @@ build:
 
 python:
   version: 3.6
+  setup_py_install: true
   pip_install: true
   extra_requirements:
     - test
     - docs
 
-requirements_file: requirements.txt
+requirements_file: docs/source/requirements.txt

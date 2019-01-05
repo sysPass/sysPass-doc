@@ -546,4 +546,5 @@ pdf_documents = [
 
 plantuml = 'java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar'
 
-tags.add('lang_' + app.config.language)
+def setup(app):
+    tags.add('lang_' + app.config.language)

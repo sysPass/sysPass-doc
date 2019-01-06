@@ -1,195 +1,504 @@
 .. _`JSON-RPC v2`: https://en.wikipedia.org/wiki/JSON-RPC
 
-.. warning::
-
-  Only 2.0. Work in progress
-  
 API
 ===
 
-La API de sysPass utiliza `JSON-RPC v2`_ para el intercambio de mensajes entre cliente-servidor.
+sysPass API relies on `JSON-RPC v2`_ schema for client-server communication.
 
-La URL de acceso a la API es "https://servidor/sysPass/api.php".
+The API access URL is "https://server_name/api.php"
 
-Métodos
+Example of JSON-RPC payload:
+
+.. code:: json
+
+    {
+      "jsonrpc": "2.0",
+      "method": "account/search",
+      "params": {
+        "authToken": "auth_token_for_api"
+      },
+      "id": 1
+    }
+
+Methods
 -------
 
-getAccountSearch
-::::::::::::::::
+Accounts
+________
 
-Realiza una búsqueda de cuentas
-
-.. cssclass:: table-bordered
-
-==========  ==============================
-Parámetro   Descripción
-==========  ==============================
-authToken   Token API del usuario
-text        Texto a buscar
-count       Número de resultados a mostrar
-categoryId  Id de categoría a filtrar
-customerId  Id de cliente a filtrar
-==========  ==============================
-
-getAccountData
+account/search
 ::::::::::::::
 
-Obtiene los detalles de una cuenta
+Search for accounts
 
 .. cssclass:: table-bordered
 
-==========  ==============================
-Parámetro   Descripción
-==========  ==============================
-authToken   Token API del usuario
-id          Id de la cuenta
-userPass    Clave del usuario asociado al token
-==========  ==============================
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+text        string  no        Text to search for
+count       int     no        Number of results to display
+categoryId  int     no        Category's Id for filtering
+clientId    int     no        Client's Id for filtering
+tagsId      array   no        Tags' Id for filtering
+op          string  no        Operator used for filtering. It can be either 'or' or 'and'
+==========  ======  ========  ===========
 
-getAccountPassword
-::::::::::::::::::
-
-Obtiene la clave de una cuenta
-
-.. cssclass:: table-bordered
-
-==========  ==============================
-Parámetro   Descripción
-==========  ==============================
-authToken   Token API del usuario
-id          Id de la cuenta
-tokenPass   Clave del token API
-details     Devolver detalles en la respuesta
-==========  ==============================
-
-addAccount
-::::::::::
-
-Crea una cuenta
-
-.. cssclass:: table-bordered
-
-==========  ==============================
-Parámetro   Descripción
-==========  ==============================
-authToken   Token API del usuario
-tokenPass   Clave del token API
-name        Nombre de cuenta
-categoryId  Id de categoría
-customerId  Id de cliente
-pass        Clave
-login       Usuario de acceso
-url         URL o IP de acceso
-notes       Notas sobre la cuenta
-==========  ==============================
-
-deleteAccount
-:::::::::::::
-
-Elimina una cuenta
-
-.. cssclass:: table-bordered
-
-==========  ==============================
-Parámetro   Descripción
-==========  ==============================
-authToken   Token API del usuario
-id          Id de la cuenta
-==========  ==============================
-
-getCategories
-:::::::::::::
-
-Realiza una búsqueda de categorías
-
-.. cssclass:: table-bordered
-
-==========  ==============================
-Parámetro   Descripción
-==========  ==============================
-authToken   Token API del usuario
-name        Nombre a buscar
-count       Número de resultados a mostrar
-==========  ==============================
-
-addCategory
-:::::::::::
-
-Crea una categoría
-
-.. cssclass:: table-bordered
-
-=========== ==============================
-Parámetro   Descripción
-=========== ==============================
-authToken   Token API del usuario
-name        Nombre de la categoría
-description Descripción
-=========== ==============================
-
-deleteCategory
-::::::::::::::
-
-Elimina una categoría
-
-.. cssclass:: table-bordered
-
-=========== ==============================
-Parámetro   Descripción
-=========== ==============================
-authToken   Token API del usuario
-id          Id de la categoría
-=========== ==============================
-
-getCustomers
+account/view
 ::::::::::::
 
-Realiza una búsqueda de clientes
+Get account's details
 
 .. cssclass:: table-bordered
 
-==========  ==============================
-Parámetro   Descripción
-==========  ==============================
-authToken   Token API del usuario
-name        Nombre a buscar
-count       Número de resultados a mostrar
-==========  ==============================
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+tokenPass   string  yes       API token's pass
+id          int     yes       Account's Id
+==========  ======  ========  ===========
 
-addCustomer
-:::::::::::
+account/viewPass
+::::::::::::::::
 
-Crea un cliente
+Get account's password
 
 .. cssclass:: table-bordered
 
-=========== ==============================
-Parámetro   Descripción
-=========== ==============================
-authToken   Token API del usuario
-name        Nombre del cliente
-description Descripción
-=========== ==============================
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+tokenPass   string  yes       API token's pass
+id          int     yes       Account's Id
+details     int     no        Whether to return account's details within response
+==========  ======  ========  ===========
 
-deleteCustomer
+account/editPass
+::::::::::::::::
+
+Edit account's password
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+tokenPass   string  yes       API token's pass
+id          int     yes       Account's Id
+pass        string  yes       Account's password
+expireDate  int     no        Expire date in UNIX timestamp format
+==========  ======  ========  ===========
+
+account/create
 ::::::::::::::
 
-Elimina un cliente
+Create account
 
-=========== ==============================
-Parámetro   Descripción
-=========== ==============================
-authToken   Token API del usuario
-id          Id del cliente
-=========== ==============================
+.. cssclass:: table-bordered
 
-backup
-::::::
+============  ======  ========  ===========
+Parameter     Type    Required  Description
+============  ======  ========  ===========
+authToken     string  yes       User's API token
+tokenPass     string  yes       API token's pass
+name          string  yes       Account's name
+categoryId    int     yes       Account's category Id
+clientId      int     yes       Account's client Id
+pass          string  yes       Account's password
+tagsId        array   no        Account's tags Id
+userGroupId   int     no        Account's user group Id
+parentId      int     no        Account's parent Id
+login         string  no        Account's login
+url           string  no        Account's access URL or IP
+notes         string  no        Account's notes
+private       int     no        Set account as private. It can be either 0 or 1
+privateGroup  int     no        Set account as private for group. It can be either 0 or 1
+expireDate    int     no        Expire date in UNIX timestamp format
+============  ======  ========  ===========
 
-Realiza una copia de seguridad de la aplicación
+account/edit
+::::::::::::
 
-=========== ==============================
-Parámetro   Descripción
-=========== ==============================
-authToken   Token API del usuario
-=========== ==============================
+Edit account
+
+.. cssclass:: table-bordered
+
+============  ======  ========  ===========
+Parameter     Type    Required  Description
+============  ======  ========  ===========
+authToken     string  yes       User's API token
+tokenPass     string  yes       API token's pass
+id            int     yes       Account's Id
+name          string  no        Account's name
+categoryId    int     no        Account's category Id
+clientId      int     no        Account's client Id
+tagsId        array   no        Account's tags Id
+userGroupId   int     no        Account's user group Id
+parentId      int     no        Account's parent Id
+login         string  no        Account's login
+url           string  no        Account's access URL or IP
+notes         string  no        Account's notes
+private       int     no        Set account as private. It can be either 0 or 1
+privateGroup  int     no        Set account as private for group. It can be either 0 or 1
+expireDate    int     no        Expire date in UNIX timestamp format
+============  ======  ========  ===========
+
+account/delete
+::::::::::::::
+
+Delete an account
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+id          int     yes       Account's Id
+==========  ======  ========  ===========
+
+Categories
+__________
+
+category/search
+:::::::::::::::
+
+Search for categories
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+text        string  no        Text to search for
+count       int     no        Number of results to display
+==========  ======  ========  ===========
+
+category/view
+:::::::::::::
+
+Get category's details
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+tokenPass   string  yes       API token's pass
+id          int     yes       Category's Id
+==========  ======  ========  ===========
+
+category/create
+:::::::::::::::
+
+Create category
+
+.. cssclass:: table-bordered
+
+===========  ======  ========  ===========
+Parameter    Type    Required  Description
+===========  ======  ========  ===========
+authToken    string  yes       User's API token
+name         string  yes       Category's name
+description  string  no        Category's description
+===========  ======  ========  ===========
+
+category/edit
+:::::::::::::
+
+Edit category
+
+.. cssclass:: table-bordered
+
+===========  ======  ========  ===========
+Parameter    Type    Required  Description
+===========  ======  ========  ===========
+authToken    string  yes       User's API token
+id           int     yes       Category's Id
+name         string  yes       Category's name
+description  string  no        Category's description
+===========  ======  ========  ===========
+
+category/delete
+:::::::::::::::
+
+Delete category
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+id          int     yes       Category's Id
+==========  ======  ========  ===========
+
+Clients
+__________
+
+client/search
+:::::::::::::
+
+Search for clients
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+text        string  no        Text to search for
+count       int     no        Number of results to display
+==========  ======  ========  ===========
+
+client/view
+:::::::::::
+
+Get client's details
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+tokenPass   string  yes       API token's pass
+id          int     yes       Client's Id
+==========  ======  ========  ===========
+
+client/create
+:::::::::::::
+
+Create client
+
+.. cssclass:: table-bordered
+
+===========  ======  ========  ===========
+Parameter    Type    Required  Description
+===========  ======  ========  ===========
+authToken    string  yes       User's API token
+name         string  yes       Client's name
+description  string  no        Client's description
+global       int     no        Set client as global. It can be either 0 or 1
+===========  ======  ========  ===========
+
+client/edit
+:::::::::::
+
+Edit client
+
+.. cssclass:: table-bordered
+
+===========  ======  ========  ===========
+Parameter    Type    Required  Description
+===========  ======  ========  ===========
+authToken    string  yes       User's API token
+id           int     yes       Client's Id
+name         string  yes       Client's name
+description  string  no        Client's description
+global       int     no        Set client as global. It can be either 0 or 1
+===========  ======  ========  ===========
+
+client/delete
+:::::::::::::
+
+Delete client
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+id          int     yes       Client's Id
+==========  ======  ========  ===========
+
+Tags
+__________
+
+tag/search
+::::::::::
+
+Search for tags
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+text        string  no        Text to search for
+count       int     no        Number of results to display
+==========  ======  ========  ===========
+
+tag/view
+::::::::
+
+Get tag's details
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+tokenPass   string  yes       API token's pass
+id          int     yes       Tag's Id
+==========  ======  ========  ===========
+
+tag/create
+::::::::::
+
+Create tag
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+name        string  yes       Tag's name
+==========  ======  ========  ===========
+
+tag/edit
+::::::::
+
+Edit tag
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+id          int     yes       Tag's Id
+name        string  yes       Tag's name
+==========  ======  ========  ===========
+
+tag/delete
+::::::::::
+
+Delete tag
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+id          int     yes       Tag's Id
+==========  ======  ========  ===========
+
+User Groups
+___________
+
+usergroup/search
+::::::::::::::::
+
+Search for user groups
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+text        string  no        Text to search for
+count       int     no        Number of results to display
+==========  ======  ========  ===========
+
+usergroup/view
+::::::::::::::
+
+Get user group's details
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+tokenPass   string  yes       API token's pass
+id          int     yes       User group's Id
+==========  ======  ========  ===========
+
+usergroup/create
+::::::::::::::::
+
+Create user group
+
+.. cssclass:: table-bordered
+
+===========  ======  ========  ===========
+Parameter    Type    Required  Description
+===========  ======  ========  ===========
+authToken    string  yes       User's API token
+name         string  yes       User group's name
+description  string  no        User group's description
+usersId      array   no        User group's users Id
+===========  ======  ========  ===========
+
+usergroup/edit
+::::::::::::::
+
+Edit user group
+
+.. cssclass:: table-bordered
+
+===========  ======  ========  ===========
+Parameter    Type    Required  Description
+===========  ======  ========  ===========
+authToken    string  yes       User's API token
+id           int     yes       User group's Id
+name         string  yes       User group's name
+description  string  no        User group's description
+usersId      array   no        User group's users Id
+===========  ======  ========  ===========
+
+usergroup/delete
+::::::::::::::::
+
+Delete user group
+
+.. cssclass:: table-bordered
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+id          int     yes       User group's Id
+==========  ======  ========  ===========
+
+Configuration
+_____________
+
+config/backup
+:::::::::::::
+
+Perform an application and database backup
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+path        string  no        Server path to store the application and database backup
+==========  ======  ========  ===========
+
+config/export
+:::::::::::::
+
+Export application data in XML format
+
+==========  ======  ========  ===========
+Parameter   Type    Required  Description
+==========  ======  ========  ===========
+authToken   string  yes       User's API token
+path        string  no        Server path to store the XML file
+password    string  no        Password used to encrypt the exported data
+==========  ======  ========  ===========

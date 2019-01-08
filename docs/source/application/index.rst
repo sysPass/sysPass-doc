@@ -1,15 +1,16 @@
 .. _application:
 
-Aplicación
+Application
 ===========
 
-sysPass es una aplicación que utiliza una base de datos MySQL/MariaDB para almacenar los datos de todos sus componentes excepto la configuración, que es almacenada en un archivo XML dentro del directorio "config".
+sysPass is an application that uses a MySQL/MariaDB database to store the data of all its components except for the configuration, which is stored in an XML file within 'app/config' directory.
 
-.. warning:: Es importante que el directorio "config" no sea accesible desde el servicio web, ya que puede revelar información importante.
+.. warning::
+  It's important that 'app/config' directory is not accessible from the web service, because it could reveal important information.
 
 .. toctree::
     :maxdepth: 2
-    :name: applicationtoc
+    :name: applicationtocs
 
     encryption
     security
@@ -20,3 +21,4 @@ sysPass es una aplicación que utiliza una base de datos MySQL/MariaDB para alma
     api
     features
     plugins
+    backup

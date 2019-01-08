@@ -1,24 +1,28 @@
-Búsqueda de Cuentas
+Accounts Searching
 ===================
 
-La búsqueda de cuentas realiza una consulta del texto introducido en los campos "nombre", "login", "url" y "notas".
+The accounts searching performs a query for the entered text within the fields 'name', 'login', 'url' and 'notes'.
 
-Es posible fltrar los resultados mediante la selección de categoría, cliente o etiquetas.
+Results filtering could be done by selecting category, client or tags.
 
-El filtrado mediante etiquetas es acumulativo ("OR"), por lo que se incluirán las cuentas con las etiquetas seleccionadas.
+The tag filtering is cumulative ('OR'), so it will be included all the accounts with selected tags.
 
-Existen filtros especiales que son introducidos en el campo de texto:
+There are special filters that could be entered in the text field. You could use either one or several special parameters separated by blank spaces:
 
 .. cssclass:: table-bordered
 
-=====================  ============================================================================
-Filtro                 Descripción
-=====================  ============================================================================
-user\:login            Devolver las cuentas a las que el usuario con login "login" tenga acceso
-owner\:login           Devolver las cuentas en las que "login" es propietario
-maingroup\:group_name  Devolver las cuentas con grupo principal "group_name"
-group\:group_name      Devolver las cuentas a las que el grupo con nombre "group_name" tenga acceso
-file\:file_name        Devolver las cuentas que contengan el archivo con nombre "file_name"
-expired\:              Devolver las cuentas con clave caducada
-private\:              Devolver las cuentas privadas del usuario actual
-=====================  ============================================================================
+==========================  ============================================================================
+Filter                      Description
+==========================  ============================================================================
+user\:"login"               Get the accounts in which the user with login 'login' has access
+owner\:"login"              Get the accounts in which the user with login 'login' is the owner
+group\:"group_name"         Search for accounts which 'group_name' has access rights
+maingroup\:"group_name"     Get the accounts which have the main group with name 'group_name'
+file\:"file_name"           Search for accounts which contain a file with the name 'file_name'
+client\:"client_name"       Search for accounts by client name
+category\:"category_name"   Search for accounts by category name
+id\:"account_id"            Returns the account for the given ID
+is|not\:expired             Search for accounts with expired password
+is|not\:private             Get the private accounts for the current user
+op\:and|or                  Operator used by special parameters
+==========================  ============================================================================

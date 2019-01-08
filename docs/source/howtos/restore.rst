@@ -1,11 +1,11 @@
-Cómo restaurar sysPass
+How to restore sysPass
 ======================
 
 .. note::
 
-  Este procedimiento requiere disponer de una copia de seguridad de la base de datos y de la aplicación
+  This procedure requires to have a database and application backup
 
-1. Restaurar la copia de la base de datos. Se puede realizar mediante la utilidad de copia de sysPass, usando MySQL Workbench o con la utilidad mysqldump
-2. Crear el usuario de conexión (ver archivo "config.xml") y asignar permisos sobre la base de datos restaurada
-3. Restaurar la copia de la aplicación
-4. Acceder desde un navegador a la aplicación
+1. Restore the database backup. It could be made either through the sysPass utility, MySQL workbench or mysqldump tool
+2. Create the connection user (see 'config.xml' file) and set the correct permissions on the restored database
+3. Restore the application backup
+4. oint the browser to the application URL

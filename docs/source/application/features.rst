@@ -1,57 +1,58 @@
-Funcionalidades
-===============
+.. _`Authenticator Plugin`: https://github.com/sysPass/plugin-Authenticator
 
-sysPass implementa las siguientes funcionalidades:
+Features
+========
 
-* **Seguridad**
+sysPass implements the following features:
 
-  * Autentificacion con base de datos
-  * Autentificación con directorio LDAP
-  * Autorización con Auth Basic
-  * Autorización de doble factor
+* **Security**
 
-* **Permisos**
+  * Database authentication
+  * LDAP directory authentication
+  * Auth Basic authorization
+  * Two Factor authorization (using `Authenticator Plugin`_)
 
-  * Control de acceso a módulos mediante perfiles
-  * Usuarios adminsitradores de aplicación
-  * Usuarios administradores de cuentas
-  * Control de acceso a cuentas por usuario
-  * Control de acceso a cuentas por grupo
-  * Control para modificar cuentas por usuarios
-  * Control para modificar cuentas por grupos
+* **Permissions**
 
-* **Elementos**
+  * Module access control by profiles
+  * Application administrator users
+  * Accounts administrator users
+  * Accounts user access control (read or write)
+  * Accounts group access control (read or write)
 
-  * Campos personalizados encriptados para cuentas, clientes, categorías y usuarios
-  * Enlaces públicos a cuentas sin necesidad de usuario/clave
-  * Configuración de caducidad de cuentas
-  * Gestión de archivos para cuentas
-  * Gestión de etiquetas para cuentas
-  * Gestión de clientes
-  * Gestión de categorías
-  * Gestión de enlaces públicos
-  * Gestión de autorizaciones API
-  * Gestión de cuentas
-  * Gestión de histórico de cuentas
-  * Gestión de plugins
-  * Gestión de usuarios
-  * Gestión de grupos
-  * Gestión de perfiles
-  * Gestión de notificaciones in-App
+* **Items**
 
-* **Configuración**
+  * Encrypted and unencrypted custom fields for accounts, clients, categories and users
+  * Accounts public links access without user/password
+  * Accounts expiry date configuration
+  * Accounts' files management
+  * Accounts' tags management
+  * Clients management
+  * Categories management
+  * Public links management
+  * API's authorizations management
+  * Accounts management
+  * Accounts' history management
+  * Plugins management
+  * Users management
+  * User groups management
+  * User profiles management
+  * In-App notifications management
 
-  * Configuración de idioma
-  * Configuración de tema visual
-  * Configuración de proxy
-  * Configuración de cuentas
-  * Configuración de enlaces públicos
-  * Configuración de enlaces a Wiki
-  * Configuración de enlaces con API de DokuWiki
-  * Configuración de LDAP con importación de usuarios
-  * Configuración de notificaciones por correo
-  * Cambio de clave maestra
-  * Generación de clave maestra temporal
-  * Copia de seguridad de base de datos y aplicación
-  * Exportación en formato XML
-  * Importación en formato XML, KeePass, KeePassX y CSV
+* **Configuration**
+
+  * Language configuration
+  * Visual theme configuration
+  * Logging and audit configuration
+  * Proxy configuration
+  * Accounts configuration
+  * Public links configuration
+  * Wiki links configuration
+  * LDAP configuration
+  * Import users and groups from LDAP
+  * Email notifications configuration
+  * Master password change
+  * Temporary master key generation
+  * Application and database backups
+  * XML format exporting using encryption or not
+  * Importing from sysPass or KeePass XML formats and CSV format

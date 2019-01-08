@@ -27,7 +27,7 @@ Prerequisites
 Installation
 ------------
 
-Debian GNU/Linux package installation
+Debian GNU/Linux package installation.
 
 .. code:: bash
 
@@ -37,7 +37,7 @@ Debian GNU/Linux package installation
 
     service apache2 restart
 
-Optional for enabling SSL
+Optional for enabling SSL.
 
 In order to increase your sysPass instance security, please consider to use SSL. See :doc:`/application/security` and the following resources for Debian:
 
@@ -47,25 +47,24 @@ In order to increase your sysPass instance security, please consider to use SSL.
 Directories and permissions
 ---------------------------
 
-Create a directory for the application in the web server root directory
+Create a directory for sysPass within the web server root.
 
 .. code:: bash
 
     mkdir /var/www/html/syspass
 
-Copy and unpackage sysPass file in the created directory
+Unpack sysPass files.
 
 .. code:: bash
 
-    cp sysPass.tar.gz /var/www/html/syspass
     cd /var/www/html/syspass
     tar xzf syspass.tar.gz
 
-Change the owner of 'syspass/app/config' and 'syspass/app/backup'. It should match with the web server user
+Setup directories permissions. The owner should match the web server running user.
 
 .. code:: bash
 
-    chown www-data /var/www/html/syspass/app/config /var/www/html/syspass/app/backup
+    chown apache -R /var/www/html/syspass
     chmod 750 /var/www/html/syspass/app/config /var/www/html/syspass/app/backup
 
 Installing dependencies
@@ -75,6 +74,7 @@ From sysPass root directory, download and install Composer (https://getcomposer.
 
 .. code:: bash
 
+    cd /var/www/html/syspass
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
     php composer-setup.php
@@ -86,18 +86,18 @@ Then install sysPass dependencies
 
     php composer.phar install --no-dev
 
-
 Environment configuration
 -------------------------
 
 Please, point your web browser to the following URL and follow the installer steps
 
-https://IP_O_NOMBRE_SERVIDOR/syspass/index.php
+https://IP_OR_SERVER_ADDRESS/syspass/index.php
+
 
 .. note::
 
-  More about how sysPass works on :doc:`/application/index`
+  More information about how sysPass works on :doc:`/application/index`
 
 .. warning::
 
-  Please check out the security notices on :doc:`/application/security`
+  It's very advisable to take a look to security advices on :doc:`/application/security`

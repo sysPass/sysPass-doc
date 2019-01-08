@@ -1,74 +1,50 @@
-Instalación CentOS 7
-====================
+CentOS 7 Installation
+=====================
 
-.. warning::
-
-  Only 2.0. Work in progress
-
-Prerequisitos
+Prerequisites
 -------------
 
-* Servidor Web (Apache/Nginx/Lighttpd) con SSL habilitado.
-* MariaDB o MySQL >= 5
-* PHP >= 5.6 <= 7.0
-* Módulos PHP
-    * Mysql
-    * mcrypt
-    * ldap (opcional)
-    * SimpleXML
-    * XML
-    * Curl
-    * Json
-    * GD
-    * PDO
-    * mbstring
-* Última versión de sysPass https://github.com/nuxsmin/sysPass/releases
+* Web server (Apache/Nginx/Lighttpd) with SSL enabled.
+* MariaDB >= 10.1
+* PHP >= 7.0
+* PHP modules
+  * mysqlnd
+  * curl
+  * json
+  * gd
+  * xml
+  * mbstring
+  * intl
+  * readline
+  * ldap (optional)
+  * mcrypt (optional for importing older XML export files)
+* Latest sysPass version https://github.com/nuxsmin/sysPass/releases
 
-Instalación
------------
+Installation
+------------
 
-Instalación de paquetes
+CentOS 7 package installation.
 
 .. code:: bash
 
-    yum install httpd php-mysql php-pdo php-ldap php-gd php-pdo php-xml php-mbstring mariadb-server mariadb wget
+    yum install httpd php-ldap php-mcrypt php-mbstring php-gd php-mysqlnd php-pdo php-json php-xml php-ldap php-xml mariadb-server wget
 
-Para iniciar y auto-iniciar el servidor web Apache:
+Automated start/stop Apache web server and MariaDB server.
 
 .. code:: bash
 
     systemctl enable httpd.service
-    systemctl start httpd.service
-
-Para iniciar y auto-iniciar el servidor MariaDB:
-
-.. code:: bash
-
     systemctl enable mariadb.service
+    systemctl start httpd.service
     systemctl start mariadb.service
 
-Necesitamos securizar el servidor MariaDB:
+Setting up MariaDB.
 
 .. code:: bash
 
     /usr/bin/mysql_secure_installation
 
-
-Instalación del repositorio EPEL para módulo de encriptación
-------------------------------------------------------------
-
-Descargar e instalar el RPM para el repositorio de EPEL:
-
-.. code:: bash
-
-    wget http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
-    yum install epel-release-7-0.2.noarch.rpm
-    yum install php-mcrypt
-    systemctl restart httpd.service
-
-Habilitar los puertos en el firewall
-------------------------------------
-Añadir reglas en el firewall:
+Enabling firewall ports.
 
 .. code:: bash
 
@@ -76,62 +52,80 @@ Añadir reglas en el firewall:
     firewall-cmd --permanent --zone=public --add-service=https
     firewall-cmd --reload
 
-Configuración de directorios y permisos
----------------------------------------
+Optional for enabling SSL.
 
-Crear un directorio para la aplicación en la raíz del servidor web:
+In order to increase your sysPass instance security, please consider to use SSL. See :doc:`/application/security` and the following resources for Debian:
+
+* Sites only accessible from LAN: https://doc.debian.org/configuration/Self-Signed_Certificate
+* Sites accessible from Internet, you could use Let's Encrypt, see https://certbot.eff.org/
+
+Directories and permissions
+---------------------------
+
+Create a directory for sysPass within the web server root.
 
 .. code:: bash
 
     mkdir /var/www/html/syspass
 
-Copiar y descomprimir el archivo sysPass en el directorio creado:
+Unpack sysPass files.
 
 .. code:: bash
 
-    cp sysPass.tar.gz /var/www/html/syspass
     cd /var/www/html/syspass
     tar xzf syspass.tar.gz
 
-Cambiar el propietario del directorio 'syspass/config'. Ha de coincidir con el usuario del servidor web:
+Setup directories permissions. The owner should match the web server running user.
 
 .. code:: bash
 
-    chown apache /var/www/html/syspass/config
-    chmod 750 /var/www/html/syspass/config
+    chown apache -R /var/www/html/syspass
+    chmod 750 /var/www/html/syspass/app/config /var/www/html/syspass/app/backup
 
-Crear y cambiar el propietario del directorio de copias de seguridad:
+SELinux
+-------
 
-.. code:: bash
-
-    mkdir var/www/html/syspass/backup
-    chown apache /var/www/html/syspass/backup
-
-Modificando SELinux
--------------------
-
-Para permitir a sysPass escribir su configuración y backups, tenemos dos opciones:
+sysPass needs to be allowed to write its configuration and some other files (backup, cache, temp, etc). We have 2 choices:
 
 .. note::
 
-    Elegir una de las dos opciones
+    Please, run only one of the choices
 
-* Cambiar el usuario y contexto de SELinux para hacer escribibles los directorios de config y backups:
+* Change SELinux's context and user:
 
 .. code:: bash
 
-    chcon -R -t httpd_sys_rw_content_t /var/www/html/sysPass/config/
-    chcon -R -t httpd_sys_rw_content_t /var/www/html/sysPass/backup/
-    mkdir /var/www/html/sysPass/tmp && chcon -R -t httpd_sys_rw_content_t /var/www/html/sysPass/tmp
+    setsebool -P httpd_can_connect_ldap 1
+    chcon -R -t httpd_sys_rw_content_t /var/www/html/syspass/app/{config,backup,cache,tmp}
 
-* Deshabilitar SELinux editando el archivo '/etc/sysconfig/selinux' y cambiar el valor de la variable "SELINUX" a "permissive" y reiniciar el sistema.
 
-Configuración del entorno
+* Disable SELinux by editing the file "/etc/sysconfig/selinux" and setting "SELINUX" variable's value to "permissive". You need to restart the system.
+
+Installing dependencies
+-----------------------
+
+From sysPass root directory, download and install Composer (https://getcomposer.org/download/)
+
+.. code:: bash
+
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    php composer-setup.php
+    php -r "unlink('composer-setup.php');"
+
+Then install sysPass dependencies
+
+.. code:: bash
+
+    php composer.phar install --no-dev
+
+Environment configuration
 -------------------------
 
-Abir un navegador y escribir la URL:
+Please, point your web browser to the following URL and follow the installer steps
 
-https://IP_O_NOMBRE_SERVIDOR/syspass/index.php
+https://IP_OR_SERVER_ADDRESS/syspass/index.php
+
 
 .. note::
 

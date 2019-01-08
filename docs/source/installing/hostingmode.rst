@@ -1,16 +1,19 @@
-Modo Hosting
+Hosting Mode
 ------------
 
-El modo hosting es para aquellas instalaciones que se ejecutan en un hosting externo en las que no es posible crear la base de datos ni el usuario de conexión a la misma.
+The hosting mode is for those installations that are running on a external hosting, where is not possible to create neither database nor connection user for it.
 
-.. note:: **No se creará la base de datos (sí las tablas) ni el usuario de conexión**
 
-Los pasos para realizar la instalación son los siguientes:
+.. note::
+  **It won't create neither database (except tables) nor connection user**
 
-* Crear un usuario/clave en el panel del hosting.
-* Crear la base de datos de sysPass (no crear tablas) y dar permisos al usuario anterior.
-* Iniciar la instalación de sysPass (borrar el archivo "config/config.xml" si existe) y utilizar el usuario/clave creados como usuario de sysPass (los dos primeros campos).
-* Indicar el usuario con permisos de administración de MySQL/MariaDB (puede ser el mismo de antes si tiene suficientes permisos), para realizar la creación de tablas en la base de datos de sysPass. Este usuario es sólo para la instalación y normalmente en los hostings suele ser el usuario/clave de gestión.
-* Si hay conexión con la base de datos y los permisos son correctos, la instalación debe de finalizar correctamente.
+The steps to perform the installation are the following:
 
-.. note:: En caso de errores, verificar el archivo de registro del servidor web.
+* Create an user/password for sysPass connection at the hosting panel.
+* Create the sysPass database (not tables) and give permissions to the previous user on it.
+* Start the sysPass installation and use the user/password that was previously created for sysPass (the two first fields in the installation page).
+* Provide a MySQL/MariaDB user with administration rights (it could be the same as previous if it has enough permissions), in order to create sysPass database tables. This user is used only for the installation process and it often would be the user/password for the hosting management.
+* If database connection and permissions are right, the installation should finish successfully.
+
+.. note::
+  In case of errors, you could take a look to the web server error logs.

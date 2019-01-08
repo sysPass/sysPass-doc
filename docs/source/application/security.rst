@@ -1,32 +1,36 @@
-Seguridad
-=========
+Security
+========
 
-sysPass dispone de mecanismos de seguridad para mitigar cierto tipo de eventos y acciones que pueden comprometer la seguridad de la aplicación. Entre ellos se encuentran:
+sysPass has some security mechanisms to mitigate some kind of events and actions that could compromise the application security. Among them are:
 
-* Generación de token de seguridad para envío de formularios
-* Comprobación del tipo de petición para cada formulario
-* Eliminación de carácteres no deseados en los datos recibidos
-* Forzado de tipos (type casting) en los datos recibidos
-* Generación de hashes para los nombres de archivos de exportación y copia de seguridad
-* Uso de cifrado PKI para envío de claves en formularios
+* Security token generation for sending forms
+* Removing of unwanted characters from received data
+* Type casting of received data
+* Hash generation for export and backup files name
+* RSA (PKI) encryption is used for sending passwords within forms
 
-A pesar de estas medidas, es necesario asegurar los componentes del servidor web y las comunicaciones mediante:
+Although these actions, it's needed to secure the web server components and communications by:
 
-* Uso de HTTPS
-* Restricción de acceso a los directorios "config" y "backup"
+* Using HTTPS
+* Limiting access to 'app/config' and 'app/backup' directories
 
-Para restringir el acceso a los directorios en Apache es posible utilizar los archivos ".htaccess" en cada directorio, o en la configuración del sitio:
+In order to limit the access to the directories through Apache, '.htaccess' files could be used within the directories or by modifying the site configuration:
 
 .. code:: Apache
 
   # Apache 2.4
   <Directory "/var/www/html/sysPass">
     Options -Indexes -FollowSymLinks -Includes -ExecCGI
-    Require expr "%{REQUEST_URI} =~ /(index|api\.php)?/"
+    <RequireAny>
+        Require expr "%{REQUEST_URI} =~ m#.\*\/index\.php(\?r=)?#"
+        Require expr "%{REQUEST_URI} =~ m#.\*\/api\.php$#"
+        Require expr "%{REQUEST_URI} =~ m#^$#"
+    </RequireAny>
   </Directory>
 
   <Directory "/var/www/html/sysPass/public">
     Require all granted
   </Directory>
 
-.. danger:: Es importante que el directorio "config" no sea accesible desde el servicio web, ya que puede revelar información importante.
+.. danger::
+  'app/config' directory shouldn't be accessible through the web server, it could reveal private data.

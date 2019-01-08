@@ -1,40 +1,36 @@
-.. container:: logo
-
-Introducción
+Introduction
 ============
 
-sysPass es un gestor de claves web escrito en PHP que permite la gestión centralizada de claves en un entorno multiusuario.
+sysPass is a password management system written in PHP that allows a centralized and collaborative passwords management.
 
-Características
----------------
+Features
+--------
 
-* Interfaz con Material Design Lite en HTML5 y Ajax
-* Claves encriptadas con AES-256 CTR
-* Multiusuario con gestión de usuarios, grupos y perfiles
-* Gestión avanzada de perfiles con 29 niveles de acceso
-* Autentificación con MySQL/MariaDB, OpenLDAP y Active Directory
-* Notificaciones por email e in-app de actividad
-* Enlaces públicos a cuentas sin necesidad de login
-* Historial de cambios en cuentas
-* Gestión de archivos asociados a cuentas con previsualización de imágenes
-* Multilenguaje, con traducciones en Inglés, Catalán, Alemán, Polaco, Ruso, Francés y Holandés
-* Enlace a Wiki externa e integración con API de DokuWiki
-* Backup en formato portable y exportación en XML encriptado
-* Registro de acciones y eventos con posibilidad de enviar a Syslog remoto en formato CEF
-* Configurable y extensible mediante temas y plugins
-* API para integración con otras aplicaciones
-* Importación desde KeePass, KeePassX y CSV
-* Instalación en un solo paso
+* Encrypted passwords using AES-256 CTR
+* Interface based on Material Design Lite with HTML5 and AJAX
+* Multiuser with users, groups and profiles management
+* Advanced profile management with 29 access levels
+* MySQL/MariaDB, OpenLDAP and Active Directory authentication
+* Activity notifications by email and in-app
+* Public links to accounts without login
+* Accounts changes history and restore points
+* Accounts associated files management with images preview
+* Multilanguage
+* Portable backup format and export to encrypted XML
+* Actions and events audit with the ability to send messages to a remote Syslog in CEF format
+* API for integrating with other applications
+* Import from KeePass and CSV
+* One step installation
 
-Qué no hace sysPass
--------------------
+What sysPass does not do
+------------------------
 
-* No guarda la clave maestra en el servidor
-* No envía datos a ningún servicio externo
-* No encripta las claves de las cuentas individualmente, se utiliza una clave maestra para todas
-* No realiza cambios de clave en los servidores
-* No encripta los datos de las cuentas, sólo la clave y los campos personalizados ya que no se podrían realizar búsquedas
-* No es como APT: NO tiene poderes de super vaca!!
+* It does not store the master password in the server
+* It does not send any data to an external service
+* It does not encrypt the accounts' password individually, it uses a master password for all instead
+* It does not perform password changes on the servers
+* It does not encrypt the accounts' data, only the password and custom fields data, because you wouldn't be able to perform searches
+* It isn't like APT: doesn't have Super Cow Powers!!
 
 .. toctree::
     :maxdepth: 2

@@ -1,73 +1,127 @@
 .. _Docker: https://docs.docker.com/engine/installation/
-.. _`contenedores Docker`: https://en.wikipedia.org/wiki/Docker_%28software%29
+.. _`Docker containers`: https://en.wikipedia.org/wiki/Docker_%28software%29
 .. _`Docker Hub`: https://hub.docker.com/r/nuxsmin/docker-syspass/
 .. _`Docker Compose`: https://docs.docker.com/compose/
-.. _`Debian 8`: https://www.debian.org/
+.. _Debian: https://www.debian.org/
 
-Instalación con Docker
-======================
+Docker Installation
+===================
 
-La instalación con Docker_ permite mantener la aplicación aislada del sistema así como probar diferentes versiones sin tener que instalar ningún paquete adicional.
+Docker_ based installations allow to run the application in an isolated environment besides try out multiple versions without installing any package on the host system.
 
-sysPass es posible ejecutarlo en `contenedores Docker <https://en.wikipedia.org/wiki/Docker_%28software%29>`_ los cuales han sido preparados con `Debian 8`_ y comprobados para su correcto funcionamiento, sin **realizar compilaciones de paquetes**.
+sysPass can be ran in `Docker containers <https://en.wikipedia.org/wiki/Docker_%28software%29>`_ which has been compiled on top of latest Debian_ stable version (Stretch) and avoiding any **package compilation**.
 
-Las imágenes Docker se pueden obtener desde `Docker Hub`_ las cuales son compiladas automáticamente desde los archivos Docker en https://github.com/nuxsmin/docker-syspass
+Docker images can be got from `Docker Hub`_ and they are complied automatically from Docker source files on  https://github.com/nuxsmin/docker-syspass
 
-Hay dos opciones para la instalación:
+There are two ways for installing:
 
-* Con `Docker Compose`_, el cual permite el despliegue completo de sysPass y la base de datos.
-* Con Docker_, es necesario desplegar sysPass y la base de datos por separado.
+* Using `Docker Compose`_ (recommended): deploys a fully working sysPass environment including application and database services.
+* Using Docker_: deploys each service (application and database) separately.
 
 Docker Compose
 --------------
 
-Crear el archivo "docker-compose.yml" y ejecutar docker-compose:
+In order to deploy using this method, you need to issue the following steps:
+
+1. Install Docker engine from https://docs.docker.com/install/
+2. Install Docker Compose from https://docs.docker.com/compose/install/
+3. Download "docker-compose.yml" sysPass' file from https://raw.githubusercontent.com/nuxsmin/docker-syspass/master/docker-compose.yml or use the following one:
 
 .. literalinclude:: ../_src/docker-compose.yml
   :language: yaml
+
+4. Run "docker-compose" tool for setting up the environment:
 
 .. code:: bash
 
   docker-compose -p syspass -f docker-compose.yml up -d
 
-Esto descargará la imagen de versión estable de sysPass y de la base de datos MySQL.
+This will download the latest sysPass stable image and the database (MariaDB) one.
+
+5. Take a look to deployment's logs:
+
+  docker-compose -p syspass -f docker-compose.yml logs -f
 
 .. note::
-  Al utilizar Docker Compose, se crea automáticamente una red independiente para los contenedores de sysPass y es posible utilizar resolución DNS.
+  Docker Compose will create an isolated network for all sysPass services making possible to use DNS resolution between containers. You can use "syspass-db" for setting up the database hostname in sysPass installation page.
 
-  El contenedor de sysPass contiene dos volúmenes: uno para el directorio "config" y otro para "backup"
+  It will create two fixed volumes for sysPass application, one for "config" directory and the other for "backup" directory. An additional fixed volume will be created for the database container's data.
 
-.. warning:: El contenedor de sysPass publicará los puertos 80 y 443 del host
+.. warning::
+  sysPass container will publish 80 and 443 host's ports to the outside. You could change this behavior by tweaking the Docker Compose's file.
 
 Docker
 ------
 
-Para obtener las imágenes independientes es necesario ejecutar los siguientes comandos:
+By this way all the services need to be deployed manually. The following steps are needed:
+
+1. Install Docker engine from https://docs.docker.com/install/
+2. Create network for sysPass services:
 
 .. code:: bash
 
-  docker run -d --name syspass-db -h syspass-db nuxsmin/docker-syspass:mysql
-  docker run -d --name syspass-app -h syspass-app --link syspass-db nuxsmin/docker-syspass:latest
+  docker network create syspass-net
 
-Acceso
-------
+3. Create fixed volunes for sysPass services:
 
-Los datos de acceso a la base de datos son:
+.. code:: bash
 
-* Host: syspass-db
-* Usuario: root
-* Clave: syspass
+  docker volume create syspass-app-config
+  docker volume create syspass-app-backup
+  docker volume create syspass-db-data
+
+4. Setup sysPass database container:
+
+.. code:: bash
+
+  docker run --name syspass-db \
+  --network syspass-net \
+  --restart unless-stopped \
+  --env MYSQL_ROOT_PASSWORD=syspass \
+  --volume syspass-db-data:/var/lib/mysql \
+  --detach mariadb:10.2
+
+5. Setup sysPass application container:
+
+.. code:: bash
+
+  docker run --name syspass-app \
+  --network syspass-net \
+  --publish 80:80 \
+  --restart unless-stopped \
+  --volume syspass-app-config:/var/www/html/sysPass/app/config \
+  --volume syspass-app-backup:/var/www/html/sysPass/app/backup \
+  --detach nuxsmin/docker-syspass:latest
+
+6. Connection data will be displayed in application container's console:
+
+.. code:: bash
+
+  docker logs -f syspass-app
+
+.. tip::
+
+  You can install sysPass extensions (plugins) by setting "COMPOSER_EXTENSIONS" environment variable when deploying the sysPass application container. Example: "--env COMPOSER_EXTENSIONS='syspass/plugin-authenticator'"
+
+Database Access
+---------------
+
+You can get access to the database using the following connection data:
+
+* User: root
+* Password: syspass
+
 
 .. container:: alert alert-success
 
-  Es posible instalar otras imágenes de sysPass en `Docker Hub`_
+  You may install other sysPass images from `Docker Hub`_
 
 .. note::
 
-  Seguir los pasos del instalador y tras la correcta finalización, ya es posible acceder a la aplicación
+  Please follow the installer steps in order to setup the sysPass application instance.
 
-  Para saber cómo funciona sysPass ver :doc:`/application/index`
+  More information about how sysPass works on :doc:`/application/index`
 
 .. warning::
 
-  Se recomienda leer las indicaciones de seguridad en :doc:`/application/security`
+  It's very advisable to take a look to security advices on :doc:`/application/security`

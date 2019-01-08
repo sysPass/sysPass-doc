@@ -1,94 +1,130 @@
 Plugins
 =======
 
-sysPass permite el uso de plugins mediante una arquitectura que implementa el `patrón de observador <https://en.wikipedia.org/wiki/Observer_pattern>`_ el cual se caracteriza por emitir un mensaje a todos los observadores registrados.
+sysPass allows to use plugins through an architecture that implements `observer pattern <https://en.wikipedia.org/wiki/Observer_pattern>`_ which is characterized by emitting a message to all subscribed observers.
 
-Los plugins se instalan en el directorio 'sysPass/inc/Plugins' y contienen la siguiente estructura básica:
+Plugins must be installed in 'plugins' directory within the target module and they contain the following base structure:
 
 .. only:: lang_es
 
   .. code::
 
-    Plugins/
+    plugins/
     └── NombrePlugin (1)
-        ├── ajax
-        ├── js
-        │   ├── plugin.js
-        │   └── plugin.min.js
-        ├── locales
-        │   ├── en_US
-        │   │   └── LC_MESSAGES
-        │   │       ├── NombrePlugin.mo (2)
-        │   │       └── NombrePlugin.po (2)
-        ├── themes
-        │   └── material-blue
-        │       └── views
-        │           ├── main
-        │           │   └── login.inc
-        │           └── userpreferences
-        │               └── preferences.inc
-        │
-        └── NombrePluginPlugin.class.php (3)
+        ├── base.php
+        ├── CODE_OF_CONDUCT.md
+        ├── composer.json
+        ├── LICENSE
+        ├── README.md
+        ├── src
+        │   ├── lib
+        │   │   ├── Controllers
+        │   │   ├── Models
+        │   │   ├── Plugin.php
+        │   │   ├── Services
+        │   │   └── Util
+        │   ├── locales
+        │   │   ├── en_US
+        │   │   │   └── LC_MESSAGES
+        │   │   │       ├── NombrePlugin.mo (2)
+        │   │   │       └── NombrePlugin.po (2)
+        │   ├── public
+        │   │   ├── css
+        │   │   │   ├── plugin.css
+        │   │   │   ├── plugin.css.map
+        │   │   │   ├── plugin.min.css
+        │   │   │   └── plugin.scss
+        │   │   └── js
+        │   │       ├── plugin.js
+        │   │       └── plugin.min.js
+        │   └── themes
+        │       └── material-blue
+        │           └── views (3)
+        │               ├── login
+        │               │   └── index.inc
+        │               └── userpreferences
+        │                   └── preferences-security.inc
+        └── version.json (4)
 
 .. only:: lang_en
 
   .. code::
 
-    Plugins/
+    plugins/
     └── PluginName (1)
-        ├── ajax
-        ├── js
-        │   ├── plugin.js
-        │   └── plugin.min.js
-        ├── locales
-        │   ├── en_US
-        │   │   └── LC_MESSAGES
-        │   │       ├── NombrePlugin.mo (2)
-        │   │       └── NombrePlugin.po (2)
-        ├── themes
-        │   └── material-blue
-        │       └── views
-        │           ├── main
-        │           │   └── login.inc
-        │           └── userpreferences
-        │               └── preferences.inc
-        │
-        └── PluginNamePlugin.class.php (3)
+        ├── base.php
+        ├── CODE_OF_CONDUCT.md
+        ├── composer.json
+        ├── LICENSE
+        ├── README.md
+        ├── src
+        │   ├── lib
+        │   │   ├── Controllers
+        │   │   ├── Models
+        │   │   ├── Plugin.php
+        │   │   ├── Services
+        │   │   └── Util
+        │   ├── locales
+        │   │   ├── en_US
+        │   │   │   └── LC_MESSAGES
+        │   │   │       ├── PluginName.mo (2)
+        │   │   │       └── PluginName.po (2)
+        │   ├── public
+        │   │   ├── css
+        │   │   │   ├── plugin.css
+        │   │   │   ├── plugin.css.map
+        │   │   │   ├── plugin.min.css
+        │   │   │   └── plugin.scss
+        │   │   └── js
+        │   │       ├── plugin.js
+        │   │       └── plugin.min.js
+        │   └── themes
+        │       └── material-blue
+        │           └── views (3)
+        │               ├── login
+        │               │   └── index.inc
+        │               └── userpreferences
+        │                   └── preferences-security.inc
+        └── version.json (4)
 
-Los nombres de los directorios y archivos deben de ser de la siguiente manera:
 
-1. Nombre de directorio con el nombre del plugin. Ejemplo: **Authenticator**
-2. Nombre de archivo con el nombre del plugin en minúscula. Ejemplo: **authenticator.po**
-3. Nombre de archivo con el nombre del plugin seguido de "Plugin.class.php". Ejemplo: **AuthenticatorPlugin.class.php**
+Directory and file names need to be set in the following way:
 
-La clase principal se debe de llamar igual que el plugin y tiene que extender a la clase **PluginBase**. Esta clase tiene que implementar los siguientes métodos.
+1. Directory name within the plugin name: Example: **Authenticator**
+2. Filename within the plugin name in lowercase: Example: **authenticator.po**
+3. View's name should match with the controller's name in MVC pattern. It could be overridden by setting the name of the view in the controller's code
+4. 'version.json' file is used by JavaScript code for checking if the plugin is up-to-date.
 
-Métodos
+`Plugin` (whithin 'Plugin.php' file) is the main class which will receive sysPass' events through the observer pattern. It must extends the abstract class 'SP\Plugin\PluginBase' which is responsible to make the plugin's data available.
+
+Methods
 -------
+
+The following methods must be implemented in 'Plugin' class
 
 init
 ::::
 
-Método que se llama cada vez que se ejecuta el plugin
+Method that is called every time the plugin is executed
 
 .. code-block:: php
 
   /**
-   * Inicialización
+   * Initialization
    */
   public function init() {}
 
 updateEvent
 :::::::::::
 
-Método que se llama cuando se emite un evento
+Method that is called when an event is emitted
 
 .. code-block:: php
 
   /**
-   * Evento de actualización
+   * Update event
    *
-   * @param string $event Nombre del evento
+   * @param string $event Event's name
    * @param mixed  $object
    */
   public function updateEvent($event, $object) {}
@@ -96,12 +132,12 @@ Método que se llama cuando se emite un evento
 getEvents
 :::::::::
 
-Método que devuelve un array de strings con los eventos a los que se suscribe el plugin
+Method that returns an array of strings with the events that the plugin will be subscribed to
 
 .. code-block:: php
 
   /**
-   * Devuelve los eventos que implementa el observador
+   * Returns the events implemented by the observer
    *
    * @return array
    */
@@ -113,12 +149,12 @@ Método que devuelve un array de strings con los eventos a los que se suscribe e
 getJsResources
 ::::::::::::::
 
-Método que devuelve un array de strings con los recursos Javascript que necesita el plugin
+Method that returns an array of strings with the Javascript resources required by the plugin
 
 .. code-block:: php
 
   /**
-   * Devuelve los recursos JS y CSS necesarios para el plugin
+   * Returns JS resources required by the plugin
    *
    * @return array
    */
@@ -130,12 +166,12 @@ Método que devuelve un array de strings con los recursos Javascript que necesit
 getAuthor
 :::::::::
 
-Método que devuelve el nombre del autor del plugin
+Method that returns the plugin's author
 
 .. code-block:: php
 
     /**
-     * Devuelve el autor del plugin
+     * Returns the plugin's author
      *
      * @return string
      */
@@ -147,12 +183,12 @@ Método que devuelve el nombre del autor del plugin
 getVersion
 ::::::::::
 
-Método que devuelve un array de integers con la versión del plugin
+Method that returns an array of integers with the plugin's version
 
 .. code-block:: php
 
   /**
-   * Devuelve la versión del plugin
+   * Returns the plugin's version
    *
    * @return array
    */
@@ -164,12 +200,12 @@ Método que devuelve un array de integers con la versión del plugin
 getCompatibleVersion
 ::::::::::::::::::::
 
-Método que devuelve un array de integers con la versión mínima de sysPass compatible
+Method that returns an array of integers with the minimum sysPass compatible version
 
 .. code-block:: php
 
   /**
-   * Devuelve la versión compatible de sysPass
+   * Returns the minimum sysPass compatible version
    *
    * @return array
    */
@@ -181,12 +217,12 @@ Método que devuelve un array de integers con la versión mínima de sysPass com
 getCssResources
 :::::::::::::::
 
-Método que devuelve un array de strings con los recursos CSS que requiere el plugin
+Method that returns an array of strings with the CSS resources required by the plugin
 
 .. code-block:: php
 
   /**
-   * Devuelve los recursos CSS necesarios para el plugin
+   * Returns the CSS resources required by the plugin
    *
    * @return array
    */
@@ -198,12 +234,12 @@ Método que devuelve un array de strings con los recursos CSS que requiere el pl
 getName
 :::::::
 
-Método que devuelve el nombre del plugin
+Method that returns the plugin's name
 
 .. code-block:: php
 
   /**
-   * Devuelve el nombre del plugin
+   * Returns the plugin's name
    *
    * @return string
    */
@@ -215,7 +251,7 @@ Método que devuelve el nombre del plugin
 getData
 :::::::
 
-Método que devuelve los datos del plugin
+Method that returns the plugin's data
 
 .. code-block:: php
 
@@ -227,187 +263,501 @@ Método que devuelve los datos del plugin
       return (array)parent::getData();
   }
 
-Ejemplo
+Example
 -------
 
 .. code-block:: php
 
-  <?php
+  namespace SP\Modules\Web\Plugins\Authenticator;
 
-  namespace Plugins\Authenticator;
-
-  use SP\Core\DiFactory;
-  use SP\Core\Plugin\PluginBase;
+  use Psr\Container\ContainerInterface;
+  use SP\Core\Context\ContextInterface;
+  use SP\Core\Events\Event;
+  use SP\Core\UI\ThemeInterface;
+  use SP\DataModel\PluginData;
+  use SP\Modules\Web\Plugins\Authenticator\Controllers\PreferencesController;
+  use SP\Modules\Web\Plugins\Authenticator\Models\AuthenticatorData;
+  use SP\Modules\Web\Plugins\Authenticator\Util\PluginContext;
+  use SP\Mvc\Controller\ExtensibleTabControllerInterface;
+  use SP\Plugin\PluginBase;
+  use SP\Util\Util;
   use SplSubject;
 
   /**
-  * Class Plugin
-  *
-  * @package Plugins\Authenticator
-  */
-  class AuthenticatorPlugin extends PluginBase
+   * Class Plugin
+   *
+   * @package SP\Modules\Web\Plugins\Authenticator
+   */
+  class Plugin extends PluginBase
   {
-    const PLUGIN_NAME = 'Authenticator';
+      const PLUGIN_NAME = 'Authenticator';
+      const VERSION_URL = 'https://raw.githubusercontent.com/sysPass/plugin-Authenticator/master/version.json';
+      const RECOVERY_GRACE_TIME = 86400;
+      /**
+       * @var ContainerInterface
+       */
+      private $dic;
 
-    /**
-     * Receive update from subject
-     *
-     * @link  http://php.net/manual/en/splobserver.update.php
-     * @param SplSubject $subject <p>
-     *                            The <b>SplSubject</b> notifying the observer of an update.
-     *                            </p>
-     * @return void
-     * @since 5.1.0
-     */
-    public function update(SplSubject $subject)
-    {
-    }
+      /**
+       * Receive update from subject
+       *
+       * @link  http://php.net/manual/en/splobserver.update.php
+       *
+       * @param SplSubject $subject <p>
+       *                            The <b>SplSubject</b> notifying the observer of an update.
+       *                            </p>
+       *
+       * @return void
+       * @since 5.1.0
+       */
+      public function update(SplSubject $subject)
+      {
+      }
 
-    /**
-     * Inicialización del plugin
-     */
-    public function init()
-    {
-        if (!is_array($this->data)) {
-            $this->data = [];
-        }
+      /**
+       * Inicialización del plugin
+       *
+       * @param ContainerInterface $dic
+       */
+      public function init(ContainerInterface $dic)
+      {
+          if (!is_array($this->data)) {
+              $this->data = [];
+          }
 
-        $this->base = __DIR__;
-        $this->themeDir = __DIR__ . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . DiFactory::getTheme()->getThemeName();
+          $this->base = dirname(__DIR__);
+          $this->themeDir = $this->base . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . $dic->get(ThemeInterface::class)->getThemeName();
 
-        $this->setLocales();
-    }
+          $this->setLocales();
 
-    /**
-     * Evento de actualización
-     *
-     * @param string $event Nombre del evento
-     * @param mixed  $object
-     * @throws \SP\Core\Exceptions\FileNotFoundException
-     * @throws \SP\Core\Exceptions\SPException
-     */
-    public function updateEvent($event, $object)
-    {
-        switch ($event){
-            case 'user.preferences':
-                $Controller = new PreferencesController($object, $this);
-                $Controller->getSecurityTab();
-                break;
-            case 'main.prelogin.2fa':
-                $Controller = new LoginController($this);
-                $Controller->get2FA($object);
-                break;
-            case 'login.preferences':
-                $Controller = new LoginController($this);
-                $Controller->checkLogin();
-                break;
-        }
-    }
+          $this->dic = $dic;
+      }
 
-    /**
-     * Devuelve los eventos que implementa el observador
-     *
-     * @return array
-     */
-    public function getEvents()
-    {
-        return ['user.preferences', 'main.prelogin.2fa', 'login.preferences'];
-    }
+      /**
+       * Evento de actualización
+       *
+       * @param string $eventType Nombre del evento
+       * @param Event  $event     Objeto del evento
+       *
+       * @throws \SP\Core\Exceptions\InvalidClassException
+       * @throws \Exception
+       */
+      public function updateEvent($eventType, Event $event)
+      {
+          switch ($eventType) {
+              case 'show.userSettings':
+                  /** @var ExtensibleTabControllerInterface $source */
+                  $source = $event->getSource(ExtensibleTabControllerInterface::class);
 
-    /**
-     * Devuelve los recursos JS y CSS necesarios para el plugin
-     *
-     * @return array
-     */
-    public function getJsResources()
-    {
-        return ['plugin.min.js'];
-    }
+                  (new PreferencesController($source, $this, $this->dic))
+                      ->setUp();
+                  break;
+              case 'login.finish':
+                  $this->checkLogin($event);
+                  break;
+          }
+      }
 
-    /**
-     * Devuelve el autor del plugin
-     *
-     * @return string
-     */
-    public function getAuthor()
-    {
-        return 'Rubén D.';
-    }
+      /**
+       * Comprobar 2FA en el login
+       *
+       * @param Event $event
+       *
+       * @throws \SP\Core\Context\ContextException
+       */
+      private function checkLogin(Event $event)
+      {
+          $session = $this->dic->get(ContextInterface::class);
+          $pluginContext = $this->dic->get(PluginContext::class);
 
-    /**
-     * Devuelve la versión del plugin
-     *
-     * @return array
-     */
-    public function getVersion()
-    {
-        return [1, 0];
-    }
+          $data = $this->getDataForId($session->getUserData()->getId());
 
-    /**
-     * Devuelve la versión compatible de sysPass
-     *
-     * @return array
-     */
-    public function getCompatibleVersion()
-    {
-        return [2, 0];
-    }
+          if ($data !== null && $data->isTwofaEnabled()) {
+              $pluginContext->setTwoFApass(false);
+              $session->setAuthCompleted(false);
 
-    /**
-     * Devuelve los recursos CSS necesarios para el plugin
-     *
-     * @return array
-     */
-    public function getCssResources()
-    {
-        return [];
-    }
+              $eventData = $event->getEventMessage()->getExtra();
 
-    /**
-     * Devuelve el nombre del plugin
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return self::PLUGIN_NAME;
-    }
+              if (isset($eventData['redirect'][0])
+                  && is_callable($eventData['redirect'][0])
+              ) {
+                  $session->setTrasientKey('redirect', $eventData['redirect'][0]('authenticatorLogin/index'));
+              } else {
+                  $session->setTrasientKey('redirect', 'index.php?r=authenticatorLogin/index');
+              }
+          } else {
+              $pluginContext->setTwoFApass(true);
+              $session->setAuthCompleted(true);
+          }
+      }
 
-    /**
-     * @return array|AuthenticatorData[]
-     */
-    public function getData()
-    {
-        return (array)parent::getData();
-    }
+      /**
+       * Devolver los datos de un Id
+       *
+       * @param $id
+       *
+       * @return AuthenticatorData|null
+       */
+      public function getDataForId($id)
+      {
+          return isset($this->data[$id]) ? $this->data[$id] : null;
+      }
+
+      /**
+       * @return array|AuthenticatorData[]
+       */
+      public function getData()
+      {
+          return (array)parent::getData();
+      }
+
+      /**
+       * Devuelve los eventos que implementa el observador
+       *
+       * @return array
+       */
+      public function getEvents()
+      {
+          return ['show.userSettings', 'login.finish'];
+      }
+
+      /**
+       * Devuelve los recursos JS y CSS necesarios para el plugin
+       *
+       * @return array
+       */
+      public function getJsResources()
+      {
+          return ['plugin.min.js'];
+      }
+
+      /**
+       * Devuelve el autor del plugin
+       *
+       * @return string
+       */
+      public function getAuthor()
+      {
+          return 'Rubén D.';
+      }
+
+      /**
+       * Devuelve la versión del plugin
+       *
+       * @return array
+       */
+      public function getVersion()
+      {
+          return [2, 0, 1];
+      }
+
+      /**
+       * Devuelve la versión compatible de sysPass
+       *
+       * @return array
+       */
+      public function getCompatibleVersion()
+      {
+          return [3, 0];
+      }
+
+      /**
+       * Devuelve los recursos CSS necesarios para el plugin
+       *
+       * @return array
+       */
+      public function getCssResources()
+      {
+          return ['plugin.min.css'];
+      }
+
+      /**
+       * Devuelve el nombre del plugin
+       *
+       * @return string
+       */
+      public function getName()
+      {
+          return self::PLUGIN_NAME;
+      }
+
+      /**
+       * Establecer los datos de un Id
+       *
+       * @param                   $id
+       * @param AuthenticatorData $AuthenticatorData
+       *
+       * @return Plugin
+       */
+      public function setDataForId($id, AuthenticatorData $AuthenticatorData)
+      {
+          $this->data[$id] = $AuthenticatorData;
+
+          return $this;
+      }
+
+      /**
+       * Eliminar los datos de un Id
+       *
+       * @param $id
+       */
+      public function deleteDataForId($id)
+      {
+          if (isset($this->data[$id])) {
+              unset($this->data[$id]);
+          }
+      }
+
+      /**
+       * @param mixed $pluginData
+       */
+      public function onLoadData(PluginData $pluginData)
+      {
+          $this->data = Util::unserialize(
+              AuthenticatorData::class,
+              $pluginData->getData()
+          );
+      }
   }
 
-Eventos
+
+Events
 -------
 
-Cuando se emite un evento se incluye la instancia de la clase donde se genera, por lo que es posible acceder a los métodos de dicha clase.
+When an event is emitted the generating class instance is included as an argument, so it could be possible to access to the class events.
 
-Actualmente, los eventos producidos son los siguientes:
+Events may include 'SP\Core\Events\EventMessage' class which may contain additional data to pass into the plugin.
 
-==============================  ========================  =========================================================================
-Evento                          Clase                     Descripción
-==============================  ========================  =========================================================================
-show.account.new                AccountController         Generado cuando se muestra la vista de una cuenta nueva
-show.account.copy               AccountController         Generado cuando se muestra la vista de copiar cuenta
-show.account.edit               AccountController         Generado cuando se muestra la vista de editar cuenta
-show.account.editpass           AccountController         Generado cuando se muestra la vista de editar clave de cuenta
-show.account.view               AccountController         Generado cuando se muestra la vista de detalles de cuenta
-show.account.viewhistory        AccountController         Generado cuando se muestra la vista de cuenta en histórico
-show.account.delete             AccountController         Generado cuando se muestra la vista de eliminar cuenta
-show.account.request            AccountController         Generado cuando se muestra la vista de petición de modificación de cuenta
-show.account.search             AccountSearchController   Generado cuando se muestra la vista de búsqueda de cuentas
-show.config                     ConfigController          Generado cuando se muestra la vista de configuración
-show.eventlog                   EventlogController        Generado cuando se muestra la vista del registro de eventos
-show.itemlist.accounts          ItemListController        Generado cuando se muestra la vista elementos y personalización
-show.itemlist.accesses          ItemListController        Generado cuando se muestra la vista de accesos
-show.itemlist.notices           ItemListController        Generado cuando se muestra la vista de notificaciones
-login.preferences               LoginController           Generado cuando se cargan las preferencias en el login
-main.prelogin.*                 MainController            Generado cuando se realiza una acción antes del login (vía URL)
-main.postlogin.*                MainController            Generado cuando se realiza una acción después del login (vía URL)
-==============================  ========================  =========================================================================
+Currently, the generated events are the following:
+
+==================================  ========================  =========================================================================
+Event                               Class                     Description
+==================================  ========================  =========================================================================
+acl.deny
+check.notification
+check.tempMasterPassword
+clear.eventlog
+clear.track
+copy.account.pass
+create.account
+create.authToken
+create.category
+create.client
+create.customField
+create.itemPreset
+create.notification
+create.plugin
+create.publicLink
+create.publicLink.account
+create.tag
+create.tempMasterPassword
+create.user
+create.userGroup
+create.userProfile
+database.query
+database.rollback
+database.transaction.begin
+database.transaction.end
+database.transaction.rollback
+delete.account
+delete.account.selection
+delete.accountFile
+delete.accountFile.selection
+delete.accountHistory
+delete.accountHistory.selection
+delete.authToken
+delete.authToken.selection
+delete.category
+delete.client
+delete.client.selection
+delete.customField
+delete.customField.selection
+delete.itemPreset
+delete.notification
+delete.notification.selection
+delete.plugin
+delete.plugin.selection
+delete.publicLink
+delete.publicLink.selection
+delete.tag
+delete.tag.selection
+delete.user
+delete.user.selection
+delete.userGroup
+delete.userGroup.selection
+delete.userProfile
+delete.userProfile.selection
+download.accountFile
+download.backupAppFile
+download.backupDbFile
+download.configBackupFile
+download.exportFile
+download.logFile
+edit.account
+edit.account.bulk
+edit.account.pass
+edit.account.restore
+edit.authToken
+edit.category
+edit.client
+edit.customField
+edit.itemPreset
+edit.notification
+edit.plugin.available
+edit.plugin.disable
+edit.plugin.enable
+edit.plugin.reset
+edit.plugin.unavailable
+edit.publicLink.refresh
+edit.tag
+edit.user
+edit.user.pass
+edit.user.password
+edit.userGroup
+edit.userProfile
+expire.tempMasterPassword
+import.ldap.end
+import.ldap.groups
+import.ldap.start
+import.ldap.users
+ldap.bind
+ldap.check.connection
+ldap.check.group
+ldap.check.params
+ldap.connect
+ldap.connect.tls
+ldap.getAttributes
+ldap.search
+ldap.search.group
+ldap.unbind
+list.accountFile
+login.auth.browser
+login.auth.database
+login.auth.ldap
+login.checkUser.changePass
+login.checkUser.disabled
+login.finish
+login.info
+login.masterPass
+login.masterPass.temporary
+login.preferences.load
+login.session.load
+plugin.load
+plugin.load.error
+refresh.authToken
+refresh.masterPassword
+refresh.masterPassword.hash
+request.account
+request.user.passReset
+reset.min.css
+restore.accountHistory
+run.backup.end
+run.backup.process
+run.backup.start
+run.export.end
+run.export.start
+run.export.verify
+run.import.csv
+run.import.end
+run.import.keepass
+run.import.start
+run.import.syspass
+save.config.account
+save.config.dokuwiki
+save.config.general
+save.config.ldap
+save.config.mail
+save.config.wiki
+search.category
+search.client
+search.tag
+search.userGroup
+send.mail
+send.mail.check
+session.cookie_httponly
+session.gc_maxlifetime
+session.save_handler
+session.timeout
+show.account
+show.account.bulkEdit
+show.account.copy
+show.account.create
+show.account.delete
+show.account.edit
+show.account.editpass
+show.account.history
+show.account.link
+show.account.pass
+show.account.request
+show.account.search
+show.accountFile
+show.authToken
+show.authToken.create
+show.authToken.edit
+show.category
+show.category.create
+show.category.edit
+show.client
+show.client.create
+show.client.edit
+show.config
+show.customField
+show.customField.create
+show.customField.edit
+show.itemPreset
+show.itemPreset.create
+show.itemPreset.edit
+show.itemlist.accesses
+show.itemlist.items
+show.itemlist.security
+show.notification
+show.notification.create
+show.notification.edit
+show.plugin
+show.publicLink
+show.publicLink.create
+show.publicLink.edit
+show.tag
+show.tag.create
+show.tag.edit
+show.user
+show.user.create
+show.user.edit
+show.user.editPass
+show.userGroup
+show.userGroup.create
+show.userGroup.edit
+show.userProfile
+show.userProfile.create
+show.userProfile.edit
+show.userSettings
+track.add
+track.delay
+unlock.track
+update.masterPassword.customFields
+update.masterPassword.end
+update.masterPassword.hash
+update.masterPassword.start
+upgrade.app.end
+upgrade.app.start
+upgrade.authToken.end
+upgrade.authToken.process
+upgrade.authToken.start
+upgrade.config.end
+upgrade.config.process
+upgrade.config.start
+upgrade.customField.end
+upgrade.customField.process
+upgrade.customField.start
+upgrade.db.end
+upgrade.db.process
+upgrade.db.start
+upgrade.publicLink.end
+upgrade.publicLink.process
+upgrade.publicLink.start
+upload.accountFile
+wiki.aclCheck
+wiki.getPage
+wiki.getPageHTML
+wiki.getPageInfo
+==================================  ========================  =========================================================================

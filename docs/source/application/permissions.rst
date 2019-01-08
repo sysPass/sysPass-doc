@@ -1,79 +1,79 @@
-Permisos
-========
+Permissions
+===========
 
-Los permisos en sysPass se establecen en los perfiles de los usuarios. Por defecto sólo se puede realizar una búsqueda de cuentas.
+sysPass permissions are set in users' profile. By default only accounts searching can be done.
 
-Existen 29 tipos de permisos:
+There are 29 permission types:
 
-* **Cuentas**
+* **Accounts**
 
-  * Crear - permite crear cuentas
-  * Ver - permite ver los detalles de las cuentas [#f1]_
-  * Ver Clave - permite visualizar las clave de las cuentas [#f1]_
-  * Editar - permite modificar las cuentas y sus archivos [#f1]_
-  * Editar Clave - permite modificar las claves de las cuentas [#f1]_
-  * Eliminar - permite eliminar las cuentas [#f1]_
-  * Archivos - permite visualizar los archivos de las cuentas
-  * Compartir Enlace - permite crear enlaces públicos
-  * Privada - permite crear cuentas privadas
-  * Privada para Grupo - permite crear cuentas privadas sólo para el grupo principal
-  * Permisos - permite ver y modificar los permisos de las cuentas [#f1]_
-  * Búsqueda Global - permite realizar una búsqueda en todas las cuentas excepto las privadas [#f2]_
+  * Create - allows to create new accounts
+  * View - allows to view the accounts' details [#f1]_
+  * View Password - allows to view the accounts' password [#f1]_
+  * Edit - allows to modify the accounts and its files [#f1]_
+  * Edit Password - allows to modify the accounts' password [#f1]_
+  * Delete - allows to delete accounts [#f1]_
+  * Files - allows to view account's files
+  * Share Link - allows to create public links
+  * Private - allows to create private accounts
+  * Private for Group - allows to create private accounts only accessible by the account's main group
+  * Permissions - allows to view and modify the accounts' permissions [#f1]_
+  * Global Search - allows to perform a searching in all the accounts except in the private ones [#f2]_
 
-* **Gestión**
+* **Management**
 
-  * Usuarios - permite acceso total a la gestión de usuarios [#f3]_
-  * Grupos - permite acceso total a la gestión de grupos
-  * Perfiles - permite acceso total a la gestión de perfiles
-  * Categorías - permite acceso total a la gestión de categorías
-  * Clientes - permite acceso total a la gestión de clientes
-  * Campos Personalizados - permite acceso total a la gestión de campos personalizados
-  * Autorizaciones API - permite acceso total a la gestión de autorizaciones API
-  * Enlaces Públicos - permite acceso total a la gestión de enlaces públicos
-  * Cuentas - permite acceso total a la gestión de cuentas
-  * Archivos - permite acceso total a la gestión de archivos
-  * Etiquetas - permite acceso total a la gestión de etiquetas
+  * Users - allows full access to the users management [#f3]_
+  * Groups - allows full access to the user groups management
+  * Profiles - allows full access to the user profiles management
+  * Categories - allows full access to categories management
+  * Clients - allows full access to clients management
+  * Custom Fields - allows full access to custom fields management
+  * API Authorizations - allows full access to API authorizations management
+  * Public Links - allows full access to the public links management
+  * Accounts - allows full access to accounts management
+  * Files- allows full access to files management
+  * Tags - allows full access to the tags management
 
-* **Configuración**
+* **Configuration**
 
-  * General - permite acceso total a la configuración del sitio, cuentas, wiki, ldap y correo
-  * Encriptación - permite acceso total a la configuración de la clave maestra
-  * Copia de Seguridad - permite acceso total a la realización de copias de seguridad [#f4]_
-  * Importación - permite acceso total a la importación de archivos XML y CSV
+  * General - allows full access to the site, accounts, wiki, ldap and email configuration
+  * Encryption - allows full access to the master password configuration
+  * Backup - allows full access to perform backups [#f4]_
+  * Import - allows full access to import XML and CSV files
 
-* **Otros**
+* **Others**
 
-  * Registro de Eventos - permite acceso total al registro de eventos
+  * Event Log - allows full access to the event log
 
 ACL
 ---
 
-Usuarios y Grupos
-_________________
+Users and Groups
+________________
 
-  * Los perfiles de usuario permiten establecer qué acciones puede realizar
-  * Un usuario sólo puede visualizar o modificar las cuentas si:
+  * User profiles allow to set which actions could be done by the user
+  * An user can only display or modify accounts if:
 
-    * Es propietario de la cuenta
-    * Pertenece al grupo principal de la cuenta
-    * Pertenece a los usuarios secundarios de la cuenta
-    * Su grupo principal pertenece a los grupos secundarios de la cuenta
-    * Si está incluido a través de un grupo y la opción "Acceso Grupos Secundarios" está habilitada
+    * Is the account's owner
+    * Is member of account's primary group
+    * Is member of account's secondary groups
+    * Is listed as a secondary user of the account
+    * His/Her main group is listed as a secondary group of the account
+    * Is included through a group and the 'Secondary Groups Access' option is enabled
 
-  * Una cuenta sólo puede ser modificada por los usuarios o grupos secundarios si está establecido el permiso de modificación en los accesos de la cuenta
-  * Las cuentas privadas sólo son accesibles por el propietario
-  * Las cuentas privadas para grupo sólo son accesibles por los usuarios el grupo principal
-  * Admin Aplicacion: permite acceso total a todos los módulos de la aplicación
-  * Admin Cuentas: permite acceso total a todas las cuentas excepto las privadas
+  * Private accounts can only be accessed by the owner
+  * Private accounts for groups can only be accessed by the users of the main group
+  * Application Admin: allows full access to all the application modules and accounts, except private ones
+  * Accounts Admin: allows full access to all the accounts, except private ones
 
 API
 ___
 
-Los permisos de acceso a la API son complementarios a los de acceso a las cuentas, es decir, las ACLs de usuarios y grupos se aplicarán cuando se visualiza o accede a las cuentas.
+API's access permissions are complementary to the accounts access permissions, so users and groups ACLs will be applied when an account is either listed or accessed.
 
-.. rubric:: Notas
+.. rubric:: Notes
 
-.. [#f1] Sólo a las cuentas a las que el usuario y su grupo tienen acceso
-.. [#f2] En caso de no tener acceso a la cuenta, sólo es posible realizar una "Solicitud de Modificación"
-.. [#f3] Los usuarios "Admin Aplicación" no pueden ser modificados por otros usuarios
-.. [#f4] Sólo los usuarios "Admin Aplicación" pueden descargar archivos de copia de seguridad o XML
+.. [#f1] Only the accounts that the user and its group are granted
+.. [#f2] When the account access is not granted, he/she will only be able to perform a 'Request for Account Modification'
+.. [#f3] 'Application Admin' users cannot be modified by other users
+.. [#f4] Only 'Application Admin' users can download the backup or XML files

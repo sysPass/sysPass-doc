@@ -1,20 +1,20 @@
 .. _Blowfish: `https://en.wikipedia.org/wiki/Blowfish_(cipher)`
 
-Autentificación
-===============
+Authentication
+==============
 
-Para la autentificación de sysPass es posible utilizar varios métodos:
+For sysPass authentication it could be possible to use several methods:
 
-* Base de datos MySQL/MariaDB (por defecto)
-* Directorio LDAP (OpenLDAP, eDirectory, Active Directory, freeIPA, etc)
+* MySQL/MariaDB database (by default)
+* LDAP directory (OpenLDAP, eDirectory, Active Directory, freeIPA, etc)
 
 .. note::
 
-  Si está activada la opción de LDAP, la autentificación con base de datos es utilizada cuando el servicio de LDAP no está accesible o el usuario no existe.
+  If LDAP option is enabled, the database authentication is used when the LDAP service is unavailable or the user doesn't exist.
 
-Para la autentificación con base de datos se comprueba un hash generado con Blowfish_ de la clave del usuario, por lo que la clave **nunca** se almacena.
+For the database authentication, a generated Blowfish_ hash from user's password is checked, so the password is **never** stored.
 
-Si se utiliza LDAP:
+If LDAP is enabled:
 
-* Se almacena el hash de la clave del usuario generado con Blowfish_ para comprobarlo en caso de fallo del servicio de LDAP.
-* No es posible editar el login, nombre e email del usuario.
+* The user's Blowfish_ generated hash is stored in order to check it, if the LDAP service is unavailable.
+* Neither the user's login nor name nor email can be modified.

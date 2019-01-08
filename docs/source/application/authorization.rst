@@ -2,15 +2,16 @@
 .. _2FA: https://en.wikipedia.org/wiki/Multi-factor_authentication
 .. _OTP: https://en.wikipedia.org/wiki/One-time_password
 .. _`Google Authenticator`: https://en.wikipedia.org/wiki/Google_Authenticator
+.. _`Authenticator Plugin`: https://github.com/sysPass/plugin-Authenticator
 
-Autorización
-============
+Authorization
+=============
 
-Para la autorización de sysPass es posible utilizar varios métodos:
+For sysPass authorization it could be possible to use several methods:
 
-* `Auth Basic`_ (por defecto)
-* Doble Factor 2FA_ (plugin Authenticator)
+* `Auth Basic`_ (by default)
+* Two Factor 2FA_ (`Authenticator Plugin`_)
 
-La autorización del tipo `Auth Basic`_ siempre es comprobada, por lo que si se reciben las cabeceras HTTP con los datos del usuario, se comprobará si el login del usuario de sysPass es igual al de `Auth Basic`_.
+The `Auth Basic`_ authorization could be enabled through the configuration module, so if the HTTP authorization header with the user's data is sent, it will be checked whether the sysPass user's login matches against the `Auth Basic`_ one.
 
-La autorización 2FA_ mediante el plugin Authenticator es realizada mediante la generarión de un token OTP_ desde la aplicación `Google Authenticator`_. Esta autorización es posible activarla desde las preferencias de cada usuario.
+The 2FA_ authorization, through the `Authenticator Plugin`_, is done by generating an OTP_ token from `Google Authenticator`_  or similar applications. This authorization could be enabled from the user's preferences.

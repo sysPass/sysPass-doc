@@ -22,8 +22,8 @@ In order to limit the access to the directories through Apache, '.htaccess' file
   <Directory "/var/www/html/sysPass">
     Options -Indexes -FollowSymLinks -Includes -ExecCGI
     <RequireAny>
-        Require expr "%{REQUEST_URI} =~ m#.*\/index\.php(\?r=)?#"
-        Require expr "%{REQUEST_URI} =~ m#.*\/api\.php$#"
+        Require expr "%{REQUEST_URI} =~ m#.*/index\.php(\?r=)?#"
+        Require expr "%{REQUEST_URI} =~ m#.*/api\.php$#"
         Require expr "%{REQUEST_URI} =~ m#^$#"
     </RequireAny>
   </Directory>

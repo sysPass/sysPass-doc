@@ -8,16 +8,16 @@ Prerequisites
 * MariaDB >= 10.1
 * PHP >= 7.0
 * PHP modules
-  * mysqlnd
-  * curl
-  * json
-  * gd
-  * xml
-  * mbstring
-  * intl
-  * readline
-  * ldap (optional)
-  * mcrypt (optional for importing older XML export files)
+    * mysqlnd
+    * curl
+    * json
+    * gd
+    * xml
+    * mbstring
+    * intl
+    * readline
+    * ldap (optional)
+    * mcrypt (optional for importing older XML export files)
 * Latest sysPass version https://github.com/nuxsmin/sysPass/releases
 
 Installation

@@ -24,6 +24,7 @@ In order to limit the access to the directories through Apache, '.htaccess' file
     <RequireAny>
         Require expr "%{REQUEST_URI} =~ m#.*/index\.php(\?r=)?#"
         Require expr "%{REQUEST_URI} =~ m#.*/api\.php$#"
+        Require expr "%{REQUEST_URI} =~ m#.*/app/modules/web/themes#"
         Require expr "%{REQUEST_URI} =~ m#^$#"
     </RequireAny>
   </Directory>

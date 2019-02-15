@@ -25,9 +25,14 @@ Installation
 
 CentOS 7 package installation.
 
+Activate EPEL and Webtatic repos and then, install php 7.1
+
 .. code:: bash
 
-    yum install httpd php php-ldap php-mcrypt php-mbstring php-gd php-mysqlnd php-pdo php-json php-xml php-ldap php-xml mariadb-server wget
+    rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
+    rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+    yum install httpd php71w php71w-cli php71w-ldap php71w-mcrypt php71w-mbstring php71w-gd php71w-mysqlnd php71w-pdo php71w-json php71w-xml mariadb-server wget
+
 
 Automated start/stop Apache web server and MariaDB server.
 

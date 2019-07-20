@@ -18,7 +18,7 @@ In order to limit the access to the directories through Apache, '.htaccess' file
 
 .. code:: Apache
 
-  # Apache 2.4
+  # Apache 2.4 (after 2.4.16)
   <Directory "/var/www/html/sysPass">
     Options -Indexes -FollowSymLinks -Includes -ExecCGI
     <RequireAny>
@@ -31,6 +31,23 @@ In order to limit the access to the directories through Apache, '.htaccess' file
   <Directory "/var/www/html/sysPass/public">
     Require all granted
   </Directory>
+
+.. code:: Apache
+
+  # Apache 2.4 (before 2.4.16)
+  <Directory "/var/www/html/sysPass">
+    Options -Indexes -FollowSymLinks -Includes -ExecCGI
+    <RequireAny>
+        Require expr %{REQUEST_URI} =~ m#.*/index\.php(\?r=)?#
+        Require expr %{REQUEST_URI} =~ m#.*/api\.php$#
+        Require expr %{REQUEST_URI} =~ m#^$#
+    </RequireAny>
+  </Directory>
+
+  <Directory "/var/www/html/sysPass/public">
+    Require all granted
+  </Directory>
+
 
 .. danger::
   'app/config' directory shouldn't be accessible through the web server, it could reveal private data.

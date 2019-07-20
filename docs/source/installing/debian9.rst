@@ -80,6 +80,10 @@ From sysPass root directory, download and install Composer (https://getcomposer.
     php composer-setup.php
     php -r "unlink('composer-setup.php');"
 
+.. note::
+
+  You may take the newest install instructions from composer-website (https://getcomposer.org/download/), as the Hashes of the composer-setup changes with new releases. Otherwise the verification command end in "Installert corrupt".
+
 Then install sysPass dependencies
 
 .. code:: bash

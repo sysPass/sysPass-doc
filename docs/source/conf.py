@@ -58,7 +58,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'sysPass'
-copyright = u'2010-2018, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>'
+copyright = u'2010-2019, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>'
 author = u'Rubén Domínguez'
 
 # The version info for the project you're documenting, acts as replacement for

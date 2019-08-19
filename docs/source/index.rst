@@ -25,7 +25,7 @@ Features
 What sysPass does not do
 ------------------------
 
-* It does not store any **UN**encrypted keys in the server
+* It does not store any **UNencrypted** keys in the server
 * It does not send any data to an external service
 * It does not encrypt the accounts' password individually, it uses a key protected by global master password for all instead
 * It does not perform password changes on the servers

@@ -40,17 +40,23 @@ This will download the latest sysPass stable image and the database (MariaDB) on
 
 5. Take a look to deployment's logs:
 
+.. code:: bash
+
   docker-compose -p syspass -f docker-compose.yml logs -f
 
 .. note::
-  
+
   Docker Compose will create an isolated network for all sysPass services making possible to use DNS resolution between containers. You can use "syspass-db" for setting up the database hostname in sysPass installation page.
 
-  It will create two fixed volumes for sysPass application, one for "config" directory and the other for "backup" directory. An additional fixed volume will be created for the database container's data.
+  It will create two fixed volumes for sysPass application, one for ".../app/config" directory and the other for ".../app/backup" directory. An additional fixed volume will be created for the database container's data.
 
 .. warning::
 
   sysPass container will publish 80 and 443 host's ports to the outside. You could change this behavior by tweaking the Docker Compose's file.
+
+.. tip::
+
+  You can disable HTTPS redirection by setting "USE_SSL=no" within "docker-compose.yml" file. This will offload the SSL encryption to a LB or reverse proxy.
 
 Docker
 ------
@@ -104,6 +110,7 @@ By this way all the services need to be deployed manually. The following steps a
 .. tip::
 
   You can install sysPass extensions (plugins) by setting "COMPOSER_EXTENSIONS" environment variable when deploying the sysPass application container. Example: "--env COMPOSER_EXTENSIONS='syspass/plugin-authenticator'"
+
 
 Database Access
 ---------------

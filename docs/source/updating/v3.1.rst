@@ -28,7 +28,7 @@ The following steps need to be performed in order to update sysPass:
 
 6. Set up the correct permissions on directories
 7. Point your browser to sysPass web server URL. The upgrade process will display the confirmation page
-8. Though it's being said on the upgrade page, please **Perform a full database backup using external tools like "mysqldump"**
+8. Though it's being said on the upgrade page, please **perform a full database backup using external tools like "mysqldump"**
 9. Enter the upgrade key located in ".../app/config/config.xml" file within the "upgradeKey" tag
 10. If the upgrading process fails, please check out ".../app/config/syspass.log" file for error messages
 11. Once upgraded it will redirect to the sign in page

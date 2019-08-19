@@ -64,5 +64,4 @@ Enable and start services
 
 
 .. note::
-
   Thanks to @M1k13 for this contribution

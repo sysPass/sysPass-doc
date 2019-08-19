@@ -1,10 +1,6 @@
 Instalación Debian 9
 ====================
 
-.. warning::
-
-  Work in progress
-
 Prerequisites
 -------------
 
@@ -31,11 +27,8 @@ Debian GNU/Linux package installation.
 
 .. code:: bash
 
-    apt install locales apache2 libapache2-mod-php7.0 php-pear php7.0 php7.0-cgi php7.0-cli \
-    php7.0-common php7.0-fpm php7.0-gd php7.0-json php7.0-mysql php7.0-readline \
-    php7.0-curl php7.0-intl php7.0-ldap php7.0-mcrypt php7.0-xml php7.0-mbstring
-
-    service apache2 restart
+  $ sudo apt install locales apache2 libapache2-mod-php7.0 php-pear php7.0 php7.0-cgi php7.0-cli php7.0-common php7.0-fpm php7.0-gd php7.0-json php7.0-mysql php7.0-readline php7.0 curl php7.0-intl php7.0-ldap php7.0-mcrypt php7.0-xml php7.0-mbstring
+  $ sudo service apache2 restart
 
 Optional for enabling SSL.
 
@@ -51,44 +44,58 @@ Create a directory for sysPass within the web server root.
 
 .. code:: bash
 
-    mkdir /var/www/html/syspass
+  $ sudo mkdir /var/www/html/syspass
 
 Unpack sysPass files.
 
 .. code:: bash
 
-    cd /var/www/html/syspass
-    tar xzf syspass.tar.gz
+  $ cd /var/www/html/syspass
+  $ sudo tar xzf syspass.tar.gz
 
 Setup directories permissions. The owner should match the web server running user.
 
 .. code:: bash
 
-    chown apache -R /var/www/html/syspass
-    chmod 750 /var/www/html/syspass/app/config /var/www/html/syspass/app/backup
+  $ sudo chown apache -R /var/www/html/syspass
+  $ sudo chmod 750 /var/www/html/syspass/app/config /var/www/html/syspass/app/backup
 
 Installing dependencies
 -----------------------
 
-From sysPass root directory, download and install Composer (https://getcomposer.org/download/)
+From sysPass root directory, download and install Composer (https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md)
+
+Create a bash script called "install_composer.sh" and paste this code in it:
 
 .. code:: bash
 
-    cd /var/www/html/syspass
-    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    php composer-setup.php
-    php -r "unlink('composer-setup.php');"
+  #!/bin/sh
+  EXPECTED_SIGNATURE="$(wget -q -O - https://composer.github.io/installer.sig)"
+  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  ACTUAL_SIGNATURE="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
 
-.. note::
+  if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
+  then
+      >&2 echo 'ERROR: Invalid installer signature'
+      rm composer-setup.php
+      exit 1
+  fi
 
-  You may take the newest install instructions from composer-website (https://getcomposer.org/download/), as the Hashes of the composer-setup changes with new releases. Otherwise the verification command end in "Installert corrupt".
+  php composer-setup.php --quiet
+  RESULT=$?
+  rm composer-setup.php
+  exit $RESULT
+
+.. code:: bash
+
+  $ chmod +x install_composer.sh
+  $ ./install_composer.sh
 
 Then install sysPass dependencies
 
 .. code:: bash
 
-    php composer.phar install --no-dev
+  $ php composer.phar install --no-dev
 
 Environment configuration
 -------------------------

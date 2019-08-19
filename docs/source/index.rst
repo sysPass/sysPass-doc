@@ -25,11 +25,11 @@ Features
 What sysPass does not do
 ------------------------
 
-* It does not store the master password in the server
+* It does not store any **UN**encrypted keys in the server
 * It does not send any data to an external service
-* It does not encrypt the accounts' password individually, it uses a master password for all instead
+* It does not encrypt the accounts' password individually, it uses a key protected by global master password for all instead
 * It does not perform password changes on the servers
-* It does not encrypt the accounts' data, only the password and custom fields data, because you wouldn't be able to perform searches
+* It does not encrypt the accounts' data, only the password, custom fields' and plugins' data, because you wouldn't be able to perform searches
 * It isn't like APT: doesn't have Super Cow Powers!!
 
 .. toctree::

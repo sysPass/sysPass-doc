@@ -105,14 +105,26 @@ The following methods must be implemented in 'Plugin' class
 init
 ::::
 
-Method that is called every time the plugin is executed
+Method that is called every time the plugin is executed. The dependency injection container will be passed.
 
 .. code-block:: php
 
   /**
-   * Initialization
+   * Plugin initialization
+   *
+   * @param ContainerInterface $dic
    */
-  public function init() {}
+  public function init(ContainerInterface $dic)
+  {
+      $this->base = dirname(__DIR__);
+      $this->themeDir = $this->base . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . $dic->get(ThemeInterface::class)->getThemeName();
+
+      $this->setLocales();
+
+      $this->dic = $dic;
+
+      $this->session = $this->dic->get(ContextInterface::class);
+  }
 
 updateEvent
 :::::::::::
@@ -143,7 +155,7 @@ Method that returns an array of strings with the events that the plugin will be 
    */
   public function getEvents()
   {
-      return ['user.preferences', 'main.prelogin.2fa', 'login.preferences'];
+      return ['show.userSettings', 'login.finish'];
   }
 
 getJsResources
@@ -256,12 +268,59 @@ Method that returns the plugin's data
 .. code-block:: php
 
   /**
-   * @return array|AuthenticatorData[]
+   * @return AuthenticatorData
    */
   public function getData()
   {
-      return (array)parent::getData();
+      if ($this->data === null
+          && $this->session->isLoggedIn()
+          && $this->pluginOperation !== null
+      ) {
+          $this->loadData();
+      }
+
+      return parent::getData();
   }
+
+onLoad
+::::::
+
+Method that will be called when the plugin is initialized
+
+.. code-block:: php
+
+  /**
+   * onLoad
+   */
+  public function onLoad()
+  {
+      $this->loadData();
+  }
+
+upgrade
+:::::::
+
+Method that receives the current sysPass version and would run a task if it needs to upgrade.
+This method will be called whenever a new sysPass version is detected.
+
+.. code-block:: php
+
+  /**
+   * @param string          $version
+   * @param PluginOperation $pluginOperation
+   * @param mixed           $extra
+   *
+   * @throws Services\AuthenticatorException
+   */
+  public function upgrade(string $version, PluginOperation $pluginOperation, $extra = null)
+  {
+      switch ($version) {
+          case '310.19012201':
+              (new UpgradeService($pluginOperation))->upgrade_310_19012201($extra);
+              break;
+      }
+  }
+
 
 Example
 -------
@@ -272,21 +331,23 @@ Example
 
   use Psr\Container\ContainerInterface;
   use SP\Core\Context\ContextInterface;
+  use SP\Core\Context\SessionContext;
   use SP\Core\Events\Event;
   use SP\Core\UI\ThemeInterface;
-  use SP\DataModel\PluginData;
   use SP\Modules\Web\Plugins\Authenticator\Controllers\PreferencesController;
   use SP\Modules\Web\Plugins\Authenticator\Models\AuthenticatorData;
+  use SP\Modules\Web\Plugins\Authenticator\Services\UpgradeService;
   use SP\Modules\Web\Plugins\Authenticator\Util\PluginContext;
   use SP\Mvc\Controller\ExtensibleTabControllerInterface;
   use SP\Plugin\PluginBase;
-  use SP\Util\Util;
+  use SP\Plugin\PluginOperation;
   use SplSubject;
 
   /**
    * Class Plugin
    *
    * @package SP\Modules\Web\Plugins\Authenticator
+   * @property AuthenticatorData $data
    */
   class Plugin extends PluginBase
   {
@@ -297,6 +358,10 @@ Example
        * @var ContainerInterface
        */
       private $dic;
+      /**
+       * @var SessionContext
+       */
+      private $session;
 
       /**
        * Receive update from subject
@@ -315,26 +380,24 @@ Example
       }
 
       /**
-       * Inicialización del plugin
+       * Plugin initialization
        *
        * @param ContainerInterface $dic
        */
       public function init(ContainerInterface $dic)
       {
-          if (!is_array($this->data)) {
-              $this->data = [];
-          }
-
           $this->base = dirname(__DIR__);
           $this->themeDir = $this->base . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . $dic->get(ThemeInterface::class)->getThemeName();
 
           $this->setLocales();
 
           $this->dic = $dic;
+
+          $this->session = $this->dic->get(ContextInterface::class);
       }
 
       /**
-       * Evento de actualización
+       * Updating event
        *
        * @param string $eventType Nombre del evento
        * @param Event  $event     Objeto del evento
@@ -346,20 +409,37 @@ Example
       {
           switch ($eventType) {
               case 'show.userSettings':
-                  /** @var ExtensibleTabControllerInterface $source */
-                  $source = $event->getSource(ExtensibleTabControllerInterface::class);
-
-                  (new PreferencesController($source, $this, $this->dic))
-                      ->setUp();
+                  $this->loadData();
+                  (new PreferencesController(
+                      $event->getSource(ExtensibleTabControllerInterface::class),
+                      $this,
+                      $this->dic)
+                  )->setUp();
                   break;
               case 'login.finish':
+                  $this->loadData();
                   $this->checkLogin($event);
                   break;
           }
       }
 
       /**
-       * Comprobar 2FA en el login
+       * Load plugin's data for current user
+       */
+      private function loadData()
+      {
+          try {
+              $this->data = $this->pluginOperation->get(
+                  $this->session->getUserData()->getId(),
+                  AuthenticatorData::class
+              );
+          } catch (\Exception $e) {
+              processException($e);
+          }
+      }
+
+      /**
+       * Check 2FA within log in
        *
        * @param Event $event
        *
@@ -367,52 +447,46 @@ Example
        */
       private function checkLogin(Event $event)
       {
-          $session = $this->dic->get(ContextInterface::class);
           $pluginContext = $this->dic->get(PluginContext::class);
 
-          $data = $this->getDataForId($session->getUserData()->getId());
-
-          if ($data !== null && $data->isTwofaEnabled()) {
+          if ($this->data !== null
+              && $this->data->isTwofaEnabled()
+          ) {
               $pluginContext->setTwoFApass(false);
-              $session->setAuthCompleted(false);
+              $this->session->setAuthCompleted(false);
 
               $eventData = $event->getEventMessage()->getExtra();
 
               if (isset($eventData['redirect'][0])
                   && is_callable($eventData['redirect'][0])
               ) {
-                  $session->setTrasientKey('redirect', $eventData['redirect'][0]('authenticatorLogin/index'));
+                  $this->session->setTrasientKey('redirect', $eventData['redirect'][0]('authenticatorLogin/index'));
               } else {
-                  $session->setTrasientKey('redirect', 'index.php?r=authenticatorLogin/index');
+                  $this->session->setTrasientKey('redirect', 'index.php?r=authenticatorLogin/index');
               }
           } else {
               $pluginContext->setTwoFApass(true);
-              $session->setAuthCompleted(true);
+              $this->session->setAuthCompleted(true);
           }
       }
 
       /**
-       * Devolver los datos de un Id
-       *
-       * @param $id
-       *
-       * @return AuthenticatorData|null
-       */
-      public function getDataForId($id)
-      {
-          return isset($this->data[$id]) ? $this->data[$id] : null;
-      }
-
-      /**
-       * @return array|AuthenticatorData[]
+       * @return AuthenticatorData
        */
       public function getData()
       {
-          return (array)parent::getData();
+          if ($this->data === null
+              && $this->session->isLoggedIn()
+              && $this->pluginOperation !== null
+          ) {
+              $this->loadData();
+          }
+
+          return parent::getData();
       }
 
       /**
-       * Devuelve los eventos que implementa el observador
+       * Returns the events implemented by the observer
        *
        * @return array
        */
@@ -422,7 +496,7 @@ Example
       }
 
       /**
-       * Devuelve los recursos JS y CSS necesarios para el plugin
+       * Returns the JS resources required by the plugin
        *
        * @return array
        */
@@ -432,7 +506,7 @@ Example
       }
 
       /**
-       * Devuelve el autor del plugin
+       * Returns the plugin's author
        *
        * @return string
        */
@@ -442,27 +516,27 @@ Example
       }
 
       /**
-       * Devuelve la versión del plugin
+       * Returns the plugin's version
        *
        * @return array
        */
       public function getVersion()
       {
-          return [2, 0, 1];
+          return [2, 1, 0];
       }
 
       /**
-       * Devuelve la versión compatible de sysPass
+       * Returns the sysPass compatible version
        *
        * @return array
        */
       public function getCompatibleVersion()
       {
-          return [3, 0];
+          return [3, 1];
       }
 
       /**
-       * Devuelve los recursos CSS necesarios para el plugin
+       * Returns the CSS resources required by the plugin
        *
        * @return array
        */
@@ -472,7 +546,7 @@ Example
       }
 
       /**
-       * Devuelve el nombre del plugin
+       * Returns the plugin's name
        *
        * @return string
        */
@@ -482,44 +556,43 @@ Example
       }
 
       /**
-       * Establecer los datos de un Id
-       *
-       * @param                   $id
-       * @param AuthenticatorData $AuthenticatorData
-       *
-       * @return Plugin
-       */
-      public function setDataForId($id, AuthenticatorData $AuthenticatorData)
-      {
-          $this->data[$id] = $AuthenticatorData;
-
-          return $this;
-      }
-
-      /**
-       * Eliminar los datos de un Id
+       * Removes the data for the given item's Id
        *
        * @param $id
+       *
+       * @throws \SP\Core\Exceptions\ConstraintException
+       * @throws \SP\Core\Exceptions\QueryException
+       * @throws \SP\Repositories\NoSuchItemException
        */
       public function deleteDataForId($id)
       {
-          if (isset($this->data[$id])) {
-              unset($this->data[$id]);
-          }
+          $this->pluginOperation->delete((int)$id);
       }
 
       /**
-       * @param mixed $pluginData
+       * onLoad
        */
-      public function onLoadData(PluginData $pluginData)
+      public function onLoad()
       {
-          $this->data = Util::unserialize(
-              AuthenticatorData::class,
-              $pluginData->getData()
-          );
+          $this->loadData();
+      }
+
+      /**
+       * @param string          $version
+       * @param PluginOperation $pluginOperation
+       * @param mixed           $extra
+       *
+       * @throws Services\AuthenticatorException
+       */
+      public function upgrade(string $version, PluginOperation $pluginOperation, $extra = null)
+      {
+          switch ($version) {
+              case '310.19012201':
+                  (new UpgradeService($pluginOperation))->upgrade_310_19012201($extra);
+                  break;
+          }
       }
   }
-
 
 Events
 -------

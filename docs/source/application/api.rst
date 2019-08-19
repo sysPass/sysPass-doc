@@ -398,7 +398,7 @@ id          int     yes       Tag's Id
 User Groups
 ___________
 
-usergroup/search
+userGroup/search
 ::::::::::::::::
 
 Search for user groups
@@ -413,7 +413,7 @@ text        string  no        Text to search for
 count       int     no        Number of results to display
 ==========  ======  ========  ===========
 
-usergroup/view
+userGroup/view
 ::::::::::::::
 
 Get user group's details
@@ -428,7 +428,7 @@ tokenPass   string  yes       API token's pass
 id          int     yes       User group's Id
 ==========  ======  ========  ===========
 
-usergroup/create
+userGroup/create
 ::::::::::::::::
 
 Create user group
@@ -444,7 +444,7 @@ description  string  no        User group's description
 usersId      array   no        User group's users Id
 ===========  ======  ========  ===========
 
-usergroup/edit
+userGroup/edit
 ::::::::::::::
 
 Edit user group
@@ -461,7 +461,7 @@ description  string  no        User group's description
 usersId      array   no        User group's users Id
 ===========  ======  ========  ===========
 
-usergroup/delete
+userGroup/delete
 ::::::::::::::::
 
 Delete user group

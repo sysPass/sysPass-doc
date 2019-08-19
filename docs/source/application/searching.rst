@@ -22,6 +22,7 @@ file\:"file_name"           Search for accounts which contain a file with the na
 client\:"client_name"       Search for accounts by client name
 category\:"category_name"   Search for accounts by category name
 id\:"account_id"            Returns the account for the given ID
+name_regex\:"regex"         Search for accounts name by regular expression
 is|not\:expired             Search for accounts with expired password
 is|not\:private             Get the private accounts for the current user
 op\:and|or                  Operator used by special parameters

@@ -43,11 +43,13 @@ This will download the latest sysPass stable image and the database (MariaDB) on
   docker-compose -p syspass -f docker-compose.yml logs -f
 
 .. note::
+  
   Docker Compose will create an isolated network for all sysPass services making possible to use DNS resolution between containers. You can use "syspass-db" for setting up the database hostname in sysPass installation page.
 
   It will create two fixed volumes for sysPass application, one for "config" directory and the other for "backup" directory. An additional fixed volume will be created for the database container's data.
 
 .. warning::
+
   sysPass container will publish 80 and 443 host's ports to the outside. You could change this behavior by tweaking the Docker Compose's file.
 
 Docker
@@ -91,7 +93,7 @@ By this way all the services need to be deployed manually. The following steps a
   --restart unless-stopped \
   --volume syspass-app-config:/var/www/html/sysPass/app/config \
   --volume syspass-app-backup:/var/www/html/sysPass/app/backup \
-  --detach nuxsmin/docker-syspass:latest
+  --detach syspass/syspass:3.1.0
 
 6. Connection data will be displayed in application container's console:
 

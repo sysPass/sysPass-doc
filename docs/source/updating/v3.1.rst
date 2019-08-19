@@ -1,0 +1,128 @@
+3.1 Version
+===========
+
+It's highly recommended upgrade from v3.0
+
+Please check out :doc:`v3` upgrade notes if you're upgrading from v2.1
+
+Important Changes
+-----------------
+
+* This version performs some database changes that will impact on plugins installed, so **it's very important to make a full database backup using external tools like "mysqldump"**
+* Composer PHP package manager is used to install and keep up-to-date sysPass dependencies
+
+Process
+-------
+
+The following steps need to be performed in order to update sysPass:
+
+1. Download or clone sysPass repository from either https://github.com/nuxsmin/sysPass/releases or https://github.com/nuxsmin/sysPass.git
+2. Set user and group permissions on sysPass directory
+3. Copy "config.xml", "key.pem" y "pubkey.pem" from the old ".../app/config" directory to the new one
+4. From sysPass root directory, download and install Composer (if not installed yet): https://getcomposer.org/download/
+5. Install dependencies
+
+.. code:: bash
+
+    $ php composer.phar install --no-dev
+
+6. Set up the correct permissions on directories
+7. Point your browser to sysPass web server URL. The upgrade process will display the confirmation page
+8. Though it's being said on the upgrade page, please **Perform a full database backup using external tools like "mysqldump"**
+9. Enter the upgrade key located in ".../app/config/config.xml" file within the "upgradeKey" tag
+10. If the upgrading process fails, please check out ".../app/config/syspass.log" file for error messages
+11. Once upgraded it will redirect to the sign in page
+
+.. warning::
+
+  Please do not retry the upgrade process if database changes have been made. In that case, you will need to restore the database backup and restart the whole upgrade process.
+
+Changelog
+---------
+
+Fixed
+_____
+
+
+* [FIX] Wrong URL when application URL setting is set. Thanks to @kalxasus for the notice. Closes #1395
+* [FIX] LDAP group filter wasn't applied when importing. Thanks to @kalxasus for the notice. Closes #1390
+* [FIX] Client custom fields were not created/saved. Thanks to @ZUNbado and @sf32738 for the notice. Closes #1375
+* [FIX] Skip over initialization when upgrade is needed. Thanks to @Envikia and @alexseys for the notice. Closes #1355
+* [FIX] Wrong URL handling when downloading files. Thanks to @fprina for the feedback and testing. Closes #1354
+* [FIX] Wrong field definition on PluginData table. Thanks to @drewlsvern for the feedback. Closes #1326
+* [FIX] Fix custom fields migration issue. Thanks to @VexedSyd for the feedback. Closes #1273
+* [FIX] Wrong limit for maximum file size. Thanks to @javierlm for the feedback. Closes #1313
+* [FIX] Wrong behavior when disabling remote syslog
+* [FIX] Wrong behavior when saving LDAP server. Thanks to @lreiher for the feedback. Closes #1277
+* [FIX] Wrong behavior when setting user's email from LDAP when several email addresses are set. Thanks to @cRaZy-bisCuiT for the feedback. Closes #1283
+* [FIX] Wrong behavior when updating user's password. Thanks to @vrdominguez for the feedback. Closes #1293
+* [FIX] Wrong behavior when no mail recipients are set
+* [FIX] Wrong encoding in text area. Thanks to @pierrehenrymuller for the feedback. Closes #1296
+* [FIX] Fixed wrong behavior when search operator was set
+* [FIX] No debug messages when debug mode is activated
+* [FIX] Fixed wrong behavior when setting password complexity length. Thanks to @andrucha97 for the feedback. Closes #1280
+* [FIX] Fixed wrong behavior when searching for accounts on accounts manager. Thanks to @Weptun for the feedback. Closes #1271
+* [FIX] Fixed Polski language option. Thanks to @pitrov24 for the notice. Closes 1288
+* [FIX] Added missing Italian language option. Thanks to @Matwolf08 for the notice. Closes #1302
+* [FIX] Wrong encoding when displaying account's password. Thanks to @DDH112 for the feedback. Closes #1257
+* [FIX] Wrong behavior when copying account's tags. Thanks to @leBasti91 for the feedback. Closes #1256
+* [FIX] Wrong behavior when selecting template's view
+
+Improved
+________
+
+* [MOD] Improved stacktrace by anonymizing function's arguments data. Thanks to @cRaZy-bisCuiT for the feedback. Closes #1339
+* [MOD] Bump version & build
+* [MOD] Improved behavior when searching for user permission on accounts. Thanks to @anth69 for the feedback. Closes #1338
+* [MOD] Updated translations. Thanks to all contributors.
+* [MOD] Update Authenticator version in composer.json
+* [MOD] Minor code tweaks
+* [MOD] Typo in translation. Related #1313
+* [MOD] Increase account's name length up to 100 characters long. Related #1071
+* [MOD] Unlocked PHP 7.3
+* [MOD] Improved logging messages
+* [MOD] Code cleanup
+* [MOD] Minor CSS tweaks
+* [MOD] Update translations
+* [MOD] Avoid to import blank client or category name when importing CSV files.
+* [MOD] Enforce password complexity checking. Thanks to @DDH112 for the feedback. Closes #1226
+* [MOD] Improved plugins availability detection and skip weird event log entries
+
+Added
+_____
+
+* [ADD] Added search for accounts name by regular expression. Closes #1311
+* [ADD] Added missing tests
+* [ADD] Added client IP address in syslog messages. Thanks to @sebagarayco for the feedback. Closes #1302
+* [ADD] Allow to change the account's owner and main group when the user is the account's owner. Related #705
+* [ADD] Allow to set account's owner when creating or copying the account. Related #1264
+* [ADD] Application URL for handling requests through reverse proxy. Thanks to @rob42 for the feedback. Closes #1218
+* [ADD] Allow to enable email notifications only for account access requests. Thanks to @jorgemfm for the feedback. Closes #1157
+* [ADD] Improved plugins data handling by encrypting the plugin's data
+
+Thanks
+------
+
+Big thanks to all contributors for the feedback, pull requests, translations and donations.
+
+* @kalxasus
+* @ZUNbado
+* @sf32738
+* @Envikia
+* @fprina
+* @drewlsvern
+* @VexedSyd
+* @javierlm
+* @lreiher
+* @cRaZy-bisCuiT
+* @vrdominguez
+* @pierrehenrymuller
+* @Weptun
+* @pitrov24
+* @Matwolf08
+* @DDH112
+* @leBasti91
+* @anth69
+* @sebagarayco
+* @rob42
+* @jorgemfm

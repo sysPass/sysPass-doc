@@ -9,10 +9,11 @@ sysPass has some security mechanisms to mitigate some kind of events and actions
 * Hash generation for export and backup files name
 * RSA (PKI) encryption is used for sending passwords within forms
 
-Although these actions, it's needed to secure the web server components and communications by:
+Although these actions, some other task should be performed in order to secure the web server components and communications by:
 
 * Using HTTPS
-* Limiting access to 'app/config' and 'app/backup' directories
+* Limiting access to '.../app/config' and '.../app/backup' directories
+* Enforcing web server access policies
 
 In order to limit the access to the directories through Apache, '.htaccess' files could be used within the directories or by modifying the site configuration:
 
@@ -24,13 +25,18 @@ In order to limit the access to the directories through Apache, '.htaccess' file
     <RequireAny>
         Require expr "%{REQUEST_URI} =~ m#.*/index\.php(\?r=)?#"
         Require expr "%{REQUEST_URI} =~ m#.*/api\.php$#"
-        Require expr "%{REQUEST_URI} =~ m#^$#"
+        Require expr "%{REQUEST_URI} =~ m#^/?$#"
     </RequireAny>
   </Directory>
 
   <Directory "/var/www/html/sysPass/public">
     Require all granted
   </Directory>
+
+  <FilesMatch ".(png|jpg|js|css|ttf|otf|eot|woff|woff2|ico)$">
+    Require all granted
+  </FilesMatch>
+
 
 .. code:: Apache
 
@@ -40,7 +46,7 @@ In order to limit the access to the directories through Apache, '.htaccess' file
     <RequireAny>
         Require expr %{REQUEST_URI} =~ m#.*/index\.php(\?r=)?#
         Require expr %{REQUEST_URI} =~ m#.*/api\.php$#
-        Require expr %{REQUEST_URI} =~ m#^$#
+        Require expr %{REQUEST_URI} =~ m#^/?$#
     </RequireAny>
   </Directory>
 
@@ -48,6 +54,11 @@ In order to limit the access to the directories through Apache, '.htaccess' file
     Require all granted
   </Directory>
 
+  <FilesMatch ".(png|jpg|js|css|ttf|otf|eot|woff|woff2|ico)$">
+    Require all granted
+  </FilesMatch>
+
+
 
 .. danger::
-  'app/config' directory shouldn't be accessible through the web server, it could reveal private data.
+  '.../app/config' directory shouldn't be accessible through the web server, it could reveal private data.

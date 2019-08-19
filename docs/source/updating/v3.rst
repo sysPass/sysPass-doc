@@ -17,7 +17,7 @@ The following steps need to be performed in order to update sysPass:
 
 1. Download or clone sysPass repository from either https://github.com/nuxsmin/sysPass/releases or https://github.com/nuxsmin/sysPass.git
 2. Set user and group permissions on sysPass directory
-3. Copy "config.xml", "key.pem" y "pubkey.pem" from the old "config" directory to "/app/config" directory
+3. Copy "config.xml", "key.pem" y "pubkey.pem" from the old ".../config" directory to ".../app/config" directory
 4. From sysPass root directory, download and install Composer: https://getcomposer.org/download/
 5. Install dependencies
 

@@ -1,4 +1,4 @@
-CentOS 7 Installation
+CentOS 7.x Installation
 =====================
 
 Prerequisites
@@ -6,7 +6,7 @@ Prerequisites
 
 * Web server (Apache/Nginx/Lighttpd) with SSL enabled.
 * MariaDB >= 10.1
-* PHP >= 7.0
+* PHP >= 7.0 (7.1 or above recommended)
 * PHP modules
     * mysqlnd
     * curl
@@ -23,34 +23,36 @@ Prerequisites
 Installation
 ------------
 
-CentOS 7 package installation.
+CentOS 7 package installation (https://www.softwarecollections.org/en/scls/rhscl/rh-php70/).
 
 .. code:: bash
 
-    yum install httpd php-ldap php-mcrypt php-mbstring php-gd php-mysqlnd php-pdo php-json php-xml php-ldap php-xml mariadb-server wget
+    $ sudo yum -y install centos-release-scl.noarch
+    $ sudo yum -y install rh-php71 rh-php71-php rh-php71-php-fpm httpd rh-mariadb102 wget
+    $ sudo yum -y install rh-php71-php-gd rh-php71-php-intl rh-php71-php-json rh-php71-php-ldap rh-php71-php-mbstring rh-php71-php-mysqlnd rh-php71-php-opcache rh-php71-php-pdo rh-php71-php-xml rh-php71-php-zip
 
 Automated start/stop Apache web server and MariaDB server.
 
 .. code:: bash
 
-    systemctl enable httpd.service
-    systemctl enable mariadb.service
-    systemctl start httpd.service
-    systemctl start mariadb.service
+  $ sudo systemctl enable httpd.service
+  $ sudo systemctl enable mariadb.service
+  $ sudo systemctl start httpd.service
+  $ sudo systemctl start mariadb.service
 
 Setting up MariaDB.
 
 .. code:: bash
 
-    /usr/bin/mysql_secure_installation
+  $ sudo /usr/bin/mysql_secure_installation
 
 Enabling firewall ports.
 
 .. code:: bash
 
-    firewall-cmd --permanent --zone=public --add-service=http
-    firewall-cmd --permanent --zone=public --add-service=https
-    firewall-cmd --reload
+  $ sudo firewall-cmd --permanent --zone=public --add-service=http
+  $ sudo firewall-cmd --permanent --zone=public --add-service=https
+  $ sudo firewall-cmd --reload
 
 Optional for enabling SSL.
 
@@ -66,21 +68,21 @@ Create a directory for sysPass within the web server root.
 
 .. code:: bash
 
-    mkdir /var/www/html/syspass
+  $ sudo mkdir /var/www/html/syspass
 
 Unpack sysPass files.
 
 .. code:: bash
 
-    cd /var/www/html/syspass
-    tar xzf syspass.tar.gz
+  $ sudo cd /var/www/html/syspass
+  $ sudo tar xzf syspass.tar.gz
 
 Setup directories permissions. The owner should match the web server running user.
 
 .. code:: bash
 
-    chown apache -R /var/www/html/syspass
-    chmod 750 /var/www/html/syspass/app/config /var/www/html/syspass/app/backup
+  $ sudo chown apache -R /var/www/html/syspass
+  $ sudo chmod 750 /var/www/html/syspass/app/config /var/www/html/syspass/app/backup
 
 SELinux
 -------
@@ -95,8 +97,8 @@ sysPass needs to be allowed to write its configuration and some other files (bac
 
 .. code:: bash
 
-    setsebool -P httpd_can_connect_ldap 1
-    chcon -R -t httpd_sys_rw_content_t /var/www/html/syspass/app/{config,backup,cache,tmp}
+  $ sudo setsebool -P httpd_can_connect_ldap 1
+  $ sudo chcon -R -t httpd_sys_rw_content_t /var/www/html/syspass/app/{config,backup,cache,tmp}
 
 
 * Disable SELinux by editing the file "/etc/sysconfig/selinux" and setting "SELINUX" variable's value to "permissive". You need to restart the system.
@@ -104,20 +106,39 @@ sysPass needs to be allowed to write its configuration and some other files (bac
 Installing dependencies
 -----------------------
 
-From sysPass root directory, download and install Composer (https://getcomposer.org/download/)
+From sysPass root directory, download and install Composer (https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md)
+
+Create a bash script called "install_composer.sh" and paste the following code in it:
 
 .. code:: bash
 
-    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    php composer-setup.php
-    php -r "unlink('composer-setup.php');"
+  #!/bin/sh
+  EXPECTED_SIGNATURE="$(wget -q -O - https://composer.github.io/installer.sig)"
+  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  ACTUAL_SIGNATURE="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+
+  if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
+  then
+      >&2 echo 'ERROR: Invalid installer signature'
+      rm composer-setup.php
+      exit 1
+  fi
+
+  php composer-setup.php --quiet
+  RESULT=$?
+  rm composer-setup.php
+  exit $RESULT
+
+.. code:: bash
+
+  $ chmod +x install_composer.sh
+  $ ./install_composer.sh
 
 Then install sysPass dependencies
 
 .. code:: bash
 
-    php composer.phar install --no-dev
+  $ php composer.phar install --no-dev
 
 Environment configuration
 -------------------------
@@ -129,10 +150,8 @@ https://IP_OR_SERVER_ADDRESS/syspass/index.php
 
 .. note::
 
-  Seguir los pasos del instalador y tras la correcta finalización, ya es posible acceder a la aplicación
-
-  Para saber cómo funciona sysPass ver :doc:`/application/index`
+  More information about how sysPass works on :doc:`/application/index`
 
 .. warning::
 
-  Se recomienda leer las indicaciones de seguridad en :doc:`/application/security`
+  It's very advisable to take a look to security advices on :doc:`/application/security`

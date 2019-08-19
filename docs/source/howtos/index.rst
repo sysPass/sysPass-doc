@@ -9,3 +9,6 @@ HOWTOs
 
     upgrade
     restore
+    azure_mysql
+    nginx
+    ldap_troubleshooting

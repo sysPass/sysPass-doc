@@ -1,6 +1,6 @@
 .. _configuration:
 
-Configuración
+Configuration
 =============
 
 .. toctree::
@@ -8,3 +8,4 @@ Configuración
     :name: configurationtoc
 
     ldap
+    apache

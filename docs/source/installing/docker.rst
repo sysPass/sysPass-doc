@@ -1,6 +1,6 @@
 .. _Docker: https://docs.docker.com/engine/installation/
 .. _`Docker containers`: https://en.wikipedia.org/wiki/Docker_%28software%29
-.. _`Docker Hub`: https://hub.docker.com/r/nuxsmin/docker-syspass/
+.. _`Docker Hub`: https://hub.docker.com/r/syspass/syspass/tags
 .. _`Docker Compose`: https://docs.docker.com/compose/
 .. _Debian: https://www.debian.org/
 
@@ -17,6 +17,8 @@ There are two ways for installing:
 
 * Using `Docker Compose`_ (recommended): deploys a fully working sysPass environment including application and database services.
 * Using Docker_: deploys each service (application and database) separately.
+
+.. _docker-compose:
 
 Docker Compose
 --------------

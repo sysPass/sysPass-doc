@@ -1,5 +1,5 @@
 CentOS 7.x Installation
-=====================
+=======================
 
 Prerequisites
 -------------

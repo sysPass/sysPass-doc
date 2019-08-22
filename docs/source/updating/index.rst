@@ -1,13 +1,13 @@
 .. _updating:
 
-Actualización
-=============
+Updating
+========
 
 .. toctree::
     :maxdepth: 2
     :name: updatingtoc
 
-    general
+    strategies
     v2_1
     v3
     v3.1

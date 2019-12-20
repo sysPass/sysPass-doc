@@ -33,7 +33,7 @@ In order to limit the access to the directories through Apache, '.htaccess' file
     Require all granted
   </Directory>
 
-  <FilesMatch ".(png|jpg|js|css|ttf|otf|eot|woff|woff2|ico)$">
+  <FilesMatch "\.(png|jpg|js|css|ttf|otf|eot|woff|woff2|ico)$">
     Require all granted
   </FilesMatch>
 
@@ -54,7 +54,7 @@ In order to limit the access to the directories through Apache, '.htaccess' file
     Require all granted
   </Directory>
 
-  <FilesMatch ".(png|jpg|js|css|ttf|otf|eot|woff|woff2|ico)$">
+  <FilesMatch "\.(png|jpg|js|css|ttf|otf|eot|woff|woff2|ico)$">
     Require all granted
   </FilesMatch>
 

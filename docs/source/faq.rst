@@ -132,3 +132,10 @@ Revisa las locales instaladas en tu sistema (servidor), porque sysPass usa el si
 .. _`GNU gettext`: https://en.wikipedia.org/wiki/Gettext
 
 Las locales deben de ser de la variante UTF-8.
+
+What are these strange characters in password fields?
+-----------------------------------------------------
+
+Don't worry about them, your password is okay. It's a security mechanism by which the passwords entered in a form field are automatically encrypted using RSA encryption before sending over the HTTP channel. Then, on server side, they are decrypted and stored/used as they were entered.
+
+Further info on: :doc:`/application/encryption`

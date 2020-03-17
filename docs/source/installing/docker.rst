@@ -72,7 +72,7 @@ By this way all the services need to be deployed manually. The following steps a
 
   docker network create syspass-net
 
-3. Create fixed volunes for sysPass services:
+3. Create fixed volumes for sysPass services:
 
 .. code:: bash
 

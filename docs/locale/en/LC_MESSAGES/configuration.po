@@ -63,7 +63,7 @@ msgid ""
 "interno a los usuarios que son miembros de un grupo."
 msgstr ""
 "In OpenLDAP, to the use the group membership feature you need to add an "
-"'overlay' called 'membeof'. It's a module that adds an internal attribute to "
+"'overlay' called 'memberof'. It's a module that adds an internal attribute to "
 "those users which belongs to a group. "
 
 #: ../../../source/configuration/ldap.rst:19

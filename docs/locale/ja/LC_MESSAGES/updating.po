@@ -1,0 +1,765 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/updating/index.rst:4
+msgid "Updating"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:8
+msgid "Strategies"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:10
+msgid ""
+"Though it has been discussed a few times, I should mention that **sysPass"
+" does not provide an automated upgrading method for code files**. This is"
+" so because it would imply installing some kind of software libraries "
+"like Git_ and develop an UI interface within sysPass that will try to "
+"resolve many situations when dealing with CVS repositories (merge, "
+"conflicts, etc.)."
+msgstr ""
+
+#: ../../source/updating/strategies.rst:12
+msgid ""
+"Another question is about those installations on Docker_ or Kubernetes_, "
+"which don't rely (philosophically speaking) on such kind on rolling "
+"updates based on CVS, since it will break the philosophy of containers: "
+"immutable, reproducible, scalable and so on."
+msgstr ""
+
+#: ../../source/updating/strategies.rst:14
+msgid ""
+"That being said, all-in-one apps are not a great deal for these days, so "
+"I think the best way to update is to be performed externally, that is "
+"either using Git_ or Docker_ tagged images (through `Docker Compose`_  or"
+" Helm_)."
+msgstr ""
+
+#: ../../source/updating/strategies.rst:17
+msgid "Normal"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:19
+msgid "As described on release upgrading notes"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:22
+msgid "Git"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:24
+msgid ""
+"Install Git_, point your CLI on the webserver root and run the following "
+"command:"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:31
+msgid "In order to get the latest updates:"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:39
+msgid "The \"master\" branch on Github holds the most recent stable version"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:41
+msgid ""
+"After it, if database changes are required, you'll need to follow the "
+"steps through the web UI"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:45
+msgid ""
+"Perform a full database and application backup using external tools like "
+"\"mysqldump\" and \"tar\" before updating"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:48
+msgid "Docker"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:50
+msgid ""
+"The fine and easy way is installing :ref:`docker-compose` and every new "
+"version is released out, you only need to change the image tag on "
+"composer's YAML."
+msgstr ""
+
+#: ../../source/updating/strategies.rst:62
+msgid "After changing the version tag, tun the following command:"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:68
+msgid ""
+"It will update the current sysPass container with the new version. If "
+"database changes are required, you'll need to follow the steps through "
+"the web UI"
+msgstr ""
+
+#: ../../source/updating/strategies.rst:72
+msgid ""
+"Perform a full database and application backups before updating: "
+":doc:`../application/backup`"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:4
+msgid "Versión 2.1"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:6
+msgid ""
+"Esta versión incluye mejoras en la seguridad de sysPass mediante las "
+"siguientes funcionalidades:"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:8
+msgid ""
+"Uso de la librería `Defuse/php-encryption`_ para la encriptación de datos"
+" con OpenSSL usando AES-256 CTR (CVE-2017-5999)"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:9
+msgid "Mejoras en la seguridad de las claves de sesión"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:10
+msgid "Clave para autorizaciones API"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:11
+msgid "Mejoras en la seguridad de los enlaces públicos"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:12
+msgid ""
+"Detección de intentos de acceso fallidos. Se introduce un retardo después"
+" de varios intentos"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:14
+msgid ""
+"Esta actualización requiere de la reencriptación de todas las cuentas y "
+"datos encriptados, por lo que es necesaria la clave maestra y un login de"
+" usuario válido para registrar los cambios."
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:16
+msgid ""
+"Aunque el proceso es seguro, es recomendable hacer una copia de seguridad"
+" completa de sysPass."
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:19
+msgid "Cambios Importantes"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:21
+msgid ""
+"Debido a los cambios en la encriptación de datos, los siguientes "
+"elementos han de ser renovados:"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:23
+msgid ""
+"Enlaces públicos: los enlaces son instantáneas de la cuenta enlazada, por"
+" lo que si se actualiza, es necesario renovar el enlace."
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:24
+msgid ""
+"Autorizaciones API: A partir de esta versión es necesaria una clave para "
+"las autorizaciones que requieran de datos encriptados."
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:25
+msgid "Clave maestra temporal: es necesario regenerarla si es usada."
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:28
+msgid "Proceso"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:30
+msgid "Para la actualización de sysPass son necesarios los siguientes pasos:"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:32
+msgid ""
+"Descargar la aplicación desde https://github.com/nuxsmin/sysPass/releases"
+" y descomprimir los archivos"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:33
+msgid "Establecer el propietario y permisos del directorio de sysPass"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:34
+msgid ""
+"Copiar los archivos (\"config.xml\", \"key.pem\" y \"pubkey.pem\") del "
+"directorio \"config\" de la versión actual a la nueva"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:35
+msgid "Acceder desde un navegador a la aplicación"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:37
+msgid "Si la aplicación requiere de actualización de la base de datos:"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:39
+msgid "**Realizar una copia de seguridad de la base de datos**"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:40
+msgid ""
+"Introducir el código de actualización que se encuentra en el archivo "
+"\"config/config.xml\" con la etiqueta \"upgradeKey\""
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:41
+msgid "Introducir la clave maestra de sysPass"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:42
+msgid "Introducir un login de usuario válido"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:44
+msgid ""
+"Durante la actualización se mostrará el progreso de las tareas de "
+"encriptación"
+msgstr ""
+
+#: ../../source/updating/v2_1.rst:46
+msgid ""
+"Tras la actualización, se mostrará un mensaje y en el registro de eventos"
+" se pueden revisar los detalles de la actualización"
+msgstr ""
+
+#: ../../source/updating/v3.rst:2
+msgid "3.0 Version"
+msgstr ""
+
+#: ../../source/updating/v3.rst:4
+msgid "This version only can be updated from v2.1"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:9 ../../source/updating/v3.rst:7
+msgid "Important Changes"
+msgstr ""
+
+#: ../../source/updating/v3.rst:9
+msgid ""
+"This version performs a fully database structure change, so **it's very "
+"important to make a full database backup using external tools like "
+"\"mysqldump\"**"
+msgstr ""
+
+#: ../../source/updating/v3.rst:10
+msgid "\"config\" directory is moved off to \"/app/config\""
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:12 ../../source/updating/v3.rst:11
+msgid ""
+"Composer PHP package manager is used to install and keep up-to-date "
+"sysPass dependencies"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:15 ../../source/updating/v3.rst:14
+msgid "Process"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:17 ../../source/updating/v3.rst:16
+msgid "The following steps need to be performed in order to update sysPass:"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:19 ../../source/updating/v3.rst:18
+msgid ""
+"Download or clone sysPass repository from either "
+"https://github.com/nuxsmin/sysPass/releases or "
+"https://github.com/nuxsmin/sysPass.git"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:20 ../../source/updating/v3.rst:19
+msgid "Set user and group permissions on sysPass directory"
+msgstr ""
+
+#: ../../source/updating/v3.rst:20
+msgid ""
+"Copy \"config.xml\", \"key.pem\" y \"pubkey.pem\" from the old "
+"\".../config\" directory to \".../app/config\" directory"
+msgstr ""
+
+#: ../../source/updating/v3.rst:21
+msgid ""
+"From sysPass root directory, download and install Composer: "
+"https://getcomposer.org/download/"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:23 ../../source/updating/v3.rst:22
+msgid "Install dependencies"
+msgstr ""
+
+#: ../../source/updating/v3.rst:28
+msgid ""
+"Set up the correct permissions on directories. Please note that "
+"\"config\" and \"backup\" directories are now within \"/app\""
+msgstr ""
+
+#: ../../source/updating/v3.rst:29
+msgid "Point your browser to sysPass web server URL"
+msgstr ""
+
+#: ../../source/updating/v3.rst:30
+msgid "**Perform a full database backup using external tools like \"mysqldump\"**"
+msgstr ""
+
+#: ../../source/updating/v3.rst:31
+msgid ""
+"Enter the upgrade key located in \"app/config/config.xml\" file within "
+"the \"upgradeKey\" tag"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:2
+msgid "3.1 Version"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:4
+msgid "It's highly recommended upgrade from v3.0"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:6
+msgid "Please check out :doc:`v3` upgrade notes if you're upgrading from v2.1"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:11
+msgid ""
+"This version performs some database changes that will impact on plugins "
+"installed, so **it's very important to make a full database backup using "
+"external tools like \"mysqldump\"**"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:21
+msgid ""
+"Copy \"config.xml\", \"key.pem\" y \"pubkey.pem\" from the old "
+"\".../app/config\" directory to the new one"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:22
+msgid ""
+"From sysPass root directory, download and install Composer (if not "
+"installed yet): https://getcomposer.org/download/"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:29
+msgid "Set up the correct permissions on directories"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:30
+msgid ""
+"Point your browser to sysPass web server URL. The upgrade process will "
+"display the confirmation page"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:31
+msgid ""
+"Though it's being said on the upgrade page, please **perform a full "
+"database backup using external tools like \"mysqldump\"**"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:32
+msgid ""
+"Enter the upgrade key located in \".../app/config/config.xml\" file "
+"within the \"upgradeKey\" tag"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:33
+msgid ""
+"If the upgrading process fails, please check out "
+"\".../app/config/syspass.log\" file for error messages"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:34
+msgid "Once upgraded it will redirect to the sign in page"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:38
+msgid ""
+"Please do not retry the upgrade process if database changes have been "
+"made. In that case, you will need to restore the database backup and "
+"restart the whole upgrade process."
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:41
+msgid "Changelog"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:44
+msgid "Fixed"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:47
+msgid ""
+"[FIX] Wrong URL when application URL setting is set. Thanks to @kalxasus "
+"for the notice. Closes #1395"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:48
+msgid ""
+"[FIX] LDAP group filter wasn't applied when importing. Thanks to "
+"@kalxasus for the notice. Closes #1390"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:49
+msgid ""
+"[FIX] Client custom fields were not created/saved. Thanks to @ZUNbado and"
+" @sf32738 for the notice. Closes #1375"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:50
+msgid ""
+"[FIX] Skip over initialization when upgrade is needed. Thanks to @Envikia"
+" and @alexseys for the notice. Closes #1355"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:51
+msgid ""
+"[FIX] Wrong URL handling when downloading files. Thanks to @fprina for "
+"the feedback and testing. Closes #1354"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:52
+msgid ""
+"[FIX] Wrong field definition on PluginData table. Thanks to @drewlsvern "
+"for the feedback. Closes #1326"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:53
+msgid ""
+"[FIX] Fix custom fields migration issue. Thanks to @VexedSyd for the "
+"feedback. Closes #1273"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:54
+msgid ""
+"[FIX] Wrong limit for maximum file size. Thanks to @javierlm for the "
+"feedback. Closes #1313"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:55
+msgid "[FIX] Wrong behavior when disabling remote syslog"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:56
+msgid ""
+"[FIX] Wrong behavior when saving LDAP server. Thanks to @lreiher for the "
+"feedback. Closes #1277"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:57
+msgid ""
+"[FIX] Wrong behavior when setting user's email from LDAP when several "
+"email addresses are set. Thanks to @cRaZy-bisCuiT for the feedback. "
+"Closes #1283"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:58
+msgid ""
+"[FIX] Wrong behavior when updating user's password. Thanks to "
+"@vrdominguez for the feedback. Closes #1293"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:59
+msgid "[FIX] Wrong behavior when no mail recipients are set"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:60
+msgid ""
+"[FIX] Wrong encoding in text area. Thanks to @pierrehenrymuller for the "
+"feedback. Closes #1296"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:61
+msgid "[FIX] Fixed wrong behavior when search operator was set"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:62
+msgid "[FIX] No debug messages when debug mode is activated"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:63
+msgid ""
+"[FIX] Fixed wrong behavior when setting password complexity length. "
+"Thanks to @andrucha97 for the feedback. Closes #1280"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:64
+msgid ""
+"[FIX] Fixed wrong behavior when searching for accounts on accounts "
+"manager. Thanks to @Weptun for the feedback. Closes #1271"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:65
+msgid ""
+"[FIX] Fixed Polski language option. Thanks to @pitrov24 for the notice. "
+"Closes 1288"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:66
+msgid ""
+"[FIX] Added missing Italian language option. Thanks to @Matwolf08 for the"
+" notice. Closes #1302"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:67
+msgid ""
+"[FIX] Wrong encoding when displaying account's password. Thanks to "
+"@DDH112 for the feedback. Closes #1257"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:68
+msgid ""
+"[FIX] Wrong behavior when copying account's tags. Thanks to @leBasti91 "
+"for the feedback. Closes #1256"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:69
+msgid "[FIX] Wrong behavior when selecting template's view"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:72
+msgid "Improved"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:74
+msgid ""
+"[MOD] Improved stacktrace by anonymizing function's arguments data. "
+"Thanks to @cRaZy-bisCuiT for the feedback. Closes #1339"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:75
+msgid "[MOD] Bump version & build"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:76
+msgid ""
+"[MOD] Improved behavior when searching for user permission on accounts. "
+"Thanks to @anth69 for the feedback. Closes #1338"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:77
+msgid "[MOD] Updated translations. Thanks to all contributors."
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:78
+msgid "[MOD] Update Authenticator version in composer.json"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:79
+msgid "[MOD] Minor code tweaks"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:80
+msgid "[MOD] Typo in translation. Related #1313"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:81
+msgid ""
+"[MOD] Increase account's name length up to 100 characters long. Related "
+"#1071"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:82
+msgid "[MOD] Unlocked PHP 7.3"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:83
+msgid "[MOD] Improved logging messages"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:84
+msgid "[MOD] Code cleanup"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:85
+msgid "[MOD] Minor CSS tweaks"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:86
+msgid "[MOD] Update translations"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:87
+msgid ""
+"[MOD] Avoid to import blank client or category name when importing CSV "
+"files."
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:88
+msgid ""
+"[MOD] Enforce password complexity checking. Thanks to @DDH112 for the "
+"feedback. Closes #1226"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:89
+msgid ""
+"[MOD] Improved plugins availability detection and skip weird event log "
+"entries"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:92
+msgid "Added"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:94
+msgid "[ADD] Added search for accounts name by regular expression. Closes #1311"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:95
+msgid "[ADD] Added missing tests"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:96
+msgid ""
+"[ADD] Added client IP address in syslog messages. Thanks to @sebagarayco "
+"for the feedback. Closes #1302"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:97
+msgid ""
+"[ADD] Allow to change the account's owner and main group when the user is"
+" the account's owner. Related #705"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:98
+msgid ""
+"[ADD] Allow to set account's owner when creating or copying the account. "
+"Related #1264"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:99
+msgid ""
+"[ADD] Application URL for handling requests through reverse proxy. Thanks"
+" to @rob42 for the feedback. Closes #1218"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:100
+msgid ""
+"[ADD] Allow to enable email notifications only for account access "
+"requests. Thanks to @jorgemfm for the feedback. Closes #1157"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:101
+msgid "[ADD] Improved plugins data handling by encrypting the plugin's data"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:104
+msgid "Thanks"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:106
+msgid ""
+"Big thanks to all contributors for the feedback, pull requests, "
+"translations and donations."
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:108
+msgid "@kalxasus"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:109
+msgid "@ZUNbado"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:110
+msgid "@sf32738"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:111
+msgid "@Envikia"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:112
+msgid "@fprina"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:113
+msgid "@drewlsvern"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:114
+msgid "@VexedSyd"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:115
+msgid "@javierlm"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:116
+msgid "@lreiher"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:117
+msgid "@cRaZy-bisCuiT"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:118
+msgid "@vrdominguez"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:119
+msgid "@pierrehenrymuller"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:120
+msgid "@Weptun"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:121
+msgid "@pitrov24"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:122
+msgid "@Matwolf08"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:123
+msgid "@DDH112"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:124
+msgid "@leBasti91"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:125
+msgid "@anth69"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:126
+msgid "@sebagarayco"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:127
+msgid "@rob42"
+msgstr ""
+
+#: ../../source/updating/v3.1.rst:128
+msgid "@jorgemfm"
+msgstr ""
+

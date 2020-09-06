@@ -1,0 +1,2859 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/application/api.rst:4
+#: ../../source/application/permissions.rst:70
+msgid "API"
+msgstr ""
+
+#: ../../source/application/api.rst:6
+msgid ""
+"sysPass API relies on `JSON-RPC v2`_ schema for client-server "
+"communication."
+msgstr ""
+
+#: ../../source/application/api.rst:8
+msgid "The API access URL is \"https://server_name/api.php\""
+msgstr ""
+
+#: ../../source/application/api.rst:10
+msgid "Example of JSON-RPC payload:"
+msgstr ""
+
+#: ../../source/application/api.rst:24 ../../source/application/plugins.rst:101
+msgid "Methods"
+msgstr ""
+
+#: ../../source/application/api.rst:27
+msgid "Accounts"
+msgstr ""
+
+#: ../../source/application/api.rst:30
+msgid "account/search"
+msgstr ""
+
+#: ../../source/application/api.rst:32
+msgid "Search for accounts"
+msgstr ""
+
+#: ../../source/application/api.rst:37 ../../source/application/api.rst:56
+#: ../../source/application/api.rst:71 ../../source/application/api.rst:87
+#: ../../source/application/api.rst:104 ../../source/application/api.rst:131
+#: ../../source/application/api.rst:158 ../../source/application/api.rst:175
+#: ../../source/application/api.rst:190 ../../source/application/api.rst:205
+#: ../../source/application/api.rst:220 ../../source/application/api.rst:236
+#: ../../source/application/api.rst:253 ../../source/application/api.rst:268
+#: ../../source/application/api.rst:283 ../../source/application/api.rst:299
+#: ../../source/application/api.rst:316 ../../source/application/api.rst:333
+#: ../../source/application/api.rst:348 ../../source/application/api.rst:363
+#: ../../source/application/api.rst:377 ../../source/application/api.rst:392
+#: ../../source/application/api.rst:409 ../../source/application/api.rst:424
+#: ../../source/application/api.rst:439 ../../source/application/api.rst:455
+#: ../../source/application/api.rst:472 ../../source/application/api.rst:487
+#: ../../source/application/api.rst:499
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/application/api.rst:37 ../../source/application/api.rst:56
+#: ../../source/application/api.rst:71 ../../source/application/api.rst:87
+#: ../../source/application/api.rst:104 ../../source/application/api.rst:131
+#: ../../source/application/api.rst:158 ../../source/application/api.rst:175
+#: ../../source/application/api.rst:190 ../../source/application/api.rst:205
+#: ../../source/application/api.rst:220 ../../source/application/api.rst:236
+#: ../../source/application/api.rst:253 ../../source/application/api.rst:268
+#: ../../source/application/api.rst:283 ../../source/application/api.rst:299
+#: ../../source/application/api.rst:316 ../../source/application/api.rst:333
+#: ../../source/application/api.rst:348 ../../source/application/api.rst:363
+#: ../../source/application/api.rst:377 ../../source/application/api.rst:392
+#: ../../source/application/api.rst:409 ../../source/application/api.rst:424
+#: ../../source/application/api.rst:439 ../../source/application/api.rst:455
+#: ../../source/application/api.rst:472 ../../source/application/api.rst:487
+#: ../../source/application/api.rst:499
+msgid "Type"
+msgstr ""
+
+#: ../../source/application/api.rst:37 ../../source/application/api.rst:56
+#: ../../source/application/api.rst:71 ../../source/application/api.rst:87
+#: ../../source/application/api.rst:104 ../../source/application/api.rst:131
+#: ../../source/application/api.rst:158 ../../source/application/api.rst:175
+#: ../../source/application/api.rst:190 ../../source/application/api.rst:205
+#: ../../source/application/api.rst:220 ../../source/application/api.rst:236
+#: ../../source/application/api.rst:253 ../../source/application/api.rst:268
+#: ../../source/application/api.rst:283 ../../source/application/api.rst:299
+#: ../../source/application/api.rst:316 ../../source/application/api.rst:333
+#: ../../source/application/api.rst:348 ../../source/application/api.rst:363
+#: ../../source/application/api.rst:377 ../../source/application/api.rst:392
+#: ../../source/application/api.rst:409 ../../source/application/api.rst:424
+#: ../../source/application/api.rst:439 ../../source/application/api.rst:455
+#: ../../source/application/api.rst:472 ../../source/application/api.rst:487
+#: ../../source/application/api.rst:499
+msgid "Required"
+msgstr ""
+
+#: ../../source/application/api.rst:37 ../../source/application/api.rst:56
+#: ../../source/application/api.rst:71 ../../source/application/api.rst:87
+#: ../../source/application/api.rst:104 ../../source/application/api.rst:131
+#: ../../source/application/api.rst:158 ../../source/application/api.rst:175
+#: ../../source/application/api.rst:190 ../../source/application/api.rst:205
+#: ../../source/application/api.rst:220 ../../source/application/api.rst:236
+#: ../../source/application/api.rst:253 ../../source/application/api.rst:268
+#: ../../source/application/api.rst:283 ../../source/application/api.rst:299
+#: ../../source/application/api.rst:316 ../../source/application/api.rst:333
+#: ../../source/application/api.rst:348 ../../source/application/api.rst:363
+#: ../../source/application/api.rst:377 ../../source/application/api.rst:392
+#: ../../source/application/api.rst:409 ../../source/application/api.rst:424
+#: ../../source/application/api.rst:439 ../../source/application/api.rst:455
+#: ../../source/application/api.rst:472 ../../source/application/api.rst:487
+#: ../../source/application/api.rst:499
+#: ../../source/application/plugins.rst:607
+#: ../../source/application/searching.rst:15
+msgid "Description"
+msgstr ""
+
+#: ../../source/application/api.rst:39 ../../source/application/api.rst:58
+#: ../../source/application/api.rst:73 ../../source/application/api.rst:89
+#: ../../source/application/api.rst:106 ../../source/application/api.rst:133
+#: ../../source/application/api.rst:160 ../../source/application/api.rst:177
+#: ../../source/application/api.rst:192 ../../source/application/api.rst:207
+#: ../../source/application/api.rst:222 ../../source/application/api.rst:238
+#: ../../source/application/api.rst:255 ../../source/application/api.rst:270
+#: ../../source/application/api.rst:285 ../../source/application/api.rst:301
+#: ../../source/application/api.rst:318 ../../source/application/api.rst:335
+#: ../../source/application/api.rst:350 ../../source/application/api.rst:365
+#: ../../source/application/api.rst:379 ../../source/application/api.rst:394
+#: ../../source/application/api.rst:411 ../../source/application/api.rst:426
+#: ../../source/application/api.rst:441 ../../source/application/api.rst:457
+#: ../../source/application/api.rst:474 ../../source/application/api.rst:489
+#: ../../source/application/api.rst:501
+msgid "authToken"
+msgstr ""
+
+#: ../../source/application/api.rst:39 ../../source/application/api.rst:40
+#: ../../source/application/api.rst:45 ../../source/application/api.rst:58
+#: ../../source/application/api.rst:59 ../../source/application/api.rst:73
+#: ../../source/application/api.rst:74 ../../source/application/api.rst:89
+#: ../../source/application/api.rst:90 ../../source/application/api.rst:92
+#: ../../source/application/api.rst:106 ../../source/application/api.rst:107
+#: ../../source/application/api.rst:108 ../../source/application/api.rst:111
+#: ../../source/application/api.rst:115 ../../source/application/api.rst:116
+#: ../../source/application/api.rst:117 ../../source/application/api.rst:133
+#: ../../source/application/api.rst:134 ../../source/application/api.rst:136
+#: ../../source/application/api.rst:142 ../../source/application/api.rst:143
+#: ../../source/application/api.rst:144 ../../source/application/api.rst:160
+#: ../../source/application/api.rst:177 ../../source/application/api.rst:178
+#: ../../source/application/api.rst:192 ../../source/application/api.rst:193
+#: ../../source/application/api.rst:207 ../../source/application/api.rst:208
+#: ../../source/application/api.rst:209 ../../source/application/api.rst:222
+#: ../../source/application/api.rst:224 ../../source/application/api.rst:225
+#: ../../source/application/api.rst:238 ../../source/application/api.rst:255
+#: ../../source/application/api.rst:256 ../../source/application/api.rst:270
+#: ../../source/application/api.rst:271 ../../source/application/api.rst:285
+#: ../../source/application/api.rst:286 ../../source/application/api.rst:287
+#: ../../source/application/api.rst:301 ../../source/application/api.rst:303
+#: ../../source/application/api.rst:304 ../../source/application/api.rst:318
+#: ../../source/application/api.rst:335 ../../source/application/api.rst:336
+#: ../../source/application/api.rst:350 ../../source/application/api.rst:351
+#: ../../source/application/api.rst:365 ../../source/application/api.rst:366
+#: ../../source/application/api.rst:379 ../../source/application/api.rst:381
+#: ../../source/application/api.rst:394 ../../source/application/api.rst:411
+#: ../../source/application/api.rst:412 ../../source/application/api.rst:426
+#: ../../source/application/api.rst:427 ../../source/application/api.rst:441
+#: ../../source/application/api.rst:442 ../../source/application/api.rst:443
+#: ../../source/application/api.rst:457 ../../source/application/api.rst:459
+#: ../../source/application/api.rst:460 ../../source/application/api.rst:474
+#: ../../source/application/api.rst:489 ../../source/application/api.rst:490
+#: ../../source/application/api.rst:501 ../../source/application/api.rst:502
+#: ../../source/application/api.rst:503
+msgid "string"
+msgstr ""
+
+#: ../../source/application/api.rst:39 ../../source/application/api.rst:58
+#: ../../source/application/api.rst:59 ../../source/application/api.rst:60
+#: ../../source/application/api.rst:73 ../../source/application/api.rst:74
+#: ../../source/application/api.rst:75 ../../source/application/api.rst:89
+#: ../../source/application/api.rst:90 ../../source/application/api.rst:91
+#: ../../source/application/api.rst:92 ../../source/application/api.rst:106
+#: ../../source/application/api.rst:107 ../../source/application/api.rst:108
+#: ../../source/application/api.rst:109 ../../source/application/api.rst:110
+#: ../../source/application/api.rst:111 ../../source/application/api.rst:133
+#: ../../source/application/api.rst:134 ../../source/application/api.rst:135
+#: ../../source/application/api.rst:160 ../../source/application/api.rst:161
+#: ../../source/application/api.rst:177 ../../source/application/api.rst:192
+#: ../../source/application/api.rst:193 ../../source/application/api.rst:194
+#: ../../source/application/api.rst:207 ../../source/application/api.rst:208
+#: ../../source/application/api.rst:222 ../../source/application/api.rst:223
+#: ../../source/application/api.rst:224 ../../source/application/api.rst:238
+#: ../../source/application/api.rst:239 ../../source/application/api.rst:255
+#: ../../source/application/api.rst:270 ../../source/application/api.rst:271
+#: ../../source/application/api.rst:272 ../../source/application/api.rst:285
+#: ../../source/application/api.rst:286 ../../source/application/api.rst:301
+#: ../../source/application/api.rst:302 ../../source/application/api.rst:303
+#: ../../source/application/api.rst:318 ../../source/application/api.rst:319
+#: ../../source/application/api.rst:335 ../../source/application/api.rst:350
+#: ../../source/application/api.rst:351 ../../source/application/api.rst:352
+#: ../../source/application/api.rst:365 ../../source/application/api.rst:366
+#: ../../source/application/api.rst:379 ../../source/application/api.rst:380
+#: ../../source/application/api.rst:381 ../../source/application/api.rst:394
+#: ../../source/application/api.rst:395 ../../source/application/api.rst:411
+#: ../../source/application/api.rst:426 ../../source/application/api.rst:427
+#: ../../source/application/api.rst:428 ../../source/application/api.rst:441
+#: ../../source/application/api.rst:442 ../../source/application/api.rst:457
+#: ../../source/application/api.rst:458 ../../source/application/api.rst:459
+#: ../../source/application/api.rst:474 ../../source/application/api.rst:475
+#: ../../source/application/api.rst:489 ../../source/application/api.rst:501
+msgid "yes"
+msgstr ""
+
+#: ../../source/application/api.rst:39 ../../source/application/api.rst:58
+#: ../../source/application/api.rst:73 ../../source/application/api.rst:89
+#: ../../source/application/api.rst:106 ../../source/application/api.rst:133
+#: ../../source/application/api.rst:160 ../../source/application/api.rst:177
+#: ../../source/application/api.rst:192 ../../source/application/api.rst:207
+#: ../../source/application/api.rst:222 ../../source/application/api.rst:238
+#: ../../source/application/api.rst:255 ../../source/application/api.rst:270
+#: ../../source/application/api.rst:285 ../../source/application/api.rst:301
+#: ../../source/application/api.rst:318 ../../source/application/api.rst:335
+#: ../../source/application/api.rst:350 ../../source/application/api.rst:365
+#: ../../source/application/api.rst:379 ../../source/application/api.rst:394
+#: ../../source/application/api.rst:411 ../../source/application/api.rst:426
+#: ../../source/application/api.rst:441 ../../source/application/api.rst:457
+#: ../../source/application/api.rst:474 ../../source/application/api.rst:489
+#: ../../source/application/api.rst:501
+msgid "User's API token"
+msgstr ""
+
+#: ../../source/application/api.rst:40 ../../source/application/api.rst:178
+#: ../../source/application/api.rst:256 ../../source/application/api.rst:336
+#: ../../source/application/api.rst:412
+msgid "text"
+msgstr ""
+
+#: ../../source/application/api.rst:40 ../../source/application/api.rst:41
+#: ../../source/application/api.rst:42 ../../source/application/api.rst:43
+#: ../../source/application/api.rst:44 ../../source/application/api.rst:45
+#: ../../source/application/api.rst:76 ../../source/application/api.rst:93
+#: ../../source/application/api.rst:112 ../../source/application/api.rst:113
+#: ../../source/application/api.rst:114 ../../source/application/api.rst:115
+#: ../../source/application/api.rst:116 ../../source/application/api.rst:117
+#: ../../source/application/api.rst:118 ../../source/application/api.rst:119
+#: ../../source/application/api.rst:120 ../../source/application/api.rst:136
+#: ../../source/application/api.rst:137 ../../source/application/api.rst:138
+#: ../../source/application/api.rst:139 ../../source/application/api.rst:140
+#: ../../source/application/api.rst:141 ../../source/application/api.rst:142
+#: ../../source/application/api.rst:143 ../../source/application/api.rst:144
+#: ../../source/application/api.rst:145 ../../source/application/api.rst:146
+#: ../../source/application/api.rst:147 ../../source/application/api.rst:178
+#: ../../source/application/api.rst:179 ../../source/application/api.rst:209
+#: ../../source/application/api.rst:225 ../../source/application/api.rst:256
+#: ../../source/application/api.rst:257 ../../source/application/api.rst:287
+#: ../../source/application/api.rst:288 ../../source/application/api.rst:304
+#: ../../source/application/api.rst:305 ../../source/application/api.rst:336
+#: ../../source/application/api.rst:337 ../../source/application/api.rst:412
+#: ../../source/application/api.rst:413 ../../source/application/api.rst:443
+#: ../../source/application/api.rst:444 ../../source/application/api.rst:460
+#: ../../source/application/api.rst:461 ../../source/application/api.rst:490
+#: ../../source/application/api.rst:502 ../../source/application/api.rst:503
+msgid "no"
+msgstr ""
+
+#: ../../source/application/api.rst:40 ../../source/application/api.rst:178
+#: ../../source/application/api.rst:256 ../../source/application/api.rst:336
+#: ../../source/application/api.rst:412
+msgid "Text to search for"
+msgstr ""
+
+#: ../../source/application/api.rst:41 ../../source/application/api.rst:179
+#: ../../source/application/api.rst:257 ../../source/application/api.rst:337
+#: ../../source/application/api.rst:413
+msgid "count"
+msgstr ""
+
+#: ../../source/application/api.rst:41 ../../source/application/api.rst:42
+#: ../../source/application/api.rst:43 ../../source/application/api.rst:60
+#: ../../source/application/api.rst:75 ../../source/application/api.rst:76
+#: ../../source/application/api.rst:91 ../../source/application/api.rst:93
+#: ../../source/application/api.rst:109 ../../source/application/api.rst:110
+#: ../../source/application/api.rst:113 ../../source/application/api.rst:114
+#: ../../source/application/api.rst:118 ../../source/application/api.rst:119
+#: ../../source/application/api.rst:120 ../../source/application/api.rst:135
+#: ../../source/application/api.rst:137 ../../source/application/api.rst:138
+#: ../../source/application/api.rst:140 ../../source/application/api.rst:141
+#: ../../source/application/api.rst:145 ../../source/application/api.rst:146
+#: ../../source/application/api.rst:147 ../../source/application/api.rst:161
+#: ../../source/application/api.rst:179 ../../source/application/api.rst:194
+#: ../../source/application/api.rst:223 ../../source/application/api.rst:239
+#: ../../source/application/api.rst:257 ../../source/application/api.rst:272
+#: ../../source/application/api.rst:288 ../../source/application/api.rst:302
+#: ../../source/application/api.rst:305 ../../source/application/api.rst:319
+#: ../../source/application/api.rst:337 ../../source/application/api.rst:352
+#: ../../source/application/api.rst:380 ../../source/application/api.rst:395
+#: ../../source/application/api.rst:413 ../../source/application/api.rst:428
+#: ../../source/application/api.rst:458 ../../source/application/api.rst:475
+msgid "int"
+msgstr ""
+
+#: ../../source/application/api.rst:41 ../../source/application/api.rst:179
+#: ../../source/application/api.rst:257 ../../source/application/api.rst:337
+#: ../../source/application/api.rst:413
+msgid "Number of results to display"
+msgstr ""
+
+#: ../../source/application/api.rst:42 ../../source/application/api.rst:109
+#: ../../source/application/api.rst:137
+msgid "categoryId"
+msgstr ""
+
+#: ../../source/application/api.rst:42
+msgid "Category's Id for filtering"
+msgstr ""
+
+#: ../../source/application/api.rst:43 ../../source/application/api.rst:110
+#: ../../source/application/api.rst:138
+msgid "clientId"
+msgstr ""
+
+#: ../../source/application/api.rst:43
+msgid "Client's Id for filtering"
+msgstr ""
+
+#: ../../source/application/api.rst:44 ../../source/application/api.rst:112
+#: ../../source/application/api.rst:139
+msgid "tagsId"
+msgstr ""
+
+#: ../../source/application/api.rst:44 ../../source/application/api.rst:112
+#: ../../source/application/api.rst:139 ../../source/application/api.rst:444
+#: ../../source/application/api.rst:461
+msgid "array"
+msgstr ""
+
+#: ../../source/application/api.rst:44
+msgid "Tags' Id for filtering"
+msgstr ""
+
+#: ../../source/application/api.rst:45
+msgid "op"
+msgstr ""
+
+#: ../../source/application/api.rst:45
+msgid "Operator used for filtering. It can be either 'or' or 'and'"
+msgstr ""
+
+#: ../../source/application/api.rst:49
+msgid "account/view"
+msgstr ""
+
+#: ../../source/application/api.rst:51
+msgid "Get account's details"
+msgstr ""
+
+#: ../../source/application/api.rst:59 ../../source/application/api.rst:74
+#: ../../source/application/api.rst:90 ../../source/application/api.rst:107
+#: ../../source/application/api.rst:134 ../../source/application/api.rst:193
+#: ../../source/application/api.rst:271 ../../source/application/api.rst:351
+#: ../../source/application/api.rst:427
+msgid "tokenPass"
+msgstr ""
+
+#: ../../source/application/api.rst:59 ../../source/application/api.rst:74
+#: ../../source/application/api.rst:90 ../../source/application/api.rst:107
+#: ../../source/application/api.rst:134 ../../source/application/api.rst:193
+#: ../../source/application/api.rst:271 ../../source/application/api.rst:351
+#: ../../source/application/api.rst:427
+msgid "API token's pass"
+msgstr ""
+
+#: ../../source/application/api.rst:60 ../../source/application/api.rst:75
+#: ../../source/application/api.rst:91 ../../source/application/api.rst:135
+#: ../../source/application/api.rst:161 ../../source/application/api.rst:194
+#: ../../source/application/api.rst:223 ../../source/application/api.rst:239
+#: ../../source/application/api.rst:272 ../../source/application/api.rst:302
+#: ../../source/application/api.rst:319 ../../source/application/api.rst:352
+#: ../../source/application/api.rst:380 ../../source/application/api.rst:395
+#: ../../source/application/api.rst:428 ../../source/application/api.rst:458
+#: ../../source/application/api.rst:475
+msgid "id"
+msgstr ""
+
+#: ../../source/application/api.rst:60 ../../source/application/api.rst:75
+#: ../../source/application/api.rst:91 ../../source/application/api.rst:135
+#: ../../source/application/api.rst:161
+msgid "Account's Id"
+msgstr ""
+
+#: ../../source/application/api.rst:64
+msgid "account/viewPass"
+msgstr ""
+
+#: ../../source/application/api.rst:66
+msgid "Get account's password"
+msgstr ""
+
+#: ../../source/application/api.rst:76
+msgid "details"
+msgstr ""
+
+#: ../../source/application/api.rst:76
+msgid "Whether to return account's details within response"
+msgstr ""
+
+#: ../../source/application/api.rst:80
+msgid "account/editPass"
+msgstr ""
+
+#: ../../source/application/api.rst:82
+msgid "Edit account's password"
+msgstr ""
+
+#: ../../source/application/api.rst:92 ../../source/application/api.rst:111
+msgid "pass"
+msgstr ""
+
+#: ../../source/application/api.rst:92 ../../source/application/api.rst:111
+msgid "Account's password"
+msgstr ""
+
+#: ../../source/application/api.rst:93 ../../source/application/api.rst:120
+#: ../../source/application/api.rst:147
+msgid "expireDate"
+msgstr ""
+
+#: ../../source/application/api.rst:93 ../../source/application/api.rst:120
+#: ../../source/application/api.rst:147
+msgid "Expire date in UNIX timestamp format"
+msgstr ""
+
+#: ../../source/application/api.rst:97
+msgid "account/create"
+msgstr ""
+
+#: ../../source/application/api.rst:99
+msgid "Create account"
+msgstr ""
+
+#: ../../source/application/api.rst:108 ../../source/application/api.rst:136
+#: ../../source/application/api.rst:208 ../../source/application/api.rst:224
+#: ../../source/application/api.rst:286 ../../source/application/api.rst:303
+#: ../../source/application/api.rst:366 ../../source/application/api.rst:381
+#: ../../source/application/api.rst:442 ../../source/application/api.rst:459
+msgid "name"
+msgstr ""
+
+#: ../../source/application/api.rst:108 ../../source/application/api.rst:136
+msgid "Account's name"
+msgstr ""
+
+#: ../../source/application/api.rst:109 ../../source/application/api.rst:137
+msgid "Account's category Id"
+msgstr ""
+
+#: ../../source/application/api.rst:110 ../../source/application/api.rst:138
+msgid "Account's client Id"
+msgstr ""
+
+#: ../../source/application/api.rst:112 ../../source/application/api.rst:139
+msgid "Account's tags Id"
+msgstr ""
+
+#: ../../source/application/api.rst:113 ../../source/application/api.rst:140
+msgid "userGroupId"
+msgstr ""
+
+#: ../../source/application/api.rst:113 ../../source/application/api.rst:140
+msgid "Account's user group Id"
+msgstr ""
+
+#: ../../source/application/api.rst:114 ../../source/application/api.rst:141
+msgid "parentId"
+msgstr ""
+
+#: ../../source/application/api.rst:114 ../../source/application/api.rst:141
+msgid "Account's parent Id"
+msgstr ""
+
+#: ../../source/application/api.rst:115 ../../source/application/api.rst:142
+msgid "login"
+msgstr ""
+
+#: ../../source/application/api.rst:115 ../../source/application/api.rst:142
+msgid "Account's login"
+msgstr ""
+
+#: ../../source/application/api.rst:116 ../../source/application/api.rst:143
+msgid "url"
+msgstr ""
+
+#: ../../source/application/api.rst:116 ../../source/application/api.rst:143
+msgid "Account's access URL or IP"
+msgstr ""
+
+#: ../../source/application/api.rst:117 ../../source/application/api.rst:144
+msgid "notes"
+msgstr ""
+
+#: ../../source/application/api.rst:117 ../../source/application/api.rst:144
+msgid "Account's notes"
+msgstr ""
+
+#: ../../source/application/api.rst:118 ../../source/application/api.rst:145
+msgid "private"
+msgstr ""
+
+#: ../../source/application/api.rst:118 ../../source/application/api.rst:145
+msgid "Set account as private. It can be either 0 or 1"
+msgstr ""
+
+#: ../../source/application/api.rst:119 ../../source/application/api.rst:146
+msgid "privateGroup"
+msgstr ""
+
+#: ../../source/application/api.rst:119 ../../source/application/api.rst:146
+msgid "Set account as private for group. It can be either 0 or 1"
+msgstr ""
+
+#: ../../source/application/api.rst:124
+msgid "account/edit"
+msgstr ""
+
+#: ../../source/application/api.rst:126
+msgid "Edit account"
+msgstr ""
+
+#: ../../source/application/api.rst:151
+msgid "account/delete"
+msgstr ""
+
+#: ../../source/application/api.rst:153
+msgid "Delete an account"
+msgstr ""
+
+#: ../../source/application/api.rst:165
+msgid "Categories"
+msgstr ""
+
+#: ../../source/application/api.rst:168
+msgid "category/search"
+msgstr ""
+
+#: ../../source/application/api.rst:170
+msgid "Search for categories"
+msgstr ""
+
+#: ../../source/application/api.rst:183
+msgid "category/view"
+msgstr ""
+
+#: ../../source/application/api.rst:185
+msgid "Get category's details"
+msgstr ""
+
+#: ../../source/application/api.rst:194 ../../source/application/api.rst:223
+#: ../../source/application/api.rst:239
+msgid "Category's Id"
+msgstr ""
+
+#: ../../source/application/api.rst:198
+msgid "category/create"
+msgstr ""
+
+#: ../../source/application/api.rst:200
+msgid "Create category"
+msgstr ""
+
+#: ../../source/application/api.rst:208 ../../source/application/api.rst:224
+msgid "Category's name"
+msgstr ""
+
+#: ../../source/application/api.rst:209 ../../source/application/api.rst:225
+#: ../../source/application/api.rst:287 ../../source/application/api.rst:304
+#: ../../source/application/api.rst:443 ../../source/application/api.rst:460
+msgid "description"
+msgstr ""
+
+#: ../../source/application/api.rst:209 ../../source/application/api.rst:225
+msgid "Category's description"
+msgstr ""
+
+#: ../../source/application/api.rst:213
+msgid "category/edit"
+msgstr ""
+
+#: ../../source/application/api.rst:215
+msgid "Edit category"
+msgstr ""
+
+#: ../../source/application/api.rst:229
+msgid "category/delete"
+msgstr ""
+
+#: ../../source/application/api.rst:231
+msgid "Delete category"
+msgstr ""
+
+#: ../../source/application/api.rst:243
+msgid "Clients"
+msgstr ""
+
+#: ../../source/application/api.rst:246
+msgid "client/search"
+msgstr ""
+
+#: ../../source/application/api.rst:248
+msgid "Search for clients"
+msgstr ""
+
+#: ../../source/application/api.rst:261
+msgid "client/view"
+msgstr ""
+
+#: ../../source/application/api.rst:263
+msgid "Get client's details"
+msgstr ""
+
+#: ../../source/application/api.rst:272 ../../source/application/api.rst:302
+#: ../../source/application/api.rst:319
+msgid "Client's Id"
+msgstr ""
+
+#: ../../source/application/api.rst:276
+msgid "client/create"
+msgstr ""
+
+#: ../../source/application/api.rst:278
+msgid "Create client"
+msgstr ""
+
+#: ../../source/application/api.rst:286 ../../source/application/api.rst:303
+msgid "Client's name"
+msgstr ""
+
+#: ../../source/application/api.rst:287 ../../source/application/api.rst:304
+msgid "Client's description"
+msgstr ""
+
+#: ../../source/application/api.rst:288 ../../source/application/api.rst:305
+msgid "global"
+msgstr ""
+
+#: ../../source/application/api.rst:288 ../../source/application/api.rst:305
+msgid "Set client as global. It can be either 0 or 1"
+msgstr ""
+
+#: ../../source/application/api.rst:292
+msgid "client/edit"
+msgstr ""
+
+#: ../../source/application/api.rst:294
+msgid "Edit client"
+msgstr ""
+
+#: ../../source/application/api.rst:309
+msgid "client/delete"
+msgstr ""
+
+#: ../../source/application/api.rst:311
+msgid "Delete client"
+msgstr ""
+
+#: ../../source/application/api.rst:323
+msgid "Tags"
+msgstr ""
+
+#: ../../source/application/api.rst:326
+msgid "tag/search"
+msgstr ""
+
+#: ../../source/application/api.rst:328
+msgid "Search for tags"
+msgstr ""
+
+#: ../../source/application/api.rst:341
+msgid "tag/view"
+msgstr ""
+
+#: ../../source/application/api.rst:343
+msgid "Get tag's details"
+msgstr ""
+
+#: ../../source/application/api.rst:352 ../../source/application/api.rst:380
+#: ../../source/application/api.rst:395
+msgid "Tag's Id"
+msgstr ""
+
+#: ../../source/application/api.rst:356
+msgid "tag/create"
+msgstr ""
+
+#: ../../source/application/api.rst:358
+msgid "Create tag"
+msgstr ""
+
+#: ../../source/application/api.rst:366 ../../source/application/api.rst:381
+msgid "Tag's name"
+msgstr ""
+
+#: ../../source/application/api.rst:370
+msgid "tag/edit"
+msgstr ""
+
+#: ../../source/application/api.rst:372
+msgid "Edit tag"
+msgstr ""
+
+#: ../../source/application/api.rst:385
+msgid "tag/delete"
+msgstr ""
+
+#: ../../source/application/api.rst:387
+msgid "Delete tag"
+msgstr ""
+
+#: ../../source/application/api.rst:399
+msgid "User Groups"
+msgstr ""
+
+#: ../../source/application/api.rst:402
+msgid "userGroup/search"
+msgstr ""
+
+#: ../../source/application/api.rst:404
+msgid "Search for user groups"
+msgstr ""
+
+#: ../../source/application/api.rst:417
+msgid "userGroup/view"
+msgstr ""
+
+#: ../../source/application/api.rst:419
+msgid "Get user group's details"
+msgstr ""
+
+#: ../../source/application/api.rst:428 ../../source/application/api.rst:458
+#: ../../source/application/api.rst:475
+msgid "User group's Id"
+msgstr ""
+
+#: ../../source/application/api.rst:432
+msgid "userGroup/create"
+msgstr ""
+
+#: ../../source/application/api.rst:434
+msgid "Create user group"
+msgstr ""
+
+#: ../../source/application/api.rst:442 ../../source/application/api.rst:459
+msgid "User group's name"
+msgstr ""
+
+#: ../../source/application/api.rst:443 ../../source/application/api.rst:460
+msgid "User group's description"
+msgstr ""
+
+#: ../../source/application/api.rst:444 ../../source/application/api.rst:461
+msgid "usersId"
+msgstr ""
+
+#: ../../source/application/api.rst:444 ../../source/application/api.rst:461
+msgid "User group's users Id"
+msgstr ""
+
+#: ../../source/application/api.rst:448
+msgid "userGroup/edit"
+msgstr ""
+
+#: ../../source/application/api.rst:450
+msgid "Edit user group"
+msgstr ""
+
+#: ../../source/application/api.rst:465
+msgid "userGroup/delete"
+msgstr ""
+
+#: ../../source/application/api.rst:467
+msgid "Delete user group"
+msgstr ""
+
+#: ../../source/application/api.rst:479
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/application/api.rst:482
+msgid "config/backup"
+msgstr ""
+
+#: ../../source/application/api.rst:484
+msgid "Perform an application and database backup"
+msgstr ""
+
+#: ../../source/application/api.rst:490 ../../source/application/api.rst:502
+msgid "path"
+msgstr ""
+
+#: ../../source/application/api.rst:490
+msgid "Server path to store the application and database backup"
+msgstr ""
+
+#: ../../source/application/api.rst:494
+msgid "config/export"
+msgstr ""
+
+#: ../../source/application/api.rst:496
+msgid "Export application data in XML format"
+msgstr ""
+
+#: ../../source/application/api.rst:502
+msgid "Server path to store the XML file"
+msgstr ""
+
+#: ../../source/application/api.rst:503
+msgid "password"
+msgstr ""
+
+#: ../../source/application/api.rst:503
+msgid "Password used to encrypt the exported data"
+msgstr ""
+
+#: ../../source/application/authentication.rst:4
+msgid "Authentication"
+msgstr ""
+
+#: ../../source/application/authentication.rst:6
+msgid "For sysPass authentication it could be possible to use several methods:"
+msgstr ""
+
+#: ../../source/application/authentication.rst:8
+msgid "MySQL/MariaDB database (by default)"
+msgstr ""
+
+#: ../../source/application/authentication.rst:9
+msgid "LDAP directory (OpenLDAP, eDirectory, Active Directory, freeIPA, etc)"
+msgstr ""
+
+#: ../../source/application/authentication.rst:13
+msgid ""
+"If LDAP option is enabled, the database authentication is used when the "
+"LDAP service is unavailable or the user doesn't exist."
+msgstr ""
+
+#: ../../source/application/authentication.rst:15
+msgid ""
+"For the database authentication, a generated Blowfish_ hash from user's "
+"password is checked, so the password is **never** stored."
+msgstr ""
+
+#: ../../source/application/authentication.rst:17
+msgid "If LDAP is enabled:"
+msgstr ""
+
+#: ../../source/application/authentication.rst:19
+msgid ""
+"The user's Blowfish_ generated hash is stored in order to check it, if "
+"the LDAP service is unavailable."
+msgstr ""
+
+#: ../../source/application/authentication.rst:20
+msgid "Neither the user's login nor name nor email can be modified."
+msgstr ""
+
+#: ../../source/application/authorization.rst:8
+msgid "Authorization"
+msgstr ""
+
+#: ../../source/application/authorization.rst:10
+msgid "For sysPass authorization it could be possible to use several methods:"
+msgstr ""
+
+#: ../../source/application/authorization.rst:12
+msgid "`Auth Basic`_ (by default)"
+msgstr ""
+
+#: ../../source/application/authorization.rst:13
+msgid "Two Factor 2FA_ (`Authenticator Plugin`_)"
+msgstr ""
+
+#: ../../source/application/authorization.rst:15
+msgid ""
+"The `Auth Basic`_ authorization could be enabled through the "
+"configuration module, so if the HTTP authorization header with the user's"
+" data is sent, it will be checked whether the sysPass user's login "
+"matches against the `Auth Basic`_ one."
+msgstr ""
+
+#: ../../source/application/authorization.rst:17
+msgid ""
+"The 2FA_ authorization, through the `Authenticator Plugin`_, is done by "
+"generating an OTP_ token from `Google Authenticator`_  or similar "
+"applications. This authorization could be enabled from the user's "
+"preferences."
+msgstr ""
+
+#: ../../source/application/backup.rst:2
+msgid "Backup Strategies"
+msgstr ""
+
+#: ../../source/application/backup.rst:6
+msgid "Work in progress"
+msgstr ""
+
+#: ../../source/application/backup.rst:9
+msgid "Docker"
+msgstr ""
+
+#: ../../source/application/backup.rst:11
+msgid ""
+"Please perform backups regularly by using in-app tools or external ones "
+"(recommended). You need to copy the following data:"
+msgstr ""
+
+#: ../../source/application/backup.rst:13
+msgid "\"syspass-app-config\" volume"
+msgstr ""
+
+#: ../../source/application/backup.rst:14
+msgid "\"syspass-app-backup\" volume"
+msgstr ""
+
+#: ../../source/application/backup.rst:15
+msgid "sysPass database"
+msgstr ""
+
+#: ../../source/application/backup.rst:17
+msgid "Example:"
+msgstr ""
+
+#: ../../source/application/backup.rst:31
+msgid ""
+"These commands will create \"syspass-app-backup.tar.gz\" and \"syspass-"
+"db-dump.sql\" files within the current directory"
+msgstr ""
+
+#: ../../source/application/encryption.rst:11
+msgid "Encryption"
+msgstr ""
+
+#: ../../source/application/encryption.rst:14
+msgid ""
+"If you already use a sysPass version **<= 2.0**, it's advisable to update"
+" to 2.1 version and then to 3.1, in order to use the new security "
+"improvements on the encryption mechanisms (CVE-2017-5999). Please see "
+":doc:`/updating/index` for upgrading details."
+msgstr ""
+
+#: ../../source/application/encryption.rst:16
+msgid ""
+"sysPass encryption is based on AES-256_  in CTR_ mode by using PHP's "
+"OpenSSL_ module. It uses the `Defuse/php-encryption`_ library for the "
+"encryption modules and functions management."
+msgstr ""
+
+#: ../../source/application/encryption.rst:18
+msgid "The encrypted data (up to 3.1 version) are:"
+msgstr ""
+
+#: ../../source/application/encryption.rst:20
+msgid "Accounts' passwords (always)"
+msgstr ""
+
+#: ../../source/application/encryption.rst:21
+msgid "Accounts' public links (always)"
+msgstr ""
+
+#: ../../source/application/encryption.rst:22
+msgid "Custom fields' data (if set)"
+msgstr ""
+
+#: ../../source/application/encryption.rst:23
+msgid "Plugins' data"
+msgstr ""
+
+#: ../../source/application/encryption.rst:24
+msgid "sysPass XML format export (if set)"
+msgstr ""
+
+#: ../../source/application/encryption.rst:25
+msgid "PHP's session data (if set)"
+msgstr ""
+
+#: ../../source/application/encryption.rst:27
+msgid ""
+"In order to use the application, for every user first login, either a "
+"master password or a temporary master key (see :ref:`temporarymasterkey`)"
+" will be needed. That is so because the master password is not stored in "
+"the web server but a a generated Blowfish_ hash is saved in order to "
+"check if the user is using the correct master password."
+msgstr ""
+
+#: ../../source/application/encryption.rst:29
+msgid ""
+"After logging in with the master password, it's encrypted and stored "
+"within the user's data in the database. The encryption key is generated "
+"using a derived key from user's password and login, and a secure random "
+"salt generated by openssl_random_pseudo_bytes_ (stored in "
+"\".../app/config/config.xml\" file)."
+msgstr ""
+
+#: ../../source/application/encryption.rst:31
+msgid ""
+"On next user logins the master password is got from the user's data and "
+"decrypted by using the derived key. After this, the master password is "
+"encrypted again for storing it in the user's PHP session, so every time "
+"the master password is needed it must be decrypted using a session-based "
+"generated key. This key is regenerated every 120 seconds."
+msgstr ""
+
+#: ../../source/application/encryption.rst:33
+msgid "The master password will be prompted again if:"
+msgstr ""
+
+#: ../../source/application/encryption.rst:35
+msgid ""
+"The user changes either its login password or username. The previous "
+"password will be requested."
+msgstr ""
+
+#: ../../source/application/encryption.rst:36
+msgid "It has been changed by the administrator."
+msgstr ""
+
+#: ../../source/application/encryption.rst:37
+msgid "The configuration salt is changed."
+msgstr ""
+
+#: ../../source/application/encryption.rst:40
+msgid ""
+"A temporary master key (see :ref:`temporarymasterkey`) could be used "
+"instead of the real master password"
+msgstr ""
+
+#: ../../source/application/encryption.rst:45
+msgid "Temporary Master Key"
+msgstr ""
+
+#: ../../source/application/encryption.rst:47
+msgid ""
+"A temporary master key could be generated to be used by the application "
+"users, so it won't be needed to tell the real master password."
+msgstr ""
+
+#: ../../source/application/encryption.rst:49
+msgid ""
+"For the temporary master key generation the real master password is "
+"encrypted using a secure key generated by openssl_random_pseudo_bytes_. "
+"Then a Blowfish_ generated hash of it is stored in the database "
+"\"\\\"Config\\\" table.\" in order to check it when the temporary master "
+"key is provided on login."
+msgstr ""
+
+#: ../../source/application/encryption.rst:52
+msgid ""
+"The real master password is never stored unencrypted. For checking the "
+"temporary master key, a Blowfish_ generated hash **is only used**"
+msgstr ""
+
+#: ../../source/application/encryption.rst:55
+msgid "PKI-RSA"
+msgstr ""
+
+#: ../../source/application/encryption.rst:57
+msgid ""
+"In order to improve the security of the sent data, RSA_ (PKI_) is being "
+"used for encrypting the passwords that are being sent from the "
+"application forms. This prevents to send sensitive date through plain "
+"channels."
+msgstr ""
+
+#: ../../source/application/encryption.rst:59
+msgid ""
+"Public and private RSA_ keys are generated within the application "
+"\".../app/config\" directory."
+msgstr ""
+
+#: ../../source/application/encryption.rst:62
+msgid ""
+"Data flowing from server to client side is not encrypted unless you run "
+"over an HTTPS channel."
+msgstr ""
+
+#: ../../source/application/encryption.rst:66
+msgid "Diagrams"
+msgstr ""
+
+#: ../../source/application/encryption.rst:69
+msgid "Login Process"
+msgstr ""
+
+#: ../../source/application/encryption.rst:117
+msgid "Master Password Process"
+msgstr ""
+
+#: ../../source/application/encryption.rst:166
+msgid "Temporary Master Key Process"
+msgstr ""
+
+#: ../../source/application/encryption.rst:213
+msgid "PKI Process"
+msgstr ""
+
+#: ../../source/application/encryption.rst:244
+msgid ""
+"Be aware that the highest security risk is in the users themselves, "
+"because a compromised password could cause a security leak."
+msgstr ""
+
+#: ../../source/application/encryption.rst:246
+msgid ""
+"A sysPass compromised server could be dangerous if the database is placed"
+" alongside the web server, because the network data could be sniffed so "
+"the passwords would be revealed."
+msgstr ""
+
+#: ../../source/application/features.rst:4
+msgid "Features"
+msgstr ""
+
+#: ../../source/application/features.rst:6
+msgid "sysPass implements the following features:"
+msgstr ""
+
+#: ../../source/application/features.rst:8
+msgid "**Security**"
+msgstr ""
+
+#: ../../source/application/features.rst:10
+msgid "Database authentication"
+msgstr ""
+
+#: ../../source/application/features.rst:11
+msgid "LDAP directory authentication"
+msgstr ""
+
+#: ../../source/application/features.rst:12
+msgid "Auth Basic authorization"
+msgstr ""
+
+#: ../../source/application/features.rst:13
+msgid "Two Factor authorization (using `Authenticator Plugin`_)"
+msgstr ""
+
+#: ../../source/application/features.rst:15
+msgid "**Permissions**"
+msgstr ""
+
+#: ../../source/application/features.rst:17
+msgid "Module access control by profiles"
+msgstr ""
+
+#: ../../source/application/features.rst:18
+msgid "Application administrator users"
+msgstr ""
+
+#: ../../source/application/features.rst:19
+msgid "Accounts administrator users"
+msgstr ""
+
+#: ../../source/application/features.rst:20
+msgid "Accounts user access control (read or write)"
+msgstr ""
+
+#: ../../source/application/features.rst:21
+msgid "Accounts group access control (read or write)"
+msgstr ""
+
+#: ../../source/application/features.rst:23
+msgid "**Items**"
+msgstr ""
+
+#: ../../source/application/features.rst:25
+msgid ""
+"Encrypted and unencrypted custom fields for accounts, clients, categories"
+" and users"
+msgstr ""
+
+#: ../../source/application/features.rst:26
+msgid "Accounts public links access without user/password"
+msgstr ""
+
+#: ../../source/application/features.rst:27
+msgid "Accounts expiry date configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:28
+msgid "Accounts' files management"
+msgstr ""
+
+#: ../../source/application/features.rst:29
+msgid "Accounts' tags management"
+msgstr ""
+
+#: ../../source/application/features.rst:30
+msgid "Clients management"
+msgstr ""
+
+#: ../../source/application/features.rst:31
+msgid "Categories management"
+msgstr ""
+
+#: ../../source/application/features.rst:32
+msgid "Public links management"
+msgstr ""
+
+#: ../../source/application/features.rst:33
+msgid "API's authorizations management"
+msgstr ""
+
+#: ../../source/application/features.rst:34
+msgid "Accounts management"
+msgstr ""
+
+#: ../../source/application/features.rst:35
+msgid "Accounts' history management"
+msgstr ""
+
+#: ../../source/application/features.rst:36
+msgid "Plugins management"
+msgstr ""
+
+#: ../../source/application/features.rst:37
+msgid "Users management"
+msgstr ""
+
+#: ../../source/application/features.rst:38
+msgid "User groups management"
+msgstr ""
+
+#: ../../source/application/features.rst:39
+msgid "User profiles management"
+msgstr ""
+
+#: ../../source/application/features.rst:40
+msgid "In-App notifications management"
+msgstr ""
+
+#: ../../source/application/features.rst:42
+#: ../../source/application/permissions.rst:37
+msgid "**Configuration**"
+msgstr ""
+
+#: ../../source/application/features.rst:44
+msgid "Language configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:45
+msgid "Visual theme configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:46
+msgid "Logging and audit configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:47
+msgid "Proxy configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:48
+msgid "Accounts configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:49
+msgid "Public links configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:50
+msgid "Wiki links configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:51
+msgid "LDAP configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:52
+msgid "Import users and groups from LDAP"
+msgstr ""
+
+#: ../../source/application/features.rst:53
+msgid "Email notifications configuration"
+msgstr ""
+
+#: ../../source/application/features.rst:54
+msgid "Master password change"
+msgstr ""
+
+#: ../../source/application/features.rst:55
+msgid "Temporary master key generation"
+msgstr ""
+
+#: ../../source/application/features.rst:56
+msgid "Application and database backups"
+msgstr ""
+
+#: ../../source/application/features.rst:57
+msgid "XML format exporting using encryption or not"
+msgstr ""
+
+#: ../../source/application/features.rst:58
+msgid "Importing from sysPass or KeePass XML formats and CSV format"
+msgstr ""
+
+#: ../../source/application/index.rst:4
+msgid "Application"
+msgstr ""
+
+#: ../../source/application/index.rst:6
+msgid ""
+"sysPass is an application that uses a MySQL/MariaDB database to store the"
+" data of all its components except for the configuration, which is stored"
+" in an XML file within 'app/config' directory."
+msgstr ""
+
+#: ../../source/application/index.rst:9
+msgid ""
+"It's important that '.../app/config' directory is not accessible from the"
+" web service, because it could reveal important information."
+msgstr ""
+
+#: ../../source/application/permissions.rst:2
+msgid "Permissions"
+msgstr ""
+
+#: ../../source/application/permissions.rst:4
+msgid ""
+"sysPass permissions are set in users' profile. By default only accounts "
+"searching can be done."
+msgstr ""
+
+#: ../../source/application/permissions.rst:6
+msgid "There are 29 permission types:"
+msgstr ""
+
+#: ../../source/application/permissions.rst:8
+msgid "**Accounts**"
+msgstr ""
+
+#: ../../source/application/permissions.rst:10
+msgid "Create - allows to create new accounts"
+msgstr ""
+
+#: ../../source/application/permissions.rst:11
+msgid "View - allows to view the accounts' details [#f1]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:12
+msgid "View Password - allows to view the accounts' password [#f1]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:13
+msgid "Edit - allows to modify the accounts and its files [#f1]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:14
+msgid "Edit Password - allows to modify the accounts' password [#f1]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:15
+msgid "Delete - allows to delete accounts [#f1]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:16
+msgid "Files - allows to view account's files"
+msgstr ""
+
+#: ../../source/application/permissions.rst:17
+msgid "Share Link - allows to create public links"
+msgstr ""
+
+#: ../../source/application/permissions.rst:18
+msgid "Private - allows to create private accounts"
+msgstr ""
+
+#: ../../source/application/permissions.rst:19
+msgid ""
+"Private for Group - allows to create private accounts only accessible by "
+"the account's main group"
+msgstr ""
+
+#: ../../source/application/permissions.rst:20
+msgid "Permissions - allows to view and modify the accounts' permissions [#f1]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:21
+msgid ""
+"Global Search - allows to perform a searching in all the accounts except "
+"in the private ones [#f2]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:23
+msgid "**Management**"
+msgstr ""
+
+#: ../../source/application/permissions.rst:25
+msgid "Users - allows full access to the users management [#f3]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:26
+msgid "Groups - allows full access to the user groups management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:27
+msgid "Profiles - allows full access to the user profiles management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:28
+msgid "Categories - allows full access to categories management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:29
+msgid "Clients - allows full access to clients management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:30
+msgid "Custom Fields - allows full access to custom fields management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:31
+msgid "API Authorizations - allows full access to API authorizations management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:32
+msgid "Public Links - allows full access to the public links management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:33
+msgid "Accounts - allows full access to accounts management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:34
+msgid "Files- allows full access to files management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:35
+msgid "Tags - allows full access to the tags management"
+msgstr ""
+
+#: ../../source/application/permissions.rst:39
+msgid ""
+"General - allows full access to the site, accounts, wiki, ldap and email "
+"configuration"
+msgstr ""
+
+#: ../../source/application/permissions.rst:40
+msgid "Encryption - allows full access to the master password configuration"
+msgstr ""
+
+#: ../../source/application/permissions.rst:41
+msgid "Backup - allows full access to perform backups [#f4]_"
+msgstr ""
+
+#: ../../source/application/permissions.rst:42
+msgid "Import - allows full access to import XML and CSV files"
+msgstr ""
+
+#: ../../source/application/permissions.rst:44
+msgid "**Others**"
+msgstr ""
+
+#: ../../source/application/permissions.rst:46
+msgid "Event Log - allows full access to the event log"
+msgstr ""
+
+#: ../../source/application/permissions.rst:49
+msgid "ACL"
+msgstr ""
+
+#: ../../source/application/permissions.rst:52
+msgid "Users and Groups"
+msgstr ""
+
+#: ../../source/application/permissions.rst:54
+msgid "User profiles allow to set which actions could be done by the user"
+msgstr ""
+
+#: ../../source/application/permissions.rst:55
+msgid "An user can only display or modify accounts if:"
+msgstr ""
+
+#: ../../source/application/permissions.rst:57
+msgid "Is the account's owner"
+msgstr ""
+
+#: ../../source/application/permissions.rst:58
+msgid "Is member of account's primary group"
+msgstr ""
+
+#: ../../source/application/permissions.rst:59
+msgid "Is member of account's secondary groups"
+msgstr ""
+
+#: ../../source/application/permissions.rst:60
+msgid "Is listed as a secondary user of the account"
+msgstr ""
+
+#: ../../source/application/permissions.rst:61
+msgid "His/Her main group is listed as a secondary group of the account"
+msgstr ""
+
+#: ../../source/application/permissions.rst:62
+msgid ""
+"Is included through a group and the 'Secondary Groups Access' option is "
+"enabled"
+msgstr ""
+
+#: ../../source/application/permissions.rst:64
+msgid "Private accounts can only be accessed by the owner"
+msgstr ""
+
+#: ../../source/application/permissions.rst:65
+msgid ""
+"Private accounts for groups can only be accessed by the users of the main"
+" group"
+msgstr ""
+
+#: ../../source/application/permissions.rst:66
+msgid ""
+"Application Admin: allows full access to all the application modules and "
+"accounts, except private ones"
+msgstr ""
+
+#: ../../source/application/permissions.rst:67
+msgid ""
+"Accounts Admin: allows full access to all the accounts, except private "
+"ones"
+msgstr ""
+
+#: ../../source/application/permissions.rst:72
+msgid ""
+"API's access permissions are complementary to the accounts access "
+"permissions, so users and groups ACLs will be applied when an account is "
+"either listed or accessed."
+msgstr ""
+
+#: ../../source/application/permissions.rst:75
+msgid "Notes"
+msgstr ""
+
+#: ../../source/application/permissions.rst:76
+msgid "Only the accounts that the user and its group are granted"
+msgstr ""
+
+#: ../../source/application/permissions.rst:77
+msgid ""
+"When the account access is not granted, he/she will only be able to "
+"perform a 'Request for Account Modification'"
+msgstr ""
+
+#: ../../source/application/permissions.rst:78
+msgid "'Application Admin' users cannot be modified by other users"
+msgstr ""
+
+#: ../../source/application/permissions.rst:79
+msgid "Only 'Application Admin' users can download the backup or XML files"
+msgstr ""
+
+#: ../../source/application/plugins.rst:2
+msgid "Plugins"
+msgstr ""
+
+#: ../../source/application/plugins.rst:4
+msgid ""
+"sysPass allows to use plugins through an architecture that implements "
+"`observer pattern <https://en.wikipedia.org/wiki/Observer_pattern>`_ "
+"which is characterized by emitting a message to all subscribed observers."
+msgstr ""
+
+#: ../../source/application/plugins.rst:6
+msgid ""
+"Plugins must be installed in 'plugins' directory within the target module"
+" and they contain the following base structure:"
+msgstr ""
+
+#: ../../source/application/plugins.rst:91
+msgid "Directory and file names need to be set in the following way:"
+msgstr ""
+
+#: ../../source/application/plugins.rst:93
+msgid "Directory name within the plugin name: Example: **Authenticator**"
+msgstr ""
+
+#: ../../source/application/plugins.rst:94
+msgid ""
+"Filename within the plugin name in lowercase: Example: "
+"**authenticator.po**"
+msgstr ""
+
+#: ../../source/application/plugins.rst:95
+msgid ""
+"View's name should match with the controller's name in MVC pattern. It "
+"could be overridden by setting the name of the view in the controller's "
+"code"
+msgstr ""
+
+#: ../../source/application/plugins.rst:96
+msgid ""
+"'version.json' file is used by JavaScript code for checking if the plugin"
+" is up-to-date."
+msgstr ""
+
+#: ../../source/application/plugins.rst:98
+msgid ""
+"`Plugin` (whithin 'Plugin.php' file) is the main class which will receive"
+" sysPass' events through the observer pattern. It must extends the "
+"abstract class 'SP\\Plugin\\PluginBase' which is responsible to make the "
+"plugin's data available."
+msgstr ""
+
+#: ../../source/application/plugins.rst:103
+msgid "The following methods must be implemented in 'Plugin' class"
+msgstr ""
+
+#: ../../source/application/plugins.rst:106
+msgid "init"
+msgstr ""
+
+#: ../../source/application/plugins.rst:108
+msgid ""
+"Method that is called every time the plugin is executed. The dependency "
+"injection container will be passed."
+msgstr ""
+
+#: ../../source/application/plugins.rst:130
+msgid "updateEvent"
+msgstr ""
+
+#: ../../source/application/plugins.rst:132
+msgid "Method that is called when an event is emitted"
+msgstr ""
+
+#: ../../source/application/plugins.rst:145
+msgid "getEvents"
+msgstr ""
+
+#: ../../source/application/plugins.rst:147
+msgid ""
+"Method that returns an array of strings with the events that the plugin "
+"will be subscribed to"
+msgstr ""
+
+#: ../../source/application/plugins.rst:162
+msgid "getJsResources"
+msgstr ""
+
+#: ../../source/application/plugins.rst:164
+msgid ""
+"Method that returns an array of strings with the Javascript resources "
+"required by the plugin"
+msgstr ""
+
+#: ../../source/application/plugins.rst:179
+msgid "getAuthor"
+msgstr ""
+
+#: ../../source/application/plugins.rst:181
+msgid "Method that returns the plugin's author"
+msgstr ""
+
+#: ../../source/application/plugins.rst:196
+msgid "getVersion"
+msgstr ""
+
+#: ../../source/application/plugins.rst:198
+msgid "Method that returns an array of integers with the plugin's version"
+msgstr ""
+
+#: ../../source/application/plugins.rst:213
+msgid "getCompatibleVersion"
+msgstr ""
+
+#: ../../source/application/plugins.rst:215
+msgid ""
+"Method that returns an array of integers with the minimum sysPass "
+"compatible version"
+msgstr ""
+
+#: ../../source/application/plugins.rst:230
+msgid "getCssResources"
+msgstr ""
+
+#: ../../source/application/plugins.rst:232
+msgid ""
+"Method that returns an array of strings with the CSS resources required "
+"by the plugin"
+msgstr ""
+
+#: ../../source/application/plugins.rst:247
+msgid "getName"
+msgstr ""
+
+#: ../../source/application/plugins.rst:249
+msgid "Method that returns the plugin's name"
+msgstr ""
+
+#: ../../source/application/plugins.rst:264
+msgid "getData"
+msgstr ""
+
+#: ../../source/application/plugins.rst:266
+msgid "Method that returns the plugin's data"
+msgstr ""
+
+#: ../../source/application/plugins.rst:286
+msgid "onLoad"
+msgstr ""
+
+#: ../../source/application/plugins.rst:288
+msgid "Method that will be called when the plugin is initialized"
+msgstr ""
+
+#: ../../source/application/plugins.rst:301
+msgid "upgrade"
+msgstr ""
+
+#: ../../source/application/plugins.rst:303
+msgid ""
+"Method that receives the current sysPass version and would run a task if "
+"it needs to upgrade. This method will be called whenever a new sysPass "
+"version is detected."
+msgstr ""
+
+#: ../../source/application/plugins.rst:326
+msgid "Example"
+msgstr ""
+
+#: ../../source/application/plugins.rst:598
+msgid "Events"
+msgstr ""
+
+#: ../../source/application/plugins.rst:600
+msgid ""
+"When an event is emitted the generating class instance is included as an "
+"argument, so it could be possible to access to the class events."
+msgstr ""
+
+#: ../../source/application/plugins.rst:602
+msgid ""
+"Events may include 'SP\\Core\\Events\\EventMessage' class which may "
+"contain additional data to pass into the plugin."
+msgstr ""
+
+#: ../../source/application/plugins.rst:604
+msgid "Currently, the generated events are the following:"
+msgstr ""
+
+#: ../../source/application/plugins.rst:607
+msgid "Event"
+msgstr ""
+
+#: ../../source/application/plugins.rst:607
+msgid "Class"
+msgstr ""
+
+#: ../../source/application/plugins.rst:609
+msgid "acl.deny"
+msgstr ""
+
+#: ../../source/application/plugins.rst:610
+msgid "check.notification"
+msgstr ""
+
+#: ../../source/application/plugins.rst:611
+msgid "check.tempMasterPassword"
+msgstr ""
+
+#: ../../source/application/plugins.rst:612
+msgid "clear.eventlog"
+msgstr ""
+
+#: ../../source/application/plugins.rst:613
+msgid "clear.track"
+msgstr ""
+
+#: ../../source/application/plugins.rst:614
+msgid "copy.account.pass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:615
+msgid "create.account"
+msgstr ""
+
+#: ../../source/application/plugins.rst:616
+msgid "create.authToken"
+msgstr ""
+
+#: ../../source/application/plugins.rst:617
+msgid "create.category"
+msgstr ""
+
+#: ../../source/application/plugins.rst:618
+msgid "create.client"
+msgstr ""
+
+#: ../../source/application/plugins.rst:619
+msgid "create.customField"
+msgstr ""
+
+#: ../../source/application/plugins.rst:620
+msgid "create.itemPreset"
+msgstr ""
+
+#: ../../source/application/plugins.rst:621
+msgid "create.notification"
+msgstr ""
+
+#: ../../source/application/plugins.rst:622
+msgid "create.plugin"
+msgstr ""
+
+#: ../../source/application/plugins.rst:623
+msgid "create.publicLink"
+msgstr ""
+
+#: ../../source/application/plugins.rst:624
+msgid "create.publicLink.account"
+msgstr ""
+
+#: ../../source/application/plugins.rst:625
+msgid "create.tag"
+msgstr ""
+
+#: ../../source/application/plugins.rst:626
+msgid "create.tempMasterPassword"
+msgstr ""
+
+#: ../../source/application/plugins.rst:627
+msgid "create.user"
+msgstr ""
+
+#: ../../source/application/plugins.rst:628
+msgid "create.userGroup"
+msgstr ""
+
+#: ../../source/application/plugins.rst:629
+msgid "create.userProfile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:630
+msgid "database.query"
+msgstr ""
+
+#: ../../source/application/plugins.rst:631
+msgid "database.rollback"
+msgstr ""
+
+#: ../../source/application/plugins.rst:632
+msgid "database.transaction.begin"
+msgstr ""
+
+#: ../../source/application/plugins.rst:633
+msgid "database.transaction.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:634
+msgid "database.transaction.rollback"
+msgstr ""
+
+#: ../../source/application/plugins.rst:635
+msgid "delete.account"
+msgstr ""
+
+#: ../../source/application/plugins.rst:636
+msgid "delete.account.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:637
+msgid "delete.accountFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:638
+msgid "delete.accountFile.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:639
+msgid "delete.accountHistory"
+msgstr ""
+
+#: ../../source/application/plugins.rst:640
+msgid "delete.accountHistory.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:641
+msgid "delete.authToken"
+msgstr ""
+
+#: ../../source/application/plugins.rst:642
+msgid "delete.authToken.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:643
+msgid "delete.category"
+msgstr ""
+
+#: ../../source/application/plugins.rst:644
+msgid "delete.client"
+msgstr ""
+
+#: ../../source/application/plugins.rst:645
+msgid "delete.client.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:646
+msgid "delete.customField"
+msgstr ""
+
+#: ../../source/application/plugins.rst:647
+msgid "delete.customField.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:648
+msgid "delete.itemPreset"
+msgstr ""
+
+#: ../../source/application/plugins.rst:649
+msgid "delete.notification"
+msgstr ""
+
+#: ../../source/application/plugins.rst:650
+msgid "delete.notification.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:651
+msgid "delete.plugin"
+msgstr ""
+
+#: ../../source/application/plugins.rst:652
+msgid "delete.plugin.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:653
+msgid "delete.publicLink"
+msgstr ""
+
+#: ../../source/application/plugins.rst:654
+msgid "delete.publicLink.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:655
+msgid "delete.tag"
+msgstr ""
+
+#: ../../source/application/plugins.rst:656
+msgid "delete.tag.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:657
+msgid "delete.user"
+msgstr ""
+
+#: ../../source/application/plugins.rst:658
+msgid "delete.user.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:659
+msgid "delete.userGroup"
+msgstr ""
+
+#: ../../source/application/plugins.rst:660
+msgid "delete.userGroup.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:661
+msgid "delete.userProfile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:662
+msgid "delete.userProfile.selection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:663
+msgid "download.accountFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:664
+msgid "download.backupAppFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:665
+msgid "download.backupDbFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:666
+msgid "download.configBackupFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:667
+msgid "download.exportFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:668
+msgid "download.logFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:669
+msgid "edit.account"
+msgstr ""
+
+#: ../../source/application/plugins.rst:670
+msgid "edit.account.bulk"
+msgstr ""
+
+#: ../../source/application/plugins.rst:671
+msgid "edit.account.pass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:672
+msgid "edit.account.restore"
+msgstr ""
+
+#: ../../source/application/plugins.rst:673
+msgid "edit.authToken"
+msgstr ""
+
+#: ../../source/application/plugins.rst:674
+msgid "edit.category"
+msgstr ""
+
+#: ../../source/application/plugins.rst:675
+msgid "edit.client"
+msgstr ""
+
+#: ../../source/application/plugins.rst:676
+msgid "edit.customField"
+msgstr ""
+
+#: ../../source/application/plugins.rst:677
+msgid "edit.itemPreset"
+msgstr ""
+
+#: ../../source/application/plugins.rst:678
+msgid "edit.notification"
+msgstr ""
+
+#: ../../source/application/plugins.rst:679
+msgid "edit.plugin.available"
+msgstr ""
+
+#: ../../source/application/plugins.rst:680
+msgid "edit.plugin.disable"
+msgstr ""
+
+#: ../../source/application/plugins.rst:681
+msgid "edit.plugin.enable"
+msgstr ""
+
+#: ../../source/application/plugins.rst:682
+msgid "edit.plugin.reset"
+msgstr ""
+
+#: ../../source/application/plugins.rst:683
+msgid "edit.plugin.unavailable"
+msgstr ""
+
+#: ../../source/application/plugins.rst:684
+msgid "edit.publicLink.refresh"
+msgstr ""
+
+#: ../../source/application/plugins.rst:685
+msgid "edit.tag"
+msgstr ""
+
+#: ../../source/application/plugins.rst:686
+msgid "edit.user"
+msgstr ""
+
+#: ../../source/application/plugins.rst:687
+msgid "edit.user.pass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:688
+msgid "edit.user.password"
+msgstr ""
+
+#: ../../source/application/plugins.rst:689
+msgid "edit.userGroup"
+msgstr ""
+
+#: ../../source/application/plugins.rst:690
+msgid "edit.userProfile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:691
+msgid "expire.tempMasterPassword"
+msgstr ""
+
+#: ../../source/application/plugins.rst:692
+msgid "import.ldap.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:693
+msgid "import.ldap.groups"
+msgstr ""
+
+#: ../../source/application/plugins.rst:694
+msgid "import.ldap.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:695
+msgid "import.ldap.users"
+msgstr ""
+
+#: ../../source/application/plugins.rst:696
+msgid "ldap.bind"
+msgstr ""
+
+#: ../../source/application/plugins.rst:697
+msgid "ldap.check.connection"
+msgstr ""
+
+#: ../../source/application/plugins.rst:698
+msgid "ldap.check.group"
+msgstr ""
+
+#: ../../source/application/plugins.rst:699
+msgid "ldap.check.params"
+msgstr ""
+
+#: ../../source/application/plugins.rst:700
+msgid "ldap.connect"
+msgstr ""
+
+#: ../../source/application/plugins.rst:701
+msgid "ldap.connect.tls"
+msgstr ""
+
+#: ../../source/application/plugins.rst:702
+msgid "ldap.getAttributes"
+msgstr ""
+
+#: ../../source/application/plugins.rst:703
+msgid "ldap.search"
+msgstr ""
+
+#: ../../source/application/plugins.rst:704
+msgid "ldap.search.group"
+msgstr ""
+
+#: ../../source/application/plugins.rst:705
+msgid "ldap.unbind"
+msgstr ""
+
+#: ../../source/application/plugins.rst:706
+msgid "list.accountFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:707
+msgid "login.auth.browser"
+msgstr ""
+
+#: ../../source/application/plugins.rst:708
+msgid "login.auth.database"
+msgstr ""
+
+#: ../../source/application/plugins.rst:709
+msgid "login.auth.ldap"
+msgstr ""
+
+#: ../../source/application/plugins.rst:710
+msgid "login.checkUser.changePass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:711
+msgid "login.checkUser.disabled"
+msgstr ""
+
+#: ../../source/application/plugins.rst:712
+msgid "login.finish"
+msgstr ""
+
+#: ../../source/application/plugins.rst:713
+msgid "login.info"
+msgstr ""
+
+#: ../../source/application/plugins.rst:714
+msgid "login.masterPass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:715
+msgid "login.masterPass.temporary"
+msgstr ""
+
+#: ../../source/application/plugins.rst:716
+msgid "login.preferences.load"
+msgstr ""
+
+#: ../../source/application/plugins.rst:717
+msgid "login.session.load"
+msgstr ""
+
+#: ../../source/application/plugins.rst:718
+msgid "plugin.load"
+msgstr ""
+
+#: ../../source/application/plugins.rst:719
+msgid "plugin.load.error"
+msgstr ""
+
+#: ../../source/application/plugins.rst:720
+msgid "refresh.authToken"
+msgstr ""
+
+#: ../../source/application/plugins.rst:721
+msgid "refresh.masterPassword"
+msgstr ""
+
+#: ../../source/application/plugins.rst:722
+msgid "refresh.masterPassword.hash"
+msgstr ""
+
+#: ../../source/application/plugins.rst:723
+msgid "request.account"
+msgstr ""
+
+#: ../../source/application/plugins.rst:724
+msgid "request.user.passReset"
+msgstr ""
+
+#: ../../source/application/plugins.rst:725
+msgid "reset.min.css"
+msgstr ""
+
+#: ../../source/application/plugins.rst:726
+msgid "restore.accountHistory"
+msgstr ""
+
+#: ../../source/application/plugins.rst:727
+msgid "run.backup.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:728
+msgid "run.backup.process"
+msgstr ""
+
+#: ../../source/application/plugins.rst:729
+msgid "run.backup.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:730
+msgid "run.export.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:731
+msgid "run.export.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:732
+msgid "run.export.verify"
+msgstr ""
+
+#: ../../source/application/plugins.rst:733
+msgid "run.import.csv"
+msgstr ""
+
+#: ../../source/application/plugins.rst:734
+msgid "run.import.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:735
+msgid "run.import.keepass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:736
+msgid "run.import.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:737
+msgid "run.import.syspass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:738
+msgid "save.config.account"
+msgstr ""
+
+#: ../../source/application/plugins.rst:739
+msgid "save.config.dokuwiki"
+msgstr ""
+
+#: ../../source/application/plugins.rst:740
+msgid "save.config.general"
+msgstr ""
+
+#: ../../source/application/plugins.rst:741
+msgid "save.config.ldap"
+msgstr ""
+
+#: ../../source/application/plugins.rst:742
+msgid "save.config.mail"
+msgstr ""
+
+#: ../../source/application/plugins.rst:743
+msgid "save.config.wiki"
+msgstr ""
+
+#: ../../source/application/plugins.rst:744
+msgid "search.category"
+msgstr ""
+
+#: ../../source/application/plugins.rst:745
+msgid "search.client"
+msgstr ""
+
+#: ../../source/application/plugins.rst:746
+msgid "search.tag"
+msgstr ""
+
+#: ../../source/application/plugins.rst:747
+msgid "search.userGroup"
+msgstr ""
+
+#: ../../source/application/plugins.rst:748
+msgid "send.mail"
+msgstr ""
+
+#: ../../source/application/plugins.rst:749
+msgid "send.mail.check"
+msgstr ""
+
+#: ../../source/application/plugins.rst:750
+msgid "session.cookie_httponly"
+msgstr ""
+
+#: ../../source/application/plugins.rst:751
+msgid "session.gc_maxlifetime"
+msgstr ""
+
+#: ../../source/application/plugins.rst:752
+msgid "session.save_handler"
+msgstr ""
+
+#: ../../source/application/plugins.rst:753
+msgid "session.timeout"
+msgstr ""
+
+#: ../../source/application/plugins.rst:754
+msgid "show.account"
+msgstr ""
+
+#: ../../source/application/plugins.rst:755
+msgid "show.account.bulkEdit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:756
+msgid "show.account.copy"
+msgstr ""
+
+#: ../../source/application/plugins.rst:757
+msgid "show.account.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:758
+msgid "show.account.delete"
+msgstr ""
+
+#: ../../source/application/plugins.rst:759
+msgid "show.account.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:760
+msgid "show.account.editpass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:761
+msgid "show.account.history"
+msgstr ""
+
+#: ../../source/application/plugins.rst:762
+msgid "show.account.link"
+msgstr ""
+
+#: ../../source/application/plugins.rst:763
+msgid "show.account.pass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:764
+msgid "show.account.request"
+msgstr ""
+
+#: ../../source/application/plugins.rst:765
+msgid "show.account.search"
+msgstr ""
+
+#: ../../source/application/plugins.rst:766
+msgid "show.accountFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:767
+msgid "show.authToken"
+msgstr ""
+
+#: ../../source/application/plugins.rst:768
+msgid "show.authToken.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:769
+msgid "show.authToken.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:770
+msgid "show.category"
+msgstr ""
+
+#: ../../source/application/plugins.rst:771
+msgid "show.category.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:772
+msgid "show.category.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:773
+msgid "show.client"
+msgstr ""
+
+#: ../../source/application/plugins.rst:774
+msgid "show.client.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:775
+msgid "show.client.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:776
+msgid "show.config"
+msgstr ""
+
+#: ../../source/application/plugins.rst:777
+msgid "show.customField"
+msgstr ""
+
+#: ../../source/application/plugins.rst:778
+msgid "show.customField.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:779
+msgid "show.customField.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:780
+msgid "show.itemPreset"
+msgstr ""
+
+#: ../../source/application/plugins.rst:781
+msgid "show.itemPreset.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:782
+msgid "show.itemPreset.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:783
+msgid "show.itemlist.accesses"
+msgstr ""
+
+#: ../../source/application/plugins.rst:784
+msgid "show.itemlist.items"
+msgstr ""
+
+#: ../../source/application/plugins.rst:785
+msgid "show.itemlist.security"
+msgstr ""
+
+#: ../../source/application/plugins.rst:786
+msgid "show.notification"
+msgstr ""
+
+#: ../../source/application/plugins.rst:787
+msgid "show.notification.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:788
+msgid "show.notification.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:789
+msgid "show.plugin"
+msgstr ""
+
+#: ../../source/application/plugins.rst:790
+msgid "show.publicLink"
+msgstr ""
+
+#: ../../source/application/plugins.rst:791
+msgid "show.publicLink.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:792
+msgid "show.publicLink.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:793
+msgid "show.tag"
+msgstr ""
+
+#: ../../source/application/plugins.rst:794
+msgid "show.tag.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:795
+msgid "show.tag.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:796
+msgid "show.user"
+msgstr ""
+
+#: ../../source/application/plugins.rst:797
+msgid "show.user.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:798
+msgid "show.user.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:799
+msgid "show.user.editPass"
+msgstr ""
+
+#: ../../source/application/plugins.rst:800
+msgid "show.userGroup"
+msgstr ""
+
+#: ../../source/application/plugins.rst:801
+msgid "show.userGroup.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:802
+msgid "show.userGroup.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:803
+msgid "show.userProfile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:804
+msgid "show.userProfile.create"
+msgstr ""
+
+#: ../../source/application/plugins.rst:805
+msgid "show.userProfile.edit"
+msgstr ""
+
+#: ../../source/application/plugins.rst:806
+msgid "show.userSettings"
+msgstr ""
+
+#: ../../source/application/plugins.rst:807
+msgid "track.add"
+msgstr ""
+
+#: ../../source/application/plugins.rst:808
+msgid "track.delay"
+msgstr ""
+
+#: ../../source/application/plugins.rst:809
+msgid "unlock.track"
+msgstr ""
+
+#: ../../source/application/plugins.rst:810
+msgid "update.masterPassword.customFields"
+msgstr ""
+
+#: ../../source/application/plugins.rst:811
+msgid "update.masterPassword.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:812
+msgid "update.masterPassword.hash"
+msgstr ""
+
+#: ../../source/application/plugins.rst:813
+msgid "update.masterPassword.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:814
+msgid "upgrade.app.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:815
+msgid "upgrade.app.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:816
+msgid "upgrade.authToken.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:817
+msgid "upgrade.authToken.process"
+msgstr ""
+
+#: ../../source/application/plugins.rst:818
+msgid "upgrade.authToken.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:819
+msgid "upgrade.config.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:820
+msgid "upgrade.config.process"
+msgstr ""
+
+#: ../../source/application/plugins.rst:821
+msgid "upgrade.config.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:822
+msgid "upgrade.customField.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:823
+msgid "upgrade.customField.process"
+msgstr ""
+
+#: ../../source/application/plugins.rst:824
+msgid "upgrade.customField.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:825
+msgid "upgrade.db.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:826
+msgid "upgrade.db.process"
+msgstr ""
+
+#: ../../source/application/plugins.rst:827
+msgid "upgrade.db.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:828
+msgid "upgrade.publicLink.end"
+msgstr ""
+
+#: ../../source/application/plugins.rst:829
+msgid "upgrade.publicLink.process"
+msgstr ""
+
+#: ../../source/application/plugins.rst:830
+msgid "upgrade.publicLink.start"
+msgstr ""
+
+#: ../../source/application/plugins.rst:831
+msgid "upload.accountFile"
+msgstr ""
+
+#: ../../source/application/plugins.rst:832
+msgid "wiki.aclCheck"
+msgstr ""
+
+#: ../../source/application/plugins.rst:833
+msgid "wiki.getPage"
+msgstr ""
+
+#: ../../source/application/plugins.rst:834
+msgid "wiki.getPageHTML"
+msgstr ""
+
+#: ../../source/application/plugins.rst:835
+msgid "wiki.getPageInfo"
+msgstr ""
+
+#: ../../source/application/searching.rst:2
+msgid "Accounts Searching"
+msgstr ""
+
+#: ../../source/application/searching.rst:4
+msgid ""
+"The accounts searching performs a query for the entered text within the "
+"fields 'name', 'login', 'url' and 'notes'."
+msgstr ""
+
+#: ../../source/application/searching.rst:6
+msgid "Results filtering could be done by selecting category, client or tags."
+msgstr ""
+
+#: ../../source/application/searching.rst:8
+msgid ""
+"The tag filtering is cumulative ('OR'), so it will be included all the "
+"accounts with selected tags."
+msgstr ""
+
+#: ../../source/application/searching.rst:10
+msgid ""
+"There are special filters that could be entered in the text field. You "
+"could use either one or several special parameters separated by blank "
+"spaces:"
+msgstr ""
+
+#: ../../source/application/searching.rst:15
+msgid "Filter"
+msgstr ""
+
+#: ../../source/application/searching.rst:17
+msgid "user\\:\"login\""
+msgstr ""
+
+#: ../../source/application/searching.rst:17
+msgid "Get the accounts in which the user with login 'login' has access"
+msgstr ""
+
+#: ../../source/application/searching.rst:18
+msgid "owner\\:\"login\""
+msgstr ""
+
+#: ../../source/application/searching.rst:18
+msgid "Get the accounts in which the user with login 'login' is the owner"
+msgstr ""
+
+#: ../../source/application/searching.rst:19
+msgid "group\\:\"group_name\""
+msgstr ""
+
+#: ../../source/application/searching.rst:19
+msgid "Search for accounts which 'group_name' has access rights"
+msgstr ""
+
+#: ../../source/application/searching.rst:20
+msgid "maingroup\\:\"group_name\""
+msgstr ""
+
+#: ../../source/application/searching.rst:20
+msgid "Get the accounts which have the main group with name 'group_name'"
+msgstr ""
+
+#: ../../source/application/searching.rst:21
+msgid "file\\:\"file_name\""
+msgstr ""
+
+#: ../../source/application/searching.rst:21
+msgid "Search for accounts which contain a file with the name 'file_name'"
+msgstr ""
+
+#: ../../source/application/searching.rst:22
+msgid "client\\:\"client_name\""
+msgstr ""
+
+#: ../../source/application/searching.rst:22
+msgid "Search for accounts by client name"
+msgstr ""
+
+#: ../../source/application/searching.rst:23
+msgid "category\\:\"category_name\""
+msgstr ""
+
+#: ../../source/application/searching.rst:23
+msgid "Search for accounts by category name"
+msgstr ""
+
+#: ../../source/application/searching.rst:24
+msgid "id\\:\"account_id\""
+msgstr ""
+
+#: ../../source/application/searching.rst:24
+msgid "Returns the account for the given ID"
+msgstr ""
+
+#: ../../source/application/searching.rst:25
+msgid "name_regex\\:\"regex\""
+msgstr ""
+
+#: ../../source/application/searching.rst:25
+msgid "Search for accounts name by regular expression"
+msgstr ""
+
+#: ../../source/application/searching.rst:26
+msgid "is|not\\:expired"
+msgstr ""
+
+#: ../../source/application/searching.rst:26
+msgid "Search for accounts with expired password"
+msgstr ""
+
+#: ../../source/application/searching.rst:27
+msgid "is|not\\:private"
+msgstr ""
+
+#: ../../source/application/searching.rst:27
+msgid "Get the private accounts for the current user"
+msgstr ""
+
+#: ../../source/application/searching.rst:28
+msgid "op\\:and|or"
+msgstr ""
+
+#: ../../source/application/searching.rst:28
+msgid "Operator used by special parameters"
+msgstr ""
+
+#: ../../source/application/security.rst:2
+msgid "Security"
+msgstr ""
+
+#: ../../source/application/security.rst:4
+msgid ""
+"sysPass has some security mechanisms to mitigate some kind of events and "
+"actions that could compromise the application security. Among them are:"
+msgstr ""
+
+#: ../../source/application/security.rst:6
+msgid "Security token generation for sending forms"
+msgstr ""
+
+#: ../../source/application/security.rst:7
+msgid "Removing of unwanted characters from received data"
+msgstr ""
+
+#: ../../source/application/security.rst:8
+msgid "Type casting of received data"
+msgstr ""
+
+#: ../../source/application/security.rst:9
+msgid "Hash generation for export and backup files name"
+msgstr ""
+
+#: ../../source/application/security.rst:10
+msgid "RSA (PKI) encryption is used for sending passwords within forms"
+msgstr ""
+
+#: ../../source/application/security.rst:12
+msgid ""
+"Although these actions, some other task should be performed in order to "
+"secure the web server components and communications by:"
+msgstr ""
+
+#: ../../source/application/security.rst:14
+msgid "Using HTTPS"
+msgstr ""
+
+#: ../../source/application/security.rst:15
+msgid "Limiting access to '.../app/config' and '.../app/backup' directories"
+msgstr ""
+
+#: ../../source/application/security.rst:16
+msgid "Enforcing web server access policies"
+msgstr ""
+
+#: ../../source/application/security.rst:18
+msgid ""
+"In order to limit the access to the directories through Apache, "
+"'.htaccess' files could be used within the directories or by modifying "
+"the site configuration:"
+msgstr ""
+
+#: ../../source/application/security.rst:64
+msgid ""
+"'.../app/config' directory shouldn't be accessible through the web "
+"server, it could reveal private data."
+msgstr ""
+

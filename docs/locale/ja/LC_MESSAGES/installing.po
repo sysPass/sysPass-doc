@@ -1,0 +1,524 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/installing/_dependencies.rst:2
+msgid "Installing dependencies"
+msgstr ""
+
+#: ../../source/installing/_dependencies.rst:4
+msgid ""
+"PHP Composer is needed to keep up-to-date dependencies and an easy way to"
+" apply security or functional patches to them."
+msgstr ""
+
+#: ../../source/installing/_dependencies.rst:6
+msgid ""
+"You can either download the dependencies using Composer itself or by "
+"getting the latest \"vendor.tar.gz\" package from the release page."
+msgstr ""
+
+#: ../../source/installing/_dependencies.rst:10
+msgid ""
+"If you don't have any Internet access from the server, the vendor package"
+" will provide all the release dependencies and you don't need to deal "
+"with composer commands."
+msgstr ""
+
+#: ../../source/installing/_dependencies.rst:13
+msgid "Using PHP Composer"
+msgstr ""
+
+#: ../../source/installing/_dependencies.rst:15
+msgid ""
+"From sysPass root directory, download and install Composer "
+"(https://getcomposer.org/doc/faqs/how-to-install-composer-"
+"programmatically.md)"
+msgstr ""
+
+#: ../../source/installing/_dependencies.rst:17
+msgid ""
+"Create a bash script called \"install_composer.sh\" and paste this code "
+"in it:"
+msgstr ""
+
+#: ../../source/installing/_dependencies.rst:43
+msgid "Then install sysPass dependencies"
+msgstr ""
+
+#: ../../source/installing/_directories.rst:2
+msgid "Directories and permissions"
+msgstr ""
+
+#: ../../source/installing/_directories.rst:4
+msgid "Create a directory for sysPass within the web server root."
+msgstr ""
+
+#: ../../source/installing/_directories.rst:11
+msgid "If you go with the packaged version, download and unpack sysPass files."
+msgstr ""
+
+#: ../../source/installing/_directories.rst:18
+msgid "If you go with Git cloned version, clone sysPass GitHub repository."
+msgstr ""
+
+#: ../../source/installing/_directories.rst:24
+msgid ""
+"Setup directories permissions. The owner should match the web server "
+"running user."
+msgstr ""
+
+#: ../../source/installing/_environment.rst:2
+msgid "Environment configuration"
+msgstr ""
+
+#: ../../source/installing/_environment.rst:4
+msgid ""
+"Please, point your web browser to the following URL and follow the "
+"installer steps"
+msgstr ""
+
+#: ../../source/installing/_environment.rst:6
+msgid "https://IP_OR_SERVER_ADDRESS/syspass/index.php"
+msgstr ""
+
+#: ../../source/installing/_environment.rst:11
+#: ../../source/installing/docker.rst:134
+msgid "More information about how sysPass works on :doc:`/application/index`"
+msgstr ""
+
+#: ../../source/installing/_environment.rst:15
+#: ../../source/installing/docker.rst:138
+msgid ""
+"It's very advisable to take a look to security advices on "
+":doc:`/application/security`"
+msgstr ""
+
+#: ../../source/installing/_ssl.rst:1
+msgid "Optional for enabling SSL."
+msgstr ""
+
+#: ../../source/installing/_ssl.rst:3
+msgid ""
+"In order to increase your sysPass instance security, please consider to "
+"use SSL. See :doc:`/application/security` and the following resources for"
+" Debian:"
+msgstr ""
+
+#: ../../source/installing/_ssl.rst:5
+msgid ""
+"Sites only accessible from LAN: https://doc.debian.org/configuration"
+"/Self-Signed_Certificate"
+msgstr ""
+
+#: ../../source/installing/_ssl.rst:6
+msgid ""
+"Sites accessible from Internet, you could use Let's Encrypt, see "
+"https://certbot.eff.org/"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:2
+msgid "CentOS 7.x Installation"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:5 ../../source/installing/debian9.rst:5
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:7 ../../source/installing/debian9.rst:7
+msgid "Web server (Apache/Nginx/Lighttpd) with SSL enabled."
+msgstr ""
+
+#: ../../source/installing/centos7.rst:8 ../../source/installing/debian9.rst:8
+msgid "MariaDB >= 10.1"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:9
+msgid "PHP >= 7.0 (7.1 or above recommended)"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:19
+#: ../../source/installing/debian9.rst:19
+msgid "PHP modules"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:11
+msgid "mysqlnd"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:12
+#: ../../source/installing/debian9.rst:12
+msgid "curl"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:13
+#: ../../source/installing/debian9.rst:13
+msgid "json"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:14
+#: ../../source/installing/debian9.rst:14
+msgid "gd"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:15
+#: ../../source/installing/debian9.rst:15
+msgid "xml"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:16
+#: ../../source/installing/debian9.rst:16
+msgid "mbstring"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:17
+#: ../../source/installing/debian9.rst:17
+msgid "intl"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:18
+#: ../../source/installing/debian9.rst:18
+msgid "readline"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:19
+#: ../../source/installing/debian9.rst:19
+msgid "ldap (optional)"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:20
+#: ../../source/installing/debian9.rst:20
+msgid "mcrypt (optional for importing older XML export files)"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:21
+#: ../../source/installing/debian9.rst:21
+msgid ""
+"Package with latest sysPass version "
+"https://github.com/nuxsmin/sysPass/releases/latest"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:22
+#: ../../source/installing/debian9.rst:22
+msgid ""
+"Or clone sysPass repository from GitHub "
+"https://github.com/nuxsmin/sysPass.git"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:25
+#: ../../source/installing/debian9.rst:25 ../../source/installing/index.rst:4
+msgid "Installation"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:27
+msgid ""
+"CentOS 7 package installation "
+"(https://www.softwarecollections.org/en/scls/rhscl/rh-php70/)."
+msgstr ""
+
+#: ../../source/installing/centos7.rst:35
+msgid "Automated start/stop Apache web server and MariaDB server."
+msgstr ""
+
+#: ../../source/installing/centos7.rst:44
+msgid "Setting up MariaDB."
+msgstr ""
+
+#: ../../source/installing/centos7.rst:50
+msgid "Enabling firewall ports."
+msgstr ""
+
+#: ../../source/installing/centos7.rst:63
+msgid "SELinux"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:65
+msgid ""
+"sysPass needs to be allowed to write its configuration and some other "
+"files (backup, cache, temp, etc). We have 2 choices:"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:69
+msgid "Please, run only one of the choices"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:71
+msgid "Change SELinux's context and user:"
+msgstr ""
+
+#: ../../source/installing/centos7.rst:79
+msgid ""
+"Disable SELinux by editing the file \"/etc/sysconfig/selinux\" and "
+"setting \"SELINUX\" variable's value to \"permissive\". You need to "
+"restart the system."
+msgstr ""
+
+#: ../../source/installing/debian9.rst:2
+msgid "Debian 9 Installation"
+msgstr ""
+
+#: ../../source/installing/debian9.rst:9
+msgid "PHP >= 7.0"
+msgstr ""
+
+#: ../../source/installing/debian9.rst:11
+msgid "mysql"
+msgstr ""
+
+#: ../../source/installing/debian9.rst:27
+msgid "Debian GNU/Linux package installation."
+msgstr ""
+
+#: ../../source/installing/docker.rst:8
+msgid "Docker Installation"
+msgstr ""
+
+#: ../../source/installing/docker.rst:10
+msgid ""
+"Docker_ based installations allow to run the application in an isolated "
+"environment besides try out multiple versions without installing any "
+"package on the host system."
+msgstr ""
+
+#: ../../source/installing/docker.rst:12
+#, python-format
+msgid ""
+"sysPass can be ran in `Docker containers "
+"<https://en.wikipedia.org/wiki/Docker_%28software%29>`_ which has been "
+"compiled on top of latest Debian_ stable version (Stretch) and avoiding "
+"any **package compilation**."
+msgstr ""
+
+#: ../../source/installing/docker.rst:14
+msgid ""
+"Docker images can be got from `Docker Hub`_ and they are complied "
+"automatically from Docker source files on  https://github.com/nuxsmin"
+"/docker-syspass"
+msgstr ""
+
+#: ../../source/installing/docker.rst:16
+msgid "There are two ways for installing:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:18
+msgid ""
+"Using `Docker Compose`_ (recommended): deploys a fully working sysPass "
+"environment including application and database services."
+msgstr ""
+
+#: ../../source/installing/docker.rst:19
+msgid "Using Docker_: deploys each service (application and database) separately."
+msgstr ""
+
+#: ../../source/installing/docker.rst:24
+msgid "Docker Compose"
+msgstr ""
+
+#: ../../source/installing/docker.rst:26
+msgid ""
+"In order to deploy using this method, you need to issue the following "
+"steps:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:28 ../../source/installing/docker.rst:68
+msgid "Install Docker engine from https://docs.docker.com/install/"
+msgstr ""
+
+#: ../../source/installing/docker.rst:29
+msgid "Install Docker Compose from https://docs.docker.com/compose/install/"
+msgstr ""
+
+#: ../../source/installing/docker.rst:30
+msgid ""
+"Download \"docker-compose.yml\" sysPass' file from "
+"https://raw.githubusercontent.com/nuxsmin/docker-syspass/master/docker-"
+"compose.yml or use the following one:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:35
+msgid "Run \"docker-compose\" tool for setting up the environment:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:41
+msgid ""
+"This will download the latest sysPass stable image and the database "
+"(MariaDB) one."
+msgstr ""
+
+#: ../../source/installing/docker.rst:43
+msgid "Take a look to deployment's logs:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:51
+msgid ""
+"Docker Compose will create an isolated network for all sysPass services "
+"making possible to use DNS resolution between containers. You can use "
+"\"syspass-db\" for setting up the database hostname in sysPass "
+"installation page."
+msgstr ""
+
+#: ../../source/installing/docker.rst:53
+msgid ""
+"It will create two fixed volumes for sysPass application, one for "
+"\".../app/config\" directory and the other for \".../app/backup\" "
+"directory. An additional fixed volume will be created for the database "
+"container's data."
+msgstr ""
+
+#: ../../source/installing/docker.rst:57
+msgid ""
+"sysPass container will publish 80 and 443 host's ports to the outside. "
+"You could change this behavior by tweaking the Docker Compose's file."
+msgstr ""
+
+#: ../../source/installing/docker.rst:61
+msgid ""
+"You can disable HTTPS redirection by setting \"USE_SSL=no\" within "
+"\"docker-compose.yml\" file. This will offload the SSL encryption to a LB"
+" or reverse proxy."
+msgstr ""
+
+#: ../../source/installing/docker.rst:64
+msgid "Docker"
+msgstr ""
+
+#: ../../source/installing/docker.rst:66
+msgid ""
+"By this way all the services need to be deployed manually. The following "
+"steps are needed:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:69
+msgid "Create network for sysPass services:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:75
+msgid "Create fixed volunes for sysPass services:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:83
+msgid "Setup sysPass database container:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:94
+msgid "Setup sysPass application container:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:106
+msgid "Connection data will be displayed in application container's console:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:114
+msgid ""
+"You can install sysPass extensions (plugins) by setting "
+"\"COMPOSER_EXTENSIONS\" environment variable when deploying the sysPass "
+"application container. Example: \"--env COMPOSER_EXTENSIONS='syspass"
+"/plugin-authenticator'\""
+msgstr ""
+
+#: ../../source/installing/docker.rst:118
+msgid "Database Access"
+msgstr ""
+
+#: ../../source/installing/docker.rst:120
+msgid "You can get access to the database using the following connection data:"
+msgstr ""
+
+#: ../../source/installing/docker.rst:122
+msgid "User: root"
+msgstr ""
+
+#: ../../source/installing/docker.rst:123
+msgid "Password: syspass"
+msgstr ""
+
+#: ../../source/installing/docker.rst:128
+msgid "You may install other sysPass images from `Docker Hub`_"
+msgstr ""
+
+#: ../../source/installing/docker.rst:132
+msgid ""
+"Please follow the installer steps in order to setup the sysPass "
+"application instance."
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:2
+msgid "Hosting Mode"
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:4
+msgid ""
+"The hosting mode is for those installations that are running on a "
+"external hosting, where is not possible to create neither database nor "
+"connection user for it."
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:6
+msgid ""
+"Though hosting mode is about the database creation tasks, you would find "
+"useful to download the dependencies bundle when there isn't SSH access to"
+" the web server. The bundle will be attached to every release on GitHub "
+"as \"vendor.tar.gz\". It should be unpacked within sysPass directory."
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:9
+msgid "**It won't create neither database (except tables) nor connection user**"
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:11
+msgid "The steps to perform the installation are the following:"
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:13
+msgid "Create an user/password for sysPass connection at the hosting panel"
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:14
+msgid ""
+"Create the sysPass database (not tables) and give permissions to the "
+"previous user on it"
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:15
+msgid ""
+"Start the sysPass installation and use the user/password that was "
+"previously created for sysPass (the two first fields in the installation "
+"page)"
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:16
+msgid ""
+"Provide a MySQL/MariaDB user with administration rights (it could be the "
+"same as previous if it has enough permissions), in order to create "
+"sysPass database tables. This user is used only for the installation "
+"process and it often would be the user/password for the hosting "
+"management"
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:17
+msgid ""
+"If database connection and permissions are right, the installation should"
+" finish successfully"
+msgstr ""
+
+#: ../../source/installing/hostingmode.rst:20
+msgid ""
+"In case of errors, you could take a look to the web server error logs or "
+"\".../app/config/syspass.log\"."
+msgstr ""
+

@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/howtos/azure_mysql.rst:2
+msgid "Azure MySQL"
+msgstr ""
+
+#: ../../source/howtos/azure_mysql.rst:4
+msgid ""
+"In order to install sysPass database on Azure MySQL you'll need to change"
+" the database engine used in DDL statements that create the database "
+"views. This will replace the \"MyISAM\" engine with \"InnoDB\", which "
+"does not take any effect in database views."
+msgstr ""
+
+#: ../../source/howtos/azure_mysql.rst:12
+msgid "Thanks to @shocker70 for this contribution"
+msgstr ""
+
+#: ../../source/howtos/index.rst:4
+msgid "HOWTOs"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:2
+msgid "LDAP Troubleshooting"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:4
+msgid "PHP 7.2 now includes openssl directly compiled in."
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:6
+msgid "You may just check that with:"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:12
+msgid "or if you're like me using CentOS 7 and php via SCL:"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:18
+msgid ""
+"You may then also check if your linux box connects to your ldaps server "
+"with:"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:24
+msgid "or ldap server using TLS"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:30
+msgid ""
+"If those work, you may use ldapsearch to manually bind to your LDAP "
+"server and see what the problem might be. On CentOS, install it via:"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:37
+msgid "Simple LDAP Query"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:43
+msgid "Add -Z to the ldapsearch line to switch to TLS."
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:45
+msgid "If you get"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:53
+msgid ""
+"Your certificate might be bad. You can override certificate checking in "
+"\"/etc/openldap/ldap.conf\" by adding line:"
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:60
+msgid ""
+"Don't forget to restart php-fpm (or apache if using mod_php) for those "
+"settings to take effect."
+msgstr ""
+
+#: ../../source/howtos/ldap_troubleshooting.rst:64
+msgid "Thanks to @deajan for this contribution"
+msgstr ""
+
+#: ../../source/howtos/nginx.rst:2
+msgid "How to install and configure Nginx"
+msgstr ""
+
+#: ../../source/howtos/nginx.rst:4
+msgid "Install required repositories and packages"
+msgstr ""
+
+#: ../../source/howtos/nginx.rst:12
+msgid "Configure Nginx \"/etc/nginx/conf.d/syspass.conf\" file"
+msgstr ""
+
+#: ../../source/howtos/nginx.rst:48
+msgid "Configure PHP"
+msgstr ""
+
+#: ../../source/howtos/nginx.rst:56
+msgid "Enable and start services"
+msgstr ""
+
+#: ../../source/howtos/nginx.rst:67
+msgid "Thanks to @M1k13 for this contribution"
+msgstr ""
+
+#: ../../source/howtos/restore.rst:2
+msgid "How to restore sysPass"
+msgstr ""
+
+#: ../../source/howtos/restore.rst:6
+msgid "This procedure requires to have a database and application backup"
+msgstr ""
+
+#: ../../source/howtos/restore.rst:8
+msgid ""
+"Restore the database backup. It could be made either through the sysPass "
+"utility, MySQL workbench or mysqldump tool"
+msgstr ""
+
+#: ../../source/howtos/restore.rst:9
+msgid ""
+"Create the connection user (see '.../app/config/config.xml' file for "
+"current connection settings) and set the correct permissions on the "
+"restored database"
+msgstr ""
+
+#: ../../source/howtos/restore.rst:10
+msgid "Restore the application backup"
+msgstr ""
+
+#: ../../source/howtos/restore.rst:11
+msgid "Point the browser to the application URL"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:2
+msgid "Cómo probar una actualización de sysPass"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:6
+msgid ""
+"Este procedimiento indica los pasos a seguir para probar una "
+"actualización de sysPass sin modificar la instalación actual"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:8
+msgid ""
+"Realizar una copia de la base de datos. Se puede realizar mediante la "
+"utilidad de copia de sysPass, usando MySQL Workbench o con la utilidad "
+"mysqldump"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:9
+msgid "Crear una nueva base de datos (ej. syspass21)"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:10
+msgid ""
+"Crear un usuario (ej. sp_admin21) y asignar permisos sobre la base de "
+"datos creada"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:11
+msgid ""
+"Importar la copia de la base de datos en la nueva. Es posible utilizar "
+"las utilidades mencionadas"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:12
+msgid "Crear un nuevo directorio y descomprimir la nueva versión [#f1]_"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:13
+msgid ""
+"Copiar todos los archivos del directorio \"config\" a la nueva ruta y "
+"comprobar los permisos [#f1]_"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:14
+msgid ""
+"Modificar el archivo \"config/config.xml\" para cambiar los datos de "
+"acceso a la base de datos (\"dbname\", \"dbuser\" y \"dbpass\"). "
+"Comprobar que \"dbHost\" es correcto"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:15
+msgid ""
+"Acceder desde un navegador a la aplicación y seguir los pasos de "
+"actualización"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:18
+msgid "Notas"
+msgstr ""
+
+#: ../../source/howtos/upgrade.rst:19
+msgid "Ver :doc:`/installing/index` para más detalles"
+msgstr ""
+

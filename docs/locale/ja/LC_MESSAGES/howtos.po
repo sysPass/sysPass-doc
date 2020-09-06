@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-07 00:08+0900\n"
+"PO-Revision-Date: 2020-09-07 00:25+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -177,13 +177,17 @@ msgstr ""
 
 #: ../../source/howtos/upgrade.rst:2
 msgid "Cómo probar una actualización de sysPass"
-msgstr ""
+msgstr "sysPassのアップデートをテストする"
 
 #: ../../source/howtos/upgrade.rst:6
 msgid ""
 "Este procedimiento indica los pasos a seguir para probar una "
 "actualización de sysPass sin modificar la instalación actual"
 msgstr ""
+"sysPassをアップデートするとデータが破損したり、正しく前の情報が引き継がれ"
+"ない可能性があります。このページではアップデート前にsysPassの環境を複製し"
+"検証用の環境を作り、それをアップデートすることで正常にアップデートできる"
+"かどうかをテストします"
 
 #: ../../source/howtos/upgrade.rst:8
 msgid ""
@@ -191,32 +195,39 @@ msgid ""
 "utilidad de copia de sysPass, usando MySQL Workbench o con la utilidad "
 "mysqldump"
 msgstr ""
+"sysPassのユーティリティー・MySQL Workbench・mysqldumpなどを用いてDBのバッ"
+"クアップを作成してください"
 
 #: ../../source/howtos/upgrade.rst:9
 msgid "Crear una nueva base de datos (ej. syspass21)"
-msgstr ""
+msgstr "検証環境用にDBを作成してください"
 
 #: ../../source/howtos/upgrade.rst:10
 msgid ""
 "Crear un usuario (ej. sp_admin21) y asignar permisos sobre la base de "
 "datos creada"
-msgstr ""
+msgstr "作成したDBにアクセスするためのユーザを作成してください"
 
 #: ../../source/howtos/upgrade.rst:11
 msgid ""
 "Importar la copia de la base de datos en la nueva. Es posible utilizar "
 "las utilidades mencionadas"
-msgstr ""
+msgstr "検証用のDBに最初にバックアップしたデータでリストアしてください"
 
 #: ../../source/howtos/upgrade.rst:12
 msgid "Crear un nuevo directorio y descomprimir la nueva versión [#f1]_"
 msgstr ""
+"サーバのドキュメントルートにディレクトリを作成しそこにアップデート後の新"
+"しいバージョンのsysPass[#f1]_を配置してください"
 
 #: ../../source/howtos/upgrade.rst:13
 msgid ""
 "Copiar todos los archivos del directorio \"config\" a la nueva ruta y "
 "comprobar los permisos [#f1]_"
 msgstr ""
+"現行の環境から “config” ディレクトリの中身を全てコピーして検証環境に配置"
+"してください。なおコピーしたファイル群のパーミッションも確認してください "
+"[#f1]_"
 
 #: ../../source/howtos/upgrade.rst:14
 msgid ""
@@ -224,17 +235,19 @@ msgid ""
 "acceso a la base de datos (\"dbname\", \"dbuser\" y \"dbpass\"). "
 "Comprobar que \"dbHost\" es correcto"
 msgstr ""
+"検証環境の “config/config.xml” ファイルを開いて検証用のDBに接続するように"
+"先の操作で作成したDB名・ユーザ名・パスワードを入力してください"
 
 #: ../../source/howtos/upgrade.rst:15
 msgid ""
 "Acceder desde un navegador a la aplicación y seguir los pasos de "
 "actualización"
-msgstr ""
+msgstr "ブラウザでsysPassにアクセスし問題なく動作するか確認してください"
 
 #: ../../source/howtos/upgrade.rst:18
 msgid "Notas"
-msgstr ""
+msgstr "Notes"
 
 #: ../../source/howtos/upgrade.rst:19
 msgid "Ver :doc:`/installing/index` para más detalles"
-msgstr ""
+msgstr "詳しくは :doc:`/installing/index` を参照してください"

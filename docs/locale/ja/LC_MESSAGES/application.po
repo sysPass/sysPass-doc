@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-07 22:00+0900\n"
+"PO-Revision-Date: 2020-09-07 22:52+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1670,7 +1670,7 @@ msgstr ""
 
 #: ../../source/application/plugins.rst:2
 msgid "Plugins"
-msgstr ""
+msgstr "Plugins"
 
 #: ../../source/application/plugins.rst:4
 msgid ""
@@ -1678,37 +1678,48 @@ msgid ""
 "`observer pattern <https://en.wikipedia.org/wiki/Observer_pattern>`_ which is "
 "characterized by emitting a message to all subscribed observers."
 msgstr ""
+"sysPassでは `observer pattern <https://en.wikipedia.org/wiki/"
+"Observer_pattern>`_ に基づいてプラグインによる機能拡張をすることができます。"
 
 #: ../../source/application/plugins.rst:6
 msgid ""
 "Plugins must be installed in 'plugins' directory within the target module and "
 "they contain the following base structure:"
 msgstr ""
+"以下の基本事項を守りplugins’ディレクトリに配置するとsysPassのプラグインとして"
+"利用できます"
 
 #: ../../source/application/plugins.rst:91
 msgid "Directory and file names need to be set in the following way:"
-msgstr ""
+msgstr "ディレクトリ名とファイル名は以下のようにする必要があります"
 
 #: ../../source/application/plugins.rst:93
 msgid "Directory name within the plugin name: Example: **Authenticator**"
 msgstr ""
+"プラグイン名と同じ名前のディレクトリを作成してください。**(例 Authenticator)**"
 
 #: ../../source/application/plugins.rst:94
 msgid ""
 "Filename within the plugin name in lowercase: Example: **authenticator.po**"
 msgstr ""
+"プラグイン名をLowoercaseにした名前の.poファイルを作成してください。(例 "
+"authenticator.po)"
 
 #: ../../source/application/plugins.rst:95
 msgid ""
 "View's name should match with the controller's name in MVC pattern. It could "
 "be overridden by setting the name of the view in the controller's code"
 msgstr ""
+"Viewの名前はMVCパターンのController名と同じものにしてください。Controllerの"
+"コードでViewの名前を指定することで別の名前にすることもできます"
 
 #: ../../source/application/plugins.rst:96
 msgid ""
 "'version.json' file is used by JavaScript code for checking if the plugin is "
 "up-to-date."
 msgstr ""
+"‘version.json’ファイルはアップデートがないかを確認するためにJavascriptによって"
+"参照されます。"
 
 #: ../../source/application/plugins.rst:98
 msgid ""
@@ -1717,112 +1728,124 @@ msgid ""
 "class 'SP\\Plugin\\PluginBase' which is responsible to make the plugin's data "
 "available."
 msgstr ""
+"plugin.phpファイルはobserverパターンに従ってsysPassからのイベントを受け取るメ"
+"インクラスです。このファイルの’SP\\Plugin\\PluginBase’クラスを拡張してプラグイ"
+"ンを開発してください。"
 
 #: ../../source/application/plugins.rst:103
 msgid "The following methods must be implemented in 'Plugin' class"
-msgstr ""
+msgstr "次のメソッドを’Plugin’クラスに実装する必要があります"
 
 #: ../../source/application/plugins.rst:106
 msgid "init"
-msgstr ""
+msgstr "init"
 
 #: ../../source/application/plugins.rst:108
 msgid ""
 "Method that is called every time the plugin is executed. The dependency "
 "injection container will be passed."
 msgstr ""
+"プラグインが呼び出される一番初めに毎回このメソッドが呼び出されます。このメソッ"
+"ドでsysPassからオブジェクトを注入します。"
 
 #: ../../source/application/plugins.rst:130
 msgid "updateEvent"
-msgstr ""
+msgstr "updateEvent"
 
 #: ../../source/application/plugins.rst:132
 msgid "Method that is called when an event is emitted"
-msgstr ""
+msgstr "このメソッドにsysPassからのイベントが通知されます"
 
 #: ../../source/application/plugins.rst:145
 msgid "getEvents"
-msgstr ""
+msgstr "getEvents"
 
 #: ../../source/application/plugins.rst:147
 msgid ""
 "Method that returns an array of strings with the events that the plugin will "
 "be subscribed to"
 msgstr ""
+"このメソッドでsysPassがプラグインに通知するイベントを決定します。プラグインで"
+"サブスクライブしたいイベントを配列で返してください"
 
 #: ../../source/application/plugins.rst:162
 msgid "getJsResources"
-msgstr ""
+msgstr "getJsResources"
 
 #: ../../source/application/plugins.rst:164
 msgid ""
 "Method that returns an array of strings with the Javascript resources "
 "required by the plugin"
 msgstr ""
+"プラグインの動作に必要なJavascriptファイルなどのファイル名を配列で返してくださ"
+"い"
 
 #: ../../source/application/plugins.rst:179
 msgid "getAuthor"
-msgstr ""
+msgstr "getAuthor"
 
 #: ../../source/application/plugins.rst:181
 msgid "Method that returns the plugin's author"
-msgstr ""
+msgstr "このプラグインの開発者の名前を返してください"
 
 #: ../../source/application/plugins.rst:196
 msgid "getVersion"
-msgstr ""
+msgstr "getVersion"
 
 #: ../../source/application/plugins.rst:198
 msgid "Method that returns an array of integers with the plugin's version"
-msgstr ""
+msgstr "このプライグインのバーションを配列で返してください"
 
 #: ../../source/application/plugins.rst:213
 msgid "getCompatibleVersion"
-msgstr ""
+msgstr "getCompatibleVersion"
 
 #: ../../source/application/plugins.rst:215
 msgid ""
 "Method that returns an array of integers with the minimum sysPass compatible "
 "version"
 msgstr ""
+"このプラグインの動作を保証しているsysPassの最低バージョンを配列で返してくださ"
+"い"
 
 #: ../../source/application/plugins.rst:230
 msgid "getCssResources"
-msgstr ""
+msgstr "getCssResources"
 
 #: ../../source/application/plugins.rst:232
 msgid ""
 "Method that returns an array of strings with the CSS resources required by "
 "the plugin"
 msgstr ""
+"プラグインの動作に必要なCSSファイルなどのファイル名を配列で返してください"
 
 #: ../../source/application/plugins.rst:247
 msgid "getName"
-msgstr ""
+msgstr "getName"
 
 #: ../../source/application/plugins.rst:249
 msgid "Method that returns the plugin's name"
-msgstr ""
+msgstr "プラグイン名を返却してください"
 
 #: ../../source/application/plugins.rst:264
 msgid "getData"
-msgstr ""
+msgstr "getData"
 
 #: ../../source/application/plugins.rst:266
 msgid "Method that returns the plugin's data"
-msgstr ""
+msgstr "プラグインデータを返却してください"
 
 #: ../../source/application/plugins.rst:286
 msgid "onLoad"
-msgstr ""
+msgstr "onLoad"
 
 #: ../../source/application/plugins.rst:288
 msgid "Method that will be called when the plugin is initialized"
-msgstr ""
+msgstr "プラグインの読み込みが終わった後にこのメソッドが呼び出されます"
 
 #: ../../source/application/plugins.rst:301
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"
 
 #: ../../source/application/plugins.rst:303
 msgid ""
@@ -1830,946 +1853,951 @@ msgid ""
 "needs to upgrade. This method will be called whenever a new sysPass version "
 "is detected."
 msgstr ""
+"現在のsysPassのバージョンを受けとり、プラグインのアップデートが必要な場合はタ"
+"スクを実行するメソッド。このメソッドは、新しいsysPassバージョンが検出されるた"
+"びに呼び出されます。"
 
 #: ../../source/application/plugins.rst:326
 msgid "Example"
-msgstr ""
+msgstr "Example"
 
 #: ../../source/application/plugins.rst:598
 msgid "Events"
-msgstr ""
+msgstr "Events"
 
 #: ../../source/application/plugins.rst:600
 msgid ""
 "When an event is emitted the generating class instance is included as an "
 "argument, so it could be possible to access to the class events."
-msgstr ""
+msgstr "プラグインがサブスクライブできるイベントは以下の通りです。"
 
 #: ../../source/application/plugins.rst:602
 msgid ""
 "Events may include 'SP\\Core\\Events\\EventMessage' class which may contain "
 "additional data to pass into the plugin."
 msgstr ""
+"sysPassがupdateEventを呼び出す際に、プラグインに渡す追加データを含"
+"む’SPCoreEventsEventMessage’クラスが含まれる場合があります"
 
 #: ../../source/application/plugins.rst:604
 msgid "Currently, the generated events are the following:"
-msgstr ""
+msgstr "現在のsysPassのバージョンで生成されるイベントは以下の通りです"
 
 #: ../../source/application/plugins.rst:607
 msgid "Event"
-msgstr ""
+msgstr "Event"
 
 #: ../../source/application/plugins.rst:607
 msgid "Class"
-msgstr ""
+msgstr "Class"
 
 #: ../../source/application/plugins.rst:609
 msgid "acl.deny"
-msgstr ""
+msgstr "acl.deny"
 
 #: ../../source/application/plugins.rst:610
 msgid "check.notification"
-msgstr ""
+msgstr "check.notification"
 
 #: ../../source/application/plugins.rst:611
 msgid "check.tempMasterPassword"
-msgstr ""
+msgstr "check.tempMasterPassword"
 
 #: ../../source/application/plugins.rst:612
 msgid "clear.eventlog"
-msgstr ""
+msgstr "clear.eventlog"
 
 #: ../../source/application/plugins.rst:613
 msgid "clear.track"
-msgstr ""
+msgstr "clear.track"
 
 #: ../../source/application/plugins.rst:614
 msgid "copy.account.pass"
-msgstr ""
+msgstr "copy.account.pass"
 
 #: ../../source/application/plugins.rst:615
 msgid "create.account"
-msgstr ""
+msgstr "create.account"
 
 #: ../../source/application/plugins.rst:616
 msgid "create.authToken"
-msgstr ""
+msgstr "create.authToken"
 
 #: ../../source/application/plugins.rst:617
 msgid "create.category"
-msgstr ""
+msgstr "create.category"
 
 #: ../../source/application/plugins.rst:618
 msgid "create.client"
-msgstr ""
+msgstr "create.client"
 
 #: ../../source/application/plugins.rst:619
 msgid "create.customField"
-msgstr ""
+msgstr "create.customField"
 
 #: ../../source/application/plugins.rst:620
 msgid "create.itemPreset"
-msgstr ""
+msgstr "create.itemPreset"
 
 #: ../../source/application/plugins.rst:621
 msgid "create.notification"
-msgstr ""
+msgstr "create.notification"
 
 #: ../../source/application/plugins.rst:622
 msgid "create.plugin"
-msgstr ""
+msgstr "create.plugin"
 
 #: ../../source/application/plugins.rst:623
 msgid "create.publicLink"
-msgstr ""
+msgstr "create.publicLink"
 
 #: ../../source/application/plugins.rst:624
 msgid "create.publicLink.account"
-msgstr ""
+msgstr "create.publicLink.account"
 
 #: ../../source/application/plugins.rst:625
 msgid "create.tag"
-msgstr ""
+msgstr "create.tag"
 
 #: ../../source/application/plugins.rst:626
 msgid "create.tempMasterPassword"
-msgstr ""
+msgstr "create.tempMasterPassword"
 
 #: ../../source/application/plugins.rst:627
 msgid "create.user"
-msgstr ""
+msgstr "create.user"
 
 #: ../../source/application/plugins.rst:628
 msgid "create.userGroup"
-msgstr ""
+msgstr "create.userGroup"
 
 #: ../../source/application/plugins.rst:629
 msgid "create.userProfile"
-msgstr ""
+msgstr "create.userProfile"
 
 #: ../../source/application/plugins.rst:630
 msgid "database.query"
-msgstr ""
+msgstr "database.query"
 
 #: ../../source/application/plugins.rst:631
 msgid "database.rollback"
-msgstr ""
+msgstr "database.rollback"
 
 #: ../../source/application/plugins.rst:632
 msgid "database.transaction.begin"
-msgstr ""
+msgstr "database.transaction.begin"
 
 #: ../../source/application/plugins.rst:633
 msgid "database.transaction.end"
-msgstr ""
+msgstr "database.transaction.end"
 
 #: ../../source/application/plugins.rst:634
 msgid "database.transaction.rollback"
-msgstr ""
+msgstr "database.transaction.rollback"
 
 #: ../../source/application/plugins.rst:635
 msgid "delete.account"
-msgstr ""
+msgstr "delete.account"
 
 #: ../../source/application/plugins.rst:636
 msgid "delete.account.selection"
-msgstr ""
+msgstr "delete.account.selection"
 
 #: ../../source/application/plugins.rst:637
 msgid "delete.accountFile"
-msgstr ""
+msgstr "delete.accountFile"
 
 #: ../../source/application/plugins.rst:638
 msgid "delete.accountFile.selection"
-msgstr ""
+msgstr "delete.accountFile.selection"
 
 #: ../../source/application/plugins.rst:639
 msgid "delete.accountHistory"
-msgstr ""
+msgstr "delete.accountHistory"
 
 #: ../../source/application/plugins.rst:640
 msgid "delete.accountHistory.selection"
-msgstr ""
+msgstr "delete.accountHistory.selection"
 
 #: ../../source/application/plugins.rst:641
 msgid "delete.authToken"
-msgstr ""
+msgstr "delete.authToken"
 
 #: ../../source/application/plugins.rst:642
 msgid "delete.authToken.selection"
-msgstr ""
+msgstr "delete.authToken.selection"
 
 #: ../../source/application/plugins.rst:643
 msgid "delete.category"
-msgstr ""
+msgstr "delete.category"
 
 #: ../../source/application/plugins.rst:644
 msgid "delete.client"
-msgstr ""
+msgstr "delete.client"
 
 #: ../../source/application/plugins.rst:645
 msgid "delete.client.selection"
-msgstr ""
+msgstr "delete.client.selection"
 
 #: ../../source/application/plugins.rst:646
 msgid "delete.customField"
-msgstr ""
+msgstr "delete.customField"
 
 #: ../../source/application/plugins.rst:647
 msgid "delete.customField.selection"
-msgstr ""
+msgstr "delete.customField.selection"
 
 #: ../../source/application/plugins.rst:648
 msgid "delete.itemPreset"
-msgstr ""
+msgstr "delete.itemPreset"
 
 #: ../../source/application/plugins.rst:649
 msgid "delete.notification"
-msgstr ""
+msgstr "delete.notification"
 
 #: ../../source/application/plugins.rst:650
 msgid "delete.notification.selection"
-msgstr ""
+msgstr "delete.notification.selection"
 
 #: ../../source/application/plugins.rst:651
 msgid "delete.plugin"
-msgstr ""
+msgstr "delete.plugin"
 
 #: ../../source/application/plugins.rst:652
 msgid "delete.plugin.selection"
-msgstr ""
+msgstr "delete.plugin.selection"
 
 #: ../../source/application/plugins.rst:653
 msgid "delete.publicLink"
-msgstr ""
+msgstr "delete.publicLink"
 
 #: ../../source/application/plugins.rst:654
 msgid "delete.publicLink.selection"
-msgstr ""
+msgstr "delete.publicLink.selection"
 
 #: ../../source/application/plugins.rst:655
 msgid "delete.tag"
-msgstr ""
+msgstr "delete.tag"
 
 #: ../../source/application/plugins.rst:656
 msgid "delete.tag.selection"
-msgstr ""
+msgstr "delete.tag.selection"
 
 #: ../../source/application/plugins.rst:657
 msgid "delete.user"
-msgstr ""
+msgstr "delete.user"
 
 #: ../../source/application/plugins.rst:658
 msgid "delete.user.selection"
-msgstr ""
+msgstr "delete.user.selection"
 
 #: ../../source/application/plugins.rst:659
 msgid "delete.userGroup"
-msgstr ""
+msgstr "delete.userGroup"
 
 #: ../../source/application/plugins.rst:660
 msgid "delete.userGroup.selection"
-msgstr ""
+msgstr "delete.userGroup.selection"
 
 #: ../../source/application/plugins.rst:661
 msgid "delete.userProfile"
-msgstr ""
+msgstr "delete.userProfile"
 
 #: ../../source/application/plugins.rst:662
 msgid "delete.userProfile.selection"
-msgstr ""
+msgstr "delete.userProfile.selection"
 
 #: ../../source/application/plugins.rst:663
 msgid "download.accountFile"
-msgstr ""
+msgstr "download.accountFile"
 
 #: ../../source/application/plugins.rst:664
 msgid "download.backupAppFile"
-msgstr ""
+msgstr "download.backupAppFile"
 
 #: ../../source/application/plugins.rst:665
 msgid "download.backupDbFile"
-msgstr ""
+msgstr "download.backupDbFile"
 
 #: ../../source/application/plugins.rst:666
 msgid "download.configBackupFile"
-msgstr ""
+msgstr "download.configBackupFile"
 
 #: ../../source/application/plugins.rst:667
 msgid "download.exportFile"
-msgstr ""
+msgstr "download.exportFile"
 
 #: ../../source/application/plugins.rst:668
 msgid "download.logFile"
-msgstr ""
+msgstr "download.logFile"
 
 #: ../../source/application/plugins.rst:669
 msgid "edit.account"
-msgstr ""
+msgstr "edit.account"
 
 #: ../../source/application/plugins.rst:670
 msgid "edit.account.bulk"
-msgstr ""
+msgstr "edit.account.bulk"
 
 #: ../../source/application/plugins.rst:671
 msgid "edit.account.pass"
-msgstr ""
+msgstr "edit.account.pass"
 
 #: ../../source/application/plugins.rst:672
 msgid "edit.account.restore"
-msgstr ""
+msgstr "edit.account.restore"
 
 #: ../../source/application/plugins.rst:673
 msgid "edit.authToken"
-msgstr ""
+msgstr "edit.authToken"
 
 #: ../../source/application/plugins.rst:674
 msgid "edit.category"
-msgstr ""
+msgstr "edit.category"
 
 #: ../../source/application/plugins.rst:675
 msgid "edit.client"
-msgstr ""
+msgstr "edit.client"
 
 #: ../../source/application/plugins.rst:676
 msgid "edit.customField"
-msgstr ""
+msgstr "edit.customField"
 
 #: ../../source/application/plugins.rst:677
 msgid "edit.itemPreset"
-msgstr ""
+msgstr "edit.itemPreset"
 
 #: ../../source/application/plugins.rst:678
 msgid "edit.notification"
-msgstr ""
+msgstr "edit.notification"
 
 #: ../../source/application/plugins.rst:679
 msgid "edit.plugin.available"
-msgstr ""
+msgstr "edit.plugin.available"
 
 #: ../../source/application/plugins.rst:680
 msgid "edit.plugin.disable"
-msgstr ""
+msgstr "edit.plugin.disable"
 
 #: ../../source/application/plugins.rst:681
 msgid "edit.plugin.enable"
-msgstr ""
+msgstr "edit.plugin.enable"
 
 #: ../../source/application/plugins.rst:682
 msgid "edit.plugin.reset"
-msgstr ""
+msgstr "edit.plugin.reset"
 
 #: ../../source/application/plugins.rst:683
 msgid "edit.plugin.unavailable"
-msgstr ""
+msgstr "edit.plugin.unavailable"
 
 #: ../../source/application/plugins.rst:684
 msgid "edit.publicLink.refresh"
-msgstr ""
+msgstr "edit.publicLink.refresh"
 
 #: ../../source/application/plugins.rst:685
 msgid "edit.tag"
-msgstr ""
+msgstr "edit.tag"
 
 #: ../../source/application/plugins.rst:686
 msgid "edit.user"
-msgstr ""
+msgstr "edit.user"
 
 #: ../../source/application/plugins.rst:687
 msgid "edit.user.pass"
-msgstr ""
+msgstr "edit.user.pass"
 
 #: ../../source/application/plugins.rst:688
 msgid "edit.user.password"
-msgstr ""
+msgstr "edit.user.password"
 
 #: ../../source/application/plugins.rst:689
 msgid "edit.userGroup"
-msgstr ""
+msgstr "edit.userGroup"
 
 #: ../../source/application/plugins.rst:690
 msgid "edit.userProfile"
-msgstr ""
+msgstr "edit.userProfile"
 
 #: ../../source/application/plugins.rst:691
 msgid "expire.tempMasterPassword"
-msgstr ""
+msgstr "expire.tempMasterPassword"
 
 #: ../../source/application/plugins.rst:692
 msgid "import.ldap.end"
-msgstr ""
+msgstr "import.ldap.end"
 
 #: ../../source/application/plugins.rst:693
 msgid "import.ldap.groups"
-msgstr ""
+msgstr "import.ldap.groups"
 
 #: ../../source/application/plugins.rst:694
 msgid "import.ldap.start"
-msgstr ""
+msgstr "import.ldap.start"
 
 #: ../../source/application/plugins.rst:695
 msgid "import.ldap.users"
-msgstr ""
+msgstr "import.ldap.users"
 
 #: ../../source/application/plugins.rst:696
 msgid "ldap.bind"
-msgstr ""
+msgstr "ldap.bind"
 
 #: ../../source/application/plugins.rst:697
 msgid "ldap.check.connection"
-msgstr ""
+msgstr "ldap.check.connection"
 
 #: ../../source/application/plugins.rst:698
 msgid "ldap.check.group"
-msgstr ""
+msgstr "ldap.check.group"
 
 #: ../../source/application/plugins.rst:699
 msgid "ldap.check.params"
-msgstr ""
+msgstr "ldap.check.params"
 
 #: ../../source/application/plugins.rst:700
 msgid "ldap.connect"
-msgstr ""
+msgstr "ldap.connect"
 
 #: ../../source/application/plugins.rst:701
 msgid "ldap.connect.tls"
-msgstr ""
+msgstr "ldap.connect.tls"
 
 #: ../../source/application/plugins.rst:702
 msgid "ldap.getAttributes"
-msgstr ""
+msgstr "ldap.getAttributes"
 
 #: ../../source/application/plugins.rst:703
 msgid "ldap.search"
-msgstr ""
+msgstr "ldap.search"
 
 #: ../../source/application/plugins.rst:704
 msgid "ldap.search.group"
-msgstr ""
+msgstr "ldap.search.group"
 
 #: ../../source/application/plugins.rst:705
 msgid "ldap.unbind"
-msgstr ""
+msgstr "ldap.unbind"
 
 #: ../../source/application/plugins.rst:706
 msgid "list.accountFile"
-msgstr ""
+msgstr "list.accountFile"
 
 #: ../../source/application/plugins.rst:707
 msgid "login.auth.browser"
-msgstr ""
+msgstr "login.auth.browser"
 
 #: ../../source/application/plugins.rst:708
 msgid "login.auth.database"
-msgstr ""
+msgstr "login.auth.database"
 
 #: ../../source/application/plugins.rst:709
 msgid "login.auth.ldap"
-msgstr ""
+msgstr "login.auth.ldap"
 
 #: ../../source/application/plugins.rst:710
 msgid "login.checkUser.changePass"
-msgstr ""
+msgstr "login.checkUser.changePass"
 
 #: ../../source/application/plugins.rst:711
 msgid "login.checkUser.disabled"
-msgstr ""
+msgstr "login.checkUser.disabled"
 
 #: ../../source/application/plugins.rst:712
 msgid "login.finish"
-msgstr ""
+msgstr "login.finish"
 
 #: ../../source/application/plugins.rst:713
 msgid "login.info"
-msgstr ""
+msgstr "login.info"
 
 #: ../../source/application/plugins.rst:714
 msgid "login.masterPass"
-msgstr ""
+msgstr "login.masterPass"
 
 #: ../../source/application/plugins.rst:715
 msgid "login.masterPass.temporary"
-msgstr ""
+msgstr "login.masterPass.temporary"
 
 #: ../../source/application/plugins.rst:716
 msgid "login.preferences.load"
-msgstr ""
+msgstr "login.preferences.load"
 
 #: ../../source/application/plugins.rst:717
 msgid "login.session.load"
-msgstr ""
+msgstr "login.session.load"
 
 #: ../../source/application/plugins.rst:718
 msgid "plugin.load"
-msgstr ""
+msgstr "plugin.load"
 
 #: ../../source/application/plugins.rst:719
 msgid "plugin.load.error"
-msgstr ""
+msgstr "plugin.load.error"
 
 #: ../../source/application/plugins.rst:720
 msgid "refresh.authToken"
-msgstr ""
+msgstr "refresh.authToken"
 
 #: ../../source/application/plugins.rst:721
 msgid "refresh.masterPassword"
-msgstr ""
+msgstr "refresh.masterPassword"
 
 #: ../../source/application/plugins.rst:722
 msgid "refresh.masterPassword.hash"
-msgstr ""
+msgstr "refresh.masterPassword.hash"
 
 #: ../../source/application/plugins.rst:723
 msgid "request.account"
-msgstr ""
+msgstr "request.account"
 
 #: ../../source/application/plugins.rst:724
 msgid "request.user.passReset"
-msgstr ""
+msgstr "request.user.passReset"
 
 #: ../../source/application/plugins.rst:725
 msgid "reset.min.css"
-msgstr ""
+msgstr "reset.min.css"
 
 #: ../../source/application/plugins.rst:726
 msgid "restore.accountHistory"
-msgstr ""
+msgstr "restore.accountHistory"
 
 #: ../../source/application/plugins.rst:727
 msgid "run.backup.end"
-msgstr ""
+msgstr "run.backup.end"
 
 #: ../../source/application/plugins.rst:728
 msgid "run.backup.process"
-msgstr ""
+msgstr "run.backup.process"
 
 #: ../../source/application/plugins.rst:729
 msgid "run.backup.start"
-msgstr ""
+msgstr "run.backup.start"
 
 #: ../../source/application/plugins.rst:730
 msgid "run.export.end"
-msgstr ""
+msgstr "run.export.end"
 
 #: ../../source/application/plugins.rst:731
 msgid "run.export.start"
-msgstr ""
+msgstr "run.export.start"
 
 #: ../../source/application/plugins.rst:732
 msgid "run.export.verify"
-msgstr ""
+msgstr "run.export.verify"
 
 #: ../../source/application/plugins.rst:733
 msgid "run.import.csv"
-msgstr ""
+msgstr "run.import.csv"
 
 #: ../../source/application/plugins.rst:734
 msgid "run.import.end"
-msgstr ""
+msgstr "run.import.end"
 
 #: ../../source/application/plugins.rst:735
 msgid "run.import.keepass"
-msgstr ""
+msgstr "run.import.keepass"
 
 #: ../../source/application/plugins.rst:736
 msgid "run.import.start"
-msgstr ""
+msgstr "run.import.start"
 
 #: ../../source/application/plugins.rst:737
 msgid "run.import.syspass"
-msgstr ""
+msgstr "run.import.syspass"
 
 #: ../../source/application/plugins.rst:738
 msgid "save.config.account"
-msgstr ""
+msgstr "save.config.account"
 
 #: ../../source/application/plugins.rst:739
 msgid "save.config.dokuwiki"
-msgstr ""
+msgstr "save.config.dokuwiki"
 
 #: ../../source/application/plugins.rst:740
 msgid "save.config.general"
-msgstr ""
+msgstr "save.config.general"
 
 #: ../../source/application/plugins.rst:741
 msgid "save.config.ldap"
-msgstr ""
+msgstr "save.config.ldap"
 
 #: ../../source/application/plugins.rst:742
 msgid "save.config.mail"
-msgstr ""
+msgstr "save.config.mail"
 
 #: ../../source/application/plugins.rst:743
 msgid "save.config.wiki"
-msgstr ""
+msgstr "save.config.wiki"
 
 #: ../../source/application/plugins.rst:744
 msgid "search.category"
-msgstr ""
+msgstr "search.category"
 
 #: ../../source/application/plugins.rst:745
 msgid "search.client"
-msgstr ""
+msgstr "search.client"
 
 #: ../../source/application/plugins.rst:746
 msgid "search.tag"
-msgstr ""
+msgstr "search.tag"
 
 #: ../../source/application/plugins.rst:747
 msgid "search.userGroup"
-msgstr ""
+msgstr "search.userGroup"
 
 #: ../../source/application/plugins.rst:748
 msgid "send.mail"
-msgstr ""
+msgstr "send.mail"
 
 #: ../../source/application/plugins.rst:749
 msgid "send.mail.check"
-msgstr ""
+msgstr "send.mail.check"
 
 #: ../../source/application/plugins.rst:750
 msgid "session.cookie_httponly"
-msgstr ""
+msgstr "session.cookie_httponly"
 
 #: ../../source/application/plugins.rst:751
 msgid "session.gc_maxlifetime"
-msgstr ""
+msgstr "session.gc_maxlifetime"
 
 #: ../../source/application/plugins.rst:752
 msgid "session.save_handler"
-msgstr ""
+msgstr "session.save_handler"
 
 #: ../../source/application/plugins.rst:753
 msgid "session.timeout"
-msgstr ""
+msgstr "session.timeout"
 
 #: ../../source/application/plugins.rst:754
 msgid "show.account"
-msgstr ""
+msgstr "show.account"
 
 #: ../../source/application/plugins.rst:755
 msgid "show.account.bulkEdit"
-msgstr ""
+msgstr "show.account.bulkEdit"
 
 #: ../../source/application/plugins.rst:756
 msgid "show.account.copy"
-msgstr ""
+msgstr "show.account.copy"
 
 #: ../../source/application/plugins.rst:757
 msgid "show.account.create"
-msgstr ""
+msgstr "show.account.create"
 
 #: ../../source/application/plugins.rst:758
 msgid "show.account.delete"
-msgstr ""
+msgstr "show.account.delete"
 
 #: ../../source/application/plugins.rst:759
 msgid "show.account.edit"
-msgstr ""
+msgstr "show.account.edit"
 
 #: ../../source/application/plugins.rst:760
 msgid "show.account.editpass"
-msgstr ""
+msgstr "show.account.editpass"
 
 #: ../../source/application/plugins.rst:761
 msgid "show.account.history"
-msgstr ""
+msgstr "show.account.history"
 
 #: ../../source/application/plugins.rst:762
 msgid "show.account.link"
-msgstr ""
+msgstr "show.account.link"
 
 #: ../../source/application/plugins.rst:763
 msgid "show.account.pass"
-msgstr ""
+msgstr "show.account.pass"
 
 #: ../../source/application/plugins.rst:764
 msgid "show.account.request"
-msgstr ""
+msgstr "show.account.request"
 
 #: ../../source/application/plugins.rst:765
 msgid "show.account.search"
-msgstr ""
+msgstr "show.account.search"
 
 #: ../../source/application/plugins.rst:766
 msgid "show.accountFile"
-msgstr ""
+msgstr "show.accountFile"
 
 #: ../../source/application/plugins.rst:767
 msgid "show.authToken"
-msgstr ""
+msgstr "show.authToken"
 
 #: ../../source/application/plugins.rst:768
 msgid "show.authToken.create"
-msgstr ""
+msgstr "show.authToken.create"
 
 #: ../../source/application/plugins.rst:769
 msgid "show.authToken.edit"
-msgstr ""
+msgstr "show.authToken.edit"
 
 #: ../../source/application/plugins.rst:770
 msgid "show.category"
-msgstr ""
+msgstr "show.category"
 
 #: ../../source/application/plugins.rst:771
 msgid "show.category.create"
-msgstr ""
+msgstr "show.category.create"
 
 #: ../../source/application/plugins.rst:772
 msgid "show.category.edit"
-msgstr ""
+msgstr "show.category.edit"
 
 #: ../../source/application/plugins.rst:773
 msgid "show.client"
-msgstr ""
+msgstr "show.client"
 
 #: ../../source/application/plugins.rst:774
 msgid "show.client.create"
-msgstr ""
+msgstr "show.client.create"
 
 #: ../../source/application/plugins.rst:775
 msgid "show.client.edit"
-msgstr ""
+msgstr "show.client.edit"
 
 #: ../../source/application/plugins.rst:776
 msgid "show.config"
-msgstr ""
+msgstr "show.config"
 
 #: ../../source/application/plugins.rst:777
 msgid "show.customField"
-msgstr ""
+msgstr "show.customField"
 
 #: ../../source/application/plugins.rst:778
 msgid "show.customField.create"
-msgstr ""
+msgstr "show.customField.create"
 
 #: ../../source/application/plugins.rst:779
 msgid "show.customField.edit"
-msgstr ""
+msgstr "show.customField.edit"
 
 #: ../../source/application/plugins.rst:780
 msgid "show.itemPreset"
-msgstr ""
+msgstr "show.itemPreset"
 
 #: ../../source/application/plugins.rst:781
 msgid "show.itemPreset.create"
-msgstr ""
+msgstr "show.itemPreset.create"
 
 #: ../../source/application/plugins.rst:782
 msgid "show.itemPreset.edit"
-msgstr ""
+msgstr "show.itemPreset.edit"
 
 #: ../../source/application/plugins.rst:783
 msgid "show.itemlist.accesses"
-msgstr ""
+msgstr "show.itemlist.accesses"
 
 #: ../../source/application/plugins.rst:784
 msgid "show.itemlist.items"
-msgstr ""
+msgstr "show.itemlist.items"
 
 #: ../../source/application/plugins.rst:785
 msgid "show.itemlist.security"
-msgstr ""
+msgstr "show.itemlist.security"
 
 #: ../../source/application/plugins.rst:786
 msgid "show.notification"
-msgstr ""
+msgstr "show.notification"
 
 #: ../../source/application/plugins.rst:787
 msgid "show.notification.create"
-msgstr ""
+msgstr "show.notification.create"
 
 #: ../../source/application/plugins.rst:788
 msgid "show.notification.edit"
-msgstr ""
+msgstr "show.notification.edit"
 
 #: ../../source/application/plugins.rst:789
 msgid "show.plugin"
-msgstr ""
+msgstr "show.plugin"
 
 #: ../../source/application/plugins.rst:790
 msgid "show.publicLink"
-msgstr ""
+msgstr "show.publicLink"
 
 #: ../../source/application/plugins.rst:791
 msgid "show.publicLink.create"
-msgstr ""
+msgstr "show.publicLink.create"
 
 #: ../../source/application/plugins.rst:792
 msgid "show.publicLink.edit"
-msgstr ""
+msgstr "show.publicLink.edit"
 
 #: ../../source/application/plugins.rst:793
 msgid "show.tag"
-msgstr ""
+msgstr "show.tag"
 
 #: ../../source/application/plugins.rst:794
 msgid "show.tag.create"
-msgstr ""
+msgstr "show.tag.create"
 
 #: ../../source/application/plugins.rst:795
 msgid "show.tag.edit"
-msgstr ""
+msgstr "show.tag.edit"
 
 #: ../../source/application/plugins.rst:796
 msgid "show.user"
-msgstr ""
+msgstr "show.user"
 
 #: ../../source/application/plugins.rst:797
 msgid "show.user.create"
-msgstr ""
+msgstr "show.user.create"
 
 #: ../../source/application/plugins.rst:798
 msgid "show.user.edit"
-msgstr ""
+msgstr "show.user.edit"
 
 #: ../../source/application/plugins.rst:799
 msgid "show.user.editPass"
-msgstr ""
+msgstr "show.user.editPass"
 
 #: ../../source/application/plugins.rst:800
 msgid "show.userGroup"
-msgstr ""
+msgstr "show.userGroup"
 
 #: ../../source/application/plugins.rst:801
 msgid "show.userGroup.create"
-msgstr ""
+msgstr "show.userGroup.create"
 
 #: ../../source/application/plugins.rst:802
 msgid "show.userGroup.edit"
-msgstr ""
+msgstr "show.userGroup.edit"
 
 #: ../../source/application/plugins.rst:803
 msgid "show.userProfile"
-msgstr ""
+msgstr "show.userProfile"
 
 #: ../../source/application/plugins.rst:804
 msgid "show.userProfile.create"
-msgstr ""
+msgstr "show.userProfile.create"
 
 #: ../../source/application/plugins.rst:805
 msgid "show.userProfile.edit"
-msgstr ""
+msgstr "show.userProfile.edit"
 
 #: ../../source/application/plugins.rst:806
 msgid "show.userSettings"
-msgstr ""
+msgstr "show.userSettings"
 
 #: ../../source/application/plugins.rst:807
 msgid "track.add"
-msgstr ""
+msgstr "track.add"
 
 #: ../../source/application/plugins.rst:808
 msgid "track.delay"
-msgstr ""
+msgstr "track.delay"
 
 #: ../../source/application/plugins.rst:809
 msgid "unlock.track"
-msgstr ""
+msgstr "unlock.track"
 
 #: ../../source/application/plugins.rst:810
 msgid "update.masterPassword.customFields"
-msgstr ""
+msgstr "update.masterPassword.customFields"
 
 #: ../../source/application/plugins.rst:811
 msgid "update.masterPassword.end"
-msgstr ""
+msgstr "update.masterPassword.end"
 
 #: ../../source/application/plugins.rst:812
 msgid "update.masterPassword.hash"
-msgstr ""
+msgstr "update.masterPassword.hash"
 
 #: ../../source/application/plugins.rst:813
 msgid "update.masterPassword.start"
-msgstr ""
+msgstr "update.masterPassword.start"
 
 #: ../../source/application/plugins.rst:814
 msgid "upgrade.app.end"
-msgstr ""
+msgstr "upgrade.app.end"
 
 #: ../../source/application/plugins.rst:815
 msgid "upgrade.app.start"
-msgstr ""
+msgstr "upgrade.app.start"
 
 #: ../../source/application/plugins.rst:816
 msgid "upgrade.authToken.end"
-msgstr ""
+msgstr "upgrade.authToken.end"
 
 #: ../../source/application/plugins.rst:817
 msgid "upgrade.authToken.process"
-msgstr ""
+msgstr "upgrade.authToken.process"
 
 #: ../../source/application/plugins.rst:818
 msgid "upgrade.authToken.start"
-msgstr ""
+msgstr "upgrade.authToken.start"
 
 #: ../../source/application/plugins.rst:819
 msgid "upgrade.config.end"
-msgstr ""
+msgstr "upgrade.config.end"
 
 #: ../../source/application/plugins.rst:820
 msgid "upgrade.config.process"
-msgstr ""
+msgstr "upgrade.config.process"
 
 #: ../../source/application/plugins.rst:821
 msgid "upgrade.config.start"
-msgstr ""
+msgstr "upgrade.config.start"
 
 #: ../../source/application/plugins.rst:822
 msgid "upgrade.customField.end"
-msgstr ""
+msgstr "upgrade.customField.end"
 
 #: ../../source/application/plugins.rst:823
 msgid "upgrade.customField.process"
-msgstr ""
+msgstr "upgrade.customField.process"
 
 #: ../../source/application/plugins.rst:824
 msgid "upgrade.customField.start"
-msgstr ""
+msgstr "upgrade.customField.start"
 
 #: ../../source/application/plugins.rst:825
 msgid "upgrade.db.end"
-msgstr ""
+msgstr "upgrade.db.end"
 
 #: ../../source/application/plugins.rst:826
 msgid "upgrade.db.process"
-msgstr ""
+msgstr "upgrade.db.process"
 
 #: ../../source/application/plugins.rst:827
 msgid "upgrade.db.start"
-msgstr ""
+msgstr "upgrade.db.start"
 
 #: ../../source/application/plugins.rst:828
 msgid "upgrade.publicLink.end"
-msgstr ""
+msgstr "upgrade.publicLink.end"
 
 #: ../../source/application/plugins.rst:829
 msgid "upgrade.publicLink.process"
-msgstr ""
+msgstr "upgrade.publicLink.process"
 
 #: ../../source/application/plugins.rst:830
 msgid "upgrade.publicLink.start"
-msgstr ""
+msgstr "upgrade.publicLink.start"
 
 #: ../../source/application/plugins.rst:831
 msgid "upload.accountFile"
-msgstr ""
+msgstr "upload.accountFile"
 
 #: ../../source/application/plugins.rst:832
 msgid "wiki.aclCheck"
-msgstr ""
+msgstr "wiki.aclCheck"
 
 #: ../../source/application/plugins.rst:833
 msgid "wiki.getPage"
-msgstr ""
+msgstr "wiki.getPage"
 
 #: ../../source/application/plugins.rst:834
 msgid "wiki.getPageHTML"
-msgstr ""
+msgstr "wiki.getPageHTML"
 
 #: ../../source/application/plugins.rst:835
 msgid "wiki.getPageInfo"
-msgstr ""
+msgstr "wiki.getPageInfo"
 
 #: ../../source/application/searching.rst:2
 msgid "Accounts Searching"

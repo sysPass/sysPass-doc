@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-07 23:11+0900\n"
+"PO-Revision-Date: 2020-09-07 23:48+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1399,7 +1399,7 @@ msgstr ""
 
 #: ../../source/application/permissions.rst:2
 msgid "Permissions"
-msgstr ""
+msgstr "Permissions(権限)"
 
 #: ../../source/application/permissions.rst:4
 msgid ""
@@ -2937,51 +2937,60 @@ msgstr "オペレータ"
 
 #: ../../source/application/security.rst:2
 msgid "Security"
-msgstr ""
+msgstr "Security"
 
 #: ../../source/application/security.rst:4
 msgid ""
 "sysPass has some security mechanisms to mitigate some kind of events and "
 "actions that could compromise the application security. Among them are:"
 msgstr ""
+"sysPassにはセキュリティーを向上させる様々な工夫があります。しかし、sysPassの環"
+"境によってはセキュリティーを弱くしてしまう可能性があります。ここではセキュリ"
+"ティの問題点とその対策を示します"
 
 #: ../../source/application/security.rst:6
 msgid "Security token generation for sending forms"
-msgstr ""
+msgstr "ブラウザからサーバへ送信するformにtokenを埋め込みます"
 
 #: ../../source/application/security.rst:7
 msgid "Removing of unwanted characters from received data"
-msgstr ""
+msgstr "想定外のデータを受け取った場合はそれを処理せず破棄します"
 
 #: ../../source/application/security.rst:8
 msgid "Type casting of received data"
-msgstr ""
+msgstr "サーバで受信したデータはキャストして利用します"
 
 #: ../../source/application/security.rst:9
 msgid "Hash generation for export and backup files name"
 msgstr ""
+"バックアップ用に生成したファイル名には予測困難なハッシュを含ませています"
 
 #: ../../source/application/security.rst:10
 msgid "RSA (PKI) encryption is used for sending passwords within forms"
 msgstr ""
+"ブラウザから送信するパスワードはブラウザでRSA(PKI)で暗号化されたのちに送信され"
+"ています"
 
 #: ../../source/application/security.rst:12
 msgid ""
 "Although these actions, some other task should be performed in order to "
 "secure the web server components and communications by:"
 msgstr ""
+"上記のようなセキュリティーを向上させる機能を持ち合わせていてもセキュリティーリ"
+"スクはゼロにはなりません。以下の対策を行うことでより安全に運用することができる"
+"ようになります。"
 
 #: ../../source/application/security.rst:14
 msgid "Using HTTPS"
-msgstr ""
+msgstr "HTTPSを利用する"
 
 #: ../../source/application/security.rst:15
 msgid "Limiting access to '.../app/config' and '.../app/backup' directories"
-msgstr ""
+msgstr "'.../app/config' と '.../app/backup' ディレクトリへのアクセスを制限する"
 
 #: ../../source/application/security.rst:16
 msgid "Enforcing web server access policies"
-msgstr ""
+msgstr "webサーバへのアクセスポリシーを強化する"
 
 #: ../../source/application/security.rst:18
 msgid ""
@@ -2989,9 +2998,14 @@ msgid ""
 "files could be used within the directories or by modifying the site "
 "configuration:"
 msgstr ""
+"ディレクトリーへのアクセス制限を行う例を示します。Apacheを使っているのであれ"
+"ば ‘.htaccess’ファイルに以下の内容を書き込むことでディレクトリーへのアクセス制"
+"限を行うことができます。"
 
 #: ../../source/application/security.rst:64
 msgid ""
 "'.../app/config' directory shouldn't be accessible through the web server, it "
 "could reveal private data."
 msgstr ""
+"'.../app/config' ディレクトリの中身は絶対に外部からアクセスできないように設定"
+"する必要があります。"

@@ -3,54 +3,54 @@
 # This file is distributed under the same license as the sysPass package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-09-07 15:18+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+"Last-Translator: magcho <mail@magcho.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: ../../source/application/api.rst:4
 #: ../../source/application/permissions.rst:70
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: ../../source/application/api.rst:6
 msgid ""
-"sysPass API relies on `JSON-RPC v2`_ schema for client-server "
-"communication."
-msgstr ""
+"sysPass API relies on `JSON-RPC v2`_ schema for client-server communication."
+msgstr "sysPassのAPIは `JSON-RPC v2`_ に基づいて設計されています。"
 
 #: ../../source/application/api.rst:8
 msgid "The API access URL is \"https://server_name/api.php\""
-msgstr ""
+msgstr "APIのエンドポイントは “https://server_name/api.php” です"
 
 #: ../../source/application/api.rst:10
 msgid "Example of JSON-RPC payload:"
-msgstr ""
+msgstr "Example of JSON-RPC payload:"
 
 #: ../../source/application/api.rst:24 ../../source/application/plugins.rst:101
 msgid "Methods"
-msgstr ""
+msgstr "Methods"
 
 #: ../../source/application/api.rst:27
 msgid "Accounts"
-msgstr ""
+msgstr "Accounts"
 
 #: ../../source/application/api.rst:30
 msgid "account/search"
-msgstr ""
+msgstr "account/search"
 
 #: ../../source/application/api.rst:32
 msgid "Search for accounts"
-msgstr ""
+msgstr "アカウントの検索"
 
 #: ../../source/application/api.rst:37 ../../source/application/api.rst:56
 #: ../../source/application/api.rst:71 ../../source/application/api.rst:87
@@ -68,7 +68,7 @@ msgstr ""
 #: ../../source/application/api.rst:472 ../../source/application/api.rst:487
 #: ../../source/application/api.rst:499
 msgid "Parameter"
-msgstr ""
+msgstr "Parameter"
 
 #: ../../source/application/api.rst:37 ../../source/application/api.rst:56
 #: ../../source/application/api.rst:71 ../../source/application/api.rst:87
@@ -86,7 +86,7 @@ msgstr ""
 #: ../../source/application/api.rst:472 ../../source/application/api.rst:487
 #: ../../source/application/api.rst:499
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: ../../source/application/api.rst:37 ../../source/application/api.rst:56
 #: ../../source/application/api.rst:71 ../../source/application/api.rst:87
@@ -104,7 +104,7 @@ msgstr ""
 #: ../../source/application/api.rst:472 ../../source/application/api.rst:487
 #: ../../source/application/api.rst:499
 msgid "Required"
-msgstr ""
+msgstr "Required"
 
 #: ../../source/application/api.rst:37 ../../source/application/api.rst:56
 #: ../../source/application/api.rst:71 ../../source/application/api.rst:87
@@ -120,11 +120,10 @@ msgstr ""
 #: ../../source/application/api.rst:409 ../../source/application/api.rst:424
 #: ../../source/application/api.rst:439 ../../source/application/api.rst:455
 #: ../../source/application/api.rst:472 ../../source/application/api.rst:487
-#: ../../source/application/api.rst:499
-#: ../../source/application/plugins.rst:607
+#: ../../source/application/api.rst:499 ../../source/application/plugins.rst:607
 #: ../../source/application/searching.rst:15
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/application/api.rst:39 ../../source/application/api.rst:58
 #: ../../source/application/api.rst:73 ../../source/application/api.rst:89
@@ -142,7 +141,7 @@ msgstr ""
 #: ../../source/application/api.rst:474 ../../source/application/api.rst:489
 #: ../../source/application/api.rst:501
 msgid "authToken"
-msgstr ""
+msgstr "authToken"
 
 #: ../../source/application/api.rst:39 ../../source/application/api.rst:40
 #: ../../source/application/api.rst:45 ../../source/application/api.rst:58
@@ -181,7 +180,7 @@ msgstr ""
 #: ../../source/application/api.rst:501 ../../source/application/api.rst:502
 #: ../../source/application/api.rst:503
 msgid "string"
-msgstr ""
+msgstr "string"
 
 #: ../../source/application/api.rst:39 ../../source/application/api.rst:58
 #: ../../source/application/api.rst:59 ../../source/application/api.rst:60
@@ -218,7 +217,7 @@ msgstr ""
 #: ../../source/application/api.rst:474 ../../source/application/api.rst:475
 #: ../../source/application/api.rst:489 ../../source/application/api.rst:501
 msgid "yes"
-msgstr ""
+msgstr "yes"
 
 #: ../../source/application/api.rst:39 ../../source/application/api.rst:58
 #: ../../source/application/api.rst:73 ../../source/application/api.rst:89
@@ -236,13 +235,13 @@ msgstr ""
 #: ../../source/application/api.rst:474 ../../source/application/api.rst:489
 #: ../../source/application/api.rst:501
 msgid "User's API token"
-msgstr ""
+msgstr "User's API token"
 
 #: ../../source/application/api.rst:40 ../../source/application/api.rst:178
 #: ../../source/application/api.rst:256 ../../source/application/api.rst:336
 #: ../../source/application/api.rst:412
 msgid "text"
-msgstr ""
+msgstr "text"
 
 #: ../../source/application/api.rst:40 ../../source/application/api.rst:41
 #: ../../source/application/api.rst:42 ../../source/application/api.rst:43
@@ -270,19 +269,19 @@ msgstr ""
 #: ../../source/application/api.rst:461 ../../source/application/api.rst:490
 #: ../../source/application/api.rst:502 ../../source/application/api.rst:503
 msgid "no"
-msgstr ""
+msgstr "no"
 
 #: ../../source/application/api.rst:40 ../../source/application/api.rst:178
 #: ../../source/application/api.rst:256 ../../source/application/api.rst:336
 #: ../../source/application/api.rst:412
 msgid "Text to search for"
-msgstr ""
+msgstr "Text to search for"
 
 #: ../../source/application/api.rst:41 ../../source/application/api.rst:179
 #: ../../source/application/api.rst:257 ../../source/application/api.rst:337
 #: ../../source/application/api.rst:413
 msgid "count"
-msgstr ""
+msgstr "count"
 
 #: ../../source/application/api.rst:41 ../../source/application/api.rst:42
 #: ../../source/application/api.rst:43 ../../source/application/api.rst:60
@@ -306,62 +305,62 @@ msgstr ""
 #: ../../source/application/api.rst:413 ../../source/application/api.rst:428
 #: ../../source/application/api.rst:458 ../../source/application/api.rst:475
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: ../../source/application/api.rst:41 ../../source/application/api.rst:179
 #: ../../source/application/api.rst:257 ../../source/application/api.rst:337
 #: ../../source/application/api.rst:413
 msgid "Number of results to display"
-msgstr ""
+msgstr "Number of results to display"
 
 #: ../../source/application/api.rst:42 ../../source/application/api.rst:109
 #: ../../source/application/api.rst:137
 msgid "categoryId"
-msgstr ""
+msgstr "categoryId"
 
 #: ../../source/application/api.rst:42
 msgid "Category's Id for filtering"
-msgstr ""
+msgstr "Category's Id for filtering"
 
 #: ../../source/application/api.rst:43 ../../source/application/api.rst:110
 #: ../../source/application/api.rst:138
 msgid "clientId"
-msgstr ""
+msgstr "clientId"
 
 #: ../../source/application/api.rst:43
 msgid "Client's Id for filtering"
-msgstr ""
+msgstr "Client's Id for filtering"
 
 #: ../../source/application/api.rst:44 ../../source/application/api.rst:112
 #: ../../source/application/api.rst:139
 msgid "tagsId"
-msgstr ""
+msgstr "tagsId"
 
 #: ../../source/application/api.rst:44 ../../source/application/api.rst:112
 #: ../../source/application/api.rst:139 ../../source/application/api.rst:444
 #: ../../source/application/api.rst:461
 msgid "array"
-msgstr ""
+msgstr "array"
 
 #: ../../source/application/api.rst:44
 msgid "Tags' Id for filtering"
-msgstr ""
+msgstr "Tags' Id for filtering"
 
 #: ../../source/application/api.rst:45
 msgid "op"
-msgstr ""
+msgstr "op"
 
 #: ../../source/application/api.rst:45
 msgid "Operator used for filtering. It can be either 'or' or 'and'"
-msgstr ""
+msgstr "Operator used for filtering. It can be either 'or' or 'and'"
 
 #: ../../source/application/api.rst:49
 msgid "account/view"
-msgstr ""
+msgstr "account/view"
 
 #: ../../source/application/api.rst:51
 msgid "Get account's details"
-msgstr ""
+msgstr "アカウント情報の取得"
 
 #: ../../source/application/api.rst:59 ../../source/application/api.rst:74
 #: ../../source/application/api.rst:90 ../../source/application/api.rst:107
@@ -369,7 +368,7 @@ msgstr ""
 #: ../../source/application/api.rst:271 ../../source/application/api.rst:351
 #: ../../source/application/api.rst:427
 msgid "tokenPass"
-msgstr ""
+msgstr "tokenPass"
 
 #: ../../source/application/api.rst:59 ../../source/application/api.rst:74
 #: ../../source/application/api.rst:90 ../../source/application/api.rst:107
@@ -377,7 +376,7 @@ msgstr ""
 #: ../../source/application/api.rst:271 ../../source/application/api.rst:351
 #: ../../source/application/api.rst:427
 msgid "API token's pass"
-msgstr ""
+msgstr "API token's pass"
 
 #: ../../source/application/api.rst:60 ../../source/application/api.rst:75
 #: ../../source/application/api.rst:91 ../../source/application/api.rst:135
@@ -389,63 +388,63 @@ msgstr ""
 #: ../../source/application/api.rst:428 ../../source/application/api.rst:458
 #: ../../source/application/api.rst:475
 msgid "id"
-msgstr ""
+msgstr "id"
 
 #: ../../source/application/api.rst:60 ../../source/application/api.rst:75
 #: ../../source/application/api.rst:91 ../../source/application/api.rst:135
 #: ../../source/application/api.rst:161
 msgid "Account's Id"
-msgstr ""
+msgstr "Account's Id"
 
 #: ../../source/application/api.rst:64
 msgid "account/viewPass"
-msgstr ""
+msgstr "account/viewPass"
 
 #: ../../source/application/api.rst:66
 msgid "Get account's password"
-msgstr ""
+msgstr "アカウントのパスワードを取得"
 
 #: ../../source/application/api.rst:76
 msgid "details"
-msgstr ""
+msgstr "details"
 
 #: ../../source/application/api.rst:76
 msgid "Whether to return account's details within response"
-msgstr ""
+msgstr "Whether to return account's details within response"
 
 #: ../../source/application/api.rst:80
 msgid "account/editPass"
-msgstr ""
+msgstr "account/editPass"
 
 #: ../../source/application/api.rst:82
 msgid "Edit account's password"
-msgstr ""
+msgstr "アカウントのパスワードを変更"
 
 #: ../../source/application/api.rst:92 ../../source/application/api.rst:111
 msgid "pass"
-msgstr ""
+msgstr "pass"
 
 #: ../../source/application/api.rst:92 ../../source/application/api.rst:111
 msgid "Account's password"
-msgstr ""
+msgstr "Account's password"
 
 #: ../../source/application/api.rst:93 ../../source/application/api.rst:120
 #: ../../source/application/api.rst:147
 msgid "expireDate"
-msgstr ""
+msgstr "expireDate"
 
 #: ../../source/application/api.rst:93 ../../source/application/api.rst:120
 #: ../../source/application/api.rst:147
 msgid "Expire date in UNIX timestamp format"
-msgstr ""
+msgstr "Expire date in UNIX timestamp format"
 
 #: ../../source/application/api.rst:97
 msgid "account/create"
-msgstr ""
+msgstr "account/create"
 
 #: ../../source/application/api.rst:99
 msgid "Create account"
-msgstr ""
+msgstr "新規アカウントの作成"
 
 #: ../../source/application/api.rst:108 ../../source/application/api.rst:136
 #: ../../source/application/api.rst:208 ../../source/application/api.rst:224
@@ -453,377 +452,377 @@ msgstr ""
 #: ../../source/application/api.rst:366 ../../source/application/api.rst:381
 #: ../../source/application/api.rst:442 ../../source/application/api.rst:459
 msgid "name"
-msgstr ""
+msgstr "name"
 
 #: ../../source/application/api.rst:108 ../../source/application/api.rst:136
 msgid "Account's name"
-msgstr ""
+msgstr "Account's name"
 
 #: ../../source/application/api.rst:109 ../../source/application/api.rst:137
 msgid "Account's category Id"
-msgstr ""
+msgstr "Account's category Id"
 
 #: ../../source/application/api.rst:110 ../../source/application/api.rst:138
 msgid "Account's client Id"
-msgstr ""
+msgstr "Account's client Id"
 
 #: ../../source/application/api.rst:112 ../../source/application/api.rst:139
 msgid "Account's tags Id"
-msgstr ""
+msgstr "Account's tags Id"
 
 #: ../../source/application/api.rst:113 ../../source/application/api.rst:140
 msgid "userGroupId"
-msgstr ""
+msgstr "userGroupId"
 
 #: ../../source/application/api.rst:113 ../../source/application/api.rst:140
 msgid "Account's user group Id"
-msgstr ""
+msgstr "Account's user group Id"
 
 #: ../../source/application/api.rst:114 ../../source/application/api.rst:141
 msgid "parentId"
-msgstr ""
+msgstr "parentId"
 
 #: ../../source/application/api.rst:114 ../../source/application/api.rst:141
 msgid "Account's parent Id"
-msgstr ""
+msgstr "Account's parent Id"
 
 #: ../../source/application/api.rst:115 ../../source/application/api.rst:142
 msgid "login"
-msgstr ""
+msgstr "login"
 
 #: ../../source/application/api.rst:115 ../../source/application/api.rst:142
 msgid "Account's login"
-msgstr ""
+msgstr "Account's login"
 
 #: ../../source/application/api.rst:116 ../../source/application/api.rst:143
 msgid "url"
-msgstr ""
+msgstr "url"
 
 #: ../../source/application/api.rst:116 ../../source/application/api.rst:143
 msgid "Account's access URL or IP"
-msgstr ""
+msgstr "Account's access URL or IP"
 
 #: ../../source/application/api.rst:117 ../../source/application/api.rst:144
 msgid "notes"
-msgstr ""
+msgstr "notes"
 
 #: ../../source/application/api.rst:117 ../../source/application/api.rst:144
 msgid "Account's notes"
-msgstr ""
+msgstr "Account's notes"
 
 #: ../../source/application/api.rst:118 ../../source/application/api.rst:145
 msgid "private"
-msgstr ""
+msgstr "private"
 
 #: ../../source/application/api.rst:118 ../../source/application/api.rst:145
 msgid "Set account as private. It can be either 0 or 1"
-msgstr ""
+msgstr "Set account as private. It can be either 0 or 1"
 
 #: ../../source/application/api.rst:119 ../../source/application/api.rst:146
 msgid "privateGroup"
-msgstr ""
+msgstr "privateGroup"
 
 #: ../../source/application/api.rst:119 ../../source/application/api.rst:146
 msgid "Set account as private for group. It can be either 0 or 1"
-msgstr ""
+msgstr "Set account as private for group. It can be either 0 or 1"
 
 #: ../../source/application/api.rst:124
 msgid "account/edit"
-msgstr ""
+msgstr "account/edit"
 
 #: ../../source/application/api.rst:126
 msgid "Edit account"
-msgstr ""
+msgstr "アカウントの編集"
 
 #: ../../source/application/api.rst:151
 msgid "account/delete"
-msgstr ""
+msgstr "account/delete"
 
 #: ../../source/application/api.rst:153
 msgid "Delete an account"
-msgstr ""
+msgstr "アカウントの削除"
 
 #: ../../source/application/api.rst:165
 msgid "Categories"
-msgstr ""
+msgstr "Categories"
 
 #: ../../source/application/api.rst:168
 msgid "category/search"
-msgstr ""
+msgstr "category/search"
 
 #: ../../source/application/api.rst:170
 msgid "Search for categories"
-msgstr ""
+msgstr "カテゴリーの検索"
 
 #: ../../source/application/api.rst:183
 msgid "category/view"
-msgstr ""
+msgstr "category/view"
 
 #: ../../source/application/api.rst:185
 msgid "Get category's details"
-msgstr ""
+msgstr "カテゴリーの情報の取得"
 
 #: ../../source/application/api.rst:194 ../../source/application/api.rst:223
 #: ../../source/application/api.rst:239
 msgid "Category's Id"
-msgstr ""
+msgstr "Category's Id"
 
 #: ../../source/application/api.rst:198
 msgid "category/create"
-msgstr ""
+msgstr "category/create"
 
 #: ../../source/application/api.rst:200
 msgid "Create category"
-msgstr ""
+msgstr "新規カテゴリーを作成"
 
 #: ../../source/application/api.rst:208 ../../source/application/api.rst:224
 msgid "Category's name"
-msgstr ""
+msgstr "Category's name"
 
 #: ../../source/application/api.rst:209 ../../source/application/api.rst:225
 #: ../../source/application/api.rst:287 ../../source/application/api.rst:304
 #: ../../source/application/api.rst:443 ../../source/application/api.rst:460
 msgid "description"
-msgstr ""
+msgstr "description"
 
 #: ../../source/application/api.rst:209 ../../source/application/api.rst:225
 msgid "Category's description"
-msgstr ""
+msgstr "Category's description"
 
 #: ../../source/application/api.rst:213
 msgid "category/edit"
-msgstr ""
+msgstr "category/edit"
 
 #: ../../source/application/api.rst:215
 msgid "Edit category"
-msgstr ""
+msgstr "カテゴリーを編集"
 
 #: ../../source/application/api.rst:229
 msgid "category/delete"
-msgstr ""
+msgstr "category/delete"
 
 #: ../../source/application/api.rst:231
 msgid "Delete category"
-msgstr ""
+msgstr "カテゴリーの削除"
 
 #: ../../source/application/api.rst:243
 msgid "Clients"
-msgstr ""
+msgstr "Clients"
 
 #: ../../source/application/api.rst:246
 msgid "client/search"
-msgstr ""
+msgstr "client/search"
 
 #: ../../source/application/api.rst:248
 msgid "Search for clients"
-msgstr ""
+msgstr "クライアントの検索"
 
 #: ../../source/application/api.rst:261
 msgid "client/view"
-msgstr ""
+msgstr "client/view"
 
 #: ../../source/application/api.rst:263
 msgid "Get client's details"
-msgstr ""
+msgstr "クライアントの情報の取得"
 
 #: ../../source/application/api.rst:272 ../../source/application/api.rst:302
 #: ../../source/application/api.rst:319
 msgid "Client's Id"
-msgstr ""
+msgstr "Client's Id"
 
 #: ../../source/application/api.rst:276
 msgid "client/create"
-msgstr ""
+msgstr "client/create"
 
 #: ../../source/application/api.rst:278
 msgid "Create client"
-msgstr ""
+msgstr "新規クライアントの作成"
 
 #: ../../source/application/api.rst:286 ../../source/application/api.rst:303
 msgid "Client's name"
-msgstr ""
+msgstr "Client's name"
 
 #: ../../source/application/api.rst:287 ../../source/application/api.rst:304
 msgid "Client's description"
-msgstr ""
+msgstr "Client's description"
 
 #: ../../source/application/api.rst:288 ../../source/application/api.rst:305
 msgid "global"
-msgstr ""
+msgstr "global"
 
 #: ../../source/application/api.rst:288 ../../source/application/api.rst:305
 msgid "Set client as global. It can be either 0 or 1"
-msgstr ""
+msgstr "Set client as global. It can be either 0 or 1"
 
 #: ../../source/application/api.rst:292
 msgid "client/edit"
-msgstr ""
+msgstr "client/edit"
 
 #: ../../source/application/api.rst:294
 msgid "Edit client"
-msgstr ""
+msgstr "クライアントの編集"
 
 #: ../../source/application/api.rst:309
 msgid "client/delete"
-msgstr ""
+msgstr "client/delete"
 
 #: ../../source/application/api.rst:311
 msgid "Delete client"
-msgstr ""
+msgstr "クライアントの削除"
 
 #: ../../source/application/api.rst:323
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 #: ../../source/application/api.rst:326
 msgid "tag/search"
-msgstr ""
+msgstr "tag/search"
 
 #: ../../source/application/api.rst:328
 msgid "Search for tags"
-msgstr ""
+msgstr "タグの検索"
 
 #: ../../source/application/api.rst:341
 msgid "tag/view"
-msgstr ""
+msgstr "tag/view"
 
 #: ../../source/application/api.rst:343
 msgid "Get tag's details"
-msgstr ""
+msgstr "タグの情報の取得"
 
 #: ../../source/application/api.rst:352 ../../source/application/api.rst:380
 #: ../../source/application/api.rst:395
 msgid "Tag's Id"
-msgstr ""
+msgstr "Tag's Id"
 
 #: ../../source/application/api.rst:356
 msgid "tag/create"
-msgstr ""
+msgstr "tag/create"
 
 #: ../../source/application/api.rst:358
 msgid "Create tag"
-msgstr ""
+msgstr "新規タグを作成"
 
 #: ../../source/application/api.rst:366 ../../source/application/api.rst:381
 msgid "Tag's name"
-msgstr ""
+msgstr "Tag's name"
 
 #: ../../source/application/api.rst:370
 msgid "tag/edit"
-msgstr ""
+msgstr "tag/edit"
 
 #: ../../source/application/api.rst:372
 msgid "Edit tag"
-msgstr ""
+msgstr "タグの編集"
 
 #: ../../source/application/api.rst:385
 msgid "tag/delete"
-msgstr ""
+msgstr "tag/delete"
 
 #: ../../source/application/api.rst:387
 msgid "Delete tag"
-msgstr ""
+msgstr "タグの削除"
 
 #: ../../source/application/api.rst:399
 msgid "User Groups"
-msgstr ""
+msgstr "User Groups"
 
 #: ../../source/application/api.rst:402
 msgid "userGroup/search"
-msgstr ""
+msgstr "userGroup/search"
 
 #: ../../source/application/api.rst:404
 msgid "Search for user groups"
-msgstr ""
+msgstr "ユーザーグループの検索"
 
 #: ../../source/application/api.rst:417
 msgid "userGroup/view"
-msgstr ""
+msgstr "userGroup/view"
 
 #: ../../source/application/api.rst:419
 msgid "Get user group's details"
-msgstr ""
+msgstr "ユーザーグループの情報の取得"
 
 #: ../../source/application/api.rst:428 ../../source/application/api.rst:458
 #: ../../source/application/api.rst:475
 msgid "User group's Id"
-msgstr ""
+msgstr "User group's Id"
 
 #: ../../source/application/api.rst:432
 msgid "userGroup/create"
-msgstr ""
+msgstr "userGroup/create"
 
 #: ../../source/application/api.rst:434
 msgid "Create user group"
-msgstr ""
+msgstr "新規ユーザーグループの作成"
 
 #: ../../source/application/api.rst:442 ../../source/application/api.rst:459
 msgid "User group's name"
-msgstr ""
+msgstr "User group's name"
 
 #: ../../source/application/api.rst:443 ../../source/application/api.rst:460
 msgid "User group's description"
-msgstr ""
+msgstr "User group's description"
 
 #: ../../source/application/api.rst:444 ../../source/application/api.rst:461
 msgid "usersId"
-msgstr ""
+msgstr "usersId"
 
 #: ../../source/application/api.rst:444 ../../source/application/api.rst:461
 msgid "User group's users Id"
-msgstr ""
+msgstr "User group's users Id"
 
 #: ../../source/application/api.rst:448
 msgid "userGroup/edit"
-msgstr ""
+msgstr "userGroup/edit"
 
 #: ../../source/application/api.rst:450
 msgid "Edit user group"
-msgstr ""
+msgstr "ユーザーグループの編集"
 
 #: ../../source/application/api.rst:465
 msgid "userGroup/delete"
-msgstr ""
+msgstr "userGroup/delete"
 
 #: ../../source/application/api.rst:467
 msgid "Delete user group"
-msgstr ""
+msgstr "ユーザーグループの削除"
 
 #: ../../source/application/api.rst:479
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../source/application/api.rst:482
 msgid "config/backup"
-msgstr ""
+msgstr "config/backup"
 
 #: ../../source/application/api.rst:484
 msgid "Perform an application and database backup"
-msgstr ""
+msgstr "アプリケーションとデータベースのバックアップを実行"
 
 #: ../../source/application/api.rst:490 ../../source/application/api.rst:502
 msgid "path"
-msgstr ""
+msgstr "path"
 
 #: ../../source/application/api.rst:490
 msgid "Server path to store the application and database backup"
-msgstr ""
+msgstr "Server path to store the application and database backup"
 
 #: ../../source/application/api.rst:494
 msgid "config/export"
-msgstr ""
+msgstr "config/export"
 
 #: ../../source/application/api.rst:496
 msgid "Export application data in XML format"
-msgstr ""
+msgstr "アプリケーションデータをXML形式でエクスポート"
 
 #: ../../source/application/api.rst:502
 msgid "Server path to store the XML file"
-msgstr ""
+msgstr "Server path to store the XML file"
 
 #: ../../source/application/api.rst:503
 msgid "password"
-msgstr ""
+msgstr "password"
 
 #: ../../source/application/api.rst:503
 msgid "Password used to encrypt the exported data"
@@ -847,8 +846,8 @@ msgstr ""
 
 #: ../../source/application/authentication.rst:13
 msgid ""
-"If LDAP option is enabled, the database authentication is used when the "
-"LDAP service is unavailable or the user doesn't exist."
+"If LDAP option is enabled, the database authentication is used when the LDAP "
+"service is unavailable or the user doesn't exist."
 msgstr ""
 
 #: ../../source/application/authentication.rst:15
@@ -863,8 +862,8 @@ msgstr ""
 
 #: ../../source/application/authentication.rst:19
 msgid ""
-"The user's Blowfish_ generated hash is stored in order to check it, if "
-"the LDAP service is unavailable."
+"The user's Blowfish_ generated hash is stored in order to check it, if the "
+"LDAP service is unavailable."
 msgstr ""
 
 #: ../../source/application/authentication.rst:20
@@ -889,18 +888,17 @@ msgstr ""
 
 #: ../../source/application/authorization.rst:15
 msgid ""
-"The `Auth Basic`_ authorization could be enabled through the "
-"configuration module, so if the HTTP authorization header with the user's"
-" data is sent, it will be checked whether the sysPass user's login "
-"matches against the `Auth Basic`_ one."
+"The `Auth Basic`_ authorization could be enabled through the configuration "
+"module, so if the HTTP authorization header with the user's data is sent, it "
+"will be checked whether the sysPass user's login matches against the `Auth "
+"Basic`_ one."
 msgstr ""
 
 #: ../../source/application/authorization.rst:17
 msgid ""
 "The 2FA_ authorization, through the `Authenticator Plugin`_, is done by "
 "generating an OTP_ token from `Google Authenticator`_  or similar "
-"applications. This authorization could be enabled from the user's "
-"preferences."
+"applications. This authorization could be enabled from the user's preferences."
 msgstr ""
 
 #: ../../source/application/backup.rst:2
@@ -939,8 +937,8 @@ msgstr ""
 
 #: ../../source/application/backup.rst:31
 msgid ""
-"These commands will create \"syspass-app-backup.tar.gz\" and \"syspass-"
-"db-dump.sql\" files within the current directory"
+"These commands will create \"syspass-app-backup.tar.gz\" and \"syspass-db-"
+"dump.sql\" files within the current directory"
 msgstr ""
 
 #: ../../source/application/encryption.rst:11
@@ -949,17 +947,17 @@ msgstr ""
 
 #: ../../source/application/encryption.rst:14
 msgid ""
-"If you already use a sysPass version **<= 2.0**, it's advisable to update"
-" to 2.1 version and then to 3.1, in order to use the new security "
-"improvements on the encryption mechanisms (CVE-2017-5999). Please see "
-":doc:`/updating/index` for upgrading details."
+"If you already use a sysPass version **<= 2.0**, it's advisable to update to "
+"2.1 version and then to 3.1, in order to use the new security improvements on "
+"the encryption mechanisms (CVE-2017-5999). Please see :doc:`/updating/index` "
+"for upgrading details."
 msgstr ""
 
 #: ../../source/application/encryption.rst:16
 msgid ""
-"sysPass encryption is based on AES-256_  in CTR_ mode by using PHP's "
-"OpenSSL_ module. It uses the `Defuse/php-encryption`_ library for the "
-"encryption modules and functions management."
+"sysPass encryption is based on AES-256_  in CTR_ mode by using PHP's OpenSSL_ "
+"module. It uses the `Defuse/php-encryption`_ library for the encryption "
+"modules and functions management."
 msgstr ""
 
 #: ../../source/application/encryption.rst:18
@@ -992,28 +990,28 @@ msgstr ""
 
 #: ../../source/application/encryption.rst:27
 msgid ""
-"In order to use the application, for every user first login, either a "
-"master password or a temporary master key (see :ref:`temporarymasterkey`)"
-" will be needed. That is so because the master password is not stored in "
-"the web server but a a generated Blowfish_ hash is saved in order to "
-"check if the user is using the correct master password."
+"In order to use the application, for every user first login, either a master "
+"password or a temporary master key (see :ref:`temporarymasterkey`) will be "
+"needed. That is so because the master password is not stored in the web "
+"server but a a generated Blowfish_ hash is saved in order to check if the "
+"user is using the correct master password."
 msgstr ""
 
 #: ../../source/application/encryption.rst:29
 msgid ""
-"After logging in with the master password, it's encrypted and stored "
-"within the user's data in the database. The encryption key is generated "
-"using a derived key from user's password and login, and a secure random "
-"salt generated by openssl_random_pseudo_bytes_ (stored in "
-"\".../app/config/config.xml\" file)."
+"After logging in with the master password, it's encrypted and stored within "
+"the user's data in the database. The encryption key is generated using a "
+"derived key from user's password and login, and a secure random salt "
+"generated by openssl_random_pseudo_bytes_ (stored in \".../app/config/config."
+"xml\" file)."
 msgstr ""
 
 #: ../../source/application/encryption.rst:31
 msgid ""
 "On next user logins the master password is got from the user's data and "
 "decrypted by using the derived key. After this, the master password is "
-"encrypted again for storing it in the user's PHP session, so every time "
-"the master password is needed it must be decrypted using a session-based "
+"encrypted again for storing it in the user's PHP session, so every time the "
+"master password is needed it must be decrypted using a session-based "
 "generated key. This key is regenerated every 120 seconds."
 msgstr ""
 
@@ -1023,8 +1021,8 @@ msgstr ""
 
 #: ../../source/application/encryption.rst:35
 msgid ""
-"The user changes either its login password or username. The previous "
-"password will be requested."
+"The user changes either its login password or username. The previous password "
+"will be requested."
 msgstr ""
 
 #: ../../source/application/encryption.rst:36
@@ -1037,8 +1035,8 @@ msgstr ""
 
 #: ../../source/application/encryption.rst:40
 msgid ""
-"A temporary master key (see :ref:`temporarymasterkey`) could be used "
-"instead of the real master password"
+"A temporary master key (see :ref:`temporarymasterkey`) could be used instead "
+"of the real master password"
 msgstr ""
 
 #: ../../source/application/encryption.rst:45
@@ -1053,11 +1051,11 @@ msgstr ""
 
 #: ../../source/application/encryption.rst:49
 msgid ""
-"For the temporary master key generation the real master password is "
-"encrypted using a secure key generated by openssl_random_pseudo_bytes_. "
-"Then a Blowfish_ generated hash of it is stored in the database "
-"\"\\\"Config\\\" table.\" in order to check it when the temporary master "
-"key is provided on login."
+"For the temporary master key generation the real master password is encrypted "
+"using a secure key generated by openssl_random_pseudo_bytes_. Then a "
+"Blowfish_ generated hash of it is stored in the database \"\\\"Config\\\" "
+"table.\" in order to check it when the temporary master key is provided on "
+"login."
 msgstr ""
 
 #: ../../source/application/encryption.rst:52
@@ -1072,22 +1070,21 @@ msgstr ""
 
 #: ../../source/application/encryption.rst:57
 msgid ""
-"In order to improve the security of the sent data, RSA_ (PKI_) is being "
-"used for encrypting the passwords that are being sent from the "
-"application forms. This prevents to send sensitive date through plain "
-"channels."
+"In order to improve the security of the sent data, RSA_ (PKI_) is being used "
+"for encrypting the passwords that are being sent from the application forms. "
+"This prevents to send sensitive date through plain channels."
 msgstr ""
 
 #: ../../source/application/encryption.rst:59
 msgid ""
-"Public and private RSA_ keys are generated within the application "
-"\".../app/config\" directory."
+"Public and private RSA_ keys are generated within the application \".../app/"
+"config\" directory."
 msgstr ""
 
 #: ../../source/application/encryption.rst:62
 msgid ""
-"Data flowing from server to client side is not encrypted unless you run "
-"over an HTTPS channel."
+"Data flowing from server to client side is not encrypted unless you run over "
+"an HTTPS channel."
 msgstr ""
 
 #: ../../source/application/encryption.rst:66
@@ -1112,15 +1109,15 @@ msgstr ""
 
 #: ../../source/application/encryption.rst:244
 msgid ""
-"Be aware that the highest security risk is in the users themselves, "
-"because a compromised password could cause a security leak."
+"Be aware that the highest security risk is in the users themselves, because a "
+"compromised password could cause a security leak."
 msgstr ""
 
 #: ../../source/application/encryption.rst:246
 msgid ""
-"A sysPass compromised server could be dangerous if the database is placed"
-" alongside the web server, because the network data could be sniffed so "
-"the passwords would be revealed."
+"A sysPass compromised server could be dangerous if the database is placed "
+"alongside the web server, because the network data could be sniffed so the "
+"passwords would be revealed."
 msgstr ""
 
 #: ../../source/application/features.rst:4
@@ -1181,8 +1178,8 @@ msgstr ""
 
 #: ../../source/application/features.rst:25
 msgid ""
-"Encrypted and unencrypted custom fields for accounts, clients, categories"
-" and users"
+"Encrypted and unencrypted custom fields for accounts, clients, categories and "
+"users"
 msgstr ""
 
 #: ../../source/application/features.rst:26
@@ -1316,15 +1313,15 @@ msgstr ""
 
 #: ../../source/application/index.rst:6
 msgid ""
-"sysPass is an application that uses a MySQL/MariaDB database to store the"
-" data of all its components except for the configuration, which is stored"
-" in an XML file within 'app/config' directory."
+"sysPass is an application that uses a MySQL/MariaDB database to store the "
+"data of all its components except for the configuration, which is stored in "
+"an XML file within 'app/config' directory."
 msgstr ""
 
 #: ../../source/application/index.rst:9
 msgid ""
-"It's important that '.../app/config' directory is not accessible from the"
-" web service, because it could reveal important information."
+"It's important that '.../app/config' directory is not accessible from the web "
+"service, because it could reveal important information."
 msgstr ""
 
 #: ../../source/application/permissions.rst:2
@@ -1383,8 +1380,8 @@ msgstr ""
 
 #: ../../source/application/permissions.rst:19
 msgid ""
-"Private for Group - allows to create private accounts only accessible by "
-"the account's main group"
+"Private for Group - allows to create private accounts only accessible by the "
+"account's main group"
 msgstr ""
 
 #: ../../source/application/permissions.rst:20
@@ -1393,8 +1390,8 @@ msgstr ""
 
 #: ../../source/application/permissions.rst:21
 msgid ""
-"Global Search - allows to perform a searching in all the accounts except "
-"in the private ones [#f2]_"
+"Global Search - allows to perform a searching in all the accounts except in "
+"the private ones [#f2]_"
 msgstr ""
 
 #: ../../source/application/permissions.rst:23
@@ -1519,8 +1516,8 @@ msgstr ""
 
 #: ../../source/application/permissions.rst:65
 msgid ""
-"Private accounts for groups can only be accessed by the users of the main"
-" group"
+"Private accounts for groups can only be accessed by the users of the main "
+"group"
 msgstr ""
 
 #: ../../source/application/permissions.rst:66
@@ -1531,8 +1528,7 @@ msgstr ""
 
 #: ../../source/application/permissions.rst:67
 msgid ""
-"Accounts Admin: allows full access to all the accounts, except private "
-"ones"
+"Accounts Admin: allows full access to all the accounts, except private ones"
 msgstr ""
 
 #: ../../source/application/permissions.rst:72
@@ -1552,8 +1548,8 @@ msgstr ""
 
 #: ../../source/application/permissions.rst:77
 msgid ""
-"When the account access is not granted, he/she will only be able to "
-"perform a 'Request for Account Modification'"
+"When the account access is not granted, he/she will only be able to perform a "
+"'Request for Account Modification'"
 msgstr ""
 
 #: ../../source/application/permissions.rst:78
@@ -1571,14 +1567,14 @@ msgstr ""
 #: ../../source/application/plugins.rst:4
 msgid ""
 "sysPass allows to use plugins through an architecture that implements "
-"`observer pattern <https://en.wikipedia.org/wiki/Observer_pattern>`_ "
-"which is characterized by emitting a message to all subscribed observers."
+"`observer pattern <https://en.wikipedia.org/wiki/Observer_pattern>`_ which is "
+"characterized by emitting a message to all subscribed observers."
 msgstr ""
 
 #: ../../source/application/plugins.rst:6
 msgid ""
-"Plugins must be installed in 'plugins' directory within the target module"
-" and they contain the following base structure:"
+"Plugins must be installed in 'plugins' directory within the target module and "
+"they contain the following base structure:"
 msgstr ""
 
 #: ../../source/application/plugins.rst:91
@@ -1591,29 +1587,27 @@ msgstr ""
 
 #: ../../source/application/plugins.rst:94
 msgid ""
-"Filename within the plugin name in lowercase: Example: "
-"**authenticator.po**"
+"Filename within the plugin name in lowercase: Example: **authenticator.po**"
 msgstr ""
 
 #: ../../source/application/plugins.rst:95
 msgid ""
-"View's name should match with the controller's name in MVC pattern. It "
-"could be overridden by setting the name of the view in the controller's "
-"code"
+"View's name should match with the controller's name in MVC pattern. It could "
+"be overridden by setting the name of the view in the controller's code"
 msgstr ""
 
 #: ../../source/application/plugins.rst:96
 msgid ""
-"'version.json' file is used by JavaScript code for checking if the plugin"
-" is up-to-date."
+"'version.json' file is used by JavaScript code for checking if the plugin is "
+"up-to-date."
 msgstr ""
 
 #: ../../source/application/plugins.rst:98
 msgid ""
-"`Plugin` (whithin 'Plugin.php' file) is the main class which will receive"
-" sysPass' events through the observer pattern. It must extends the "
-"abstract class 'SP\\Plugin\\PluginBase' which is responsible to make the "
-"plugin's data available."
+"`Plugin` (whithin 'Plugin.php' file) is the main class which will receive "
+"sysPass' events through the observer pattern. It must extends the abstract "
+"class 'SP\\Plugin\\PluginBase' which is responsible to make the plugin's data "
+"available."
 msgstr ""
 
 #: ../../source/application/plugins.rst:103
@@ -1644,8 +1638,8 @@ msgstr ""
 
 #: ../../source/application/plugins.rst:147
 msgid ""
-"Method that returns an array of strings with the events that the plugin "
-"will be subscribed to"
+"Method that returns an array of strings with the events that the plugin will "
+"be subscribed to"
 msgstr ""
 
 #: ../../source/application/plugins.rst:162
@@ -1680,8 +1674,8 @@ msgstr ""
 
 #: ../../source/application/plugins.rst:215
 msgid ""
-"Method that returns an array of integers with the minimum sysPass "
-"compatible version"
+"Method that returns an array of integers with the minimum sysPass compatible "
+"version"
 msgstr ""
 
 #: ../../source/application/plugins.rst:230
@@ -1690,8 +1684,8 @@ msgstr ""
 
 #: ../../source/application/plugins.rst:232
 msgid ""
-"Method that returns an array of strings with the CSS resources required "
-"by the plugin"
+"Method that returns an array of strings with the CSS resources required by "
+"the plugin"
 msgstr ""
 
 #: ../../source/application/plugins.rst:247
@@ -1724,9 +1718,9 @@ msgstr ""
 
 #: ../../source/application/plugins.rst:303
 msgid ""
-"Method that receives the current sysPass version and would run a task if "
-"it needs to upgrade. This method will be called whenever a new sysPass "
-"version is detected."
+"Method that receives the current sysPass version and would run a task if it "
+"needs to upgrade. This method will be called whenever a new sysPass version "
+"is detected."
 msgstr ""
 
 #: ../../source/application/plugins.rst:326
@@ -1745,8 +1739,8 @@ msgstr ""
 
 #: ../../source/application/plugins.rst:602
 msgid ""
-"Events may include 'SP\\Core\\Events\\EventMessage' class which may "
-"contain additional data to pass into the plugin."
+"Events may include 'SP\\Core\\Events\\EventMessage' class which may contain "
+"additional data to pass into the plugin."
 msgstr ""
 
 #: ../../source/application/plugins.rst:604
@@ -2691,9 +2685,8 @@ msgstr ""
 
 #: ../../source/application/searching.rst:10
 msgid ""
-"There are special filters that could be entered in the text field. You "
-"could use either one or several special parameters separated by blank "
-"spaces:"
+"There are special filters that could be entered in the text field. You could "
+"use either one or several special parameters separated by blank spaces:"
 msgstr ""
 
 #: ../../source/application/searching.rst:15
@@ -2846,14 +2839,13 @@ msgstr ""
 
 #: ../../source/application/security.rst:18
 msgid ""
-"In order to limit the access to the directories through Apache, "
-"'.htaccess' files could be used within the directories or by modifying "
-"the site configuration:"
+"In order to limit the access to the directories through Apache, '.htaccess' "
+"files could be used within the directories or by modifying the site "
+"configuration:"
 msgstr ""
 
 #: ../../source/application/security.rst:64
 msgid ""
-"'.../app/config' directory shouldn't be accessible through the web "
-"server, it could reveal private data."
+"'.../app/config' directory shouldn't be accessible through the web server, it "
+"could reveal private data."
 msgstr ""
-

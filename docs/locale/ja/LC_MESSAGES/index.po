@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-06 14:24+0900\n"
+"PO-Revision-Date: 2020-09-08 01:22+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,8 +27,9 @@ msgid ""
 "sysPass is a password management system written in PHP that allows a "
 "centralized and collaborative passwords management."
 msgstr ""
-"sysPassは様々なパスワードを安全に一箇所で管理し、チームで共有することを可"
-"能としたパスワードマネージャです。sysPass自体はPHPで実装されています。"
+"sysPassは様々なパスワードを安全に一箇所で管理し、チームで共有することを"
+"可能としたパスワードマネージャです。sysPass自体はPHPで実装されていま"
+"す。"
 
 #: ../../source/index.rst:7
 msgid "Features"
@@ -52,7 +53,8 @@ msgstr "ユーザにあわせて29種もの細かい権限設定ができます"
 
 #: ../../source/index.rst:13
 msgid "MySQL/MariaDB, OpenLDAP and Active Directory authentication"
-msgstr "MySQL/MariaDB・OpenLDAPおよびActive Directory認証に対応しています"
+msgstr ""
+"MySQL/MariaDB・OpenLDAPおよびActive Directory認証に対応しています"
 
 #: ../../source/index.rst:14
 msgid "Activity notifications by email and in-app"
@@ -65,14 +67,14 @@ msgstr "ログインの必要のないページの作成と共有URLの発行が
 #: ../../source/index.rst:16
 msgid "Accounts changes history and restore points"
 msgstr ""
-"保存したパスワードの変更履歴を保持しているので、うっかり変更してしまって"
-"も復元できます"
+"保存したパスワードの変更履歴を保持しているので、うっかり変更してしまっ"
+"ても復元できます"
 
 #: ../../source/index.rst:17
 msgid "Accounts associated files management with images preview"
 msgstr ""
-"保存できるのはパスワードだけではありません、ファイルも合わせて保存できま"
-"す"
+"保存できるのはパスワードだけではありません、ファイルも合わせて保存でき"
+"ます"
 
 #: ../../source/index.rst:18
 msgid "Multilanguage"
@@ -88,12 +90,13 @@ msgid ""
 "Actions and events audit with the ability to send messages to a remote "
 "Syslog in CEF format"
 msgstr ""
-"CEF形式でシステムログやアクションをを記録したり、そのログを送信することが"
-"できます"
+"CEF形式でシステムログやアクションをを記録したり、そのログを送信すること"
+"ができます"
 
 #: ../../source/index.rst:21
 msgid "API for integrating with other applications"
-msgstr "API連携により様々なアプリケーションを開発・利用することができます"
+msgstr ""
+"API連携により様々なアプリケーションを開発・利用することができます"
 
 #: ../../source/index.rst:22
 msgid "Import from KeePass and CSV"
@@ -133,9 +136,9 @@ msgid ""
 "fields' and plugins' data, because you wouldn't be able to perform "
 "searches"
 msgstr ""
-"何のサービスのパスワードを保存しているか探せるようにサービス名などはあえ"
-"て暗号化しません。暗号化するのはパスワード・カスタムフィールド・プラグイ"
-"ンのデータなどです"
+"何のサービスのパスワードを保存しているか探せるようにサービス名などはあ"
+"えて暗号化しません。暗号化するのはパスワード・カスタムフィールド・プラ"
+"グインのデータなどです"
 
 #: ../../source/index.rst:33
 msgid "It isn't like APT: doesn't have Super Cow Powers!!"

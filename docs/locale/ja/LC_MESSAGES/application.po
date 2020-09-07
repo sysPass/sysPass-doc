@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-07 18:47+0900\n"
+"PO-Revision-Date: 2020-09-07 22:00+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -830,7 +830,7 @@ msgstr "Password used to encrypt the exported data"
 
 #: ../../source/application/authentication.rst:4
 msgid "Authentication"
-msgstr "認証"
+msgstr "Authentication(認証)"
 
 #: ../../source/application/authentication.rst:6
 msgid "For sysPass authentication it could be possible to use several methods:"
@@ -880,7 +880,7 @@ msgstr ""
 
 #: ../../source/application/authorization.rst:8
 msgid "Authorization"
-msgstr "認可"
+msgstr "Authorization(認可)"
 
 #: ../../source/application/authorization.rst:10
 msgid "For sysPass authorization it could be possible to use several methods:"
@@ -921,7 +921,7 @@ msgstr "バックアップ手順"
 
 #: ../../source/application/backup.rst:6
 msgid "Work in progress"
-msgstr "この項目は書きかけです、内容に不備がある可能性もあります。"
+msgstr "この項目は書きかけです、内容に不備がある可能性もあります"
 
 #: ../../source/application/backup.rst:9
 msgid "Docker"
@@ -934,7 +934,7 @@ msgid ""
 msgstr ""
 "定期的に以下の項目をバックアップしてください。sysPass内蔵のバックアップツール"
 "も利用できますが、任意の外部ツールを用いてバックアップすることをおすすめししま"
-"す。"
+"す"
 
 #: ../../source/application/backup.rst:13
 msgid "\"syspass-app-config\" volume"
@@ -990,7 +990,7 @@ msgstr ""
 msgid "The encrypted data (up to 3.1 version) are:"
 msgstr ""
 "sysPass(<=3.1)が暗号化しているものは以下の項目です。オプション項目を暗号化する"
-"には設定がが必要な場合があります。"
+"には設定がが必要な場合があります"
 
 #: ../../source/application/encryption.rst:20
 msgid "Accounts' passwords (always)"
@@ -1185,194 +1185,200 @@ msgstr ""
 
 #: ../../source/application/features.rst:4
 msgid "Features"
-msgstr ""
+msgstr "Features(機能)"
 
 #: ../../source/application/features.rst:6
 msgid "sysPass implements the following features:"
-msgstr ""
+msgstr "sysPassは以下の機能を備えています"
 
 #: ../../source/application/features.rst:8
 msgid "**Security**"
-msgstr ""
+msgstr "**Security**"
 
 #: ../../source/application/features.rst:10
 msgid "Database authentication"
-msgstr ""
+msgstr "データベース認証"
 
 #: ../../source/application/features.rst:11
 msgid "LDAP directory authentication"
-msgstr ""
+msgstr "LDAP directory認証"
 
 #: ../../source/application/features.rst:12
 msgid "Auth Basic authorization"
-msgstr ""
+msgstr "Basic認証"
 
 #: ../../source/application/features.rst:13
 msgid "Two Factor authorization (using `Authenticator Plugin`_)"
-msgstr ""
+msgstr "２要素認証 (using `Authenticator Plugin`_)"
 
 #: ../../source/application/features.rst:15
 msgid "**Permissions**"
-msgstr ""
+msgstr "**Permissions**"
 
 #: ../../source/application/features.rst:17
 msgid "Module access control by profiles"
-msgstr ""
+msgstr "プロファイルによるアクセスコントロール"
 
 #: ../../source/application/features.rst:18
 msgid "Application administrator users"
-msgstr ""
+msgstr "アプリケーション全体の管理者権限を持つユーザ"
 
 #: ../../source/application/features.rst:19
 msgid "Accounts administrator users"
-msgstr ""
+msgstr "アカウント管理権限を持つユーザ"
 
 #: ../../source/application/features.rst:20
 msgid "Accounts user access control (read or write)"
-msgstr ""
+msgstr "ユーザーごとのアクセスコントロール(読み込み or 書き込み)"
 
 #: ../../source/application/features.rst:21
 msgid "Accounts group access control (read or write)"
-msgstr ""
+msgstr "アカウントグループごとのアクセスコントロール(読み込み or 書き込み)"
 
 #: ../../source/application/features.rst:23
 msgid "**Items**"
-msgstr ""
+msgstr "**Items**"
 
 #: ../../source/application/features.rst:25
 msgid ""
 "Encrypted and unencrypted custom fields for accounts, clients, categories and "
 "users"
 msgstr ""
+"アカウント情報・クライアント情報・カテゴリー情報・ユーザ情報にカスタムフィール"
+"ドを設定できます。また、このフィールドは暗号化/非暗号化を設定できます"
 
 #: ../../source/application/features.rst:26
 msgid "Accounts public links access without user/password"
-msgstr ""
+msgstr "ログインなしで共有できるアカウントの公開リンクを作成できます"
 
 #: ../../source/application/features.rst:27
 msgid "Accounts expiry date configuration"
-msgstr ""
+msgstr "アカウントに有効期限を設定できます"
 
 #: ../../source/application/features.rst:28
 msgid "Accounts' files management"
-msgstr ""
+msgstr "パスワードだけでなくファイルも保存できます"
 
 #: ../../source/application/features.rst:29
 msgid "Accounts' tags management"
-msgstr ""
+msgstr "アカウントをタグで管理できます"
 
 #: ../../source/application/features.rst:30
 msgid "Clients management"
-msgstr ""
+msgstr "クライアントごとに整理することができます"
 
 #: ../../source/application/features.rst:31
 msgid "Categories management"
-msgstr ""
+msgstr "カテゴリーで整理することもできます"
 
 #: ../../source/application/features.rst:32
 msgid "Public links management"
-msgstr ""
+msgstr "共有リンクも細かく設定できます"
 
 #: ../../source/application/features.rst:33
 msgid "API's authorizations management"
-msgstr ""
+msgstr "APIからsysPassを利用することができます"
 
 #: ../../source/application/features.rst:34
 msgid "Accounts management"
-msgstr ""
+msgstr "アカウントを管理することができます"
 
 #: ../../source/application/features.rst:35
 msgid "Accounts' history management"
 msgstr ""
+"アカウントの変更履歴も保持しているため、前まで使っていたパスワードを確認するこ"
+"ともできます"
 
 #: ../../source/application/features.rst:36
 msgid "Plugins management"
-msgstr ""
+msgstr "プラグインで機能を追加することができます"
 
 #: ../../source/application/features.rst:37
 msgid "Users management"
-msgstr ""
+msgstr "ユーザーごとに設定できる項目があります"
 
 #: ../../source/application/features.rst:38
 msgid "User groups management"
-msgstr ""
+msgstr "ユーザをユーザーグループで管理できます"
 
 #: ../../source/application/features.rst:39
 msgid "User profiles management"
-msgstr ""
+msgstr "ユーザをプロファイルで管理できます"
 
 #: ../../source/application/features.rst:40
 msgid "In-App notifications management"
-msgstr ""
+msgstr "アプリ内通知機能があります"
 
 #: ../../source/application/features.rst:42
 #: ../../source/application/permissions.rst:37
 msgid "**Configuration**"
-msgstr ""
+msgstr "**Configuration**"
 
 #: ../../source/application/features.rst:44
 msgid "Language configuration"
-msgstr ""
+msgstr "多言語対応しています"
 
 #: ../../source/application/features.rst:45
 msgid "Visual theme configuration"
-msgstr ""
+msgstr "ブラウザを用いてUIで設定を変更できます"
 
 #: ../../source/application/features.rst:46
 msgid "Logging and audit configuration"
-msgstr ""
+msgstr "設定の変更履歴のログを残します"
 
 #: ../../source/application/features.rst:47
 msgid "Proxy configuration"
-msgstr ""
+msgstr "プロキシー設定をすることができます"
 
 #: ../../source/application/features.rst:48
 msgid "Accounts configuration"
-msgstr ""
+msgstr "アカウントの設定ができます"
 
 #: ../../source/application/features.rst:49
 msgid "Public links configuration"
-msgstr ""
+msgstr "公開リンクの設定ができます"
 
 #: ../../source/application/features.rst:50
 msgid "Wiki links configuration"
-msgstr ""
+msgstr "Wikiの設定ができます"
 
 #: ../../source/application/features.rst:51
 msgid "LDAP configuration"
-msgstr ""
+msgstr "LDAPの設定ができます"
 
 #: ../../source/application/features.rst:52
 msgid "Import users and groups from LDAP"
-msgstr ""
+msgstr "LDAPを用いてユーザーやグループをインポートできます"
 
 #: ../../source/application/features.rst:53
 msgid "Email notifications configuration"
-msgstr ""
+msgstr "メール通知機能があります"
 
 #: ../../source/application/features.rst:54
 msgid "Master password change"
-msgstr ""
+msgstr "マスターパスワードを変更することができます"
 
 #: ../../source/application/features.rst:55
 msgid "Temporary master key generation"
-msgstr ""
+msgstr "仮マスターパスワードを用いることができます"
 
 #: ../../source/application/features.rst:56
 msgid "Application and database backups"
-msgstr ""
+msgstr "アプリケーションとデータベースのバックアップを取ることができます"
 
 #: ../../source/application/features.rst:57
 msgid "XML format exporting using encryption or not"
-msgstr ""
+msgstr "XML形式でエクスポートできます。また、これを暗号化しておくこともできます"
 
 #: ../../source/application/features.rst:58
 msgid "Importing from sysPass or KeePass XML formats and CSV format"
 msgstr ""
+"KeePassでエクスポートしたXML/CSVファイルをsysPassにインポートすることができま"
+"す"
 
 #: ../../source/application/index.rst:4
 msgid "Application"
-msgstr ""
+msgstr "Application"
 
 #: ../../source/application/index.rst:6
 msgid ""
@@ -1380,12 +1386,16 @@ msgid ""
 "data of all its components except for the configuration, which is stored in "
 "an XML file within 'app/config' directory."
 msgstr ""
+"sysPassはMySQL/MariaDBのようなデータベースと’app/config’ディレクトリ内のxml"
+"ファイル以外にデータを保存することはありません。"
 
 #: ../../source/application/index.rst:9
 msgid ""
 "It's important that '.../app/config' directory is not accessible from the web "
 "service, because it could reveal important information."
 msgstr ""
+"‘…/app/config’ディレクトリ内のファイルには重要な情報が含まれています。このファ"
+"イルが外部からアクセスできないようにwebサーバを設定してください。"
 
 #: ../../source/application/permissions.rst:2
 msgid "Permissions"
@@ -1396,203 +1406,230 @@ msgid ""
 "sysPass permissions are set in users' profile. By default only accounts "
 "searching can be done."
 msgstr ""
+"作成したユーザのデフォルトの権限はアカウトの検索のみが許可されています。それ以"
+"外の操作を許可する場合はそれぞれの権限を付与してください。"
 
 #: ../../source/application/permissions.rst:6
 msgid "There are 29 permission types:"
-msgstr ""
+msgstr "sysPassの権限設定には29種類の設定項目があります"
 
 #: ../../source/application/permissions.rst:8
 msgid "**Accounts**"
-msgstr ""
+msgstr "**アカウント**"
 
 #: ../../source/application/permissions.rst:10
 msgid "Create - allows to create new accounts"
-msgstr ""
+msgstr "Create - 新しいアカウントを作成することを許可します"
 
 #: ../../source/application/permissions.rst:11
 msgid "View - allows to view the accounts' details [#f1]_"
-msgstr ""
+msgstr "View - アカウントの情報を閲覧することを許可します [#f1]_"
 
 #: ../../source/application/permissions.rst:12
 msgid "View Password - allows to view the accounts' password [#f1]_"
 msgstr ""
+"View Password - アカウント情報と合わせて保存されているパスワードを閲覧すること"
+"を許可します [#f1]_"
 
 #: ../../source/application/permissions.rst:13
 msgid "Edit - allows to modify the accounts and its files [#f1]_"
-msgstr ""
+msgstr "Edit - アカウント情報を編集することを許可します [#f1]_"
 
 #: ../../source/application/permissions.rst:14
 msgid "Edit Password - allows to modify the accounts' password [#f1]_"
 msgstr ""
+"Edit Password - アカウント情報と合わせて保存されているパスワードを変更すること"
+"を許可します [#f1]_"
 
 #: ../../source/application/permissions.rst:15
 msgid "Delete - allows to delete accounts [#f1]_"
-msgstr ""
+msgstr "Delete - アカウントを削除することを許可します [#f1]_"
 
 #: ../../source/application/permissions.rst:16
 msgid "Files - allows to view account's files"
 msgstr ""
+"Files - アカウント情報と合わせて保存されているファイルにアクセスすることを許可"
+"します"
 
 #: ../../source/application/permissions.rst:17
 msgid "Share Link - allows to create public links"
-msgstr ""
+msgstr "Share Link - 共有リンクを発行することを許可します"
 
 #: ../../source/application/permissions.rst:18
 msgid "Private - allows to create private accounts"
 msgstr ""
+"Private - 自分のみがアクセスできるプライベートなアカウトを作成することを許可し"
+"ます"
 
 #: ../../source/application/permissions.rst:19
 msgid ""
 "Private for Group - allows to create private accounts only accessible by the "
 "account's main group"
 msgstr ""
+"Private for Group - 指定したグループに属するユーザだけがアクセスできるプライ"
+"ベートアカウントを作成することを許可する"
 
 #: ../../source/application/permissions.rst:20
 msgid "Permissions - allows to view and modify the accounts' permissions [#f1]_"
-msgstr ""
+msgstr "Permissions - 権限設定を閲覧したり、変更すること許可する [#f1]_"
 
 #: ../../source/application/permissions.rst:21
 msgid ""
 "Global Search - allows to perform a searching in all the accounts except in "
 "the private ones [#f2]_"
 msgstr ""
+"Global Search - プライベートアカウントを除く全てのアカウントを対象に検索をする"
+"ことを許可する [#f2]_"
 
 #: ../../source/application/permissions.rst:23
 msgid "**Management**"
-msgstr ""
+msgstr "**Management**"
 
 #: ../../source/application/permissions.rst:25
 msgid "Users - allows full access to the users management [#f3]_"
-msgstr ""
+msgstr "Users - 全てのユーザを管理することを許可する [#f3]_"
 
 #: ../../source/application/permissions.rst:26
 msgid "Groups - allows full access to the user groups management"
-msgstr ""
+msgstr "Groups - 全てのグループを管理することを許可する"
 
 #: ../../source/application/permissions.rst:27
 msgid "Profiles - allows full access to the user profiles management"
-msgstr ""
+msgstr "Profiles - 全てのプロファイルを管理することを許可する"
 
 #: ../../source/application/permissions.rst:28
 msgid "Categories - allows full access to categories management"
-msgstr ""
+msgstr "Categories - 全てのカテゴリーを管理することを許可する"
 
 #: ../../source/application/permissions.rst:29
 msgid "Clients - allows full access to clients management"
-msgstr ""
+msgstr "Clients - 全てのクライアントを管理することを許可する"
 
 #: ../../source/application/permissions.rst:30
 msgid "Custom Fields - allows full access to custom fields management"
-msgstr ""
+msgstr "Custom Fields - 全てのカスタムフィールドを管理することを許可する"
 
 #: ../../source/application/permissions.rst:31
 msgid "API Authorizations - allows full access to API authorizations management"
-msgstr ""
+msgstr "API Authorizations - 全てのAPIを管理することを許可する"
 
 #: ../../source/application/permissions.rst:32
 msgid "Public Links - allows full access to the public links management"
-msgstr ""
+msgstr "Public Links - 全ての共有リンクについて管理することを許可する"
 
 #: ../../source/application/permissions.rst:33
 msgid "Accounts - allows full access to accounts management"
-msgstr ""
+msgstr "Accounts - 全てのアカウントを管理することを許可する"
 
 #: ../../source/application/permissions.rst:34
 msgid "Files- allows full access to files management"
-msgstr ""
+msgstr "Files - 全てのファイルを管理することを許可する"
 
 #: ../../source/application/permissions.rst:35
 msgid "Tags - allows full access to the tags management"
-msgstr ""
+msgstr "Tags - 全てのタグを管理することを許可します"
 
 #: ../../source/application/permissions.rst:39
 msgid ""
 "General - allows full access to the site, accounts, wiki, ldap and email "
 "configuration"
 msgstr ""
+"General - サイト・アカウント・Wiki・LDAP・メールに冠する全ての設定を変更するこ"
+"とを許可します"
 
 #: ../../source/application/permissions.rst:40
 msgid "Encryption - allows full access to the master password configuration"
 msgstr ""
+"Encryption - マスターパスワードに関する全ての設定を変更することを許可します"
 
 #: ../../source/application/permissions.rst:41
 msgid "Backup - allows full access to perform backups [#f4]_"
-msgstr ""
+msgstr "Backup - バックアップを作成することを許可します [#f4]_"
 
 #: ../../source/application/permissions.rst:42
 msgid "Import - allows full access to import XML and CSV files"
-msgstr ""
+msgstr "Import - XML/CSVファイルをインポートすることを許可します"
 
 #: ../../source/application/permissions.rst:44
 msgid "**Others**"
-msgstr ""
+msgstr "**Others**"
 
 #: ../../source/application/permissions.rst:46
 msgid "Event Log - allows full access to the event log"
-msgstr ""
+msgstr "Event Log - イベントログを閲覧することを許可します"
 
 #: ../../source/application/permissions.rst:49
 msgid "ACL"
-msgstr ""
+msgstr "ACL(Access Control List)"
 
 #: ../../source/application/permissions.rst:52
 msgid "Users and Groups"
-msgstr ""
+msgstr "Users and Groups"
 
 #: ../../source/application/permissions.rst:54
 msgid "User profiles allow to set which actions could be done by the user"
-msgstr ""
+msgstr "ユーザープロファイルを設定することで権限を設定できます"
 
 #: ../../source/application/permissions.rst:55
 msgid "An user can only display or modify accounts if:"
-msgstr ""
+msgstr "ユーザは次の場合に該当する時のみ、アカウント情報にアクセスできます"
 
 #: ../../source/application/permissions.rst:57
 msgid "Is the account's owner"
-msgstr ""
+msgstr "アカウントのオーナーである場合"
 
 #: ../../source/application/permissions.rst:58
 msgid "Is member of account's primary group"
-msgstr ""
+msgstr "許可されたprimary groupに属している場合"
 
 #: ../../source/application/permissions.rst:59
 msgid "Is member of account's secondary groups"
-msgstr ""
+msgstr "許可されたsecondary groupに属している場合"
 
 #: ../../source/application/permissions.rst:60
 msgid "Is listed as a secondary user of the account"
-msgstr ""
+msgstr "アカウントのsecondary userに設定されている場合"
 
 #: ../../source/application/permissions.rst:61
 msgid "His/Her main group is listed as a secondary group of the account"
-msgstr ""
+msgstr "ユーザのmian groupがアカウントのsecondary groupに設定されている場合"
 
 #: ../../source/application/permissions.rst:62
 msgid ""
 "Is included through a group and the 'Secondary Groups Access' option is "
 "enabled"
 msgstr ""
+"ユーザのmian groupがアカウントのsecondary group accessオプションが有効化されて"
+"いる場合"
 
 #: ../../source/application/permissions.rst:64
 msgid "Private accounts can only be accessed by the owner"
 msgstr ""
+"個人のプライベートアカウントには作成したユーザとそのユーザが許可したユーザのみ"
+"がアクセスできます"
 
 #: ../../source/application/permissions.rst:65
 msgid ""
 "Private accounts for groups can only be accessed by the users of the main "
 "group"
 msgstr ""
+"グループプライベートアカウントには許可されたグループがmain groupになっている"
+"ユーザのみがアクセスできます"
 
 #: ../../source/application/permissions.rst:66
 msgid ""
 "Application Admin: allows full access to all the application modules and "
 "accounts, except private ones"
 msgstr ""
+"アプリケーション管理者:: プライベートアカウントを除く全てのアカウント・全ての"
+"アプリケーションモジュール・アカウントへのフルアクセスをすることができます"
 
 #: ../../source/application/permissions.rst:67
 msgid ""
 "Accounts Admin: allows full access to all the accounts, except private ones"
 msgstr ""
+"アカウント管理車: プライベートアカウントを除く全てのアカウントにアクセスできま"
+"す"
 
 #: ../../source/application/permissions.rst:72
 msgid ""
@@ -1600,28 +1637,36 @@ msgid ""
 "permissions, so users and groups ACLs will be applied when an account is "
 "either listed or accessed."
 msgstr ""
+"APIにもユーザと同じ権限が与えられているため、APIを用いてアクセスできる情報はブ"
+"ラウザで閲覧できる情報と同じです。"
 
 #: ../../source/application/permissions.rst:75
 msgid "Notes"
-msgstr ""
+msgstr "Notes"
 
 #: ../../source/application/permissions.rst:76
 msgid "Only the accounts that the user and its group are granted"
-msgstr ""
+msgstr "そのユーザがそのアカウントへのアクセス権限がある場合に限る"
 
 #: ../../source/application/permissions.rst:77
 msgid ""
 "When the account access is not granted, he/she will only be able to perform a "
 "'Request for Account Modification'"
 msgstr ""
+"検索する権限は持っているが、そのアカウントへのアクセス権限を持っていないユー"
+"ザーはそのアカウントにアクセスすることはできません。代わりに’アクセス権限のリ"
+"クエスト’だけを行うことができます"
 
 #: ../../source/application/permissions.rst:78
 msgid "'Application Admin' users cannot be modified by other users"
 msgstr ""
+"‘アプリケーション管理者’以外が他のユーザの情報を変更することはできません"
 
 #: ../../source/application/permissions.rst:79
 msgid "Only 'Application Admin' users can download the backup or XML files"
 msgstr ""
+"生成したバックアップファイルをダウンロードできるのは’アプリケーション管理者’の"
+"みです"
 
 #: ../../source/application/plugins.rst:2
 msgid "Plugins"

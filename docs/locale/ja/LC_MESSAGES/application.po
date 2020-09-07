@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-07 15:18+0900\n"
+"PO-Revision-Date: 2020-09-07 16:31+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -826,65 +826,73 @@ msgstr "password"
 
 #: ../../source/application/api.rst:503
 msgid "Password used to encrypt the exported data"
-msgstr ""
+msgstr "Password used to encrypt the exported data"
 
 #: ../../source/application/authentication.rst:4
 msgid "Authentication"
-msgstr ""
+msgstr "認証"
 
 #: ../../source/application/authentication.rst:6
 msgid "For sysPass authentication it could be possible to use several methods:"
-msgstr ""
+msgstr "sysPassでは何通りかの認証方式を利用することができます"
 
 #: ../../source/application/authentication.rst:8
 msgid "MySQL/MariaDB database (by default)"
-msgstr ""
+msgstr "MySQL/MariaDB database (デフォルト)"
 
 #: ../../source/application/authentication.rst:9
 msgid "LDAP directory (OpenLDAP, eDirectory, Active Directory, freeIPA, etc)"
-msgstr ""
+msgstr "LDAP directory (OpenLDAP, eDirectory, Active Directory, freeIPA, etc)"
 
 #: ../../source/application/authentication.rst:13
 msgid ""
 "If LDAP option is enabled, the database authentication is used when the LDAP "
 "service is unavailable or the user doesn't exist."
 msgstr ""
+"LDAPオプションを有効化している時、何らかの理由でLDAPサービスが利用できない場合"
+"は大体の認証方式としてデフォルトのMySQL/MariaDB detabase方式に切り替わります。"
 
 #: ../../source/application/authentication.rst:15
 msgid ""
 "For the database authentication, a generated Blowfish_ hash from user's "
 "password is checked, so the password is **never** stored."
 msgstr ""
+"データベースを用いる認証方式ではパスワードを元に Blowfish_ アルゴリズムでハッ"
+"シュ化して検証しているため **決してパスワードは保存していません**。"
 
 #: ../../source/application/authentication.rst:17
 msgid "If LDAP is enabled:"
-msgstr ""
+msgstr "LDAP方式の場合"
 
 #: ../../source/application/authentication.rst:19
 msgid ""
 "The user's Blowfish_ generated hash is stored in order to check it, if the "
 "LDAP service is unavailable."
 msgstr ""
+"前途の通りLDAPが利用できないときにデータベース方式に切り替えるため、データベー"
+"ス方式と同様に Blowfish_ アルゴリズムでハッシュ化したものをデータベースに保存"
+"しています。"
 
 #: ../../source/application/authentication.rst:20
 msgid "Neither the user's login nor name nor email can be modified."
 msgstr ""
+"ユーザのログイン名・名前・メールアドレスを後から変更することはできません。"
 
 #: ../../source/application/authorization.rst:8
 msgid "Authorization"
-msgstr ""
+msgstr "認可"
 
 #: ../../source/application/authorization.rst:10
 msgid "For sysPass authorization it could be possible to use several methods:"
-msgstr ""
+msgstr "sysPassでは何通りかの認可方式を利用することができます"
 
 #: ../../source/application/authorization.rst:12
 msgid "`Auth Basic`_ (by default)"
-msgstr ""
+msgstr "`Basic認証`_ (デフォルト)"
 
 #: ../../source/application/authorization.rst:13
 msgid "Two Factor 2FA_ (`Authenticator Plugin`_)"
-msgstr ""
+msgstr "２要素認証 (2FA_ ) (`Authenticator Plugin`_)"
 
 #: ../../source/application/authorization.rst:15
 msgid ""
@@ -893,6 +901,8 @@ msgid ""
 "will be checked whether the sysPass user's login matches against the `Auth "
 "Basic`_ one."
 msgstr ""
+"`Basic 認証`_ はsysPassの設定画面から有効化/も無効化できます。HTTPの認証ヘッ"
+"ダーを見て有効なユーザーかどうかを判断します。"
 
 #: ../../source/application/authorization.rst:17
 msgid ""
@@ -900,6 +910,10 @@ msgid ""
 "generating an OTP_ token from `Google Authenticator`_  or similar "
 "applications. This authorization could be enabled from the user's preferences."
 msgstr ""
+"二段階認証 は `Authenticator Plugin`_ を導入することで使用可能になります。通常"
+"の認証に加えて `ワンタイムパスワード`_ を用いた認証を行うことができます。代表"
+"的なクライアントには `Google Authenticator`_ がありますが、その他2要素認証に対"
+"応しているアプリケーションも利用することができます。"
 
 #: ../../source/application/backup.rst:2
 msgid "Backup Strategies"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-07 22:52+0900\n"
+"PO-Revision-Date: 2020-09-07 23:11+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2801,129 +2801,139 @@ msgstr "wiki.getPageInfo"
 
 #: ../../source/application/searching.rst:2
 msgid "Accounts Searching"
-msgstr ""
+msgstr "アカウント検索"
 
 #: ../../source/application/searching.rst:4
 msgid ""
 "The accounts searching performs a query for the entered text within the "
 "fields 'name', 'login', 'url' and 'notes'."
 msgstr ""
+"アカウント検索フォームは単語だけでなくクエリを用いて賢く検索することができま"
+"す。"
 
 #: ../../source/application/searching.rst:6
 msgid "Results filtering could be done by selecting category, client or tags."
 msgstr ""
+"例えばカテゴリー・クライアント・タグなどでフィルターすることができます。"
 
 #: ../../source/application/searching.rst:8
 msgid ""
 "The tag filtering is cumulative ('OR'), so it will be included all the "
 "accounts with selected tags."
 msgstr ""
+"タグ名でフィルターする時基本的に “OR” で検索するため、いずれかのタグを含む全て"
+"のアカウントが表示されます。"
 
 #: ../../source/application/searching.rst:10
 msgid ""
 "There are special filters that could be entered in the text field. You could "
 "use either one or several special parameters separated by blank spaces:"
 msgstr ""
+"以下のような構文のクエリーを利用できます。スペースで区切ることで複数のクエリを"
+"用いて検索することができます"
 
 #: ../../source/application/searching.rst:15
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: ../../source/application/searching.rst:17
 msgid "user\\:\"login\""
-msgstr ""
+msgstr "user\\:\"login\""
 
 #: ../../source/application/searching.rst:17
 msgid "Get the accounts in which the user with login 'login' has access"
-msgstr ""
+msgstr "‘login’ という名前のユーザがアクセスできるアカウントを表示します"
 
 #: ../../source/application/searching.rst:18
 msgid "owner\\:\"login\""
-msgstr ""
+msgstr "owner\\:\"login\""
 
 #: ../../source/application/searching.rst:18
 msgid "Get the accounts in which the user with login 'login' is the owner"
-msgstr ""
+msgstr "‘login’という名前のユーザが作成したアカウントが表示されます"
 
 #: ../../source/application/searching.rst:19
 msgid "group\\:\"group_name\""
-msgstr ""
+msgstr "group\\:\"group_name\""
 
 #: ../../source/application/searching.rst:19
 msgid "Search for accounts which 'group_name' has access rights"
 msgstr ""
+"‘group_name’という名前のグループがアクセスできるアカウントが表示されます"
 
 #: ../../source/application/searching.rst:20
 msgid "maingroup\\:\"group_name\""
-msgstr ""
+msgstr "maingroup\\:\"group_name\""
 
 #: ../../source/application/searching.rst:20
 msgid "Get the accounts which have the main group with name 'group_name'"
 msgstr ""
+"‘group_name’という名前のグループをメイングループにしているアカウントを表示しま"
+"す"
 
 #: ../../source/application/searching.rst:21
 msgid "file\\:\"file_name\""
-msgstr ""
+msgstr "file\\:\"file_name\""
 
 #: ../../source/application/searching.rst:21
 msgid "Search for accounts which contain a file with the name 'file_name'"
-msgstr ""
+msgstr "‘file_name’という名前のファイルが存在するアカウントを表示します"
 
 #: ../../source/application/searching.rst:22
 msgid "client\\:\"client_name\""
-msgstr ""
+msgstr "client\\:\"client_name\""
 
 #: ../../source/application/searching.rst:22
 msgid "Search for accounts by client name"
-msgstr ""
+msgstr "’client_name’という名前のクライアントのアカウントを表示します"
 
 #: ../../source/application/searching.rst:23
 msgid "category\\:\"category_name\""
-msgstr ""
+msgstr "category\\:\"category_name\""
 
 #: ../../source/application/searching.rst:23
 msgid "Search for accounts by category name"
-msgstr ""
+msgstr "‘category_name’という名前のカテゴリーに属するアカウントを表示します"
 
 #: ../../source/application/searching.rst:24
 msgid "id\\:\"account_id\""
-msgstr ""
+msgstr "id\\:\"account_id\""
 
 #: ../../source/application/searching.rst:24
 msgid "Returns the account for the given ID"
-msgstr ""
+msgstr "‘account_id’に一致するアカウントを表示します"
 
 #: ../../source/application/searching.rst:25
 msgid "name_regex\\:\"regex\""
-msgstr ""
+msgstr "name_regex\\:\"regex\""
 
 #: ../../source/application/searching.rst:25
 msgid "Search for accounts name by regular expression"
-msgstr ""
+msgstr "アカウント名を正規表現を用いて検索します"
 
 #: ../../source/application/searching.rst:26
 msgid "is|not\\:expired"
-msgstr ""
+msgstr "is|not\\:expired"
 
 #: ../../source/application/searching.rst:26
 msgid "Search for accounts with expired password"
-msgstr ""
+msgstr "有効期限の切れたアカウントを表示します"
 
 #: ../../source/application/searching.rst:27
 msgid "is|not\\:private"
-msgstr ""
+msgstr "is|not\\:private"
 
 #: ../../source/application/searching.rst:27
 msgid "Get the private accounts for the current user"
-msgstr ""
+msgstr "プライベートアカウントを表示します"
 
 #: ../../source/application/searching.rst:28
 msgid "op\\:and|or"
-msgstr ""
+msgstr "op\\:and|or"
 
 #: ../../source/application/searching.rst:28
 msgid "Operator used by special parameters"
-msgstr ""
+msgstr "オペレータ"
 
 #: ../../source/application/security.rst:2
 msgid "Security"

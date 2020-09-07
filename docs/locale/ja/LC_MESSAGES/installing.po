@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-06 17:50+0900\n"
+"PO-Revision-Date: 2020-09-08 01:48+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -238,7 +238,7 @@ msgstr ""
 #: ../../source/installing/centos7.rst:25 ../../source/installing/debian9.rst:25
 #: ../../source/installing/index.rst:4
 msgid "Installation"
-msgstr "Installation"
+msgstr "インストール"
 
 #: ../../source/installing/centos7.rst:27
 msgid ""

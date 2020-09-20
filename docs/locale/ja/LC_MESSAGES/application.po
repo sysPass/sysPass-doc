@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-08 01:49+0900\n"
+"PO-Revision-Date: 2020-09-20 16:17+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -876,7 +876,7 @@ msgstr ""
 #: ../../source/application/authentication.rst:20
 msgid "Neither the user's login nor name nor email can be modified."
 msgstr ""
-"ユーザのログイン名・名前・メールアドレスを後から変更することはできません。"
+"ユーザーのログイン名・名前・メールアドレスを後から変更することはできません。"
 
 #: ../../source/application/authorization.rst:8
 msgid "Authorization"
@@ -1024,7 +1024,7 @@ msgid ""
 "server but a a generated Blowfish_ hash is saved in order to check if the "
 "user is using the correct master password."
 msgstr ""
-"ユーザが最初にログインするときにマスターパスワードもしくは :ref:"
+"ユーザーが最初にログインするときにマスターパスワードもしくは :ref:"
 "`temporarymasterkey` の入力が必要です。これはsysPassにはマスターパスワードでは"
 "なくその Blowfish_ ハッシュのみが保存されているためです。"
 
@@ -1221,11 +1221,11 @@ msgstr "プロファイルによるアクセスコントロール"
 
 #: ../../source/application/features.rst:18
 msgid "Application administrator users"
-msgstr "アプリケーション全体の管理者権限を持つユーザ"
+msgstr "アプリケーション全体の管理者権限を持つユーザー"
 
 #: ../../source/application/features.rst:19
 msgid "Accounts administrator users"
-msgstr "アカウント管理権限を持つユーザ"
+msgstr "アカウント管理権限を持つユーザー"
 
 #: ../../source/application/features.rst:20
 msgid "Accounts user access control (read or write)"
@@ -1244,8 +1244,8 @@ msgid ""
 "Encrypted and unencrypted custom fields for accounts, clients, categories and "
 "users"
 msgstr ""
-"アカウント情報・クライアント情報・カテゴリー情報・ユーザ情報にカスタムフィール"
-"ドを設定できます。また、このフィールドは暗号化/非暗号化を設定できます"
+"アカウント情報・クライアント情報・カテゴリー情報・ユーザー情報にカスタムフィー"
+"ルドを設定できます。また、このフィールドは暗号化/非暗号化を設定できます"
 
 #: ../../source/application/features.rst:26
 msgid "Accounts public links access without user/password"
@@ -1299,11 +1299,11 @@ msgstr "ユーザーごとに設定できる項目があります"
 
 #: ../../source/application/features.rst:38
 msgid "User groups management"
-msgstr "ユーザをユーザーグループで管理できます"
+msgstr "ユーザーをユーザーグループで管理できます"
 
 #: ../../source/application/features.rst:39
 msgid "User profiles management"
-msgstr "ユーザをプロファイルで管理できます"
+msgstr "ユーザーをプロファイルで管理できます"
 
 #: ../../source/application/features.rst:40
 msgid "In-App notifications management"
@@ -1406,8 +1406,8 @@ msgid ""
 "sysPass permissions are set in users' profile. By default only accounts "
 "searching can be done."
 msgstr ""
-"作成したユーザのデフォルトの権限はアカウトの検索のみが許可されています。それ以"
-"外の操作を許可する場合はそれぞれの権限を付与してください。"
+"作成したユーザーのデフォルトの権限はアカウトの検索のみが許可されています。それ"
+"以外の操作を許可する場合はそれぞれの権限を付与してください。"
 
 #: ../../source/application/permissions.rst:6
 msgid "There are 29 permission types:"
@@ -1466,7 +1466,7 @@ msgid ""
 "Private for Group - allows to create private accounts only accessible by the "
 "account's main group"
 msgstr ""
-"Private for Group - 指定したグループに属するユーザだけがアクセスできるプライ"
+"Private for Group - 指定したグループに属するユーザーだけがアクセスできるプライ"
 "ベートアカウントを作成することを許可する"
 
 #: ../../source/application/permissions.rst:20
@@ -1487,7 +1487,7 @@ msgstr "**Management**"
 
 #: ../../source/application/permissions.rst:25
 msgid "Users - allows full access to the users management [#f3]_"
-msgstr "Users - 全てのユーザを管理することを許可する [#f3]_"
+msgstr "Users - 全てのユーザーを管理することを許可する [#f3]_"
 
 #: ../../source/application/permissions.rst:26
 msgid "Groups - allows full access to the user groups management"
@@ -1572,7 +1572,7 @@ msgstr "ユーザープロファイルを設定することで権限を設定で
 
 #: ../../source/application/permissions.rst:55
 msgid "An user can only display or modify accounts if:"
-msgstr "ユーザは次の場合に該当する時のみ、アカウント情報にアクセスできます"
+msgstr "ユーザーは次の場合に該当する時のみ、アカウント情報にアクセスできます"
 
 #: ../../source/application/permissions.rst:57
 msgid "Is the account's owner"
@@ -1592,21 +1592,21 @@ msgstr "アカウントのsecondary userに設定されている場合"
 
 #: ../../source/application/permissions.rst:61
 msgid "His/Her main group is listed as a secondary group of the account"
-msgstr "ユーザのmian groupがアカウントのsecondary groupに設定されている場合"
+msgstr "ユーザーのmian groupがアカウントのsecondary groupに設定されている場合"
 
 #: ../../source/application/permissions.rst:62
 msgid ""
 "Is included through a group and the 'Secondary Groups Access' option is "
 "enabled"
 msgstr ""
-"ユーザのmian groupがアカウントのsecondary group accessオプションが有効化されて"
-"いる場合"
+"ユーザーのmian groupがアカウントのsecondary group accessオプションが有効化され"
+"ている場合"
 
 #: ../../source/application/permissions.rst:64
 msgid "Private accounts can only be accessed by the owner"
 msgstr ""
-"個人のプライベートアカウントには作成したユーザとそのユーザが許可したユーザのみ"
-"がアクセスできます"
+"個人のプライベートアカウントには作成したユーザーとそのユーザーが許可したユー"
+"ザーのみがアクセスできます"
 
 #: ../../source/application/permissions.rst:65
 msgid ""
@@ -1614,7 +1614,7 @@ msgid ""
 "group"
 msgstr ""
 "グループプライベートアカウントには許可されたグループがmain groupになっている"
-"ユーザのみがアクセスできます"
+"ユーザーのみがアクセスできます"
 
 #: ../../source/application/permissions.rst:66
 msgid ""
@@ -1637,8 +1637,8 @@ msgid ""
 "permissions, so users and groups ACLs will be applied when an account is "
 "either listed or accessed."
 msgstr ""
-"APIにもユーザと同じ権限が与えられているため、APIを用いてアクセスできる情報はブ"
-"ラウザで閲覧できる情報と同じです。"
+"APIにもユーザーと同じ権限が与えられているため、APIを用いてアクセスできる情報は"
+"ブラウザで閲覧できる情報と同じです。"
 
 #: ../../source/application/permissions.rst:75
 msgid "Notes"
@@ -1646,7 +1646,7 @@ msgstr "Notes"
 
 #: ../../source/application/permissions.rst:76
 msgid "Only the accounts that the user and its group are granted"
-msgstr "そのユーザがそのアカウントへのアクセス権限がある場合に限る"
+msgstr "そのユーザーがそのアカウントへのアクセス権限がある場合に限る"
 
 #: ../../source/application/permissions.rst:77
 msgid ""
@@ -1660,7 +1660,7 @@ msgstr ""
 #: ../../source/application/permissions.rst:78
 msgid "'Application Admin' users cannot be modified by other users"
 msgstr ""
-"‘アプリケーション管理者’以外が他のユーザの情報を変更することはできません"
+"‘アプリケーション管理者’以外が他のユーザーの情報を変更することはできません"
 
 #: ../../source/application/permissions.rst:79
 msgid "Only 'Application Admin' users can download the backup or XML files"
@@ -2842,7 +2842,7 @@ msgstr "user\\:\"login\""
 
 #: ../../source/application/searching.rst:17
 msgid "Get the accounts in which the user with login 'login' has access"
-msgstr "‘login’ という名前のユーザがアクセスできるアカウントを表示します"
+msgstr "‘login’ という名前のユーザーがアクセスできるアカウントを表示します"
 
 #: ../../source/application/searching.rst:18
 msgid "owner\\:\"login\""
@@ -2850,7 +2850,7 @@ msgstr "owner\\:\"login\""
 
 #: ../../source/application/searching.rst:18
 msgid "Get the accounts in which the user with login 'login' is the owner"
-msgstr "‘login’という名前のユーザが作成したアカウントが表示されます"
+msgstr "‘login’という名前のユーザーが作成したアカウントが表示されます"
 
 #: ../../source/application/searching.rst:19
 msgid "group\\:\"group_name\""

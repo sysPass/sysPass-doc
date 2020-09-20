@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sysPass 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 12:58+0900\n"
-"PO-Revision-Date: 2020-09-08 01:22+0900\n"
+"PO-Revision-Date: 2020-09-20 15:56+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,11 +45,11 @@ msgstr "HTML5とAJAXで構築されたマテリアルデザインのUIでモダ�
 
 #: ../../source/index.rst:11
 msgid "Multiuser with users, groups and profiles management"
-msgstr "個人だけでなく、複数のユーザ・グループごとに権限設定ができます"
+msgstr "個人だけでなく、複数のユーザー・グループごとに権限設定ができます"
 
 #: ../../source/index.rst:12
 msgid "Advanced profile management with 29 access levels"
-msgstr "ユーザにあわせて29種もの細かい権限設定ができます"
+msgstr "ユーザーにあわせて29種もの細かい権限設定ができます"
 
 #: ../../source/index.rst:13
 msgid "MySQL/MariaDB, OpenLDAP and Active Directory authentication"
@@ -90,13 +90,11 @@ msgid ""
 "Actions and events audit with the ability to send messages to a remote "
 "Syslog in CEF format"
 msgstr ""
-"CEF形式でシステムログやアクションをを記録したり、そのログを送信すること"
-"ができます"
+"CEF形式でシステムログやアクションをを記録したり、そのログを送信できます"
 
 #: ../../source/index.rst:21
 msgid "API for integrating with other applications"
-msgstr ""
-"API連携により様々なアプリケーションを開発・利用することができます"
+msgstr "API連携により様々なアプリケーションを開発・利用できます"
 
 #: ../../source/index.rst:22
 msgid "Import from KeePass and CSV"

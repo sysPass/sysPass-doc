@@ -24,36 +24,32 @@ Prerequisites
 Installation
 ------------
 
-CentOS 7 package installation (https://www.softwarecollections.org/en/scls/rhscl/rh-php70/).
+CentOS 7 package installation (http://wiki.centos.org/SpecialInterestGroup/SCLo).
 
 .. code:: bash
 
     $ sudo yum -y install centos-release-scl.noarch
-    $ sudo yum -y install rh-php71 rh-php71-php rh-php71-php-fpm httpd rh-mariadb102 wget
-    $ sudo yum -y install rh-php71-php-gd rh-php71-php-intl rh-php71-php-json rh-php71-php-ldap rh-php71-php-mbstring rh-php71-php-mysqlnd rh-php71-php-opcache rh-php71-php-pdo rh-php71-php-xml rh-php71-php-zip
+    $ sudo yum -y install rh-php73 rh-php73-php rh-php73-php-fpm httpd rh-mariadb103 wget
+    $ sudo yum -y install rh-php73-php-gd rh-php73-php-intl rh-php73-php-json rh-php73-php-ldap rh-php73-php-mbstring rh-php73-php-mysqlnd rh-php73-php-opcache rh-php73-php-pdo rh-php73-php-xml rh-php73-php-zip
 
 Automated start/stop Apache web server and MariaDB server.
 
 .. code:: bash
 
-  $ sudo systemctl enable httpd.service
-  $ sudo systemctl enable mariadb.service
-  $ sudo systemctl start httpd.service
-  $ sudo systemctl start mariadb.service
+  $ sudo systemctl enable --now httpd24-httpd.service rh-mariadb103-mariadb.service
 
 Setting up MariaDB.
 
 .. code:: bash
 
-  $ sudo /usr/bin/mysql_secure_installation
+  $ sudo scl enable rh-mariadb103 mysql_secure_installation
 
 Enabling firewall ports.
 
 .. code:: bash
 
-  $ sudo firewall-cmd --permanent --zone=public --add-service=http
-  $ sudo firewall-cmd --permanent --zone=public --add-service=https
-  $ sudo firewall-cmd --reload
+  $ sudo firewall-cmd --zone=public --add-service=http --add-service=https
+  $ sudo firewall-cmd --runtime-to-permanent
 
 .. include:: _ssl.rst
 
@@ -68,15 +64,20 @@ sysPass needs to be allowed to write its configuration and some other files (bac
 
     Please, run only one of the choices
 
-* Change SELinux's context and user:
+* Change the SELinux context of files:
 
 .. code:: bash
 
   $ sudo setsebool -P httpd_can_connect_ldap 1
-  $ sudo chcon -R -t httpd_sys_rw_content_t /var/www/html/syspass/app/{config,backup,cache,tmp}
+  $ sudo semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/html/syspass/app/(config|backup|cache|temp)(/.*)?"
+  $ sudo restorecon -R -v /var/www/html/syspass
 
 
-* Disable SELinux by editing the file "/etc/sysconfig/selinux" and setting "SELINUX" variable's value to "permissive". You need to restart the system.
+* Disable SELinux by editing the file "/etc/sysconfig/selinux" and setting "SELINUX" variable's value to "disabled". You need to restart the system. Until then you can use permissive mode which won't enforce the policies:
+
+.. code:: bash
+
+  $ sudo setenforce 0
 
 .. include:: _dependencies.rst
 

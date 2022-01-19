@@ -13,7 +13,10 @@ If you go with the packaged version, download and unpack sysPass files.
 .. code:: bash
 
   $ cd /var/www/html/syspass
-  $ sudo tar xzf syspass.tar.gz
+  # Strip version directory and extract contents to current directory.
+  $ sudo tar xzf syspass.tar.gz --strip-components=1
+  # If using the vendors package
+  $ sudo tar xzf vendors.tar.gz
 
 If you go with Git cloned version, clone sysPass GitHub repository.
 

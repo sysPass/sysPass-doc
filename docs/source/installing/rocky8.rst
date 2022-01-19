@@ -24,7 +24,7 @@ Prerequisites
 Installation
 ------------
 
-Rocky 8 package installation. First configure dnf modules to use php 7.4 then install all packages needed from a base server installation.
+Rocky 8 package installation. First configure dnf modules to use php 7.4 then install all packages needed from a base server installation. This example uses httpd; swap for your prefered webserver.
 
 .. code:: bash
 
@@ -87,5 +87,14 @@ sysPass needs to be allowed to write its configuration and some other files (bac
 
   $ sudo setenforce 0
 
+
+HTTP
+-------
+
+After installation, enable and start your webserver. This example uses apache.
+
+.. code:: bash
+
+  $ sudo systemctl enable --now httpd
 
 .. include:: _environment.rst

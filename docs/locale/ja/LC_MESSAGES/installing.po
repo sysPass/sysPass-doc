@@ -1,0 +1,609 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: 2020-09-20 16:11+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Last-Translator: magcho <mail@magcho.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../source/installing/_dependencies.rst:2
+msgid "Installing dependencies"
+msgstr "依存パッケージをインストール"
+
+#: ../../source/installing/_dependencies.rst:4
+msgid ""
+"PHP Composer is needed to keep up-to-date dependencies and an easy way to apply "
+"security or functional patches to them."
+msgstr ""
+"ComposerはPHP向けのパッケージマネージャーで依存パッケージのインストール・アップ"
+"デートを簡単に行うために必要なものです。"
+
+#: ../../source/installing/_dependencies.rst:6
+msgid ""
+"You can either download the dependencies using Composer itself or by getting "
+"the latest \"vendor.tar.gz\" package from the release page."
+msgstr ""
+"Composerを利用しない場合はgithubのリリースページから “vendor.tar.gz” をダウン"
+"ロードして配置することでsysPassを始めることができます。"
+
+#: ../../source/installing/_dependencies.rst:10
+msgid ""
+"If you don't have any Internet access from the server, the vendor package will "
+"provide all the release dependencies and you don't need to deal with composer "
+"commands."
+msgstr ""
+"Composerコマンドで依存パッケージをインストールするためにサーバーがインターネット"
+"に接続できるようになっている必要があります。"
+
+#: ../../source/installing/_dependencies.rst:13
+msgid "Using PHP Composer"
+msgstr "PHP Composerを利用する"
+
+#: ../../source/installing/_dependencies.rst:15
+msgid ""
+"From sysPass root directory, download and install Composer (https://getcomposer."
+"org/doc/faqs/how-to-install-composer-programmatically.md)"
+msgstr ""
+"sysPassのルートディレクトリへ移動し、Composerをインストールしてください、インス"
+"トール方法はComposerのドキュメント（https://getcomposer.org/doc/faqs/how-to-"
+"install-composer-programmatically.md）を参照してください"
+
+#: ../../source/installing/_dependencies.rst:17
+msgid ""
+"Create a bash script called \"install_composer.sh\" and paste this code in it:"
+msgstr "以下のスクリプトを実行することでComposerをインストールすることもできます"
+
+#: ../../source/installing/_dependencies.rst:43
+msgid "Then install sysPass dependencies"
+msgstr ""
+"Composerのインストールが終わったら、次はsysPassの依存パッケージをインストールし"
+"ます。以下のコマンドを実行してください"
+
+#: ../../source/installing/_directories.rst:2
+msgid "Directories and permissions"
+msgstr "ディレクトリとパーミッション"
+
+#: ../../source/installing/_directories.rst:4
+msgid "Create a directory for sysPass within the web server root."
+msgstr ""
+"サーバーのドキュメントルートに sysPass用のディレクトリを作成してください。"
+
+#: ../../source/installing/_directories.rst:11
+msgid "If you go with the packaged version, download and unpack sysPass files."
+msgstr ""
+"リリースページからsysPassをダウンロードして先ほど作成したディレクトリの中に配置"
+"してください。"
+
+#: ../../source/installing/_directories.rst:18
+msgid "If you go with Git cloned version, clone sysPass GitHub repository."
+msgstr ""
+"リリースページからダウンロードしなくてもGitを用いて配置することもできます。"
+
+#: ../../source/installing/_directories.rst:24
+msgid ""
+"Setup directories permissions. The owner should match the web server running "
+"user."
+msgstr ""
+"以下のコマンドでいくつかのディレクトリの所有者とパーミッションを変更してくださ"
+"い。"
+
+#: ../../source/installing/_environment.rst:2
+msgid "Environment configuration"
+msgstr "環境設定"
+
+#: ../../source/installing/_environment.rst:4
+msgid ""
+"Please, point your web browser to the following URL and follow the installer "
+"steps"
+msgstr ""
+"以上の操作が終わったらwebブラウザーでsysPassにアクセスしてインストールウィザード"
+"に従って環境設定をしてsysPassのインストールを完了してください"
+
+#: ../../source/installing/_environment.rst:6
+msgid "https://IP_OR_SERVER_ADDRESS/syspass/index.php"
+msgstr "https://IP_OR_SERVER_ADDRESS/syspass/index.php"
+
+#: ../../source/installing/_environment.rst:11
+#: ../../source/installing/docker.rst:134
+msgid "More information about how sysPass works on :doc:`/application/index`"
+msgstr ""
+"sysPassに関するもっと詳しい説明は :doc:`/application/index` をお読みください"
+
+#: ../../source/installing/_environment.rst:15
+#: ../../source/installing/docker.rst:138
+msgid ""
+"It's very advisable to take a look to security advices on :doc:`/application/"
+"security`"
+msgstr ""
+"sysPassを安全に利用するために :doc:`/application/security` をお読みください"
+
+#: ../../source/installing/_ssl.rst:1
+msgid "Optional for enabling SSL."
+msgstr "オプションとしてSSLを有効化することもできます。"
+
+#: ../../source/installing/_ssl.rst:3
+msgid ""
+"In order to increase your sysPass instance security, please consider to use "
+"SSL. See :doc:`/application/security` and the following resources for Debian:"
+msgstr ""
+"SSLを利用することでより一層sysPassを安全に利用することができます。SSLの有効化手"
+"順については :doc:`/application/security` ページ、または以下を参照してください"
+
+#: ../../source/installing/_ssl.rst:5
+msgid ""
+"Sites only accessible from LAN: https://doc.debian.org/configuration/Self-"
+"Signed_Certificate"
+msgstr ""
+"sysPassをLAN内で利用している場合: https://doc.debian.org/configuration/Self-"
+"Signed_Certificate"
+
+#: ../../source/installing/_ssl.rst:6
+msgid ""
+"Sites accessible from Internet, you could use Let's Encrypt, see https://"
+"certbot.eff.org/"
+msgstr ""
+"sysPassをインターネットに公開している場合はLet’s Encryptの利用を検討してみてくだ"
+"さい( https://certbot.eff.org/)"
+
+#: ../../source/installing/centos7.rst:2
+msgid "CentOS 7.x Installation"
+msgstr "CentOS 7.x へのインストール"
+
+#: ../../source/installing/centos7.rst:5 ../../source/installing/debian9.rst:5
+msgid "Prerequisites"
+msgstr "動作用件"
+
+#: ../../source/installing/centos7.rst:7 ../../source/installing/debian9.rst:7
+msgid "Web server (Apache/Nginx/Lighttpd) with SSL enabled."
+msgstr ""
+"Web server [Apache/Nginx/Lighttpd] (SSLを有効化する際はSSLに対応するWeb serverを"
+"利用してください)"
+
+#: ../../source/installing/centos7.rst:8 ../../source/installing/debian9.rst:8
+msgid "MariaDB >= 10.1"
+msgstr "MariaDB >= 10.1"
+
+#: ../../source/installing/centos7.rst:9
+msgid "PHP >= 7.0 (7.1 or above recommended)"
+msgstr "PHP >= 7.0 (7.1以上を推奨します)"
+
+#: ../../source/installing/centos7.rst:19 ../../source/installing/debian9.rst:19
+msgid "PHP modules"
+msgstr "PHP modules"
+
+#: ../../source/installing/centos7.rst:11
+msgid "mysqlnd"
+msgstr "mysqlnd"
+
+#: ../../source/installing/centos7.rst:12 ../../source/installing/debian9.rst:12
+msgid "curl"
+msgstr "curl"
+
+#: ../../source/installing/centos7.rst:13 ../../source/installing/debian9.rst:13
+msgid "json"
+msgstr "json"
+
+#: ../../source/installing/centos7.rst:14 ../../source/installing/debian9.rst:14
+msgid "gd"
+msgstr "gd"
+
+#: ../../source/installing/centos7.rst:15 ../../source/installing/debian9.rst:15
+msgid "xml"
+msgstr "xml"
+
+#: ../../source/installing/centos7.rst:16 ../../source/installing/debian9.rst:16
+msgid "mbstring"
+msgstr "mbstring"
+
+#: ../../source/installing/centos7.rst:17 ../../source/installing/debian9.rst:17
+msgid "intl"
+msgstr "intl"
+
+#: ../../source/installing/centos7.rst:18 ../../source/installing/debian9.rst:18
+msgid "readline"
+msgstr "readline"
+
+#: ../../source/installing/centos7.rst:19 ../../source/installing/debian9.rst:19
+msgid "ldap (optional)"
+msgstr "ldap (optional)"
+
+#: ../../source/installing/centos7.rst:20 ../../source/installing/debian9.rst:20
+msgid "mcrypt (optional for importing older XML export files)"
+msgstr ""
+"mcrypt (optional: 古いバージョンのsysPassで出力したXMKファイルをいインポートする"
+"際に必要です)"
+
+#: ../../source/installing/centos7.rst:21 ../../source/installing/debian9.rst:21
+msgid ""
+"Package with latest sysPass version https://github.com/nuxsmin/sysPass/releases/"
+"latest"
+msgstr "最新版のsysPass (https://github.com/nuxsmin/sysPass/releases/latest)"
+
+#: ../../source/installing/centos7.rst:22 ../../source/installing/debian9.rst:22
+msgid ""
+"Or clone sysPass repository from GitHub https://github.com/nuxsmin/sysPass.git"
+msgstr ""
+"リリースページのほかGitを利用して最新のsysPassを利用することもできます(https://"
+"github.com/nuxsmin/sysPass.git)"
+
+#: ../../source/installing/centos7.rst:25 ../../source/installing/debian9.rst:25
+#: ../../source/installing/index.rst:4
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/installing/centos7.rst:27
+msgid ""
+"CentOS 7 package installation (https://www.softwarecollections.org/en/scls/"
+"rhscl/rh-php70/)."
+msgstr ""
+"CentOS 7 に以下のパッケージをインストールしてください (https://www."
+"softwarecollections.org/en/scls/rhscl/rh-php70/)."
+
+#: ../../source/installing/centos7.rst:35
+msgid "Automated start/stop Apache web server and MariaDB server."
+msgstr ""
+"以下のコマンドでApache web serverとMariaDB serverが自動起動するように設定してく"
+"ださい。"
+
+#: ../../source/installing/centos7.rst:44
+msgid "Setting up MariaDB."
+msgstr "MariaDBの設定"
+
+#: ../../source/installing/centos7.rst:50
+msgid "Enabling firewall ports."
+msgstr ""
+"以下のコマンドでファイヤーウォールでsysPassの利用に必要な通信を許可してくださ"
+"い。"
+
+#: ../../source/installing/centos7.rst:63
+msgid "SELinux"
+msgstr "SELinux"
+
+#: ../../source/installing/centos7.rst:65
+msgid ""
+"sysPass needs to be allowed to write its configuration and some other files "
+"(backup, cache, temp, etc). We have 2 choices:"
+msgstr ""
+"sysPassに構成ファイル(backup, cache, temp, etc)の書き込みを許可する必要がありま"
+"す。許可する方法は以下の２通りがあります。"
+
+#: ../../source/installing/centos7.rst:69
+msgid "Please, run only one of the choices"
+msgstr ""
+"どちらか一方の方法でsysPassの構成ファイルへの書き込みを許可してください。両方行"
+"う必要はありません"
+
+#: ../../source/installing/centos7.rst:71
+msgid "Change SELinux's context and user:"
+msgstr "userの設定を変更する"
+
+#: ../../source/installing/centos7.rst:79
+msgid ""
+"Disable SELinux by editing the file \"/etc/sysconfig/selinux\" and setting "
+"\"SELINUX\" variable's value to \"permissive\". You need to restart the system."
+msgstr ""
+"SELinuxによる書き込み制限を無効化する。”/etc/sysconfig/selinux”ファイルを開"
+"き”SELINUX”の項目を”permissive”に変更してください。"
+
+#: ../../source/installing/debian9.rst:2
+msgid "Debian 9 Installation"
+msgstr "Debian 9 へのインストール"
+
+#: ../../source/installing/debian9.rst:9
+msgid "PHP >= 7.0"
+msgstr "PHP >= 7.0"
+
+#: ../../source/installing/debian9.rst:11
+msgid "mysql"
+msgstr "mysql"
+
+#: ../../source/installing/debian9.rst:27
+msgid "Debian GNU/Linux package installation."
+msgstr "以下のコマンドで必要なパッケージをインストールしてください"
+
+#: ../../source/installing/docker.rst:8
+msgid "Docker Installation"
+msgstr "Dockerを用いたインストール"
+
+#: ../../source/installing/docker.rst:10
+msgid ""
+"Docker_ based installations allow to run the application in an isolated "
+"environment besides try out multiple versions without installing any package on "
+"the host system."
+msgstr ""
+"Dcokerを用いることで動作しているサーバーのOSに関わらず独立した仮想環境にsysPass"
+"をインストール・利用することができます。これによりサーバの環境に影響を及ぼすこと"
+"なくsysPassの運用ができます。"
+
+#: ../../source/installing/docker.rst:12
+#, python-format
+msgid ""
+"sysPass can be ran in `Docker containers <https://en.wikipedia.org/wiki/Docker_"
+"%28software%29>`_ which has been compiled on top of latest Debian_ stable "
+"version (Stretch) and avoiding any **package compilation**."
+msgstr ""
+"sysPassの `Dockerコンテナ <https://en.wikipedia.org/wiki/Docker_%28software"
+"%29>`_ は最新のDebian:Stretchイメージを **ベースに** 作られています。"
+
+#: ../../source/installing/docker.rst:14
+msgid ""
+"Docker images can be got from `Docker Hub`_ and they are complied automatically "
+"from Docker source files on  https://github.com/nuxsmin/docker-syspass"
+msgstr ""
+"sysPassのDockerイメージは https://github.com/nuxsmin/docker-syspass を元にして "
+"`Docker Hub`_ で自動的にビルド・公開されています"
+
+#: ../../source/installing/docker.rst:16
+msgid "There are two ways for installing:"
+msgstr "Dockerを利用したsysPassのインストール方法は以下の２通りあります"
+
+#: ../../source/installing/docker.rst:18
+msgid ""
+"Using `Docker Compose`_ (recommended): deploys a fully working sysPass "
+"environment including application and database services."
+msgstr ""
+"`Docker Compose`_ (recommended): sysPassのだけでなくDB Serverも一括で管理・運用"
+"できます。"
+
+#: ../../source/installing/docker.rst:19
+msgid "Using Docker_: deploys each service (application and database) separately."
+msgstr "Using Docker_: sysPassに加えてDB Serverを自分で設定する必要があります。"
+
+#: ../../source/installing/docker.rst:24
+msgid "Docker Compose"
+msgstr "Docker Compose"
+
+#: ../../source/installing/docker.rst:26
+msgid ""
+"In order to deploy using this method, you need to issue the following steps:"
+msgstr ""
+"以下の手順でDockerとDocker Composeをインストールし、sysPassを起動していきます。"
+
+#: ../../source/installing/docker.rst:28 ../../source/installing/docker.rst:68
+msgid "Install Docker engine from https://docs.docker.com/install/"
+msgstr ""
+"Docker engineをインストールしてください。インストール手順は https://docs.docker."
+"com/install/ を参照してください"
+
+#: ../../source/installing/docker.rst:29
+msgid "Install Docker Compose from https://docs.docker.com/compose/install/"
+msgstr ""
+"Docker Composeをインストールしてください。インストール手順は https://docs."
+"docker.com/compose/install/ を参照してください"
+
+#: ../../source/installing/docker.rst:30
+msgid ""
+"Download \"docker-compose.yml\" sysPass' file from https://raw."
+"githubusercontent.com/nuxsmin/docker-syspass/master/docker-compose.yml or use "
+"the following one:"
+msgstr ""
+"Githubからhttps://raw.githubusercontent.com/nuxsmin/docker-syspass/master/"
+"docker-compose.yml をダウンロードするか、以下の内容で ”docker-compose.yml” ファ"
+"イルを作成してください"
+
+#: ../../source/installing/docker.rst:35
+msgid "Run \"docker-compose\" tool for setting up the environment:"
+msgstr "以下のコマンドで ”docker-compose\" を用いてsysPassを起動してください"
+
+#: ../../source/installing/docker.rst:41
+msgid ""
+"This will download the latest sysPass stable image and the database (MariaDB) "
+"one."
+msgstr ""
+"このコマンドにより最新版のsysPassとMariaDBがダウンロードされ、自動的に起動しま"
+"す。"
+
+#: ../../source/installing/docker.rst:43
+msgid "Take a look to deployment's logs:"
+msgstr "ログを見たい場合は以下のコマンドを実行してください"
+
+#: ../../source/installing/docker.rst:51
+msgid ""
+"Docker Compose will create an isolated network for all sysPass services making "
+"possible to use DNS resolution between containers. You can use \"syspass-db\" "
+"for setting up the database hostname in sysPass installation page."
+msgstr ""
+"Docker Composeを利用するとコンテナ間を繋ぐ内部的なネットワークが作成され、"
+"sysPassからDB Serverに接続する際のホスト名は “syspass-db” になります。sysPassの"
+"インストールウィザードではDBのホストネームに “syspass-db” と入力してください。"
+
+#: ../../source/installing/docker.rst:53
+msgid ""
+"It will create two fixed volumes for sysPass application, one for \".../app/"
+"config\" directory and the other for \".../app/backup\" directory. An "
+"additional fixed volume will be created for the database container's data."
+msgstr ""
+"Docker Composeを利用して起動するとsysPassコンテナでは ”…/app/config” ディレクト"
+"リと ”…/app/backup” ディレクトリの２つを永続化するために２つのボリュームが作成さ"
+"れます。また、DB Serverコンテナでもデータベースの永続化のために１つボリュームが"
+"作成されます。"
+
+#: ../../source/installing/docker.rst:57
+msgid ""
+"sysPass container will publish 80 and 443 host's ports to the outside. You "
+"could change this behavior by tweaking the Docker Compose's file."
+msgstr ""
+"このdocker-composeファイルを用いると外部から80, 443の２つのポートでアクセスでき"
+"るようになります。ポート番号を変更したい場合は ”docker-compose.yml” を編集してく"
+"ださい。"
+
+#: ../../source/installing/docker.rst:61
+msgid ""
+"You can disable HTTPS redirection by setting \"USE_SSL=no\" within \"docker-"
+"compose.yml\" file. This will offload the SSL encryption to a LB or reverse "
+"proxy."
+msgstr ""
+"HTTPS(SSL)を利用しない場合は ”docker-compose.yml” ファイルで “USE_SSL=no” に修正"
+"してください。"
+
+#: ../../source/installing/docker.rst:64
+msgid "Docker"
+msgstr "Docker"
+
+#: ../../source/installing/docker.rst:66
+msgid ""
+"By this way all the services need to be deployed manually. The following steps "
+"are needed:"
+msgstr ""
+"Docker continerを手動で構成したい場合はDocker Composeを用いずにこちらの方法で"
+"sysPassをインストールしてください"
+
+#: ../../source/installing/docker.rst:69
+msgid "Create network for sysPass services:"
+msgstr "以下のコマンドでsysPass用にネットワークを作成してください"
+
+#: ../../source/installing/docker.rst:75
+msgid "Create fixed volunes for sysPass services:"
+msgstr "以下のコマンドで永続化用のボリュームを作成してください"
+
+#: ../../source/installing/docker.rst:83
+msgid "Setup sysPass database container:"
+msgstr "以下のコマンドでDB コンテナを起動してください"
+
+#: ../../source/installing/docker.rst:94
+msgid "Setup sysPass application container:"
+msgstr "以下のコマンドでsysPassコンテナを起動してください"
+
+#: ../../source/installing/docker.rst:106
+msgid "Connection data will be displayed in application container's console:"
+msgstr "以下のコマンドでコンテナ間で正しく通信できているかを確認できます"
+
+#: ../../source/installing/docker.rst:114
+msgid ""
+"You can install sysPass extensions (plugins) by setting \"COMPOSER_EXTENSIONS\" "
+"environment variable when deploying the sysPass application container. Example: "
+"\"--env COMPOSER_EXTENSIONS='syspass/plugin-authenticator'\""
+msgstr ""
+"Docker経由でsysPassにextention (plugins)をインストールしたい場合は環境変数 "
+"“COMPOSER_EXTENSIONS” にextention名を設定しておくとsysPassのインストール時に自動"
+"でセットアップされます。(例: “--env COMPOSER_EXTENSIONS=‘syspass/plugin-"
+"authenticator’”)"
+
+#: ../../source/installing/docker.rst:118
+msgid "Database Access"
+msgstr "Database Access"
+
+#: ../../source/installing/docker.rst:120
+msgid "You can get access to the database using the following connection data:"
+msgstr "デフォルトでは以下の情報でDB Serverにアクセスできます"
+
+#: ../../source/installing/docker.rst:122
+msgid "User: root"
+msgstr "User: root"
+
+#: ../../source/installing/docker.rst:123
+msgid "Password: syspass"
+msgstr "Password: syspass"
+
+#: ../../source/installing/docker.rst:128
+msgid "You may install other sysPass images from `Docker Hub`_"
+msgstr "最新版以外後sysPassを利用したい場合は`Docker Hub`_ を参照してください"
+
+#: ../../source/installing/docker.rst:132
+msgid ""
+"Please follow the installer steps in order to setup the sysPass application "
+"instance."
+msgstr ""
+"ここまでの手順はsysPassコンテナを起動するまでの作業です。これ以降のインストール"
+"の操作はWebブラウザーでsysPassにアクセスしてインストールウィザードを利用し進めて"
+"ください。"
+
+#: ../../source/installing/hostingmode.rst:2
+msgid "Hosting Mode"
+msgstr "Hosting Mode"
+
+#: ../../source/installing/hostingmode.rst:4
+msgid ""
+"The hosting mode is for those installations that are running on a external "
+"hosting, where is not possible to create neither database nor connection user "
+"for it."
+msgstr ""
+"ホスティングモードは外部のレンタルサーバーなどを利用しておりDBの作成。DB userの"
+"追加をsysPassから行えない時に利用するモードです。お使いのレンタルサーバサービス"
+"からsysPass用のデータベースとアクセスのためのDB userを作成してください。作成の方"
+"法についてはお使いのレンタルサーバへお問い合わせください。"
+
+#: ../../source/installing/hostingmode.rst:6
+msgid ""
+"Though hosting mode is about the database creation tasks, you would find useful "
+"to download the dependencies bundle when there isn't SSH access to the web "
+"server. The bundle will be attached to every release on GitHub as \"vendor.tar."
+"gz\". It should be unpacked within sysPass directory."
+msgstr ""
+"Hosting ModeはsysPassインストール時のDBに関するオプションです。もしお使いのサー"
+"バーへssh接続が出来ずにComposerコマンドが利用できなくてお困りの場合はGithubのリ"
+"リースページから “vender.tar.gz” を利用してインストールする方法も検討してくださ"
+"い。これはComposerコマンドの代わりに依存モジュールをセットアップするための手順で"
+"あり、“vender.tar.gz” をsysPassのルートディレクトリに展開することでComposerを利"
+"用することなくインストールができるようになります。"
+
+#: ../../source/installing/hostingmode.rst:9
+msgid "**It won't create neither database (except tables) nor connection user**"
+msgstr ""
+"**Hosting ModeではsysPassはデータベース(テーブルを除く)の作成・接続のためのユー"
+"ザの作成を行いません。利用者自身でこれらの操作を行いsysPassのインストールウィ"
+"ザードに作成したものを入力してください。**"
+
+#: ../../source/installing/hostingmode.rst:11
+msgid "The steps to perform the installation are the following:"
+msgstr ""
+"Hosting ModeでsysPassの代わりに利用者が行わなければならない内容は以下の通りです"
+
+#: ../../source/installing/hostingmode.rst:13
+msgid "Create an user/password for sysPass connection at the hosting panel"
+msgstr "sysPassで利用するDBへの接続ユーザ/パスワードを作成する"
+
+#: ../../source/installing/hostingmode.rst:14
+msgid ""
+"Create the sysPass database (not tables) and give permissions to the previous "
+"user on it"
+msgstr ""
+"sysPassで利用するデータベース(テーブルではありません)を作成し、先ほど作成した"
+"ユーザがアクセスできるように権限を付与する"
+
+#: ../../source/installing/hostingmode.rst:15
+msgid ""
+"Start the sysPass installation and use the user/password that was previously "
+"created for sysPass (the two first fields in the installation page)"
+msgstr ""
+"ブラウザーでsysPassのインストールウィザードを開き先ほど作成したDB接続の情報を入"
+"力していく"
+
+#: ../../source/installing/hostingmode.rst:16
+msgid ""
+"Provide a MySQL/MariaDB user with administration rights (it could be the same "
+"as previous if it has enough permissions), in order to create sysPass database "
+"tables. This user is used only for the installation process and it often would "
+"be the user/password for the hosting management"
+msgstr ""
+"この時入力したユーザにはDB内でテーブルを作成する権限が必要です。大抵の場合先ほど"
+"作成したユーザ/パスワードを入力すれば問題ありません。うまくいかない場合はお使い"
+"のサーバー提供者にお問い合わせください"
+
+#: ../../source/installing/hostingmode.rst:17
+msgid ""
+"If database connection and permissions are right, the installation should "
+"finish successfully"
+msgstr ""
+"データベースへ問題なく接続でき、十分な権限を持っている場合は問題なくインストール"
+"が進行します"
+
+#: ../../source/installing/hostingmode.rst:20
+msgid ""
+"In case of errors, you could take a look to the web server error logs or \".../"
+"app/config/syspass.log\"."
+msgstr ""
+"何か問題がある場合はweb serverのログ、または “…/app/config/syspass.log” を参考に"
+"してください。"

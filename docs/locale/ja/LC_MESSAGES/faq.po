@@ -1,0 +1,399 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: 2020-09-08 01:44+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Last-Translator: magcho <mail@magcho.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../source/faq.rst:2
+msgid "Preguntas Frecuentes"
+msgstr "FAQ"
+
+#: ../../source/faq.rst:5
+msgid "¿Para qué sirve sysPass?"
+msgstr "sysPassとは？"
+
+#: ../../source/faq.rst:7
+msgid ""
+"sysPass un gestor de claves que permite almacenarlas de forma segura mediante "
+"encriptación de doble sentido con clave maestra. Las claves están asociadas a "
+"cuentas, las cuales tienen información detallada del propósito de la misma "
+"como: cliente, categoría, notas, archivos, etc."
+msgstr ""
+"sysPassは暗号化して安全にパスワードを保存するパスワードマネージャーです。パス"
+"ワードの他にカテゴリー・メモ・ファイルなど様々な情報をまとめて管理できます。"
+
+#: ../../source/faq.rst:9
+msgid ""
+"La idea inicial era la de hacer accesible las claves de cuentas de acceso a "
+"servidores y servicios en un entorno multiusuario, de forma segura y que "
+"pudiera ser exportable a una memoria externa."
+msgstr ""
+"このプロジェクトは個人だけでなくチームで安全にパスワードを管理し、なおかつどこ"
+"でもパスワードを確認できるようなツールが欲しいと思ったことから開発がスタートし"
+"ました。"
+
+#: ../../source/faq.rst:12
+msgid "¿Dónde se puede instalar sysPass?"
+msgstr "sysPassをインストールするには何が必要ですか？"
+
+#: ../../source/faq.rst:14
+msgid ""
+"La aplicación pueder ser instalada en cualquier sistema que disponga de "
+"Apache, PHP y MySQL."
+msgstr ""
+"Apacheのようなwebサーバ・PHP・MySQLが動作する環境であればいますぐsysPassをイン"
+"ストールすることができます。"
+
+#: ../../source/faq.rst:17
+msgid "¿Cómo se instala sysPass?"
+msgstr "sysPassのインストール方法は？"
+
+#: ../../source/faq.rst:19
+msgid ""
+"Bajar la aplicación desde https://github.com/nuxsmin/sysPass/releases/latest "
+"y seguir los pasos de :doc:`/installing/index`"
+msgstr ""
+"このリンクから https://github.com/nuxsmin/sysPass/releases/latest 最新版の"
+"sysPassをダウンロードできます。インストールの手順は :doc:`/installing/index` "
+"を参照してください"
+
+#: ../../source/faq.rst:22
+msgid "¿Qué métodos de autentificación utiliza?"
+msgstr "認証方式には何を利用できますか？"
+
+#: ../../source/faq.rst:24
+msgid "sysPass utiliza MySQL/MariaDB o LDAP como “backends” de autentificación."
+msgstr ""
+"sysPassではMySQL/MariaDBを用いたデータベース認証の他にLDAPを用いた認証にも対応"
+"しています。"
+
+#: ../../source/faq.rst:26
+msgid ""
+"En caso de utilizar LDAP, si no es posible conectar con el servidor de LDAP, "
+"se utilizará MySQL como “backend” utilizando los datos de acceso de la última "
+"sesión iniciada en LDAP."
+msgstr ""
+"LDAP認証を設定している状態で、もしLDAPサーバへの接続に問題があるとsysPassが判"
+"断すると自動的にデータベース認証に切り替わります。"
+
+#: ../../source/faq.rst:28
+msgid "Para más información ver: :doc:`/application/authentication`"
+msgstr "詳しい情報は :doc:`/application/authentication` を参照してください"
+
+#: ../../source/faq.rst:31
+msgid "¿Para qué sirve la encriptación?"
+msgstr "暗号化とはなんですか？"
+
+#: ../../source/faq.rst:33
+msgid ""
+"La encriptación de las claves en la base de datos permite que, en caso de que "
+"alguien tenga acceso a ésta o si se realiza una exportación de la misma, no "
+"sea legible sin la clave maestra."
+msgstr ""
+"sysPassはデータベースにパスワードを直接保存することはなく、マスターパスワード"
+"を用いて暗号化した状態でデータベースに保存しています。"
+
+#: ../../source/faq.rst:35
+msgid ""
+"Esta solución es muy conveniente para ejecutar la aplicación desde un "
+"pendrive, para casos en los que no es posible acceder al servidor donde se "
+"almacena la aplicación. ¿Qué tipo de encriptación utiliza?"
+msgstr ""
+"この仕組みにより、sysPassをサーバではなくUSBなどのポータブルな環境にインストー"
+"ルしている時に便利です。さて、sysPassが具体的にどのような暗号方式を用いている"
+"か気になりませんか？"
+
+#: ../../source/faq.rst:38
+msgid "El esquema de cifrado utilizado es rijndael-256_ en modo CBC_."
+msgstr "sysPassではrijndael-256_ の CBC_ モードで暗号化しています。"
+
+#: ../../source/faq.rst:40 ../../source/faq.rst:65
+msgid "Para más información ver: :doc:`/application/encryption`"
+msgstr ""
+"もっと詳しく知りたい場合はこちら :doc:`/application/encryption` を参照してくだ"
+"さい"
+
+#: ../../source/faq.rst:46
+msgid "¿Qué quiere decir “portable”?"
+msgstr "ポータブルとは？"
+
+#: ../../source/faq.rst:48
+msgid ""
+"Este término se refiere a aquellas aplicaciones que pueden ser ejecutadas sin "
+"realizar la instalación de componentes en el sistema operativo que la ejecuta."
+msgstr ""
+"sysPassは完全にPHPとその周辺技術でのみ実装されており、OSに別途パッケージをイン"
+"ストールすつる必要はありません。"
+
+#: ../../source/faq.rst:50
+msgid ""
+"Esta aplicación es posible hacerla “portable” mediante la instalación de "
+"apache, php y mysql en una unidad externa. Para ello, es posible utilizar "
+"cualquiera de los paquetes LAMP_ disponibles como WAMP, XAMPP, etc."
+msgstr ""
+"sysPassは一般に LAMP_  と呼ばれるようなApache・PHP・MySQLが動く環境ならどこで"
+"もインストールすることができます。なのでWAMPやXAMPPなどのツールを使うことでお"
+"使いのPCもしくはUSBドライブなどにもインストールすることができます。"
+
+#: ../../source/faq.rst:54
+msgid ""
+"La herramienta de backup permite realizar una copia de todo el entorno "
+"(aplicación y base de datos), para poder instalarlo en la unidad externa. La "
+"encriptación de los datos de las cuentas, hace que la seguridad sea muy alta "
+"en caso de pérdida de la unidad extraíble."
+msgstr ""
+"USBドライブにインストールしている場合は別途ツールを用いてドライブ自体をバック"
+"アップすれば完璧なバックアップを取得することもできます。"
+
+#: ../../source/faq.rst:57
+msgid "¿Hay una clave maestra por cada cuenta/usuario?"
+msgstr "マスターパスワードはユーザー(アカウント)ごとに違うものが必要ですか？"
+
+#: ../../source/faq.rst:59
+msgid "La clave maestra es global para todas las cuentas y usuarios."
+msgstr ""
+"いいえ、マスターパスワードはsysPass全体で１つしか存在しません。複数人のユー"
+"ザーがいる場合はその全員で同じマスターパスワードを使用してください。"
+
+#: ../../source/faq.rst:61
+msgid ""
+"Cada vez que un usuario se dé de alta, cambie su clave personal o se "
+"reestablezca la clave maestra, será necesario que éste la introduzca en el "
+"siguiente inicio de sesión."
+msgstr ""
+"マスターパスワードを変更した際はsysPassを利用している全てのユーザーがその新し"
+"いマスターパスワードでログインし直す必要があります。その他、ユーザーのパスワー"
+"ドを変更した際にはそのユーザーだけ再度マスターパスワードの入力が必要です。"
+
+#: ../../source/faq.rst:63
+msgid ""
+"Cada vez que se produzca un cambio de clave maestra, los usuarios que tengan "
+"iniciada la sesión, sólo podrán visualizar las cuentas hasta que introduzca "
+"la nueva clave."
+msgstr ""
+"マスターパスワードが変更された後、新しいマスターパスワードを入力しないと保存し"
+"たアカウントのパスワードを閲覧することができず、アカウントの情報しか閲覧できな"
+"くなります。"
+
+#: ../../source/faq.rst:68
+msgid "¿Qué son los enlaces a Wiki?"
+msgstr "Wikiのリンクはどのように決定されますか？"
+
+#: ../../source/faq.rst:70
+msgid ""
+"Nos permiten enlazar las cuentas con un determinado patrón de nombre, a una "
+"Wiki externa que permita pasar el nombre de la cuenta como parámetro en la "
+"URL."
+msgstr ""
+"URLのパラメーターにユーザー名などの情報を含めたリンクを発行することがありま"
+"す。"
+
+#: ../../source/faq.rst:72
+msgid ""
+"Hay dos tipos de enlaces, uno que enlaza con la página de búsqueda de la Wiki "
+"y pasa como parámetro el nombre del cliente, y otro, que enlaza directamente "
+"con la página de la cuenta."
+msgstr ""
+"Wikiのリンクには２種類あり、１つはWikiの検索結果へのリンクです。これは検索条件"
+"を表したURLであり、アクセスされた時点の最新の検索結果を表示します。２つ目は"
+"Wikiのページを表示するURLです。"
+
+#: ../../source/faq.rst:75
+msgid "¿Para qué sirven las categorías?"
+msgstr "カテゴリーとは？"
+
+#: ../../source/faq.rst:77
+msgid ""
+"Las categorías tienen como objetivo el clasificar las cuentas para poder "
+"realizar búsquedas más precisas."
+msgstr ""
+"アカウントを分類して検索しやすくしたり、管理しやすくするための項目です。"
+
+#: ../../source/faq.rst:80
+msgid "¿Para qué sirven los grupos de usuarios?"
+msgstr "グループとは？"
+
+#: ../../source/faq.rst:82
+msgid ""
+"Estos grupos se utilizan para dar acceso a los usuarios a las cuentas que "
+"tengan dicho grupo como principal o secundario."
+msgstr ""
+"ユーザーをまとめて管理するための機能です、保存されているアカウントにアクセスす"
+"る権限をグループごとに管理すると便利です。１人のユーザが所属できるグループには"
+"primary groupと secondary groupの２種類があります。"
+
+#: ../../source/faq.rst:85
+msgid "¿Para qué sirve el campo cliente?"
+msgstr "カスタマーフィールドとは？"
+
+#: ../../source/faq.rst:87
+msgid ""
+"Al igual que las categorías, es posible hacer búsquedas basadas en el "
+"cliente. Este campo se puede tratar de forma genérica como departamento, "
+"empresa, división, etc."
+msgstr ""
+"カテゴリーと似ている概念でアカウントを検索するときのヒントとして設定できる任意"
+"項目です。会社では部門名などを設定すると便利かもしれません。"
+
+#: ../../source/faq.rst:89
+msgid "En futuras versiones se podrán asociar usuarios a clientes."
+msgstr ""
+"将来的にはカスタマーフィールドを用いてユーザーとクライアントを関連づけられるよ"
+"うになる予定です。"
+
+#: ../../source/faq.rst:92
+msgid "¿Existe un histórico de cuentas?"
+msgstr "アカウントの変更履歴を保持していますか？"
+
+#: ../../source/faq.rst:94
+msgid ""
+"Sí, cada vez que se realiza una modificación de una cuenta, se realiza una "
+"copia del estado anterior de la misma."
+msgstr ""
+"もちろんです、アカウントのパスワードを変更しても前のパスワードは全て保存されて"
+"います。間違えてパスワードを変えてしまったとき、間違えてアカウントを削除してし"
+"まった時も安心です。"
+
+#: ../../source/faq.rst:96
+msgid ""
+"En los detalles de la cuenta se puede visualizar cada registro del histórico "
+"de una cuenta. Si la clave maestra con la que fue guardada la cuenta en dicho "
+"punto no conincide con la actual, no se podrá mostrar."
+msgstr ""
+"アカウントの詳細から履歴を見ることができます。注意するべきことはマスターパス"
+"ワードを途中で変更した場合です。マスターパスワードの変更前の時に保存したパス"
+"ワードは履歴に表示されなくなります。"
+
+#: ../../source/faq.rst:99
+msgid "¿Para qué sirven los perfiles?"
+msgstr "プロファイルとは？"
+
+#: ../../source/faq.rst:101
+msgid ""
+"Los perfiles son usados para definir las acciones que pueden realizar los "
+"usuarios."
+msgstr ""
+"プロファイルはユーザが行える操作を制限するための権限設定を行うものです。"
+
+#: ../../source/faq.rst:103
+msgid ""
+"Existen 29 niveles de acceso que pueden ser activados de forma conjunta, "
+"permitiendo así definir a qué partes de la aplicación pueden acceder los "
+"usuarios con dicho perfil."
+msgstr "現在設定できる権限の項目は29種類あります。"
+
+#: ../../source/faq.rst:106
+msgid "¿Qué es el modo mantenimiento?"
+msgstr "メンテナンスモードとは？"
+
+#: ../../source/faq.rst:108
+msgid ""
+"Este modo se utiliza para impedir que los usuarios utilicen la aplicación en "
+"las ocasiones en las que se estén realizando operaciones sobre la Base de "
+"Datos, actualizaciones, etc."
+msgstr ""
+"このモードはsysPassのバックアップ・アップデートを行なっている時にユーザーがロ"
+"グインできないようにするモードです。"
+
+#: ../../source/faq.rst:110
+msgid ""
+"El usuario que active el modo matenimiento será el único que puede utilizar "
+"la aplicación hasta el cierre de sesión. Después de ello es necesario "
+"desactivarlo en el archivo \"config/config.xml\" bajo la etiqueta "
+"\"maintenance\""
+msgstr ""
+"メンテナンスモードの間は、そのモードを有効化する操作をしたユーザーのみが"
+"sysPass内で操作ができます。メンテナンスモードを強制的に終了するために"
+"は”config/config.xml”ファイルの”maintenance”項目を変更してください。"
+
+#: ../../source/faq.rst:113
+msgid "¿Puedo cambiar la Clave Maestra?"
+msgstr "マスターパスワードを変更することはできますか？"
+
+#: ../../source/faq.rst:115
+msgid ""
+"Sí, para ello es necesario conocer la actual. Se recomienda realizar una "
+"copia de seguridad de la Base de Datos."
+msgstr ""
+"もちろんです、いつでもマスターパスワードを変更することができます。マスターパス"
+"ワードを変更するとデーターベース内に保存されたアカウント情報を全て再暗号化しま"
+"す、なのでマスターパスワードを変更する前にデータベースのバックアップを取ってお"
+"くことをおすすめします。"
+
+#: ../../source/faq.rst:118
+msgid "No recuerdo la Clave Maestra, ¿Puedo desencriptar las claves?"
+msgstr "マスターパスワードを忘れました、再発行することはできますか？"
+
+#: ../../source/faq.rst:120
+msgid "No, no es posible visualizar una clave sin la Clave Maestra."
+msgstr ""
+"いいえ、マスターパスワードを忘れると再発行できません。マスターパスワードがなけ"
+"れば保存された全てのパスワードを閲覧することができなくなります、注意してくださ"
+"い。"
+
+#: ../../source/faq.rst:123
+msgid "¿Funciona el backup en Windows?"
+msgstr ""
+"Windows上にsysPassの環境を作っています、バックアップを取ることはできますか？"
+
+#: ../../source/faq.rst:125
+msgid ""
+"Sí, desde la versión 1.1 se utiliza la librería PHAR de PHP para realizar los "
+"backups."
+msgstr ""
+"もちろんです、PHPファイルとPHARファイル一式をコピーしてバックアップしてくださ"
+"い。"
+
+#: ../../source/faq.rst:128
+msgid "El lenguaje no cambia"
+msgstr "表示言語が変更できません"
+
+#: ../../source/faq.rst:130
+msgid ""
+"Revisa las locales instaladas en tu sistema (servidor), porque sysPass usa el "
+"sistema de internacionalización `GNU gettext`_."
+msgstr ""
+"お使いのサーバーのシステム(OS)に変更したいlocaleが存在するか確認してください。"
+"sysPassでは `GNU gettext`_ を用いて多言語対応を行なっているためシステムに"
+"localeが存在しなければ変更できません。"
+
+#: ../../source/faq.rst:134
+msgid "Las locales deben de ser de la variante UTF-8."
+msgstr ""
+"インストールするlocaleはUTF-8でないと動作しないことにも注意してください。"
+
+#: ../../source/faq.rst:137
+msgid "What are these strange characters in password fields?"
+msgstr ""
+"パスワードを送信する時の通信に奇妙な文字列が含まれています、これはなんですか？"
+
+#: ../../source/faq.rst:139
+msgid ""
+"Don't worry about them, your password is okay. It's a security mechanism by "
+"which the passwords entered in a form field are automatically encrypted using "
+"RSA encryption before sending over the HTTP channel. Then, on server side, "
+"they are decrypted and stored/used as they were entered."
+msgstr ""
+"心配しないでください、それはsysPassのセキュリティー強化のための機能の一部で、"
+"ブラウザがサーバーにパスワードを送信する前にRSA暗号化を施しているため一見奇妙"
+"な文字列になっています。"
+
+#: ../../source/faq.rst:141
+msgid "Further info on: :doc:`/application/encryption`"
+msgstr ""
+"もっと詳しく知りたい場合はこちら :doc:`/application/encryption` を参照してくだ"
+"さい"

@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: 2020-09-07 00:25+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Last-Translator: magcho <mail@magcho.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../source/howtos/azure_mysql.rst:2
+msgid "Azure MySQL"
+msgstr "Azure MySQL"
+
+#: ../../source/howtos/azure_mysql.rst:4
+msgid ""
+"In order to install sysPass database on Azure MySQL you'll need to "
+"change the database engine used in DDL statements that create the "
+"database views. This will replace the \"MyISAM\" engine with \"InnoDB\", "
+"which does not take any effect in database views."
+msgstr ""
+"Azure MySQLを用いてsysPassを構築する際にデータベースビューを作成するDDLス"
+"テートメントで使用されるデータベースエンジンを以下のコマンドを用いて "
+"“MyISAM” から “InnoDB” に変更する必要があります。これは、データベース"
+"ビューでは効果がありません。"
+
+#: ../../source/howtos/azure_mysql.rst:12
+msgid "Thanks to @shocker70 for this contribution"
+msgstr "この情報を提供してくださった@shocker70に感謝を"
+
+#: ../../source/howtos/index.rst:4
+msgid "HOWTOs"
+msgstr "HOWTOs"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:2
+msgid "LDAP Troubleshooting"
+msgstr "LDAPのトラブルシューティング"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:4
+msgid "PHP 7.2 now includes openssl directly compiled in."
+msgstr "PHP 7.2 には最初からコンパイル済みのopensslが組み込まれています。"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:6
+msgid "You may just check that with:"
+msgstr "以下のコマンドで確認できます"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:12
+msgid "or if you're like me using CentOS 7 and php via SCL:"
+msgstr "CentOS 7でSCLを用いている場合は以下のコマンドで確認できます"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:18
+msgid ""
+"You may then also check if your linux box connects to your ldaps server "
+"with:"
+msgstr ""
+"以下のコマンドでLDAPサーバーに接続しているかどうかを確認することができま"
+"す。"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:24
+msgid "or ldap server using TLS"
+msgstr "LDAPサーバがSSLを用いている場合は以下のコマンドが利用できます"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:30
+msgid ""
+"If those work, you may use ldapsearch to manually bind to your LDAP "
+"server and see what the problem might be. On CentOS, install it via:"
+msgstr ""
+"これらのコマンドで異常が見つけられない場合は ldapsearch を用いて手動で"
+"LDAPサーバに接続し問題点を探すことができます。以下のコマンドでこのツール"
+"をインストールすることができます"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:37
+msgid "Simple LDAP Query"
+msgstr "Simple LDAP Queryを試すには以下のコマンド例が参考になります"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:43
+msgid "Add -Z to the ldapsearch line to switch to TLS."
+msgstr "TLSに切り替える場合は -Z オプションを追加してください。"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:45
+msgid "If you get"
+msgstr "レスポンスの例です"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:53
+msgid ""
+"Your certificate might be bad. You can override certificate checking in "
+"\"/etc/openldap/ldap.conf\" by adding line:"
+msgstr ""
+"このようなレスポンスが表示されている場合は証明書に問題がある可能性があり"
+"ます “/etc/openldap/ldap.conf” ファイルを開いて以下のように変更することで"
+"証明書の検証を無効化することができます"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:60
+msgid ""
+"Don't forget to restart php-fpm (or apache if using mod_php) for those "
+"settings to take effect."
+msgstr ""
+"ファイルを変更後、これを適用するにはphp-fpm (mod_phpを用いている場合は "
+"Apache)を再起動してください。"
+
+#: ../../source/howtos/ldap_troubleshooting.rst:64
+msgid "Thanks to @deajan for this contribution"
+msgstr "この情報を提供してくださった@deajanに感謝を"
+
+#: ../../source/howtos/nginx.rst:2
+msgid "How to install and configure Nginx"
+msgstr "Nginxを用いてsysPassを構築する"
+
+#: ../../source/howtos/nginx.rst:4
+msgid "Install required repositories and packages"
+msgstr "以下のコマンドで動作に必要なパッケージをインストールしてください"
+
+#: ../../source/howtos/nginx.rst:12
+msgid "Configure Nginx \"/etc/nginx/conf.d/syspass.conf\" file"
+msgstr ""
+"Nginxの設定ファイル ”/etc/nginx/conf.d/syspass.conf\" を以下のように修正"
+"してください"
+
+#: ../../source/howtos/nginx.rst:48
+msgid "Configure PHP"
+msgstr "以下のコマンドでPHPの設定を行ってください"
+
+#: ../../source/howtos/nginx.rst:56
+msgid "Enable and start services"
+msgstr "以下のコマンドで各種サービスを起動してください"
+
+#: ../../source/howtos/nginx.rst:67
+msgid "Thanks to @M1k13 for this contribution"
+msgstr "この情報を提供してくださった@M1k13に感謝を"
+
+#: ../../source/howtos/restore.rst:2
+msgid "How to restore sysPass"
+msgstr "sysPassをバックアップからリストアする"
+
+#: ../../source/howtos/restore.rst:6
+msgid "This procedure requires to have a database and application backup"
+msgstr ""
+"リストアするためのsysPass application, DBのバックアップが取られていること"
+"を前提にしています"
+
+#: ../../source/howtos/restore.rst:8
+msgid ""
+"Restore the database backup. It could be made either through the sysPass "
+"utility, MySQL workbench or mysqldump tool"
+msgstr ""
+"DBをリストアします、sysPassのユーティリティー・MySQL workbench・"
+"mysqldump toolなどを用いてDBをリストアしてください"
+
+#: ../../source/howtos/restore.rst:9
+msgid ""
+"Create the connection user (see '.../app/config/config.xml' file for "
+"current connection settings) and set the correct permissions on the "
+"restored database"
+msgstr ""
+"DBに接続するためのユーザ情報を ’…/app/config/config.xml’ に入力してくださ"
+"い。うまくいかない場合、このユーザの権限がsysPassの要件を満たしているか確"
+"認してください"
+
+#: ../../source/howtos/restore.rst:10
+msgid "Restore the application backup"
+msgstr "sysPassをapplicationバックアップを用いてリストアしてください"
+
+#: ../../source/howtos/restore.rst:11
+msgid "Point the browser to the application URL"
+msgstr ""
+"ブラウザでsysPassにアクセスして正常にリストアできたことを確認してください"
+
+#: ../../source/howtos/upgrade.rst:2
+msgid "Cómo probar una actualización de sysPass"
+msgstr "sysPassのアップデートをテストする"
+
+#: ../../source/howtos/upgrade.rst:6
+msgid ""
+"Este procedimiento indica los pasos a seguir para probar una "
+"actualización de sysPass sin modificar la instalación actual"
+msgstr ""
+"sysPassをアップデートするとデータが破損したり、正しく前の情報が引き継がれ"
+"ない可能性があります。このページではアップデート前にsysPassの環境を複製し"
+"検証用の環境を作り、それをアップデートすることで正常にアップデートできる"
+"かどうかをテストします"
+
+#: ../../source/howtos/upgrade.rst:8
+msgid ""
+"Realizar una copia de la base de datos. Se puede realizar mediante la "
+"utilidad de copia de sysPass, usando MySQL Workbench o con la utilidad "
+"mysqldump"
+msgstr ""
+"sysPassのユーティリティー・MySQL Workbench・mysqldumpなどを用いてDBのバッ"
+"クアップを作成してください"
+
+#: ../../source/howtos/upgrade.rst:9
+msgid "Crear una nueva base de datos (ej. syspass21)"
+msgstr "検証環境用にDBを作成してください"
+
+#: ../../source/howtos/upgrade.rst:10
+msgid ""
+"Crear un usuario (ej. sp_admin21) y asignar permisos sobre la base de "
+"datos creada"
+msgstr "作成したDBにアクセスするためのユーザを作成してください"
+
+#: ../../source/howtos/upgrade.rst:11
+msgid ""
+"Importar la copia de la base de datos en la nueva. Es posible utilizar "
+"las utilidades mencionadas"
+msgstr "検証用のDBに最初にバックアップしたデータでリストアしてください"
+
+#: ../../source/howtos/upgrade.rst:12
+msgid "Crear un nuevo directorio y descomprimir la nueva versión [#f1]_"
+msgstr ""
+"サーバのドキュメントルートにディレクトリを作成しそこにアップデート後の新"
+"しいバージョンのsysPass[#f1]_を配置してください"
+
+#: ../../source/howtos/upgrade.rst:13
+msgid ""
+"Copiar todos los archivos del directorio \"config\" a la nueva ruta y "
+"comprobar los permisos [#f1]_"
+msgstr ""
+"現行の環境から “config” ディレクトリの中身を全てコピーして検証環境に配置"
+"してください。なおコピーしたファイル群のパーミッションも確認してください "
+"[#f1]_"
+
+#: ../../source/howtos/upgrade.rst:14
+msgid ""
+"Modificar el archivo \"config/config.xml\" para cambiar los datos de "
+"acceso a la base de datos (\"dbname\", \"dbuser\" y \"dbpass\"). "
+"Comprobar que \"dbHost\" es correcto"
+msgstr ""
+"検証環境の “config/config.xml” ファイルを開いて検証用のDBに接続するように"
+"先の操作で作成したDB名・ユーザ名・パスワードを入力してください"
+
+#: ../../source/howtos/upgrade.rst:15
+msgid ""
+"Acceder desde un navegador a la aplicación y seguir los pasos de "
+"actualización"
+msgstr "ブラウザでsysPassにアクセスし問題なく動作するか確認してください"
+
+#: ../../source/howtos/upgrade.rst:18
+msgid "Notas"
+msgstr "Notes"
+
+#: ../../source/howtos/upgrade.rst:19
+msgid "Ver :doc:`/installing/index` para más detalles"
+msgstr "詳しくは :doc:`/installing/index` を参照してください"

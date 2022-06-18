@@ -1,0 +1,915 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: 2020-09-06 23:07+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Last-Translator: magcho <mail@magcho.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../source/updating/index.rst:4
+msgid "Updating"
+msgstr "アップデート"
+
+#: ../../source/updating/strategies.rst:8
+msgid "Strategies"
+msgstr "方針"
+
+#: ../../source/updating/strategies.rst:10
+msgid ""
+"Though it has been discussed a few times, I should mention that **sysPass does "
+"not provide an automated upgrading method for code files**. This is so because "
+"it would imply installing some kind of software libraries like Git_ and develop "
+"an UI interface within sysPass that will try to resolve many situations when "
+"dealing with CVS repositories (merge, conflicts, etc.)."
+msgstr ""
+"sysPassにはwebアプリによくある**自己アップデート機能はありません**。これは"
+"sysPass自体がGitなどのバージョン管理ツールを用いて管理・更新されることを想定して"
+"いるためです。自己アップデート時にありがちな前のバージョンのファイルがアップデー"
+"トで上書きされて消えてしまう心配がありません。そういった場合でもGitなどには強力"
+"なマージツールがあるので安心してsysPassのアップデートを行うことができます。"
+
+#: ../../source/updating/strategies.rst:12
+msgid ""
+"Another question is about those installations on Docker_ or Kubernetes_, which "
+"don't rely (philosophically speaking) on such kind on rolling updates based on "
+"CVS, since it will break the philosophy of containers: immutable, reproducible, "
+"scalable and so on."
+msgstr ""
+"また、よく聞かれる質問ですが。Docker_ or Kubernetes_ を用いて構成している場合は"
+"どのようにアップデートを行うのか。これらについてもsshなどで接続してGitコマンドを"
+"用いてアップデートを行うこともできますがコンテナの再現性を損ねてしまいます。"
+
+#: ../../source/updating/strategies.rst:14
+msgid ""
+"That being said, all-in-one apps are not a great deal for these days, so I "
+"think the best way to update is to be performed externally, that is either "
+"using Git_ or Docker_ tagged images (through `Docker Compose`_  or Helm_)."
+msgstr ""
+"昨今のコンテナ技術を考えるとsysPassイメージのタグを変更してアップデートする方法"
+"が一般的です。`Docker Compose`_ や Helm_ を用いることで簡単にこの操作を行うこと"
+"ができます。"
+
+#: ../../source/updating/strategies.rst:17
+msgid "Normal"
+msgstr "Normal"
+
+#: ../../source/updating/strategies.rst:19
+msgid "As described on release upgrading notes"
+msgstr "アップデートの詳細はリリースノートを参照してください"
+
+#: ../../source/updating/strategies.rst:22
+msgid "Git"
+msgstr "Git"
+
+#: ../../source/updating/strategies.rst:24
+msgid ""
+"Install Git_, point your CLI on the webserver root and run the following "
+"command:"
+msgstr ""
+"Git_ を用いてsysPassをインストールした場合は以下のようなコマンドを実行したはずで"
+"す"
+
+#: ../../source/updating/strategies.rst:31
+msgid "In order to get the latest updates:"
+msgstr ""
+"Git_ コマンドでクローンしたsysPassディレクトリ内で以下のコマンドを実行すると"
+"sysPassが最新のものにアップデートされます"
+
+#: ../../source/updating/strategies.rst:39
+msgid "The \"master\" branch on Github holds the most recent stable version"
+msgstr "Github上の “master” ブランチは常に最新のstableバージョンになっています"
+
+#: ../../source/updating/strategies.rst:41
+msgid ""
+"After it, if database changes are required, you'll need to follow the steps "
+"through the web UI"
+msgstr ""
+"アップデートに伴いDBに変更が必要な場合はブラウザでsysPassにアクセスするとその旨"
+"が表示されます。具体的な手順についてはその表示に従ってください"
+
+#: ../../source/updating/strategies.rst:45
+msgid ""
+"Perform a full database and application backup using external tools like "
+"\"mysqldump\" and \"tar\" before updating"
+msgstr ""
+"アップデートする前に”mysqldump” や “tar” などのコマンドを利用するなどして、"
+"sysPassディレクトリ全体とデータベース全体のバックアップをしてください"
+
+#: ../../source/updating/strategies.rst:48
+msgid "Docker"
+msgstr "Docker"
+
+#: ../../source/updating/strategies.rst:50
+msgid ""
+"The fine and easy way is installing :ref:`docker-compose` and every new version "
+"is released out, you only need to change the image tag on composer's YAML."
+msgstr ""
+":ref:`docker-compose` を用いて運用している場合のアップデートは簡単です。デフォル"
+"トのdocker-compose.ymlを利用している場合は起動時に常に最新のsysPassが使用されま"
+"す。docker-compose.ymlを自分で書き換えている場合はtagを更新するだけでsysPassの"
+"アップデートができます。"
+
+#: ../../source/updating/strategies.rst:62
+msgid "After changing the version tag, tun the following command:"
+msgstr ""
+"tagを変更した後に以下のコマンドを実行すると最新のsysPassがダウンロードされ、自動"
+"で起動します"
+
+#: ../../source/updating/strategies.rst:68
+msgid ""
+"It will update the current sysPass container with the new version. If database "
+"changes are required, you'll need to follow the steps through the web UI"
+msgstr ""
+"アップデートに伴いDBに変更が必要な場合はブラウザでsysPassにアクセスするとその旨"
+"が表示されます。具体的な手順についてはその表示に従ってください"
+
+#: ../../source/updating/strategies.rst:72
+msgid ""
+"Perform a full database and application backups before updating: :doc:`../"
+"application/backup`"
+msgstr ""
+"アップデートする前にsysPassディレクトリ全体とデータベース全体のバックアップ :"
+"doc:`../application/backup` をしてください"
+
+#: ../../source/updating/v2_1.rst:4
+msgid "Versión 2.1"
+msgstr "2.1 Version"
+
+#: ../../source/updating/v2_1.rst:6
+msgid ""
+"Esta versión incluye mejoras en la seguridad de sysPass mediante las siguientes "
+"funcionalidades:"
+msgstr ""
+"このアップデートには様々な機能向上のほかセキュリティー向上のための変更があります"
+
+#: ../../source/updating/v2_1.rst:8
+msgid ""
+"Uso de la librería `Defuse/php-encryption`_ para la encriptación de datos con "
+"OpenSSL usando AES-256 CTR (CVE-2017-5999)"
+msgstr ""
+"AES-256 CTR (CVE-2017-5999)方式で暗号化する時のOpenSSLに`Defuse/php-encryption`_"
+"を用いるようになります"
+
+#: ../../source/updating/v2_1.rst:9
+msgid "Mejoras en la seguridad de las claves de sesión"
+msgstr ""
+"セッションキーを安全に扱うようになり、セッション機能の安全性が向上しました"
+
+#: ../../source/updating/v2_1.rst:10
+msgid "Clave para autorizaciones API"
+msgstr "API認証のセキュリティ機能が向上しました"
+
+#: ../../source/updating/v2_1.rst:11
+msgid "Mejoras en la seguridad de los enlaces públicos"
+msgstr ""
+"公開リンク機能のセキュリティアップデートを行い、より安心してリンクを共有できるよ"
+"うになりました"
+
+#: ../../source/updating/v2_1.rst:12
+msgid ""
+"Detección de intentos de acceso fallidos. Se introduce un retardo después de "
+"varios intentos"
+msgstr ""
+"続けてログインに失敗していることを検知すると次にログイン画面が出るまで遅延させる"
+"ようにしました"
+
+#: ../../source/updating/v2_1.rst:14
+msgid ""
+"Esta actualización requiere de la reencriptación de todas las cuentas y datos "
+"encriptados, por lo que es necesaria la clave maestra y un login de usuario "
+"válido para registrar los cambios."
+msgstr ""
+"今回のアップデートでは既に保存されているパスワードをより安全な方式で暗号化するた"
+"めにマスターパスワードの変更・有効なアカウントのログインが必要です。詳しくはアッ"
+"プデート後にブラウザでsysPassにアクセスすると表示される情報をご覧ください。"
+
+#: ../../source/updating/v2_1.rst:16
+msgid ""
+"Aunque el proceso es seguro, es recomendable hacer una copia de seguridad "
+"completa de sysPass."
+msgstr ""
+"このアップデートが正常に行われ、データが消えたりすることがないことを確認していま"
+"すが、念のためにバックアップを取ってからアップデートすることをお勧めします。"
+
+#: ../../source/updating/v2_1.rst:19
+msgid "Cambios Importantes"
+msgstr "重要な変更"
+
+#: ../../source/updating/v2_1.rst:21
+msgid ""
+"Debido a los cambios en la encriptación de datos, los siguientes elementos han "
+"de ser renovados:"
+msgstr ""
+"このアップデートでは暗号化方式が変更されるため以下のものが再生成され、アップデー"
+"ト前とは異なるものになる可能性があります"
+
+#: ../../source/updating/v2_1.rst:23
+msgid ""
+"Enlaces públicos: los enlaces son instantáneas de la cuenta enlazada, por lo "
+"que si se actualiza, es necesario renovar el enlace."
+msgstr ""
+"共有リンク: アップデート後はリンクされたアカウントのスナップショットが共有される"
+"ようになります。そのためアカウントが変更された場合リンクも再生成されるようになり"
+"ました。"
+
+#: ../../source/updating/v2_1.rst:24
+msgid ""
+"Autorizaciones API: A partir de esta versión es necesaria una clave para las "
+"autorizaciones que requieran de datos encriptados."
+msgstr ""
+"API: このバージョンからAPIで暗号化されている情報にアクセスするためにパスワード認"
+"証が必須になりました。"
+
+#: ../../source/updating/v2_1.rst:25
+msgid "Clave maestra temporal: es necesario regenerarla si es usada."
+msgstr ""
+"Temporary master password: Temporary master passwordを使用している場合は再生成が"
+"必要になります"
+
+#: ../../source/updating/v2_1.rst:28
+msgid "Proceso"
+msgstr "アップデート手順"
+
+#: ../../source/updating/v2_1.rst:30
+msgid "Para la actualización de sysPass son necesarios los siguientes pasos:"
+msgstr ""
+"sysPassのアップデートの概略です、以下のような手順でアップデートを行ってください"
+
+#: ../../source/updating/v2_1.rst:32
+msgid ""
+"Descargar la aplicación desde https://github.com/nuxsmin/sysPass/releases y "
+"descomprimir los archivos"
+msgstr ""
+"https://github.com/nuxsmin/sysPass/releases から最新のsysPassを取得し、サーバに"
+"展開してください"
+
+#: ../../source/updating/v2_1.rst:33
+msgid "Establecer el propietario y permisos del directorio de sysPass"
+msgstr ""
+"インストール時と同様にフォルダの所有者とパーミッション変更を行ってください"
+
+#: ../../source/updating/v2_1.rst:34
+msgid ""
+"Copiar los archivos (\"config.xml\", \"key.pem\" y \"pubkey.pem\") del "
+"directorio \"config\" de la versión actual a la nueva"
+msgstr ""
+"アップデート前のフォルダから“config.xml”, “key.pem” , “pubkey.pem” の３ファイル"
+"をコピーして “config” ディレクトリ内に入れてください"
+
+#: ../../source/updating/v2_1.rst:35
+msgid "Acceder desde un navegador a la aplicación"
+msgstr "ブラウザでsysPassにアクセスしてください"
+
+#: ../../source/updating/v2_1.rst:37
+msgid "Si la aplicación requiere de actualización de la base de datos:"
+msgstr "アップデートに伴いデータベースの変更が必要と表示されたとき"
+
+#: ../../source/updating/v2_1.rst:39
+msgid "**Realizar una copia de seguridad de la base de datos**"
+msgstr "**必ずデータベースのバップアップを取ってください**"
+
+#: ../../source/updating/v2_1.rst:40
+msgid ""
+"Introducir el código de actualización que se encuentra en el archivo \"config/"
+"config.xml\" con la etiqueta \"upgradeKey\""
+msgstr ""
+"“config/config.xml” ファイル内の “upgradeKey” に記載されているアップデートコード"
+"を、ブラウザの指示されたところに入力してください"
+
+#: ../../source/updating/v2_1.rst:41
+msgid "Introducir la clave maestra de sysPass"
+msgstr "sysPassのマスターパスワードを指示されたところに入力してください"
+
+#: ../../source/updating/v2_1.rst:42
+msgid "Introducir un login de usuario válido"
+msgstr "有効なユーザでログインしてください"
+
+#: ../../source/updating/v2_1.rst:44
+msgid ""
+"Durante la actualización se mostrará el progreso de las tareas de encriptación"
+msgstr "アップデート中に再暗号化についての情報が表示されます"
+
+#: ../../source/updating/v2_1.rst:46
+msgid ""
+"Tras la actualización, se mostrará un mensaje y en el registro de eventos se "
+"pueden revisar los detalles de la actualización"
+msgstr ""
+"アップデートが完了するとメッセージが表示されます。また、イベントログで正常にアッ"
+"プデートできたかを確認することができます"
+
+#: ../../source/updating/v3.rst:2
+msgid "3.0 Version"
+msgstr "3.0 Version"
+
+#: ../../source/updating/v3.rst:4
+msgid "This version only can be updated from v2.1"
+msgstr ""
+"このバージョンにアップデートするにはsysPassがv2.1である必要があります。2.1より前"
+"のバージョンをお使いの場合は一旦v2.1へアップデートの後v3.0にアップデートしてくだ"
+"さい"
+
+#: ../../source/updating/v3.1.rst:9 ../../source/updating/v3.rst:7
+msgid "Important Changes"
+msgstr "重要な変更"
+
+#: ../../source/updating/v3.rst:9
+msgid ""
+"This version performs a fully database structure change, so **it's very "
+"important to make a full database backup using external tools like \"mysqldump"
+"\"**"
+msgstr ""
+"このバージョンではDBの構成が変更されています。**必ず”mysqldump” コマンドなどを用"
+"いてDBをバックアップした後アップデート作業を行ってください**"
+
+#: ../../source/updating/v3.rst:10
+msgid "\"config\" directory is moved off to \"/app/config\""
+msgstr "“config” ディレクトリの場所が “/app/config” に変更になりました"
+
+#: ../../source/updating/v3.1.rst:12 ../../source/updating/v3.rst:11
+msgid ""
+"Composer PHP package manager is used to install and keep up-to-date sysPass "
+"dependencies"
+msgstr "依存パッケージをComposerを用いて管理するようになりました"
+
+#: ../../source/updating/v3.1.rst:15 ../../source/updating/v3.rst:14
+msgid "Process"
+msgstr "アップデート手順"
+
+#: ../../source/updating/v3.1.rst:17 ../../source/updating/v3.rst:16
+msgid "The following steps need to be performed in order to update sysPass:"
+msgstr ""
+"sysPassのアップデートの概略です、以下のような手順でアップデートを行ってください"
+
+#: ../../source/updating/v3.1.rst:19 ../../source/updating/v3.rst:18
+msgid ""
+"Download or clone sysPass repository from either https://github.com/nuxsmin/"
+"sysPass/releases or https://github.com/nuxsmin/sysPass.git"
+msgstr ""
+"https://github.com/nuxsmin/sysPass/releases もしくは https://github.com/nuxsmin/"
+"sysPass.git から最新のsysPassを取得し、サーバに展開してください"
+
+#: ../../source/updating/v3.1.rst:20 ../../source/updating/v3.rst:19
+msgid "Set user and group permissions on sysPass directory"
+msgstr ""
+"インストール時と同様にフォルダの所有者とパーミッション変更を行ってください"
+
+#: ../../source/updating/v3.rst:20
+msgid ""
+"Copy \"config.xml\", \"key.pem\" y \"pubkey.pem\" from the old \".../config\" "
+"directory to \".../app/config\" directory"
+msgstr ""
+"”…/config” 内にある “config.xml”, “key.pem”, “pubkey.pem” ファイルを “…/app/"
+"config” ディレクトリにコピーしてください"
+
+#: ../../source/updating/v3.rst:21
+msgid ""
+"From sysPass root directory, download and install Composer: https://getcomposer."
+"org/download/"
+msgstr ""
+"sysPassのルートディレクトリにComposerをインストールしてください。詳しくは "
+"https://getcomposer.org/download/ を参照してください"
+
+#: ../../source/updating/v3.1.rst:23 ../../source/updating/v3.rst:22
+msgid "Install dependencies"
+msgstr "以下のコマンドで依存パッケージをインストールしてください"
+
+#: ../../source/updating/v3.rst:28
+msgid ""
+"Set up the correct permissions on directories. Please note that \"config\" and "
+"\"backup\" directories are now within \"/app\""
+msgstr ""
+"インストール時と同様にフォルダの所有者とパーミッション変更を行ってください"
+
+#: ../../source/updating/v3.rst:29
+msgid "Point your browser to sysPass web server URL"
+msgstr "ブラウザでsysPassにアクセスしてください"
+
+#: ../../source/updating/v3.rst:30
+msgid "**Perform a full database backup using external tools like \"mysqldump\"**"
+msgstr "**必ず”mysqldump” コマンドなどを用いてDBのバックアップを取ってください**"
+
+#: ../../source/updating/v3.rst:31
+msgid ""
+"Enter the upgrade key located in \"app/config/config.xml\" file within the "
+"\"upgradeKey\" tag"
+msgstr ""
+"“config/config.xml” ファイル内の “upgradeKey” に記載されているアップデートコード"
+"を、ブラウザの指示されたところに入力してください"
+
+#: ../../source/updating/v3.1.rst:2
+msgid "3.1 Version"
+msgstr "3.1 Version"
+
+#: ../../source/updating/v3.1.rst:4
+msgid "It's highly recommended upgrade from v3.0"
+msgstr ""
+"v3.0からのアップデートをすることを強く勧めます。お使いのsysPassがv3.0より低い"
+"バージョンの場合は段階を踏んでアップデートすることを推奨します。"
+
+#: ../../source/updating/v3.1.rst:6
+msgid "Please check out :doc:`v3` upgrade notes if you're upgrading from v2.1"
+msgstr ""
+"アップデート情報のほかv2.1 から :doc:`v3` へのアップデートの情報も参照してくださ"
+"い"
+
+#: ../../source/updating/v3.1.rst:11
+msgid ""
+"This version performs some database changes that will impact on plugins "
+"installed, so **it's very important to make a full database backup using "
+"external tools like \"mysqldump\"**"
+msgstr ""
+"このバージョンはインストールされているextention(plugins)に影響するDBの変更があり"
+"ます、**必ずDBのバックアップを取ってから** アップデートと作業を行ってください"
+
+#: ../../source/updating/v3.1.rst:21
+msgid ""
+"Copy \"config.xml\", \"key.pem\" y \"pubkey.pem\" from the old \".../app/config"
+"\" directory to the new one"
+msgstr ""
+"“…/app/config” 内にある “config.xml”, “key.pem”, “pubkey.pem” ファイルをアップ"
+"デート後の “…/app/config” ディレクトリにコピーしてください"
+
+#: ../../source/updating/v3.1.rst:22
+msgid ""
+"From sysPass root directory, download and install Composer (if not installed "
+"yet): https://getcomposer.org/download/"
+msgstr ""
+"sysPassのルートディレクトリでComposerを用いて依存パッケージのインストールを行っ"
+"てください。(Composerをインストールしていない場合は https://getcomposer.org/"
+"download/ を参照してインストールしてください)"
+
+#: ../../source/updating/v3.1.rst:29
+msgid "Set up the correct permissions on directories"
+msgstr ""
+"インストール時と同様にフォルダの所有者とパーミッション変更を行ってください"
+
+#: ../../source/updating/v3.1.rst:30
+msgid ""
+"Point your browser to sysPass web server URL. The upgrade process will display "
+"the confirmation page"
+msgstr ""
+"ブラウザでsysPassにアクセスし、表示されたアップグレードプロセスに従って処理を完"
+"了させてください"
+
+#: ../../source/updating/v3.1.rst:31
+msgid ""
+"Though it's being said on the upgrade page, please **perform a full database "
+"backup using external tools like \"mysqldump\"**"
+msgstr ""
+"アップデートする前に”mysqldump” コマンドを利用するなどして、**データベース全体の"
+"バックアップをしてください**"
+
+#: ../../source/updating/v3.1.rst:32
+msgid ""
+"Enter the upgrade key located in \".../app/config/config.xml\" file within the "
+"\"upgradeKey\" tag"
+msgstr ""
+"“…/app/config/config.xml” ファイル内の “upgradeKey” に記載されているアップデート"
+"コードを、ブラウザの指示されたところに入力してください"
+
+#: ../../source/updating/v3.1.rst:33
+msgid ""
+"If the upgrading process fails, please check out \".../app/config/syspass.log\" "
+"file for error messages"
+msgstr ""
+"もしアップデートに失敗した時は “…/app/config/syspass.log” のエラーメッセージを参"
+"照してください"
+
+#: ../../source/updating/v3.1.rst:34
+msgid "Once upgraded it will redirect to the sign in page"
+msgstr "アップデートが成功するとログイン画面にリダイレクトされます"
+
+#: ../../source/updating/v3.1.rst:38
+msgid ""
+"Please do not retry the upgrade process if database changes have been made. In "
+"that case, you will need to restore the database backup and restart the whole "
+"upgrade process."
+msgstr ""
+"アップデートをやり直す際はそのまま再度アップデートプロセスを実行しないでくださ"
+"い。最初のアップデートでデータベースの構造が変更されている可能性がありその場合再"
+"度実行してしまうと正常に処理を完了できません。アップデート前に取ったバックアップ"
+"データを用いてデータベースとsysPassを復元した後再度アップデートプロセスを実行し"
+"てください。"
+
+#: ../../source/updating/v3.1.rst:41
+msgid "Changelog"
+msgstr "Changelog"
+
+#: ../../source/updating/v3.1.rst:44
+msgid "Fixed"
+msgstr "Fixed"
+
+#: ../../source/updating/v3.1.rst:47
+msgid ""
+"[FIX] Wrong URL when application URL setting is set. Thanks to @kalxasus for "
+"the notice. Closes #1395"
+msgstr ""
+"[FIX] Wrong URL when application URL setting is set. Thanks to @kalxasus for "
+"the notice. Closes #1395"
+
+#: ../../source/updating/v3.1.rst:48
+msgid ""
+"[FIX] LDAP group filter wasn't applied when importing. Thanks to @kalxasus for "
+"the notice. Closes #1390"
+msgstr ""
+"[FIX] LDAP group filter wasn't applied when importing. Thanks to @kalxasus for "
+"the notice. Closes #1390"
+
+#: ../../source/updating/v3.1.rst:49
+msgid ""
+"[FIX] Client custom fields were not created/saved. Thanks to @ZUNbado and "
+"@sf32738 for the notice. Closes #1375"
+msgstr ""
+"[FIX] Client custom fields were not created/saved. Thanks to @ZUNbado and "
+"@sf32738 for the notice. Closes #1375"
+
+#: ../../source/updating/v3.1.rst:50
+msgid ""
+"[FIX] Skip over initialization when upgrade is needed. Thanks to @Envikia and "
+"@alexseys for the notice. Closes #1355"
+msgstr ""
+"[FIX] Skip over initialization when upgrade is needed. Thanks to @Envikia and "
+"@alexseys for the notice. Closes #1355"
+
+#: ../../source/updating/v3.1.rst:51
+msgid ""
+"[FIX] Wrong URL handling when downloading files. Thanks to @fprina for the "
+"feedback and testing. Closes #1354"
+msgstr ""
+"[FIX] Wrong URL handling when downloading files. Thanks to @fprina for the "
+"feedback and testing. Closes #1354"
+
+#: ../../source/updating/v3.1.rst:52
+msgid ""
+"[FIX] Wrong field definition on PluginData table. Thanks to @drewlsvern for the "
+"feedback. Closes #1326"
+msgstr ""
+"[FIX] Wrong field definition on PluginData table. Thanks to @drewlsvern for the "
+"feedback. Closes #1326"
+
+#: ../../source/updating/v3.1.rst:53
+msgid ""
+"[FIX] Fix custom fields migration issue. Thanks to @VexedSyd for the feedback. "
+"Closes #1273"
+msgstr ""
+"[FIX] Fix custom fields migration issue. Thanks to @VexedSyd for the feedback. "
+"Closes #1273"
+
+#: ../../source/updating/v3.1.rst:54
+msgid ""
+"[FIX] Wrong limit for maximum file size. Thanks to @javierlm for the feedback. "
+"Closes #1313"
+msgstr ""
+"[FIX] Wrong limit for maximum file size. Thanks to @javierlm for the feedback. "
+"Closes #1313"
+
+#: ../../source/updating/v3.1.rst:55
+msgid "[FIX] Wrong behavior when disabling remote syslog"
+msgstr "[FIX] Wrong behavior when disabling remote syslog"
+
+#: ../../source/updating/v3.1.rst:56
+msgid ""
+"[FIX] Wrong behavior when saving LDAP server. Thanks to @lreiher for the "
+"feedback. Closes #1277"
+msgstr ""
+"[FIX] Wrong behavior when saving LDAP server. Thanks to @lreiher for the "
+"feedback. Closes #1277"
+
+#: ../../source/updating/v3.1.rst:57
+msgid ""
+"[FIX] Wrong behavior when setting user's email from LDAP when several email "
+"addresses are set. Thanks to @cRaZy-bisCuiT for the feedback. Closes #1283"
+msgstr ""
+"[FIX] Wrong behavior when setting user's email from LDAP when several email "
+"addresses are set. Thanks to @cRaZy-bisCuiT for the feedback. Closes #1283"
+
+#: ../../source/updating/v3.1.rst:58
+msgid ""
+"[FIX] Wrong behavior when updating user's password. Thanks to @vrdominguez for "
+"the feedback. Closes #1293"
+msgstr ""
+"[FIX] Wrong behavior when updating user's password. Thanks to @vrdominguez for "
+"the feedback. Closes #1293"
+
+#: ../../source/updating/v3.1.rst:59
+msgid "[FIX] Wrong behavior when no mail recipients are set"
+msgstr "[FIX] Wrong behavior when no mail recipients are set"
+
+#: ../../source/updating/v3.1.rst:60
+msgid ""
+"[FIX] Wrong encoding in text area. Thanks to @pierrehenrymuller for the "
+"feedback. Closes #1296"
+msgstr ""
+"[FIX] Wrong encoding in text area. Thanks to @pierrehenrymuller for the "
+"feedback. Closes #1296"
+
+#: ../../source/updating/v3.1.rst:61
+msgid "[FIX] Fixed wrong behavior when search operator was set"
+msgstr "[FIX] Fixed wrong behavior when search operator was set"
+
+#: ../../source/updating/v3.1.rst:62
+msgid "[FIX] No debug messages when debug mode is activated"
+msgstr "[FIX] No debug messages when debug mode is activated"
+
+#: ../../source/updating/v3.1.rst:63
+msgid ""
+"[FIX] Fixed wrong behavior when setting password complexity length. Thanks to "
+"@andrucha97 for the feedback. Closes #1280"
+msgstr ""
+"[FIX] Fixed wrong behavior when setting password complexity length. Thanks to "
+"@andrucha97 for the feedback. Closes #1280"
+
+#: ../../source/updating/v3.1.rst:64
+msgid ""
+"[FIX] Fixed wrong behavior when searching for accounts on accounts manager. "
+"Thanks to @Weptun for the feedback. Closes #1271"
+msgstr ""
+"[FIX] Fixed wrong behavior when searching for accounts on accounts manager. "
+"Thanks to @Weptun for the feedback. Closes #1271"
+
+#: ../../source/updating/v3.1.rst:65
+msgid ""
+"[FIX] Fixed Polski language option. Thanks to @pitrov24 for the notice. Closes "
+"1288"
+msgstr ""
+"[FIX] Fixed Polski language option. Thanks to @pitrov24 for the notice. Closes "
+"1288"
+
+#: ../../source/updating/v3.1.rst:66
+msgid ""
+"[FIX] Added missing Italian language option. Thanks to @Matwolf08 for the "
+"notice. Closes #1302"
+msgstr ""
+"[FIX] Added missing Italian language option. Thanks to @Matwolf08 for the "
+"notice. Closes #1302"
+
+#: ../../source/updating/v3.1.rst:67
+msgid ""
+"[FIX] Wrong encoding when displaying account's password. Thanks to @DDH112 for "
+"the feedback. Closes #1257"
+msgstr ""
+"[FIX] Wrong encoding when displaying account's password. Thanks to @DDH112 for "
+"the feedback. Closes #1257"
+
+#: ../../source/updating/v3.1.rst:68
+msgid ""
+"[FIX] Wrong behavior when copying account's tags. Thanks to @leBasti91 for the "
+"feedback. Closes #1256"
+msgstr ""
+"[FIX] Wrong behavior when copying account's tags. Thanks to @leBasti91 for the "
+"feedback. Closes #1256"
+
+#: ../../source/updating/v3.1.rst:69
+msgid "[FIX] Wrong behavior when selecting template's view"
+msgstr "[FIX] Wrong behavior when selecting template's view"
+
+#: ../../source/updating/v3.1.rst:72
+msgid "Improved"
+msgstr "Improved"
+
+#: ../../source/updating/v3.1.rst:74
+msgid ""
+"[MOD] Improved stacktrace by anonymizing function's arguments data. Thanks to "
+"@cRaZy-bisCuiT for the feedback. Closes #1339"
+msgstr ""
+"[MOD] Improved stacktrace by anonymizing function's arguments data. Thanks to "
+"@cRaZy-bisCuiT for the feedback. Closes #1339"
+
+#: ../../source/updating/v3.1.rst:75
+msgid "[MOD] Bump version & build"
+msgstr "[MOD] Bump version & build"
+
+#: ../../source/updating/v3.1.rst:76
+msgid ""
+"[MOD] Improved behavior when searching for user permission on accounts. Thanks "
+"to @anth69 for the feedback. Closes #1338"
+msgstr ""
+"[MOD] Improved behavior when searching for user permission on accounts. Thanks "
+"to @anth69 for the feedback. Closes #1338"
+
+#: ../../source/updating/v3.1.rst:77
+msgid "[MOD] Updated translations. Thanks to all contributors."
+msgstr "[MOD] Updated translations. Thanks to all contributors."
+
+#: ../../source/updating/v3.1.rst:78
+msgid "[MOD] Update Authenticator version in composer.json"
+msgstr "[MOD] Update Authenticator version in composer.json"
+
+#: ../../source/updating/v3.1.rst:79
+msgid "[MOD] Minor code tweaks"
+msgstr "[MOD] Minor code tweaks"
+
+#: ../../source/updating/v3.1.rst:80
+msgid "[MOD] Typo in translation. Related #1313"
+msgstr "[MOD] Typo in translation. Related #1313"
+
+#: ../../source/updating/v3.1.rst:81
+msgid ""
+"[MOD] Increase account's name length up to 100 characters long. Related #1071"
+msgstr ""
+"[MOD] Increase account's name length up to 100 characters long. Related #1071"
+
+#: ../../source/updating/v3.1.rst:82
+msgid "[MOD] Unlocked PHP 7.3"
+msgstr "[MOD] Unlocked PHP 7.3"
+
+#: ../../source/updating/v3.1.rst:83
+msgid "[MOD] Improved logging messages"
+msgstr "[MOD] Improved logging messages"
+
+#: ../../source/updating/v3.1.rst:84
+msgid "[MOD] Code cleanup"
+msgstr "[MOD] Code cleanup"
+
+#: ../../source/updating/v3.1.rst:85
+msgid "[MOD] Minor CSS tweaks"
+msgstr "[MOD] Minor CSS tweaks"
+
+#: ../../source/updating/v3.1.rst:86
+msgid "[MOD] Update translations"
+msgstr "[MOD] Update translations"
+
+#: ../../source/updating/v3.1.rst:87
+msgid ""
+"[MOD] Avoid to import blank client or category name when importing CSV files."
+msgstr ""
+"[MOD] Avoid to import blank client or category name when importing CSV files."
+
+#: ../../source/updating/v3.1.rst:88
+msgid ""
+"[MOD] Enforce password complexity checking. Thanks to @DDH112 for the feedback. "
+"Closes #1226"
+msgstr ""
+"[MOD] Enforce password complexity checking. Thanks to @DDH112 for the feedback. "
+"Closes #1226"
+
+#: ../../source/updating/v3.1.rst:89
+msgid ""
+"[MOD] Improved plugins availability detection and skip weird event log entries"
+msgstr ""
+"[MOD] Improved plugins availability detection and skip weird event log entries"
+
+#: ../../source/updating/v3.1.rst:92
+msgid "Added"
+msgstr "Added"
+
+#: ../../source/updating/v3.1.rst:94
+msgid "[ADD] Added search for accounts name by regular expression. Closes #1311"
+msgstr "[ADD] Added search for accounts name by regular expression. Closes #1311"
+
+#: ../../source/updating/v3.1.rst:95
+msgid "[ADD] Added missing tests"
+msgstr "[ADD] Added missing tests"
+
+#: ../../source/updating/v3.1.rst:96
+msgid ""
+"[ADD] Added client IP address in syslog messages. Thanks to @sebagarayco for "
+"the feedback. Closes #1302"
+msgstr ""
+"[ADD] Added client IP address in syslog messages. Thanks to @sebagarayco for "
+"the feedback. Closes #1302"
+
+#: ../../source/updating/v3.1.rst:97
+msgid ""
+"[ADD] Allow to change the account's owner and main group when the user is the "
+"account's owner. Related #705"
+msgstr ""
+"[ADD] Allow to change the account's owner and main group when the user is the "
+"account's owner. Related #705"
+
+#: ../../source/updating/v3.1.rst:98
+msgid ""
+"[ADD] Allow to set account's owner when creating or copying the account. "
+"Related #1264"
+msgstr ""
+"[ADD] Allow to set account's owner when creating or copying the account. "
+"Related #1264"
+
+#: ../../source/updating/v3.1.rst:99
+msgid ""
+"[ADD] Application URL for handling requests through reverse proxy. Thanks to "
+"@rob42 for the feedback. Closes #1218"
+msgstr ""
+"[ADD] Application URL for handling requests through reverse proxy. Thanks to "
+"@rob42 for the feedback. Closes #1218"
+
+#: ../../source/updating/v3.1.rst:100
+msgid ""
+"[ADD] Allow to enable email notifications only for account access requests. "
+"Thanks to @jorgemfm for the feedback. Closes #1157"
+msgstr ""
+"[ADD] Allow to enable email notifications only for account access requests. "
+"Thanks to @jorgemfm for the feedback. Closes #1157"
+
+#: ../../source/updating/v3.1.rst:101
+msgid "[ADD] Improved plugins data handling by encrypting the plugin's data"
+msgstr "[ADD] Improved plugins data handling by encrypting the plugin's data"
+
+#: ../../source/updating/v3.1.rst:104
+msgid "Thanks"
+msgstr "Thanks"
+
+#: ../../source/updating/v3.1.rst:106
+msgid ""
+"Big thanks to all contributors for the feedback, pull requests, translations "
+"and donations."
+msgstr ""
+"全てのコントリビュータの方々・フィードバックをくださった方々・プルリクエストを"
+"送ってくださった方々・翻訳をしてくださった方々・寄付をしてくださった方々に心から"
+"の感謝を！"
+
+#: ../../source/updating/v3.1.rst:108
+msgid "@kalxasus"
+msgstr "@kalxasus"
+
+#: ../../source/updating/v3.1.rst:109
+msgid "@ZUNbado"
+msgstr "@ZUNbado"
+
+#: ../../source/updating/v3.1.rst:110
+msgid "@sf32738"
+msgstr "@sf32738"
+
+#: ../../source/updating/v3.1.rst:111
+msgid "@Envikia"
+msgstr "@Envikia"
+
+#: ../../source/updating/v3.1.rst:112
+msgid "@fprina"
+msgstr "@fprina"
+
+#: ../../source/updating/v3.1.rst:113
+msgid "@drewlsvern"
+msgstr "@drewlsvern"
+
+#: ../../source/updating/v3.1.rst:114
+msgid "@VexedSyd"
+msgstr "@VexedSyd"
+
+#: ../../source/updating/v3.1.rst:115
+msgid "@javierlm"
+msgstr "@javierlm"
+
+#: ../../source/updating/v3.1.rst:116
+msgid "@lreiher"
+msgstr "@lreiher"
+
+#: ../../source/updating/v3.1.rst:117
+msgid "@cRaZy-bisCuiT"
+msgstr "@cRaZy-bisCuiT"
+
+#: ../../source/updating/v3.1.rst:118
+msgid "@vrdominguez"
+msgstr "@vrdominguez"
+
+#: ../../source/updating/v3.1.rst:119
+msgid "@pierrehenrymuller"
+msgstr "@pierrehenrymuller"
+
+#: ../../source/updating/v3.1.rst:120
+msgid "@Weptun"
+msgstr "@Weptun"
+
+#: ../../source/updating/v3.1.rst:121
+msgid "@pitrov24"
+msgstr "@pitrov24"
+
+#: ../../source/updating/v3.1.rst:122
+msgid "@Matwolf08"
+msgstr "@Matwolf08"
+
+#: ../../source/updating/v3.1.rst:123
+msgid "@DDH112"
+msgstr "@DDH112"
+
+#: ../../source/updating/v3.1.rst:124
+msgid "@leBasti91"
+msgstr "@leBasti91"
+
+#: ../../source/updating/v3.1.rst:125
+msgid "@anth69"
+msgstr "@anth69"
+
+#: ../../source/updating/v3.1.rst:126
+msgid "@sebagarayco"
+msgstr "@sebagarayco"
+
+#: ../../source/updating/v3.1.rst:127
+msgid "@rob42"
+msgstr "@rob42"
+
+#: ../../source/updating/v3.1.rst:128
+msgid "@jorgemfm"
+msgstr "@jorgemfm"

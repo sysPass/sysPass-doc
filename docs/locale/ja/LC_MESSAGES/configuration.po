@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: 2020-09-20 16:14+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Last-Translator: magcho <mail@magcho.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../source/configuration/apache.rst:2
+msgid "Apache Configuration"
+msgstr "Apacheの設定"
+
+#: ../../source/configuration/apache.rst:4
+msgid ""
+"If you are running an Apache httpd web server this configuration/s would be "
+"useful in order to configure and protect your sysPass application."
+msgstr ""
+"Apacheを用いてsysPassを運用している場合は、このセクションがセキュリティーの強"
+"化のヒントになります。"
+
+#: ../../source/configuration/apache.rst:8
+msgid "Apache with HTTPS"
+msgstr "Apache with HTTPS"
+
+#: ../../source/configuration/apache.rst:10
+msgid ""
+"This code will redirect any unencrypted request to an HTTPS enabled "
+"VirtualHost."
+msgstr ""
+"以下のコードは暗号化されていないHTTP通信を暗号化されているHTTPS通信にリダイレ"
+"クトする設定です。"
+
+#: ../../source/configuration/apache.rst:12
+msgid "It requires the following modules enabled:"
+msgstr "次のモジュールを有効化しておく必要があります"
+
+#: ../../source/configuration/apache.rst:14
+msgid "ssl"
+msgstr "ssl"
+
+#: ../../source/configuration/apache.rst:15
+msgid "rewrite"
+msgstr "rewrite"
+
+#: ../../source/configuration/apache.rst:17
+msgid "Please make sure you replace the following placeholders:"
+msgstr "以下の二箇所はお使いの環境に合わせて修正してください"
+
+#: ../../source/configuration/apache.rst:19
+msgid ""
+"\"/your/syspass/root/directory\": where sysPass is installed (eg. \"\"/var/"
+"www/sysPass\")"
+msgstr ""
+"“/your/syspass/root/directory”: sysPassがインストールされてるパス (例. “”/"
+"var/www/sysPass”)"
+
+#: ../../source/configuration/apache.rst:20
+msgid "\"www.example.com\": your server DNS name"
+msgstr "“www.example.com”: sysPassを運用しているドメイン名"
+
+#: ../../source/configuration/apache.rst:212
+msgid ""
+"The final step is placing this file in \"/etc/apache2/sites-available\" and "
+"run the following commands:"
+msgstr ""
+"最後の手順はこのコードを“/etc/apache2/sites-available”に配置して以下のコマン"
+"ドを実行することです"
+
+#: ../../source/configuration/apache.rst:222
+msgid "Make sure you don't run overlapping configurations on Apache web server"
+msgstr ""
+"お使いのApacheサーバでsysPass以外のサービスを運用している場合は設定を上書きし"
+"ないように注意してください"
+
+#: ../../source/configuration/index.rst:4
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../source/configuration/ldap.rst:2
+msgid "Configuración de LDAP"
+msgstr "LDAPの設定"
+
+#: ../../source/configuration/ldap.rst:5
+msgid "Active Directory"
+msgstr "Active Directory"
+
+#: ../../source/configuration/ldap.rst:8 ../../source/configuration/ldap.rst:49
+msgid "Consejos"
+msgstr "Tips"
+
+#: ../../source/configuration/ldap.rst:10
+msgid ""
+"Comprobar que el usuario de conexión es miembro del grupo \"Operadores de "
+"Cuenta\""
+msgstr ""
+"アクセスしてきたユーザーがAccount Operatorsグループに属しているユーザーかどう"
+"かを確認します"
+
+#: ../../source/configuration/ldap.rst:13
+msgid "OpenLDAP"
+msgstr "OpenLDAP"
+
+#: ../../source/configuration/ldap.rst:15
+msgid ""
+"Para configurar un servidor de OpenLDAP correctamente, puedes seguir el "
+"siguiente artículo en https://wiki.debian.org/LDAP/OpenLDAPSetup en el que "
+"se describen los pasos para configurar un servidor totalmente operativo en "
+"distribuciones Debian y derivadas."
+msgstr ""
+"OpenLDAPをセットアップするにはhttps://wiki.debian.org/LDAP/OpenLDAPSetupなど"
+"を参考にしてください。ここではDebian系のシステムにセットアップする手順を説明"
+"します。"
+
+#: ../../source/configuration/ldap.rst:17
+msgid ""
+"En OpenLDAP, para usar la característica de pertenecia a grupo, es necesario "
+"añadir un 'overlay' llamado 'membeof'. Es un módulo que añade un atributo "
+"interno a los usuarios que son miembros de un grupo."
+msgstr ""
+"OpenLDAPでグループメンバーシップ機能を使用するには「memberof」というoverlayを"
+"追加する必要があります。これはグループに属するユーザーに内部属性を追加するモ"
+"ジュールです。"
+
+#: ../../source/configuration/ldap.rst:19
+msgid "Estos son los pasos para configurar el módulo:"
+msgstr "以下でモジュールを設定する方法を説明します。"
+
+#: ../../source/configuration/ldap.rst:21
+msgid "Crear un archivo 'ldap_memberof_add.ldif' con este contenido: ::"
+msgstr "以下の内容で ldap_memberof_add.ldif ファイルを作成してください"
+
+#: ../../source/configuration/ldap.rst:29
+msgid "Crear un archivo 'ldap_memberof_config.ldif' con este contenido: ::"
+msgstr "以下の内容で ldap_memberof_config.ldif ファイルを作成してください"
+
+#: ../../source/configuration/ldap.rst:43
+msgid "Modificar la configuración de LDAP con estos comandos: ::"
+msgstr "以下のコマンドを実行してLDAP構成を反映させます"
+
+#: ../../source/configuration/ldap.rst:51
+msgid ""
+"Comprobar que si el usuario 'admin' de sysPass coincide con el de LDAP, es "
+"necesario añadir este usuario al grupo de LDAP que tiene permisos de acceso "
+"a sysPass."
+msgstr ""
+"sysPassの’admin’ユーザーであることをOpenLDAPで確認できるようにするためには、"
+"このユーザーをsysPassへのアクセス権限を持つLDAPグループに追加する必要がありま"
+"す。"
+
+#: ../../source/configuration/ldap.rst:52
+msgid ""
+"El nombre y email de los usuarios de LDAP son obtenidos de los atributos "
+"'displayname','fullname' y 'mail'."
+msgstr ""
+"LDAPユーザーのユーザー名とメールアドレスは’displayname’・’fullname’・’mail’属"
+"性から生成されます。"
+
+#: ../../source/configuration/ldap.rst:53
+msgid ""
+"Es posible usar ldaps configurando la URI de conexión como 'ldaps:/ /"
+"mi_servidor_ldap'."
+msgstr "Idapsに接続するには ’ldaps://mi_servidor_ldap’の形式で接続できます。"
+
+#: ../../source/configuration/ldap.rst:54
+msgid "Puedes instalar phpLDAPadmin_ para crear y administrar objetos de LDAP."
+msgstr "phpLDAPadmin をインストールすれば簡単にLDAPを管理することができます。"
+
+#: ../../source/configuration/ldap.rst:59
+msgid "Enlaces"
+msgstr "Links"
+
+#: ../../source/configuration/ldap.rst:61
+msgid "Wiki de LDAP en Debian: https://wiki.debian.org/LDAP/OpenLDAPSetup"
+msgstr "DAP Debian Wiki: https://wiki.debian.org/LDAP/OpenLDAPSetup"
+
+#: ../../source/configuration/ldap.rst:62
+msgid ""
+"Configuración de 'memberof': http://www.cbjck.de/2012/05/enabling-the-"
+"memberof-overlay-for-openldap/"
+msgstr ""
+"‘memberof’ overlay config: http://www.cbjck.de/2012/05/enabling-the-memberof-"
+"overlay-for-openldap/"

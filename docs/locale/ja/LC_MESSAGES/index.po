@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010-2020, Rubén Domínguez <nuxsmin _at_ syspass _dot_ org>
+# This file is distributed under the same license as the sysPass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysPass 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 12:58+0900\n"
+"PO-Revision-Date: 2020-09-20 15:56+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Last-Translator: magcho <mail@magcho.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../source/index.rst:2
+msgid "Introduction"
+msgstr "はじめに"
+
+#: ../../source/index.rst:4
+msgid ""
+"sysPass is a password management system written in PHP that allows a "
+"centralized and collaborative passwords management."
+msgstr ""
+"sysPassは様々なパスワードを安全に一箇所で管理し、チームで共有することを"
+"可能としたパスワードマネージャです。sysPass自体はPHPで実装されていま"
+"す。"
+
+#: ../../source/index.rst:7
+msgid "Features"
+msgstr "機能"
+
+#: ../../source/index.rst:9
+msgid "Encrypted passwords using AES-256 CTR"
+msgstr "AES-256 CTR を用いてパスワードを暗号化できます"
+
+#: ../../source/index.rst:10
+msgid "Interface based on Material Design Lite with HTML5 and AJAX"
+msgstr "HTML5とAJAXで構築されたマテリアルデザインのUIでモダンに使えます"
+
+#: ../../source/index.rst:11
+msgid "Multiuser with users, groups and profiles management"
+msgstr "個人だけでなく、複数のユーザー・グループごとに権限設定ができます"
+
+#: ../../source/index.rst:12
+msgid "Advanced profile management with 29 access levels"
+msgstr "ユーザーにあわせて29種もの細かい権限設定ができます"
+
+#: ../../source/index.rst:13
+msgid "MySQL/MariaDB, OpenLDAP and Active Directory authentication"
+msgstr ""
+"MySQL/MariaDB・OpenLDAPおよびActive Directory認証に対応しています"
+
+#: ../../source/index.rst:14
+msgid "Activity notifications by email and in-app"
+msgstr "ウェブアプリ内やメールでのアクティビティ通知が設定できます"
+
+#: ../../source/index.rst:15
+msgid "Public links to accounts without login"
+msgstr "ログインの必要のないページの作成と共有URLの発行ができます"
+
+#: ../../source/index.rst:16
+msgid "Accounts changes history and restore points"
+msgstr ""
+"保存したパスワードの変更履歴を保持しているので、うっかり変更してしまっ"
+"ても復元できます"
+
+#: ../../source/index.rst:17
+msgid "Accounts associated files management with images preview"
+msgstr ""
+"保存できるのはパスワードだけではありません、ファイルも合わせて保存でき"
+"ます"
+
+#: ../../source/index.rst:18
+msgid "Multilanguage"
+msgstr "多言語対応しています"
+
+#: ../../source/index.rst:19
+msgid "Portable backup format and export to encrypted XML"
+msgstr ""
+"XML形式で保存しているパスワードをエクスポート・バックアップできます"
+
+#: ../../source/index.rst:20
+msgid ""
+"Actions and events audit with the ability to send messages to a remote "
+"Syslog in CEF format"
+msgstr ""
+"CEF形式でシステムログやアクションをを記録したり、そのログを送信できます"
+
+#: ../../source/index.rst:21
+msgid "API for integrating with other applications"
+msgstr "API連携により様々なアプリケーションを開発・利用できます"
+
+#: ../../source/index.rst:22
+msgid "Import from KeePass and CSV"
+msgstr "KeePassでエクスポートしたCSVを読み込むことができます"
+
+#: ../../source/index.rst:23
+msgid "One step installation"
+msgstr "面倒な作業なしに簡単にインストールできます"
+
+#: ../../source/index.rst:26
+msgid "What sysPass does not do"
+msgstr "sysPassで行わないこと"
+
+#: ../../source/index.rst:28
+msgid "It does not store any **UNencrypted** keys in the server"
+msgstr "パスワードを **暗号化せず** 平文で保存することはありません"
+
+#: ../../source/index.rst:29
+msgid "It does not send any data to an external service"
+msgstr "外部サービスに情報を送信することはありません"
+
+#: ../../source/index.rst:30
+msgid ""
+"It does not encrypt the accounts' password individually, it uses a key "
+"protected by global master password for all instead"
+msgstr ""
+"パスワードを個別に暗号化することはありません。すべてのパスワードはマス"
+"ターパスワードを用いて暗号化されています"
+
+#: ../../source/index.rst:31
+msgid "It does not perform password changes on the servers"
+msgstr "サーバが自動で保存したパスワードを変更する機能はありません"
+
+#: ../../source/index.rst:32
+msgid ""
+"It does not encrypt the accounts' data, only the password, custom "
+"fields' and plugins' data, because you wouldn't be able to perform "
+"searches"
+msgstr ""
+"何のサービスのパスワードを保存しているか探せるようにサービス名などはあ"
+"えて暗号化しません。暗号化するのはパスワード・カスタムフィールド・プラ"
+"グインのデータなどです"
+
+#: ../../source/index.rst:33
+msgid "It isn't like APT: doesn't have Super Cow Powers!!"
+msgstr "このsysPass にはスーパー牛さんパワーなどはありません"

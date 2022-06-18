@@ -21,7 +21,7 @@ Example:
     docker run --rm \
     --volumes-from syspass-app \
     --volume $PWD:/backup \
-    alpine sh -c "exec tar xzf /backup/syspass-app-backup.tar.gz /var/www/html/sysPass"
+    alpine sh -c "exec tar czf /var/www/html/sysPass /backup/syspass-app-backup.tar.gz"
 
     docker run --rm \
     --network syspass-net \
